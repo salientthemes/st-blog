@@ -1,0 +1,5 @@
+article {
+	.entry-title {
+		@extend %entry-title;
+	}
+}

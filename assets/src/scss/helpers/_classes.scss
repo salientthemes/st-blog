@@ -1,12 +1,16 @@
-%primary-color {
+%no-margin {
+  margin: 0;
+}
+
+%no-padding {
+  padding: 0;
+}
+
+%color-primary {
     color: $color_primary;
 }
 
-%secondary-color {
-    color: $color_secondary;
-}
-
-%bg_primary {
+%bg-primary {
     background-color: $color_primary;
 }
 
@@ -14,10 +18,14 @@
     border-color: $color_primary;
 }
 
-%primary-font {
+%font-primary {
     font-family: $font_primary;
 }
 
+
+%secondary-color {
+    color: $color_secondary;
+}
 %font-secondary {
     font-family: $font_secondary;
 }
@@ -31,4 +39,29 @@
   top: 0;
 }
 
+%entry-title {
+  color: $color_black;
+  font-size: 24px;
+  font-weight: $font_primary_bold;
+  a {
+    color: $color_black;
+  }
+}
 
+%widget-title {
+  color: $color_black;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+%widget-categories-list {
+  background-color: $color_light_grey;
+  list-style: none;
+  margin-bottom: 3px;
+  padding: 4px 10px;
+  text-align: center;
+  a {
+    color: lighten($color_black, 50%);
+  }
+}

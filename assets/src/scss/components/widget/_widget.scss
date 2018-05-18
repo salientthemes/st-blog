@@ -1,0 +1,11 @@
+.widget {
+	margin-bottom: 40px;
+	.widget-title {
+		@extend %widget-title;
+	}
+	ul {
+		li {
+			@extend %widget-categories-list;
+		}
+	}
+}

@@ -1,0 +1,8 @@
+body {
+	font-size: $font-size;
+	@extend %font-secondary;
+}
+ul {
+	@extend %no-margin;
+	@extend %no-padding;
+}

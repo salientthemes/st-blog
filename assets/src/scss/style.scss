@@ -4,12 +4,15 @@
 /* foundation */
 
 @import 'foundation/base';
+@import 'foundation/global';
+
 // /* sections */
 @import 'sections/section-master';
 
 
 // /* components */
- @import 'components/components-master';
+@import 'components/components-master';
+@import 'layouts/layouts-master';
 
 @import 'pages/page-master';
 

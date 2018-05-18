@@ -19,10 +19,19 @@ module.exports = function(grunt) {
 
     // COPY CONTENT
     copy: {
+            img: {
+                files: [{
+                    expand: true,
+                    cwd: './assets/src/img/',
+                    src: '**',
+                    dest: './assets/build/img/',
+                    filter: 'isFile'
+                }]
+            }, 
             js: {
                 files: [{
                     expand: true,
-                    cwd: './assets/src/js',
+                    cwd: './assets/src/js/',
                     src: '**',
                     dest: './assets/build/js/',
                     filter: 'isFile'

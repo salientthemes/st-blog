@@ -10,6 +10,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<?php st_blog_post_thumbnail(); ?>
+
+	<footer class="entry-footer">
+		<?php st_blog_entry_footer(); ?>
+	</footer><!-- .entry-footer -->
+	
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -28,8 +35,6 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
-	<?php st_blog_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -52,8 +57,4 @@
 		) );
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php st_blog_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
