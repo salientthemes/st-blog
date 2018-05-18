@@ -1,0 +1,19 @@
+{
+  "name": "st_blog",
+  "preferGlobal": "false",
+  "version": "0.1.0",
+  "description": "Description",
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-autoprefixer": "~0.4.0",
+    "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-sass": "~0.7.0",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-watch": "^1.1.0"
+  },
+  "directories": {},
+  "dependencies": {
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-copy": "^1.0.0"
+  }
+}

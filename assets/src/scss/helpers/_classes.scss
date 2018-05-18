@@ -1,0 +1,34 @@
+%primary-color {
+    color: $color_primary;
+}
+
+%secondary-color {
+    color: $color_secondary;
+}
+
+%bg_primary {
+    background-color: $color_primary;
+}
+
+%border-primary {
+    border-color: $color_primary;
+}
+
+%primary-font {
+    font-family: $font_primary;
+}
+
+%font-secondary {
+    font-family: $font_secondary;
+}
+
+%overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.40);
+  content: "";
+  position: absolute;
+  top: 0;
+}
+
+

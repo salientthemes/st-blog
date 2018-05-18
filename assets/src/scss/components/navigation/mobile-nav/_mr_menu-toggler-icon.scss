@@ -1,0 +1,75 @@
+$mr-line-color : #000;
+$mr-line-animation: 0.35s ease;
+
+//Menu Toggle Design
+.menu-toggler {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    float: right;
+    font-size: 32px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+
+    &:focus{
+        outline: none;
+    }
+    
+    span {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: $mr-line-color;
+        opacity: 1;
+        left: 0;
+
+        -webkit-transform: rotate(0deg);
+           -moz-transform: rotate(0deg);
+                transform: rotate(0deg);
+
+        -webkit-transition: transform #{$mr-line-animation};
+           -moz-transition: transform #{$mr-line-animation};
+                transition: transform #{$mr-line-animation};
+
+        &:nth-child(1) {
+            top: 0px; 
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+            top: 8px;
+        }
+        &:nth-child(4) {
+            top: 16px;
+        }
+    }
+
+    &.mr-menu-open {
+        z-index: 9;
+        span {
+            &:nth-child(1) {
+                top: 8px;
+                width: 0%;
+                left: 50%;
+            }
+            &:nth-child(2) {
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+            &:nth-child(3) {
+                 -webkit-transform: rotate(-45deg);
+                 -moz-transform: rotate(-45deg);
+                 transform: rotate(-45deg);
+            }
+            &:nth-child(4) {
+                top: 18px;
+                width: 0%;
+                left: 50%;
+            }
+        }
+    }
+}

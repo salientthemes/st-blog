@@ -1,0 +1,34 @@
+/* ====================================
+   General site styling
+   ==================================== */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $font-size;
+}
+
+body {
+  line-height: 1.5;
+  font-smoothing: antialiased; 
+}
+
+div:focus{
+	outline: none;	
+}
+
+img {
+  vertical-align: middle;
+  height: auto;
+  max-width: 100%;
+}
+
+body a:hover,
+body a:active,
+body a:focus{
+	text-decoration: none;
+	outline: none;
+}
