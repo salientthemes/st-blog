@@ -1,0 +1,31 @@
+#banner {
+    .slick-slider {
+        .slick-slide {
+            position: relative;
+            
+            .slick-caption {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                padding-bottom: 50px;
+                text-align: center;
+                width: 100%;
+            }
+            
+        }
+        
+        // arrow
+        .slick-arrow {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            &.slick-next {
+                right: 0;
+            }
+            &.slick-prev {
+                left: 0;
+            }
+        }
+        
+    }
+}

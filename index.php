@@ -17,7 +17,37 @@ get_header();
 </div><!-- .container -->
 
 <div id="banner" class="mb-5">
-	<img src="http://via.placeholder.com/1350x500">
+	<!-- <img src="http://via.placeholder.com/1350x500"> -->
+	<div class="slick-slider">
+	  <div>
+	  	<img src="http://via.placeholder.com/1350x500">
+	  	<div class="slick-caption">
+	  		<h1>Beautiful Slider Heading</h1>
+	  		<a href="#!">Learn More</a>
+	  	</div>
+	  </div>
+	  <div>
+	  	<img src="http://via.placeholder.com/1350x500">
+	  	<div class="slick-caption">
+	  		<h1>Beautiful Slider Heading</h1>
+	  		<a href="#!">Learn More</a>
+	  	</div>
+	  </div>
+	  <div>
+	  	<img src="http://via.placeholder.com/1350x500">
+	  	<div class="slick-caption">
+	  		<h1>Beautiful Slider Heading</h1>
+	  		<a href="#!">Learn More</a>
+	  	</div>
+	  </div>
+	  <div>
+	  	<img src="http://via.placeholder.com/1350x500">
+	  	<div class="slick-caption">
+	  		<h1>Beautiful Slider Heading</h1>
+	  		<a href="#!">Learn More</a>
+	  	</div>
+	  </div>
+	</div>
 </div>
 
 <div class="container">
