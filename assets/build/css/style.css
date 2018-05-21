@@ -1,0 +1,109 @@
+/* imports all files here */
+@import url("https://fonts.googleapis.com/css?family=Hind:500,600,700|Montserrat:300,300i,400,400i,500,700,700i,900,900i");
+/* colors */
+/*prifix */
+/* line 1, ../../src/scss/helpers/_classes.scss */
+ul { margin: 0; }
+
+/* line 5, ../../src/scss/helpers/_classes.scss */
+ul { padding: 0; }
+
+/* line 21, ../../src/scss/helpers/_classes.scss */
+nav#site-navigation ul a { font-family: "Montserrat", sans-serif; }
+
+/* line 29, ../../src/scss/helpers/_classes.scss */
+body { font-family: "Hind", sans-serif; }
+
+/* line 42, ../../src/scss/helpers/_classes.scss */
+article .entry-title { color: #000; font-size: 24px; font-weight: 700; }
+/* line 46, ../../src/scss/helpers/_classes.scss */
+article .entry-title a { color: #000; }
+
+/* line 58, ../../src/scss/helpers/_classes.scss */
+.widget_categories ul li { background-color: #f7f7f7; list-style: none; margin-bottom: 3px; padding: 4px 10px; text-align: center; }
+/* line 64, ../../src/scss/helpers/_classes.scss */
+.widget_categories ul li a { color: gray; }
+
+/* MIXINS */
+/* foundation */
+/* ==================================== General site styling ==================================== */
+/* line 4, ../../src/scss/foundation/_base.scss */
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+/* line 10, ../../src/scss/foundation/_base.scss */
+html { font-size: 15px; }
+
+/* line 14, ../../src/scss/foundation/_base.scss */
+body { line-height: 1.5; font-smoothing: antialiased; }
+
+/* line 19, ../../src/scss/foundation/_base.scss */
+div:focus { outline: none; }
+
+/* line 23, ../../src/scss/foundation/_base.scss */
+img { vertical-align: middle; height: auto; max-width: 100%; }
+
+/* line 29, ../../src/scss/foundation/_base.scss */
+body a:hover, body a:active, body a:focus { text-decoration: none; outline: none; }
+
+/* line 1, ../../src/scss/foundation/_global.scss */
+body { font-size: 15px; }
+
+/* import all the components */
+/* line 2, ../../src/scss/components/_list.scss */
+.st-blog-list li { list-style: none; }
+
+/* line 1, ../../src/scss/components/header/_head-search.scss */
+.st-blog-head-search { background: #f5f5f5; padding: 30px 0; }
+
+/* line 6, ../../src/scss/components/header/_head-search.scss */
+.st-blog-head-search button { position: absolute; right: 0; top: 0; z-index: 1; background: none; border: 0; }
+
+/* line 15, ../../src/scss/components/header/_head-search.scss */
+.st-blog-head-search form { position: relative; padding-right: 30px; }
+
+/* line 20, ../../src/scss/components/header/_head-search.scss */
+.st-blog-head-search .form-control { border: 0; background: none; }
+
+/* line 24, ../../src/scss/components/header/_head-search.scss */
+.st-blog-head-search .form-control { background: none; width: 100%; }
+
+/* line 2, ../../src/scss/components/navigation/_first-level.scss */
+nav#site-navigation ul { margin: 0; padding: 0; list-style: none; }
+/* line 6, ../../src/scss/components/navigation/_first-level.scss */
+nav#site-navigation ul li { position: relative; }
+/* line 11, ../../src/scss/components/navigation/_first-level.scss */
+nav#site-navigation ul li:hover > ul { -moz-transform: translate(0, 0); -o-transform: translate(0, 0); -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0); visibility: visible; opacity: 1; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
+/* line 20, ../../src/scss/components/navigation/_first-level.scss */
+nav#site-navigation ul a { color: #000; font-weight: 500; }
+/* line 29, ../../src/scss/components/navigation/_first-level.scss */
+nav#site-navigation ul.menu > li { display: inline-block; font-size: 0.875rem; font-weight: normal; }
+/* line 34, ../../src/scss/components/navigation/_first-level.scss */
+nav#site-navigation ul.menu > li > a { display: inline-block; padding: 35px 1rem; text-transform: uppercase; }
+
+/* line 3, ../../src/scss/components/navigation/_second-level.scss */
+nav#site-navigation ul.menu ul { position: absolute; top: 100%; width: 220px; background: #fff; visibility: hidden; opacity: 0; box-shadow: 0px 3px 3px 0px #dddddd70; -moz-transform: translate(0, 10px); -o-transform: translate(0, 10px); -ms-transform: translate(0, 10px); -webkit-transform: translate(0, 10px); transform: translate(0, 10px); -webkit-transition: all 0.1s ease-in-out; -moz-transition: all 0.1s ease-in-out; -o-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out; }
+/* line 14, ../../src/scss/components/navigation/_second-level.scss */
+nav#site-navigation ul.menu ul li { text-align: left; width: 100%; }
+/* line 17, ../../src/scss/components/navigation/_second-level.scss */
+nav#site-navigation ul.menu ul li a { padding: 10px 15px; display: block; font-size: 0.825rem; width: 100%; }
+
+/* line 2, ../../src/scss/components/navigation/_n-level.scss */
+nav#site-navigation ul.menu ul ul { top: 0; left: 100%; }
+
+/* line 12, ../../src/scss/components/navigation/_nav.scss */
+#menu-icon { display: block; margin: 1.5rem 0; }
+@media (min-width: 991px) { /* line 12, ../../src/scss/components/navigation/_nav.scss */
+  #menu-icon { display: none; } }
+
+/* line 21, ../../src/scss/components/navigation/_nav.scss */
+nav#site-navigation { display: none; }
+@media (min-width: 991px) { /* line 21, ../../src/scss/components/navigation/_nav.scss */
+  nav#site-navigation { display: block; } }
+
+/* line 2, ../../src/scss/components/_footer.scss */
+.site-footer .site-info { text-align: center; padding-top: 40px; padding-bottom: 40px; }
+
+/* line 1, ../../src/scss/components/widget/_widget-categories.scss */
+.widget_categories { margin-bottom: 40px; }
+
+/*# sourceMappingURL=style.css.map */
