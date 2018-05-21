@@ -12,7 +12,7 @@ $color_light_grey: #f7f7f7;
 $color_white: #fff;
 $color_black: #000;
 
-$color_primary: #d6b938;
+$color_primary: #EF3F3D;//red-orange
 $color_secondary: #272727;
 $text_light: #8e8e8e;
 
@@ -21,3 +21,10 @@ $prefix: st-blog;
 
 $font_primary_medium: 500;
 $font_primary_bold: 700;
+
+$transition: 0.4s all ease-in-out;
+
+// header
+$header-height: 90px;
+$head-search-toggler-height: 37;
+$head-search-btn-width: 56px;

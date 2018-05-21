@@ -21,6 +21,9 @@
             color: $color_black;
             @extend %font-primary;
             font-weight: $font_primary_medium;
+            &:hover {
+                @extend %color-primary;
+            }
         }
     }
 
@@ -31,10 +34,15 @@
             font-size: $nav-menu-font-size;
             font-weight: normal; 
 
-            > a{
+            > a {
                 display: inline-block;
                 padding: 35px 1rem;
                 text-transform: uppercase;
+            }
+            &.current-menu-item {
+                > a {
+                    @extend %color-primary;
+                }
             }
         } 
 

@@ -44,14 +44,13 @@
   font-size: 24px;
   font-weight: $font_primary_bold;
   a {
-    color: $color_black;
+    // color: $color_black;
   }
 }
 
 %widget-title {
   color: $color_black;
   font-size: 16px;
-  text-align: center;
   text-transform: uppercase;
 }
 
@@ -60,8 +59,43 @@
   list-style: none;
   margin-bottom: 3px;
   padding: 4px 10px;
-  text-align: center;
   a {
     color: lighten($color_black, 50%);
+    &:hover {
+      color: $color_primary;
+    }
+  }
+}
+
+%no-box-shadow {
+  box-shadow: none;
+}
+
+%btn-reset {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+%widget-search {
+  form {
+      position: relative;
+      padding-right: $head-search-btn-width;
+      label {
+          margin-bottom: 0;
+          width: 100%;
+          .search-field {
+              border-radius: 0;
+              width: 100%;
+          }
+      }
+
+      .search-submit {
+          position: absolute;
+          height: 100%;
+          right: 0;
+          top: 0;
+          z-index: 1;
+      }
   }
 }

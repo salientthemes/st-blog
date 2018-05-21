@@ -1,5 +1,12 @@
 article {
+	&.hentry {
+    	margin-bottom: 40px;
+	}
 	.entry-title {
 		@extend %entry-title;
+	}
+	.post-thumbnail {
+	    margin-bottom: 10px;
+	    display: block;
 	}
 }

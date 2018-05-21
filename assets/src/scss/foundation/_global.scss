@@ -2,7 +2,29 @@ body {
 	font-size: $font-size;
 	@extend %font-secondary;
 }
+
 ul {
 	@extend %no-margin;
 	@extend %no-padding;
+}
+
+input,
+button {
+	&:focus {
+		outline: none;
+		@extend %no-box-shadow;
+	}
+}
+
+a {
+	color: lighten($color_black, 50%);
+	&:visited {
+		color: lighten($color_black, 50%);	
+		&:hover {
+			@extend %color-primary;
+		}
+	}
+	&:hover {
+		@extend %color-primary;
+	}
 }

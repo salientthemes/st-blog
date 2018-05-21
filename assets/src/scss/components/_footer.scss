@@ -1,4 +1,17 @@
 .site-footer {
+    background: #000;
+    color: $color_white;
+
+	a, 
+	a:visited {
+	    color: $color_white;
+	}
+
+	a:hover {
+	    color: lighten($color_black, 60%);
+	}
+
+	// copyright
 	.site-info {
 	    text-align: center;
 	    padding-top: 40px;

@@ -25,60 +25,61 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'st-blog' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="container">
-			<div class="row">
-				<div class="col-3">
-					<div class="site-branding">
-						<?php
-						the_custom_logo();
-						if ( is_front_page() && is_home() ) :
-							?>
-							<h1 class="site-title">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-									<img src="<?php echo get_template_directory_uri();?>/assets/build/img/logo.png">
-								</a>
-							</h1>
-							<?php
-						else :
-							?>
-							<h1 class="site-title">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-									<img src="<?php echo get_template_directory_uri();?>/assets/build/img/logo.png">
-								</a>
-							</h1>
-							<?php
-						endif;
-						$st_blog_description = get_bloginfo( 'description', 'display' );
-						if ( $st_blog_description || is_customize_preview() ) :
-							?>
-							<p class="site-description"><?php echo $st_blog_description; /* WPCS: xss ok. */ ?></p>
-						<?php endif; ?>
-					</div><!-- .site-branding -->					
-				</div><!-- site brand-->
-				<div class="col-9 text-right">
-					<nav id="site-navigation" class="main-navigation">
-						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'st-blog' ); ?></button>
-						<?php
-						wp_nav_menu( array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-						) );
-						?>
-					</nav><!-- #site-navigation -->		
+		<div class="st-blog-header-wrap">
+			<div class="st-blog-header-wrap-nav">
+				<div class="container">
+					<div class="row">
+						<div class="col-3">
+							<div class="site-branding">
+								<?php
+								the_custom_logo();
+								if ( is_front_page() && is_home() ) :
+									?>
+									<h1 class="site-title">
+										<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+											<img src="<?php echo get_template_directory_uri();?>/assets/build/img/logo.png">
+										</a>
+									</h1>
+									<?php
+								else :
+									?>
+									<h1 class="site-title">
+										<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+											<img src="<?php echo get_template_directory_uri();?>/assets/build/img/logo.png">
+										</a>
+									</h1>
+									<?php
+								endif;
+								$st_blog_description = get_bloginfo( 'description', 'display' );
+								if ( $st_blog_description || is_customize_preview() ) :
+									?>
+									<p class="site-description"><?php echo $st_blog_description; /* WPCS: xss ok. */ ?></p>
+								<?php endif; ?>
+							</div><!-- .site-branding -->					
+						</div><!-- site brand-->
+						<div class="col-9 text-right">
+							<nav id="site-navigation" class="main-navigation">
+								<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'st-blog' ); ?></button>
+								<?php
+								wp_nav_menu( array(
+									'theme_location' => 'menu-1',
+									'menu_id'        => 'primary-menu',
+								) );
+								?>
+							</nav><!-- #site-navigation -->		
 
-					<!-- search toggle icon -->
-				</div><!-- site nav -->
+							<!-- search toggle icon -->
+							<button class="st-blog-head-search-toggler"><i class="fas fa-search"></i></button>
+						</div><!-- site nav -->
+					</div>
+				</div>
 			</div>
 
-		</div>
-
-		<div class="st-blog-head-search">
-			<div class="container">
-				<form>
-			    	<input class="form-control" type="search" placeholder="Search" aria-label="Search">
-			    	<button type="submit"><i class="fa fa-search"></i></button>
-			    </form>
-		    </div>
+			<div class="st-blog-head-search">
+				<div class="container">
+				    <?php get_search_form();?>
+			    </div>
+			</div>
 		</div>
 	</header><!-- #masthead -->
 
