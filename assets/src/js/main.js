@@ -14,7 +14,11 @@ jQuery(window).load(function() {
 function slick_init() {
 	jQuery(".slick-slider").slick({
 	  // normal options...
-	  infinite: false,
+	  autoplay: true,
+	  autoplaySpeed: 4000,
+	  infinite: true,
+	  pauseOnFocus: false,
+	  pauseOnHover: false,
 	  prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>',
 	  nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>',
 	});

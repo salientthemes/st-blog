@@ -105,7 +105,7 @@ body.head-search-active .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-h
 body.head-search-active .st-blog-header-wrap .st-blog-head-search { -moz-transform: translate(0, 100%); -o-transform: translate(0, 100%); -ms-transform: translate(0, 100%); -webkit-transform: translate(0, 100%); transform: translate(0, 100%); }
 
 /* line 2, ../../src/scss/components/header/_fixed-header.scss */
-body.fixed-header .site-header { position: fixed; top: 0; width: 100%; z-index: 100; }
+body.fixed-header .site-header {position: fixed;top: 0;width: 100%;z-index: 100;}
 /* line 9, ../../src/scss/components/header/_fixed-header.scss */
 body.fixed-header #page { padding-top: 90px; }
 
