@@ -46,6 +46,15 @@ module.exports = function(grunt) {
                     filter: 'isFile'
                 }]
             }, 
+            webfonts: {
+                files: [{
+                    expand: true,
+                    cwd: './assets/src/webfonts/',
+                    src: '**',
+                    dest: './assets/build/webfonts/',
+                    filter: 'isFile'
+                }]
+            }, 
     },
 
     // GRUNT WATCH

@@ -19,6 +19,8 @@
 
         a{
             color: $color_black;
+            @extend %font-primary;
+            font-weight: $font_primary_medium;
         }
     }
 
@@ -30,9 +32,9 @@
             font-weight: normal; 
 
             > a{
-                padding: 0 1rem;
                 display: inline-block;
-
+                padding: 35px 1rem;
+                text-transform: uppercase;
             }
         } 
 

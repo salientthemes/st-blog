@@ -1,20 +1,27 @@
 %second-level{
-    ul.menu ul{
-        position: absolute;
-        top: 100%;
-        width: $nav-sub-menu-width;
-        background: $nav-drop-down-color; 
-        visibility: hidden;
-        opacity: 0;
-        @include box-shadow( $nav-drop-down-shadow );
-        @include translate( 0, 10px);
-        @include transition( all 0.1s ease-in-out );
+    ul.menu {
+            ul{
+                position: absolute;
+                top: 100%;
+                width: $nav-sub-menu-width;
+                background: $nav-drop-down-color; 
+                visibility: hidden;
+                opacity: 0;
+                @include box-shadow( $nav-drop-down-shadow );
+                @include translate( 0, 10px);
+                @include transition( all 0.1s ease-in-out );
 
-        a{
-            padding:$nav-drop-down-padding;
-            display: block;
-            font-size: $nav-menu-font-size - 0.05;
-        }
+                li {
+                    text-align: left;
+                    width: 100%;
+                    a{
+                        padding:$nav-drop-down-padding;
+                        display: block;
+                        font-size: $nav-menu-font-size - 0.05;
+                        width: 100%;
+                    }
+                }
+            }
     }
 
 }

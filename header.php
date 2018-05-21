@@ -64,10 +64,21 @@
 							'menu_id'        => 'primary-menu',
 						) );
 						?>
-					</nav><!-- #site-navigation -->							
+					</nav><!-- #site-navigation -->		
+
+					<!-- search toggle icon -->
 				</div><!-- site nav -->
 			</div>
 
+		</div>
+
+		<div class="st-blog-head-search">
+			<div class="container">
+				<form>
+			    	<input class="form-control" type="search" placeholder="Search" aria-label="Search">
+			    	<button type="submit"><i class="fa fa-search"></i></button>
+			    </form>
+		    </div>
 		</div>
 	</header><!-- #masthead -->
 

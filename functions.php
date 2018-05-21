@@ -152,6 +152,7 @@ function st_blog_scripts() {
 
 	// thirdparty style file
 	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/assets/build/css/bootstrap.css' );
+	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/build/css/fontawesome-all.css' );
 
 	wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/assets/build/css/style.css' );
 

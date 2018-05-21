@@ -1,5 +1,5 @@
 // import google font: https://fonts.google.com/?selection.family=Hind:500,600,700|Montserrat:300,300i,400,400i,700,700i,900,900i&query=hind
-@import url('https://fonts.googleapis.com/css?family=Hind:500,600,700|Montserrat:300,300i,400,400i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Hind:500,600,700|Montserrat:300,300i,400,400i,500,700,700i,900,900i');
 
 $font_primary: 'Montserrat', sans-serif;
 $font_secondary:  'Hind', sans-serif;
@@ -19,4 +19,5 @@ $text_light: #8e8e8e;
 /*prifix */
 $prefix: st-blog;
 
+$font_primary_medium: 500;
 $font_primary_bold: 700;

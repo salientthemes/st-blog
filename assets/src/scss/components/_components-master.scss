@@ -1,7 +1,9 @@
 /* import all the components */
 @import 'buttons';
 @import 'list';
+@import 'header/header-master';
 @import 'navigation/nav';
+@import 'footer';
 
 @import 'article/article';
-@import 'widget/widget';
+@import 'widget/widget-categories';
