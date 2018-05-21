@@ -17,7 +17,6 @@ get_header();
 </div><!-- .container -->
 
 <div id="banner" class="mb-5">
-	<!-- <img src="http://via.placeholder.com/1350x500"> -->
 	<div class="slick-slider">
 	  <div>
 	  	<img src="http://via.placeholder.com/1350x500">
@@ -47,6 +46,48 @@ get_header();
 	  		<a href="#!">Learn More</a>
 	  	</div>
 	  </div>
+	</div>
+</div>
+
+<div id="featured" class="mb-5">	
+	<div class="container">
+		<div class="slick-slider">
+		  <div>
+		  	<img src="http://via.placeholder.com/260x200">
+		  	<div class="slick-caption text-center">
+		  		<span class="category"><a href="#!">Category</a></span>
+		  		<h1>Beautiful Slider Heading</h1>
+		  	</div>
+		  </div>
+		  <div>
+		  	<img src="http://via.placeholder.com/260x200">
+		  	<div class="slick-caption text-center">
+		  		<span class="category"><a href="#!">Category</a></span>
+		  		<h1>Beautiful Slider Heading</h1>
+		  	</div>
+		  </div>
+		  <div>
+		  	<img src="http://via.placeholder.com/260x200">
+		  	<div class="slick-caption text-center">
+		  		<span class="category"><a href="#!">Category</a></span>
+		  		<h1>Beautiful Slider Heading</h1>
+		  	</div>
+		  </div>
+		  <div>
+		  	<img src="http://via.placeholder.com/260x200">
+		  	<div class="slick-caption text-center">
+		  		<span class="category"><a href="#!">Category</a></span>
+		  		<h1>Beautiful Slider Heading</h1>
+		  	</div>
+		  </div>
+		  <div>
+		  	<img src="http://via.placeholder.com/260x200">
+		  	<div class="slick-caption text-center">
+		  		<span class="category"><a href="#!">Category</a></span>
+		  		<h1>Beautiful Slider Heading</h1>
+		  	</div>
+		  </div>
+		</div>
 	</div>
 </div>
 

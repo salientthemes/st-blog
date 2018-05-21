@@ -1,0 +1,17 @@
+$slick-arrow-height: 40;
+.slick-slider {
+	overflow: hidden;
+	// arrow
+	.slick-arrow {
+	    position: absolute;
+		z-index: 1;
+		top: 50%;
+		margin-top: -#{$slick-arrow-height/2}px;
+		&.slick-next {
+		  right: 0;
+		}
+		&.slick-prev {
+		  left: 0;
+		}
+	}
+}

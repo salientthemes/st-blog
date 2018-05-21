@@ -14,18 +14,7 @@
             
         }
         
-        // arrow
-        .slick-arrow {
-            position: absolute;
-            z-index: 1;
-            top: 50%;
-            &.slick-next {
-                right: 0;
-            }
-            &.slick-prev {
-                left: 0;
-            }
-        }
+        // slick arrow
         
     }
 }
