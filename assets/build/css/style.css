@@ -3,6 +3,12 @@
 @import url("https://fonts.googleapis.com/css?family=Hind:500,600,700|Montserrat:300,300i,400,400i,500,700,700i,900,900i");
 /* colors */
 /*prifix */
+.img-cover {
+  background-size: cover;
+  background-position: center center; }
+  .img-cover > img {
+    opacity: 0; }
+
 ul {
   margin: 0; }
 
@@ -63,9 +69,11 @@ aside .widget_nav_menu ul li {
     aside .widget_nav_menu ul li a:hover {
       color: #EF3F3D; }
 
+a:focus,
 input:focus,
 button:focus,
-textarea:focus {
+textarea:focus,
+.btn:focus {
   box-shadow: none; }
 
 .st-blog-header-wrap .st-blog-head-search form .search-submit, .widget_search form .search-submit, .btn,
@@ -143,9 +151,11 @@ body {
   color: gray;
   font-size: 15px; }
 
+a:focus,
 input:focus,
 button:focus,
-textarea:focus {
+textarea:focus,
+.btn:focus {
   outline: none; }
 
 a:not(.btn) {
@@ -397,6 +407,7 @@ aside .widget_nav_menu {
     text-align: center;
     width: 100%; }
     #banner .slick-slider .slick-slide .slick-caption h1 {
+      color: #fff;
       margin-bottom: 15px; }
 
 #featured .slick-list {

@@ -17,9 +17,11 @@ ul {
 	@extend %no-padding;
 }
 
+a,
 input,
 button,
-textarea {
+textarea,
+.btn {
 	&:focus {
 		outline: none;
 		@extend %no-box-shadow;

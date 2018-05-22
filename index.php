@@ -19,29 +19,24 @@ get_header();
 
 <div id="banner" class="mb-5">
 	<div class="slick-slider">
-	  <div>
-	  	<img src="http://via.placeholder.com/1350x500">
+	  <div class="img-cover" style="background-image: url('https://gdurl.com/6oSg');">
+	  	<img src="<?php echo get_template_directory_uri();?>/assets/build/img/banner.svg">
 	  	<div class="slick-caption">
 	  		<h1>Beautiful Slider Heading</h1>
 	  		<a href="#!" class="btn">Learn More</a>
 	  	</div>
 	  </div>
-	  <div>
-	  	<img src="http://via.placeholder.com/1350x500">
+
+	  <div class="img-cover" style="background-image: url('https://gdurl.com/ctcx');">
+	  	<img src="<?php echo get_template_directory_uri();?>/assets/build/img/banner.svg">
 	  	<div class="slick-caption">
 	  		<h1>Beautiful Slider Heading</h1>
 	  		<a href="#!" class="btn">Learn More</a>
 	  	</div>
 	  </div>
-	  <div>
-	  	<img src="http://via.placeholder.com/1350x500">
-	  	<div class="slick-caption">
-	  		<h1>Beautiful Slider Heading</h1>
-	  		<a href="#!" class="btn">Learn More</a>
-	  	</div>
-	  </div>
-	  <div>
-	  	<img src="http://via.placeholder.com/1350x500">
+
+	  <div class="img-cover" style="background-image: url('http://gdurl.com/VcYZ');">
+	  	<img src="<?php echo get_template_directory_uri();?>/assets/build/img/banner.svg">
 	  	<div class="slick-caption">
 	  		<h1>Beautiful Slider Heading</h1>
 	  		<a href="#!" class="btn">Learn More</a>
@@ -54,40 +49,55 @@ get_header();
 	<div class="container">
 		<div class="slick-slider">
 		  <div>
-		  	<img src="http://via.placeholder.com/260x200">
+		  	<div class="img-cover" style="background-image: url('https://gdurl.com/6oSg');">
+			  	<img src="<?php echo get_template_directory_uri();?>/assets/build/img/featured.svg">
+			</div>
 		  	<div class="slick-caption text-center">
 		  		<span class="category"><a href="#!">Category</a></span>
 		  		<h1>Beautiful Slider Heading</h1>
 		  	</div>
 		  </div>
+		  
 		  <div>
-		  	<img src="http://via.placeholder.com/260x200">
+			<div class="img-cover" style="background-image: url('https://gdurl.com/ctcx');">
+			  	<img src="<?php echo get_template_directory_uri();?>/assets/build/img/featured.svg">
+			</div>
 		  	<div class="slick-caption text-center">
 		  		<span class="category"><a href="#!">Category</a></span>
 		  		<h1>Beautiful Slider Heading</h1>
 		  	</div>
 		  </div>
+		  
 		  <div>
-		  	<img src="http://via.placeholder.com/260x200">
+			<div class="img-cover" style="background-image: url('http://gdurl.com/VcYZ');">
+			  	<img src="<?php echo get_template_directory_uri();?>/assets/build/img/featured.svg">
+			</div>
 		  	<div class="slick-caption text-center">
 		  		<span class="category"><a href="#!">Category</a></span>
 		  		<h1>Beautiful Slider Heading</h1>
 		  	</div>
 		  </div>
+		  
 		  <div>
-		  	<img src="http://via.placeholder.com/260x200">
+			<div class="img-cover" style="background-image: url('http://gdurl.com/xEb3');">
+			  	<img src="<?php echo get_template_directory_uri();?>/assets/build/img/featured.svg">
+			</div>
 		  	<div class="slick-caption text-center">
 		  		<span class="category"><a href="#!">Category</a></span>
 		  		<h1>Beautiful Slider Heading</h1>
 		  	</div>
 		  </div>
+
 		  <div>
-		  	<img src="http://via.placeholder.com/260x200">
+			<div class="img-cover" style="background-image: url('http://gdurl.com/KYd2');">
+			  	<img src="<?php echo get_template_directory_uri();?>/assets/build/img/featured.svg">
+			</div>
 		  	<div class="slick-caption text-center">
 		  		<span class="category"><a href="#!">Category</a></span>
 		  		<h1>Beautiful Slider Heading</h1>
 		  	</div>
 		  </div>
+
 		</div>
 	</div>
 </div>
