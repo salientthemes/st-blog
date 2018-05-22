@@ -18,6 +18,10 @@ a:not(.btn):visited:hover, a:not(.btn):hover, body.head-search-active .st-blog-h
 h1, h2, h3, h4, h5, h6, nav#site-navigation ul a {
   font-family: "Montserrat", sans-serif; }
 
+.post-navigation .nav-previous a:before, .post-navigation .nav-next a:after {
+  font-family: Font Awesome\ 5 Free;
+  font-weight: 900; }
+
 body {
   font-family: "Hind", sans-serif; }
 
@@ -309,6 +313,11 @@ body:not(.home) .site-content {
 .st-blog-site-content {
   margin-left: -15px;
   margin-right: -15px; }
+  .st-blog-site-content:before, .st-blog-site-content:after {
+    content: " ";
+    display: table; }
+  .st-blog-site-content:after {
+    clear: both; }
   .st-blog-site-content #primary,
   .st-blog-site-content #secondary {
     float: left;
@@ -333,6 +342,16 @@ article.hentry {
 article .post-thumbnail {
   margin-bottom: 10px;
   display: block; }
+
+.post-navigation {
+  border-top: 1px solid #b3b3b3;
+  padding-top: 15px; }
+  .post-navigation .nav-previous a:before {
+    content: "\f30a";
+    margin-right: 10px; }
+  .post-navigation .nav-next a:after {
+    content: "\f30b";
+    margin-left: 10px; }
 
 aside .widget_categories,
 aside .widget_archive,
@@ -399,22 +418,22 @@ aside .widget_nav_menu {
 
 #comments .comments-title {
   margin-bottom: 20px; }
-#comments ol.comments-list {
+#comments ol.comment-list {
   margin: 0;
   padding: 0; }
-  #comments ol.comments-list li {
+  #comments ol.comment-list li {
     list-style: none; }
-    #comments ol.comments-list li article {
+    #comments ol.comment-list li article {
       padding-left: 90px;
       position: relative;
       margin-bottom: 30px; }
-      #comments ol.comments-list li article img {
+      #comments ol.comment-list li article img {
         position: absolute;
         left: 0;
         height: 70px;
         width: 70px;
         border-radius: 50%; }
-      #comments ol.comments-list li article .comment-meta {
+      #comments ol.comment-list li article .comment-meta {
         margin-bottom: 10px; }
 
 /*# sourceMappingURL=style.css.map */
