@@ -1,0 +1,9 @@
+.widget_media_gallery {
+	figure.gallery-item {
+	    padding: 2px;
+	    margin: 0;
+	    img {
+	    	width: 100%;//actually targed for .gallery-columns-2
+	    }
+	}
+}

@@ -22,28 +22,28 @@ get_header();
 	  	<img src="http://via.placeholder.com/1350x500">
 	  	<div class="slick-caption">
 	  		<h1>Beautiful Slider Heading</h1>
-	  		<a href="#!">Learn More</a>
+	  		<a href="#!" class="btn">Learn More</a>
 	  	</div>
 	  </div>
 	  <div>
 	  	<img src="http://via.placeholder.com/1350x500">
 	  	<div class="slick-caption">
 	  		<h1>Beautiful Slider Heading</h1>
-	  		<a href="#!">Learn More</a>
+	  		<a href="#!" class="btn">Learn More</a>
 	  	</div>
 	  </div>
 	  <div>
 	  	<img src="http://via.placeholder.com/1350x500">
 	  	<div class="slick-caption">
 	  		<h1>Beautiful Slider Heading</h1>
-	  		<a href="#!">Learn More</a>
+	  		<a href="#!" class="btn">Learn More</a>
 	  	</div>
 	  </div>
 	  <div>
 	  	<img src="http://via.placeholder.com/1350x500">
 	  	<div class="slick-caption">
 	  		<h1>Beautiful Slider Heading</h1>
-	  		<a href="#!">Learn More</a>
+	  		<a href="#!" class="btn">Learn More</a>
 	  	</div>
 	  </div>
 	</div>

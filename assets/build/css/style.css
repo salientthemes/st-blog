@@ -1,4 +1,5 @@
 /* imports all files here */
+/* MIXINS */
 @import url("https://fonts.googleapis.com/css?family=Hind:500,600,700|Montserrat:300,300i,400,400i,500,700,700i,900,900i");
 /* colors */
 /*prifix */
@@ -8,10 +9,13 @@ ul {
 ul {
   padding: 0; }
 
-a:visited:hover, a:hover, body.head-search-active .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler .fa-search, nav#site-navigation ul a:hover, nav#site-navigation ul.menu > li.current-menu-item > a {
+a:not(.btn):visited:hover, a:not(.btn):hover, body.head-search-active .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler .fa-search, nav#site-navigation ul a:hover, nav#site-navigation ul.menu > li.current-menu-item > a {
   color: #EF3F3D; }
 
-nav#site-navigation ul a {
+.st-blog-header-wrap .st-blog-head-search form .search-submit:hover, .widget_search form .search-submit:hover, .btn:hover, .wpcf7-form .wpcf7-submit:hover {
+  background-color: #EF3F3D; }
+
+h1, h2, h3, h4, h5, h6, nav#site-navigation ul a {
   font-family: "Montserrat", sans-serif; }
 
 body {
@@ -32,7 +36,8 @@ aside .widget_archive ul li,
 aside .widget_recent_entries ul li,
 aside .widget_recent_comments ul li,
 aside .widget_meta ul li,
-aside .widget_pages ul li {
+aside .widget_pages ul li,
+aside .widget_nav_menu ul li {
   background-color: #f7f7f7;
   list-style: none;
   margin-bottom: 3px;
@@ -42,41 +47,58 @@ aside .widget_pages ul li {
   aside .widget_recent_entries ul li a,
   aside .widget_recent_comments ul li a,
   aside .widget_meta ul li a,
-  aside .widget_pages ul li a {
+  aside .widget_pages ul li a,
+  aside .widget_nav_menu ul li a {
     color: gray; }
     aside .widget_categories ul li a:hover,
     aside .widget_archive ul li a:hover,
     aside .widget_recent_entries ul li a:hover,
     aside .widget_recent_comments ul li a:hover,
     aside .widget_meta ul li a:hover,
-    aside .widget_pages ul li a:hover {
+    aside .widget_pages ul li a:hover,
+    aside .widget_nav_menu ul li a:hover {
       color: #EF3F3D; }
 
 input:focus,
-button:focus {
+button:focus,
+textarea:focus {
   box-shadow: none; }
 
-.st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler {
-  background: none;
+.st-blog-header-wrap .st-blog-head-search form .search-submit, .widget_search form .search-submit, .btn,
+a.btn, .wpcf7-form .wpcf7-submit {
+  background-color: #000;
   border: 0;
-  cursor: pointer; }
+  border-radius: 0;
+  color: #fff;
+  font-size: 15px;
+  font-size: 1rem;
+  padding: 10px 20px; }
+  .st-blog-header-wrap .st-blog-head-search form .search-submit:hover, .widget_search form .search-submit:hover, .btn:hover, .wpcf7-form .wpcf7-submit:hover {
+    color: #fff; }
+
+.st-blog-header-wrap .st-blog-head-search form label .search-field, .widget_search form label .search-field, .wpcf7-form label input.wpcf7-form-control,
+.wpcf7-form label .wpcf7-form-control {
+  background: #f2f2f2;
+  border: 0;
+  border-radius: 0;
+  padding: 7px 10px;
+  width: 100%; }
 
 .st-blog-header-wrap .st-blog-head-search form, .widget_search form {
   position: relative;
-  padding-right: 56px; }
+  padding-right: 84px; }
   .st-blog-header-wrap .st-blog-head-search form label, .widget_search form label {
     margin-bottom: 0;
     width: 100%; }
     .st-blog-header-wrap .st-blog-head-search form label .search-field, .widget_search form label .search-field {
-      border-radius: 0;
-      width: 100%; }
+      /* border-radius: 0;
+      width: 100%; */ }
   .st-blog-header-wrap .st-blog-head-search form .search-submit, .widget_search form .search-submit {
     position: absolute;
     height: 100%;
     right: 0;
     top: 0; }
 
-/* MIXINS */
 /* foundation */
 /* ====================================
    General site styling
@@ -107,16 +129,20 @@ body a:focus {
   text-decoration: none;
   outline: none; }
 
+html {
+  font-size: 15px; }
+
 body {
   font-size: 15px; }
 
 input:focus,
-button:focus {
+button:focus,
+textarea:focus {
   outline: none; }
 
-a {
+a:not(.btn) {
   color: gray; }
-  a:visited {
+  a:not(.btn):visited {
     color: gray; }
 
 /* import all the components */
@@ -137,6 +163,9 @@ header.site-header {
     background: #fff;
     z-index: 1; }
     .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler {
+      background: none;
+      border: 0;
+      cursor: pointer;
       position: absolute;
       top: 50%;
       right: 0;
@@ -150,7 +179,7 @@ header.site-header {
         color: #EF3F3D; }
   .st-blog-header-wrap .st-blog-head-search {
     background: #f5f5f5;
-    padding: 30px 0;
+    padding: 27px 0;
     position: absolute;
     width: 100%;
     -webkit-transition: 0.4s all ease-in-out;
@@ -284,8 +313,22 @@ aside .widget_archive,
 aside .widget_recent_entries,
 aside .widget_recent_comments,
 aside .widget_meta,
-aside .widget_pages {
+aside .widget_pages,
+aside .widget_nav_menu {
   margin-bottom: 40px; }
+
+.widget_calendar .calendar_wrap caption {
+  background-color: #f2f2f2;
+  caption-side: top;
+  margin-bottom: 6px;
+  padding: 5px;
+  text-align: center; }
+
+.widget_media_gallery figure.gallery-item {
+  padding: 2px;
+  margin: 0; }
+  .widget_media_gallery figure.gallery-item img {
+    width: 100%; }
 
 .slick-slider {
   overflow: hidden; }
@@ -308,6 +351,8 @@ aside .widget_pages {
     padding-bottom: 50px;
     text-align: center;
     width: 100%; }
+    #banner .slick-slider .slick-slide .slick-caption h1 {
+      margin-bottom: 15px; }
 
 #featured .slick-list {
   margin-left: -15px;
@@ -322,5 +367,8 @@ aside .widget_pages {
       display: inline-block; }
     #featured .slick-list .slick-slide .slick-caption h1 {
       font-size: 18px; }
+
+.wpcf7-form label {
+  display: block; }
 
 /*# sourceMappingURL=style.css.map */

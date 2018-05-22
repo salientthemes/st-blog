@@ -1,6 +1,14 @@
+html {
+	font-size: #{$html-font-size}px;
+}
 body {
-	font-size: $font-size;
+	// font-size: $font-size;
+	font-size: #{$html-font-size}px;
 	@extend %font-secondary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@extend %font-primary;
 }
 
 ul {
@@ -9,14 +17,15 @@ ul {
 }
 
 input,
-button {
+button,
+textarea {
 	&:focus {
 		outline: none;
 		@extend %no-box-shadow;
 	}
 }
 
-a {
+a:not(.btn) {
 	color: lighten($color_black, 50%);
 	&:visited {
 		color: lighten($color_black, 50%);	

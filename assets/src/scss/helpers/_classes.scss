@@ -71,10 +71,25 @@
   box-shadow: none;
 }
 
-%btn-reset {
-  background: none;
+%btn-style {
+  background-color: $color_black;
   border: 0;
-  cursor: pointer;
+  border-radius: 0;
+  color: $color_white;
+  @include font-size(15);
+  padding: 10px 20px;
+  &:hover {
+    color: $color_white;
+    @extend %bg-primary;
+  }
+}
+
+%input-style {
+  background: #f2f2f2;
+  border: 0;
+  border-radius: 0;
+  padding: 7px 10px;
+  width: 100%;
 }
 
 %widget-search {
@@ -85,8 +100,9 @@
           margin-bottom: 0;
           width: 100%;
           .search-field {
-              border-radius: 0;
-              width: 100%;
+              /* border-radius: 0;
+              width: 100%; */
+              @extend %input-style;
           }
       }
 
@@ -96,6 +112,8 @@
           right: 0;
           top: 0;
           // z-index: 1;
+
+          @extend %btn-style;
       }
   }
 }
