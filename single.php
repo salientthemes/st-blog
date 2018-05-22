@@ -9,34 +9,29 @@
 
 get_header();
 ?>
-<div class="row">
-	<div class="col-12 col-md-8">
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main">
 
-			<?php
-			while ( have_posts() ) :
-				the_post();
+<div id="primary" class="content-area">
+	<main id="main" class="site-main">
 
-				get_template_part( 'template-parts/content', get_post_type() );
+	<?php
+	while ( have_posts() ) :
+		the_post();
 
-				the_post_navigation();
+		get_template_part( 'template-parts/content', get_post_type() );
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+		the_post_navigation();
 
-			endwhile; // End of the loop.
-			?>
+		// If comments are open or we have at least one comment, load up the comment template.
+		if ( comments_open() || get_comments_number() ) :
+			comments_template();
+		endif;
 
-			</main><!-- #main -->
-		</div><!-- #primary -->		
-	</div>
-	<div class="col-12 col-md-4">
-		<?php get_sidebar(); ?>
-	</div>
-</div>
+	endwhile; // End of the loop.
+	?>
+
+	</main><!-- #main -->
+</div><!-- #primary -->		
+<?php get_sidebar(); ?>
 
 <?php
 get_footer();

@@ -71,6 +71,7 @@
   box-shadow: none;
 }
 
+// form elements
 %btn-style {
   background-color: $color_black;
   border: 0;
@@ -90,6 +91,10 @@
   border-radius: 0;
   padding: 7px 10px;
   width: 100%;
+}
+
+%checkbox-radio-style {
+  margin-right: 10px;
 }
 
 %widget-search {

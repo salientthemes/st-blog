@@ -10,7 +10,7 @@
  */
 
 ?>
-
+		</div><!-- .st-blog-site-content -->
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer st-blog-list">

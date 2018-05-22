@@ -12,7 +12,7 @@ ul {
 a:not(.btn):visited:hover, a:not(.btn):hover, body.head-search-active .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler .fa-search, nav#site-navigation ul a:hover, nav#site-navigation ul.menu > li.current-menu-item > a {
   color: #EF3F3D; }
 
-.st-blog-header-wrap .st-blog-head-search form .search-submit:hover, .widget_search form .search-submit:hover, .btn:hover, .wpcf7-form .wpcf7-submit:hover {
+.st-blog-header-wrap .st-blog-head-search form .search-submit:hover, .widget_search form .search-submit:hover, .btn:hover, .wpcf7-form .wpcf7-submit:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
   background-color: #EF3F3D; }
 
 h1, h2, h3, h4, h5, h6, nav#site-navigation ul a {
@@ -65,7 +65,7 @@ textarea:focus {
   box-shadow: none; }
 
 .st-blog-header-wrap .st-blog-head-search form .search-submit, .widget_search form .search-submit, .btn,
-a.btn, .wpcf7-form .wpcf7-submit {
+a.btn, .wpcf7-form .wpcf7-submit, button, input[type="button"], input[type="reset"], input[type="submit"] {
   background-color: #000;
   border: 0;
   border-radius: 0;
@@ -73,16 +73,19 @@ a.btn, .wpcf7-form .wpcf7-submit {
   font-size: 15px;
   font-size: 1rem;
   padding: 10px 20px; }
-  .st-blog-header-wrap .st-blog-head-search form .search-submit:hover, .widget_search form .search-submit:hover, .btn:hover, .wpcf7-form .wpcf7-submit:hover {
+  .st-blog-header-wrap .st-blog-head-search form .search-submit:hover, .widget_search form .search-submit:hover, .btn:hover, .wpcf7-form .wpcf7-submit:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
     color: #fff; }
 
 .st-blog-header-wrap .st-blog-head-search form label .search-field, .widget_search form label .search-field, .wpcf7-form label input.wpcf7-form-control,
-.wpcf7-form label .wpcf7-form-control {
+.wpcf7-form label .wpcf7-form-control, input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea {
   background: #f2f2f2;
   border: 0;
   border-radius: 0;
   padding: 7px 10px;
   width: 100%; }
+
+input[type=checkbox], input[type=radio] {
+  margin-right: 10px; }
 
 .st-blog-header-wrap .st-blog-head-search form, .widget_search form {
   position: relative;
@@ -133,6 +136,7 @@ html {
   font-size: 15px; }
 
 body {
+  color: gray;
   font-size: 15px; }
 
 input:focus,
@@ -302,6 +306,28 @@ body:not(.home) .site-content {
   padding-top: 30px;
   padding-bottom: 20px; }
 
+.st-blog-site-content {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .st-blog-site-content #primary,
+  .st-blog-site-content #secondary {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px; }
+  .st-blog-site-content #primary {
+    width: 70%; }
+  .st-blog-site-content #secondary {
+    width: 30%; }
+
+body.st-blog-left-sidebar #primary,
+body.st-blog-left-sidebar #secondary {
+  float: right; }
+
+body.st-blog-no-sidebar #primary {
+  width: 100%; }
+body.st-blog-no-sidebar #secondary {
+  display: none; }
+
 article.hentry {
   margin-bottom: 40px; }
 article .post-thumbnail {
@@ -370,5 +396,25 @@ aside .widget_nav_menu {
 
 .wpcf7-form label {
   display: block; }
+
+#comments .comments-title {
+  margin-bottom: 20px; }
+#comments ol.comments-list {
+  margin: 0;
+  padding: 0; }
+  #comments ol.comments-list li {
+    list-style: none; }
+    #comments ol.comments-list li article {
+      padding-left: 90px;
+      position: relative;
+      margin-bottom: 30px; }
+      #comments ol.comments-list li article img {
+        position: absolute;
+        left: 0;
+        height: 70px;
+        width: 70px;
+        border-radius: 50%; }
+      #comments ol.comments-list li article .comment-meta {
+        margin-bottom: 10px; }
 
 /*# sourceMappingURL=style.css.map */

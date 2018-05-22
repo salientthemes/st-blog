@@ -4,3 +4,36 @@ body:not(.home) {
 	    padding-bottom: 20px;
 	}
 }
+
+.st-blog-site-content {
+    margin-left: -15px;
+    margin-right: -15px;
+    #primary,
+	#secondary {
+		float: left;
+	    padding-left: 15px; 
+	    padding-right: 15px;   
+	}
+	#primary {
+	    width: 70%;
+	}
+	#secondary {
+	    width: 30%;
+	}
+}
+
+body.st-blog-left-sidebar {
+	#primary,
+	#secondary {
+		float: right;
+	}
+}
+
+body.st-blog-no-sidebar {
+	#primary {
+		width: 100%;
+	}
+	#secondary {
+		display: none;
+	}
+}
