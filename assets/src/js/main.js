@@ -1,6 +1,6 @@
 jQuery(window).load(function() {
 	// fixed header
-	jQuery('body').addClass('fixed-header'); 
+	jQuery('body').addClass('fixed-header dark-header'); 
 
 	// search toggle
 	jQuery('.st-blog-head-search-toggler').click(function() { 

@@ -1,0 +1,38 @@
+.dark-header {
+	.site-header {	
+		.st-blog-header-wrap-nav {
+		    background: $color_black;
+		    color: $color_white;
+		    // logo
+		    .st-blog-logo-manage {
+		    	.site-branding {
+		    		.site-title {
+		    			a {
+		    				color: $color_white;
+		    			}
+		    		}
+		    	}
+		    }
+		    // search toggler
+		    .st-blog-head-search-toggler {
+		    	color: $color_white;
+		    }
+		}
+	}
+}
+
+// dark-header nav
+.dark-header nav#site-navigation ul.menu > li {
+	> a {
+		color: $color_white;
+		&:hover {
+			@extend %color-primary;
+		}
+	}
+
+	&.current-menu-item {
+		a {
+			@extend %color-primary;
+		}
+	}
+}

@@ -2,7 +2,7 @@ html {
 	font-size: #{$html-font-size}px;
 }
 body {
-	color: lighten($color_black, 50%);
+	color: lighten($color_black, 40%);
 	// font-size: $font-size;
 	font-size: #{$html-font-size}px;
 	@extend %font-secondary;
