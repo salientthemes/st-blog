@@ -1,0 +1,10 @@
+.image {
+	img {
+	    @include transition($transition);
+	}
+	&:hover {
+    	img {
+    		@include scale(1.05);
+    	}
+	}
+}

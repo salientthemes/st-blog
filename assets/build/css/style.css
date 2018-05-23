@@ -242,6 +242,7 @@ header.site-header {
     .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler {
       background: none;
       border: 0;
+      color: #000;
       cursor: pointer;
       position: absolute;
       top: 50%;
@@ -514,5 +515,17 @@ aside .widget_nav_menu {
         border-radius: 50%; }
       #comments ol.comment-list li article .comment-meta {
         margin-bottom: 10px; }
+
+.image img {
+  -webkit-transition: 0.4s all ease-in-out;
+  -moz-transition: 0.4s all ease-in-out;
+  -o-transition: 0.4s all ease-in-out;
+  transition: 0.4s all ease-in-out; }
+.image:hover img {
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05); }
 
 /*# sourceMappingURL=style.css.map */
