@@ -9,6 +9,8 @@ jQuery(window).load(function() {
 	});
 
 	slick_init();
+
+	hide_preloader();
 });
 
 function slick_init() {
@@ -62,4 +64,8 @@ function slick_init() {
 
 		}]
 	});
+}
+
+function hide_preloader() {
+	$('#preloader').hide();
 }

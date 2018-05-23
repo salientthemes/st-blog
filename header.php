@@ -21,6 +21,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div id="preloader" style="">
+	<div id="status" style=""><i class="fa fa-spinner fa-spin"></i></div>
+</div>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'st-blog' ); ?></a>
 
@@ -29,7 +32,7 @@
 			<div class="st-blog-header-wrap-nav">
 				<div class="container">
 					<div class="row">
-						<div class="col-3">
+						<div class="col-3 st-blog-logo-manage">
 							<div class="site-branding">
 								<?php
 								the_custom_logo();
@@ -37,7 +40,8 @@
 									?>
 									<h1 class="site-title">
 										<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-											<img src="<?php echo get_template_directory_uri();?>/assets/build/img/logo.png">
+											<!-- <img src="<?php echo get_template_directory_uri();?>/assets/build/img/logo.png"> -->
+											<?php bloginfo( 'name' ); ?>
 										</a>
 									</h1>
 									<?php
@@ -45,7 +49,8 @@
 									?>
 									<h1 class="site-title">
 										<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-											<img src="<?php echo get_template_directory_uri();?>/assets/build/img/logo.png">
+											<!-- <img src="<?php echo get_template_directory_uri();?>/assets/build/img/logo.png"> -->
+											<?php bloginfo( 'name' ); ?>
 										</a>
 									</h1>
 									<?php

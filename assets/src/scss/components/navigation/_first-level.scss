@@ -31,7 +31,8 @@
 
         > li{
             display: inline-block;
-            font-size: $nav-menu-font-size;
+            // font-size: $nav-menu-font-size;
+            @include font-size($nav-menu-font-size);
             font-weight: normal; 
 
             > a {

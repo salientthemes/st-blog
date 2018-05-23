@@ -1,5 +1,27 @@
 .st-blog-list {
 	li {
 		list-style: none;
+		margin-bottom: 8px;
+		@extend %transition;
+
+		&:before {
+			@extend %font-awesome;
+		    content: "\f101";
+		    margin-right: 5px;
+		}
+		&:hover {
+			padding-left: 10px;
+		}
+	}
+}
+.widget-area {
+	@extend .st-blog-list;
+	li {
+		&:before {
+			color: lighten($color_black, 70%);
+		}
+		&:hover {
+			padding-left: 20px;
+		}
 	}
 }

@@ -46,11 +46,11 @@ get_header();
 </div>
 
 <div id="featured" class="mb-5">	
-	<div class="container">
+	<div class="container site-content">
 		<div class="slick-slider">
 		  <div>
-		  	<div class="img-cover" style="background-image: url('https://gdurl.com/6oSg');">
-			  	<img src="<?php echo get_template_directory_uri();?>/assets/build/img/featured.svg">
+		  	<div class="image">
+			  	<img src="https://gdurl.com/6oSg">
 			</div>
 		  	<div class="slick-caption text-center">
 		  		<span class="category"><a href="#!">Category</a></span>
@@ -59,8 +59,8 @@ get_header();
 		  </div>
 		  
 		  <div>
-			<div class="img-cover" style="background-image: url('https://gdurl.com/ctcx');">
-			  	<img src="<?php echo get_template_directory_uri();?>/assets/build/img/featured.svg">
+			<div class="image">
+			  	<img src="https://gdurl.com/ctcx">
 			</div>
 		  	<div class="slick-caption text-center">
 		  		<span class="category"><a href="#!">Category</a></span>
@@ -69,8 +69,8 @@ get_header();
 		  </div>
 		  
 		  <div>
-			<div class="img-cover" style="background-image: url('http://gdurl.com/VcYZ');">
-			  	<img src="<?php echo get_template_directory_uri();?>/assets/build/img/featured.svg">
+			<div class="image">
+			  	<img src="http://gdurl.com/VcYZ">
 			</div>
 		  	<div class="slick-caption text-center">
 		  		<span class="category"><a href="#!">Category</a></span>
@@ -79,8 +79,8 @@ get_header();
 		  </div>
 		  
 		  <div>
-			<div class="img-cover" style="background-image: url('http://gdurl.com/xEb3');">
-			  	<img src="<?php echo get_template_directory_uri();?>/assets/build/img/featured.svg">
+			<div class="image">
+			  	<img src="http://gdurl.com/xEb3">
 			</div>
 		  	<div class="slick-caption text-center">
 		  		<span class="category"><a href="#!">Category</a></span>
@@ -89,8 +89,8 @@ get_header();
 		  </div>
 
 		  <div>
-			<div class="img-cover" style="background-image: url('http://gdurl.com/KYd2');">
-			  	<img src="<?php echo get_template_directory_uri();?>/assets/build/img/featured.svg">
+			<div class="image">
+			  	<img src="http://gdurl.com/KYd2">
 			</div>
 		  	<div class="slick-caption text-center">
 		  		<span class="category"><a href="#!">Category</a></span>
@@ -102,7 +102,7 @@ get_header();
 	</div>
 </div>
 
-<div class="container">
+<div class="container site-content">
 	<div class="st-blog-site-content">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main">
@@ -124,7 +124,8 @@ get_header();
 						while ( have_posts() ) :
 						
 							echo '<div class="col-sm-6 col-md-12 col-lg-6">';
-						
+								echo '<div class="article-grid">';
+								
 								the_post();
 
 								/*
@@ -134,6 +135,7 @@ get_header();
 								 */
 								get_template_part( 'template-parts/content', get_post_type() );
 
+								echo '</div><!-- .article-grid -->';
 							echo '</div><!-- .col -->';
 
 						endwhile;

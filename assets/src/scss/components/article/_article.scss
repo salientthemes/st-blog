@@ -1,3 +1,5 @@
+$article_image_height: 170px;
+
 article {
 	&.hentry {
     	margin-bottom: 40px;
@@ -5,8 +7,24 @@ article {
 	.entry-title {
 		@extend %entry-title;
 	}
-	.post-thumbnail {
-	    margin-bottom: 10px;
-	    display: block;
+	.image {
+	    overflow: hidden;
+	    margin-bottom: 15px;
+	    
+		.post-thumbnail {
+		    margin-bottom: 10px;
+		    display: block;
+		}
+	}
+	span.cat-links {
+	    margin-right: 10px;
+	}
+}
+
+.article-grid {
+	article {
+		.image {
+			max-height: $article_image_height;
+		}
 	}
 }

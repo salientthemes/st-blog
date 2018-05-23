@@ -1,14 +1,18 @@
 .site-footer {
-    background: #000;
-    color: $color_white;
+    background: $bgcolor_footer;;
+	@extend %color-footer;
 
 	a, 
 	a:visited {
-	    color: $color_white;
+		@extend %color-footer;
 	}
 
 	a:hover {
-	    color: lighten($color_black, 60%);
+	    color: lighten($color_black, 70%);
+	}
+
+	.widget-title {
+		@extend %color-footer;
 	}
 
 	// copyright

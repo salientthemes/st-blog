@@ -16,7 +16,7 @@
 	<footer id="colophon" class="site-footer st-blog-list">
 
 		<div class="container">
-			<div class="st-blog-main-footer">
+			<div class="st-blog-main-footer mt-5">
 				<div class="row">
 					<div class="col">
 						<?php dynamic_sidebar( 'footer-1' ); ?>
@@ -41,7 +41,7 @@
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'st-blog' ), 'st-blog', '<a href="http://underscores.me/">Underscores.me</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'st-blog' ), 'st-blog', '<a href="http://salientthemes.com/">Salientthemes</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
