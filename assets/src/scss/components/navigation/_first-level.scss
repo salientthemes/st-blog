@@ -1,6 +1,8 @@
 %first-level{
     ul{
+        float: right;
         margin: 0;
+        margin-right: 30px;
         padding: 0;
         list-style: none;
         li{
@@ -37,7 +39,7 @@
 
             > a {
                 display: inline-block;
-                padding: 35px 1rem;
+                padding: 33px 1rem;
                 text-transform: uppercase;
             }
             &.current-menu-item {

@@ -35,7 +35,10 @@
 
 	<div class="entry-content">
 		<?php
+		// added for design
 		the_excerpt();
+
+		echo '<a href="'.get_the_permalink().'" class="btn">Read More</a>';
 		
 		// the_content( sprintf(
 		// 	wp_kses(
@@ -58,6 +61,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php st_blog_entry_footer(); ?>
+		<?php //st_blog_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

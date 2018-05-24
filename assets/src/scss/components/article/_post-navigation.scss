@@ -1,19 +1,7 @@
 .post-navigation {
-    border-top: 1px solid lighten($color_black, 70%);
-    padding-top: 15px;
+    @extend %post-navigation;
+}
 
-	.nav-previous a {
-		&:before {
-			content: "\f30a";
-			margin-right: 10px;
-		    @extend %font-awesome;
-		}
-	}
-	.nav-next a {
-		&:after {
-		    content: "\f30b";
-		    margin-left: 10px;
-		    @extend %font-awesome;
-		}
-	}
+.posts-navigation {
+    @extend %post-navigation;
 }

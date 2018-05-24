@@ -1,12 +1,18 @@
+$admin-bar-height: 32px;
+
 body.fixed-header {
 	.site-header {
 	    position: fixed;
 	    top: 0;
 	    width: 100%;
-	    z-index: 100;
+	    z-index: 9999;
 	}
 
 	#page {
-	    padding-top: 90px;
+	    padding-top: $header-height;
 	}
+}
+
+body.admin-bar.fixed-header .site-header {
+    top: $admin-bar-height;
 }

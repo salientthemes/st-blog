@@ -13,6 +13,10 @@
 		</div><!-- .st-blog-site-content -->
 	</div><!-- #content -->
 
+	<div id="instafeed">
+		
+	</div>
+
 	<footer id="colophon" class="site-footer st-blog-list">
 
 		<div class="container">

@@ -2,7 +2,7 @@
     background-size: cover;
     background-position: center center;
     > img {
-      opacity: 0;
+      opacity: 0.2;
     }
 }
 
@@ -77,6 +77,7 @@
   list-style: none;
   margin-bottom: 3px;
   padding: 4px 10px;
+  line-height: 28px;
   a {
     color: lighten($color_black, 50%);
     &:hover {
@@ -95,6 +96,7 @@
   border: 0;
   border-radius: 0;
   color: $color_white;
+  cursor: pointer;
   @include font-size(15);
   padding: 10px 20px;
   &:hover {
@@ -156,4 +158,25 @@
 }
 %flex-h-center {
   justify-content: center;
+}
+
+// post-navigation
+%post-navigation {
+  border-top: 1px solid lighten($color_black, 70%);
+  padding-top: 15px;
+
+  .nav-previous a {
+    &:before {
+      content: "\f30a";
+      margin-right: 10px;
+        @extend %font-awesome;
+    }
+  }
+  .nav-next a {
+    &:after {
+        content: "\f30b";
+        margin-left: 10px;
+        @extend %font-awesome;
+    }
+  }
 }

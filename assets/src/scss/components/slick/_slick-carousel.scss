@@ -1,4 +1,4 @@
-$featured-image-height: 120px;
+$featured-image-height: 200px;
 $featured-heading-font-size: 16px;
 
 #featured {
@@ -20,8 +20,10 @@ $featured-heading-font-size: 16px;
 
 			.slick-caption {
 				span.category {
+					@extend %font-primary;
 				    margin-bottom: 5px;
 				    display: inline-block;
+				    text-transform: uppercase;
 				}
 				h1 {
 				    font-size: $featured-heading-font-size;

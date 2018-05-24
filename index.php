@@ -19,7 +19,7 @@ get_header();
 
 <div id="banner" class="mb-5">
 	<div class="slick-slider">
-	  <div class="img-cover" style="background-image: url('https://gdurl.com/6oSg');">
+	  <div class="img-cover" style="background-image: url('http://gdurl.com/r_PH');">
 	  	<img src="<?php echo get_template_directory_uri();?>/assets/build/img/banner.svg">
 	  	<div class="slick-caption">
 	  		<h1>Beautiful Slider Heading</h1>
@@ -27,7 +27,7 @@ get_header();
 	  	</div>
 	  </div>
 
-	  <div class="img-cover" style="background-image: url('https://gdurl.com/ctcx');">
+	  <div class="img-cover" style="background-image: url('https://gdurl.com/Aq4r');">
 	  	<img src="<?php echo get_template_directory_uri();?>/assets/build/img/banner.svg">
 	  	<div class="slick-caption">
 	  		<h1>Beautiful Slider Heading</h1>
@@ -35,7 +35,7 @@ get_header();
 	  	</div>
 	  </div>
 
-	  <div class="img-cover" style="background-image: url('http://gdurl.com/VcYZ');">
+	  <div class="img-cover" style="background-image: url('https://gdurl.com/Jct1');">
 	  	<img src="<?php echo get_template_directory_uri();?>/assets/build/img/banner.svg">
 	  	<div class="slick-caption">
 	  		<h1>Beautiful Slider Heading</h1>
@@ -50,51 +50,51 @@ get_header();
 		<div class="slick-slider">
 		  <div>
 		  	<div class="image">
-			  	<img src="https://gdurl.com/6oSg">
+			  	<img src="https://gdurl.com/5XRj">
 			</div>
 		  	<div class="slick-caption text-center">
 		  		<span class="category"><a href="#!">Category</a></span>
-		  		<h1>Beautiful Slider Heading</h1>
+		  		<h1><a href="#!">Beautiful Slider Heading</a></h1>
 		  	</div>
 		  </div>
 		  
 		  <div>
 			<div class="image">
-			  	<img src="https://gdurl.com/ctcx">
+			  	<img src="http://gdurl.com/5EjE">
 			</div>
 		  	<div class="slick-caption text-center">
 		  		<span class="category"><a href="#!">Category</a></span>
-		  		<h1>Beautiful Slider Heading</h1>
+		  		<h1><a href="#!">Beautiful Slider Heading</a></h1>
 		  	</div>
 		  </div>
 		  
 		  <div>
 			<div class="image">
-			  	<img src="http://gdurl.com/VcYZ">
+			  	<img src="http://gdurl.com/BWro">
 			</div>
 		  	<div class="slick-caption text-center">
 		  		<span class="category"><a href="#!">Category</a></span>
-		  		<h1>Beautiful Slider Heading</h1>
+		  		<h1><a href="#!">Beautiful Slider Heading</a></h1>
 		  	</div>
 		  </div>
 		  
 		  <div>
 			<div class="image">
-			  	<img src="http://gdurl.com/xEb3">
+			  	<img src="http://gdurl.com/NNTv">
 			</div>
 		  	<div class="slick-caption text-center">
 		  		<span class="category"><a href="#!">Category</a></span>
-		  		<h1>Beautiful Slider Heading</h1>
+		  		<h1><a href="#!">Beautiful Slider Heading</a></h1>
 		  	</div>
 		  </div>
 
 		  <div>
 			<div class="image">
-			  	<img src="http://gdurl.com/KYd2">
+			  	<img src="http://gdurl.com/qmTx">
 			</div>
 		  	<div class="slick-caption text-center">
 		  		<span class="category"><a href="#!">Category</a></span>
-		  		<h1>Beautiful Slider Heading</h1>
+		  		<h1><a href="#!">Beautiful Slider Heading</a></h1>
 		  	</div>
 		  </div>
 

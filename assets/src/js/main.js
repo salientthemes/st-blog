@@ -5,15 +5,15 @@ jQuery(window).load(function() {
 	// search toggle
 	jQuery('.st-blog-head-search-toggler').click(function() { 
 		// console.log('clicked');
-		jQuery('body').toggleClass('head-search-active'); 
+		jQuery('body').toggleClass('head-search-active');
+
+		// focus search input
+		if(jQuery('body').hasClass('head-search-active')) {
+			$('header.site-header .st-blog-head-search input.search-field').focus();
+		}
 	});
 
-	slick_init();
-
-	hide_preloader();
-});
-
-function slick_init() {
+	// slick_init
 	jQuery("#banner .slick-slider").slick({
 		// normal options...
 		arrows: true,
@@ -25,6 +25,8 @@ function slick_init() {
 		pauseOnHover: false,
 		prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>',
 		nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>',
+		speed: 800,
+		useCSS: true,
 	});
 
 	jQuery("#featured .slick-slider").slick({
@@ -39,6 +41,8 @@ function slick_init() {
 		slidesToShow: 4,
 		prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>',
 		nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>',
+		speed: 800,
+		useCSS: true,
 
 		// the magic
 		responsive: [{
@@ -64,8 +68,7 @@ function slick_init() {
 
 		}]
 	});
-}
 
-function hide_preloader() {
+	// hide_preloader
 	$('#preloader').hide();
-}
+});
