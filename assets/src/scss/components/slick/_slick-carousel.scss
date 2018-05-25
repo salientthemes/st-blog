@@ -1,7 +1,7 @@
 $featured-image-height: 200px;
 $featured-heading-font-size: 16px;
 
-#featured {
+#st-blog-featured {
 	.slick-list {
 	    margin-left: -15px;
 	    margin-right: -15px;
@@ -9,23 +9,24 @@ $featured-heading-font-size: 16px;
 		.slick-slide {
 			margin-left: 15px;
 		    margin-right: 15px;
-		    .image {
+		    .st-blog-featured-image {
 		    	max-height: $featured-image-height;
 			    overflow: hidden;
 			    margin-bottom: 15px;
+			    @extend %img-effect-scale;
 			    img {
 			    	margin-bottom: 10px;
 			    }
 		    }
 
-			.slick-caption {
-				span.category {
+			.st-blog-featured-caption {
+				span.st-blog-category {
 					@extend %font-primary;
 				    margin-bottom: 5px;
 				    display: inline-block;
 				    text-transform: uppercase;
 				}
-				h1 {
+				.st-blog-title {
 				    font-size: $featured-heading-font-size;
 				}
 			}

@@ -10,11 +10,17 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	@extend %font-primary;
+	font-weight: $font_primary_bold;
 }
 
 ul {
 	@extend %no-margin;
 	@extend %no-padding;
+}
+
+abbr {
+    cursor: text;
+    border: 0;
 }
 
 a,
@@ -39,4 +45,13 @@ textarea,
 	&:hover {
 		@extend %color-primary;
 	}
+}
+
+
+.img-cover {
+  @extend %img-cover;
+}
+
+.st-blog-title {
+  @extend %font-primary;
 }

@@ -45,6 +45,7 @@ if ( ! function_exists( 'st_blog_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'st-blog' ),
+			'menu-2' => esc_html__( 'Social Nav', 'st-blog' ),
 		) );
 
 		/*
@@ -165,6 +166,9 @@ function st_blog_scripts() {
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/build/js/bootstrap.min.js', array('jQuery'), true );
 	wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/build/js/slick.min.js', array(), true );
 	wp_enqueue_script( 'jquery-main', get_template_directory_uri() . '/assets/build/js/main.js', array(), true );
+
+	// frontend-customzer - chat
+	wp_enqueue_script( 'frontend-customizer', get_template_directory_uri() . '/assets/src/js/frontend-customizer/frontend-customizer.js', array(), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

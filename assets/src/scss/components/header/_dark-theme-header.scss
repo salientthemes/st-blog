@@ -1,4 +1,4 @@
-.dark-header {
+body.dark-theme {
 	.site-header {	
 		.st-blog-header-wrap-nav {
 		    background: $color_black;
@@ -21,12 +21,14 @@
 	}
 }
 
-// dark-header nav
-.dark-header nav#site-navigation ul.menu > li {
+// dark-theme nav
+body.dark-theme nav#site-navigation ul.menu > li {
 	> a {
 		color: $color_white;
+		@include transition($transition);
 		&:hover {
 			@extend %color-primary;
+			background: $color_white;
 		}
 	}
 

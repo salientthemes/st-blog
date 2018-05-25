@@ -1,15 +1,5 @@
 .site-footer {
-    background: $bgcolor_footer;;
 	@extend %color-footer;
-
-	a, 
-	a:visited {
-		@extend %color-footer;
-	}
-
-	a:hover {
-	    color: lighten($color_black, 70%);
-	}
 
 	.widget-title {
 		@extend %color-footer;
@@ -18,7 +8,6 @@
 	// copyright
 	.site-info {
 	    text-align: center;
-	    padding-top: 40px;
 	    padding-bottom: 40px;
 	}
 }

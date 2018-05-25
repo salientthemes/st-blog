@@ -2,6 +2,7 @@
 	figure.gallery-item {
 	    padding: 2px;
 	    margin: 0;
+	    @extend %img-effect-scale;
 	    img {
 	    	width: 100%;//actually targed for .gallery-columns-2
 	    }

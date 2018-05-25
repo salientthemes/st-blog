@@ -1,0 +1,11 @@
+#st-blog-instafeed {
+	.st-blog-instafeed-image {
+		height: 125px;
+		@extend %img-effect-scale;
+		img {
+			// showing demo images
+			height: 100%;
+			width: 100%;
+		}
+	}
+}

@@ -13,5 +13,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 ?>
 
 <aside id="secondary" class="widget-area">
+	<?php get_template_part('template-parts/markup/sidebar-author');?>
+	<?php get_template_part('template-parts/markup/sidebar-popular-posts');?>
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->

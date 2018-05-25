@@ -1,4 +1,9 @@
 aside {
+	.widget {
+		margin-bottom: 40px;		
+	}
+}
+aside {
 	.widget_categories,
 	.widget_archive,
 	.widget_recent_entries,
@@ -6,7 +11,6 @@ aside {
 	.widget_meta,
 	.widget_pages,
 	.widget_nav_menu {
-		margin-bottom: 40px;
 		ul {
 			li {
 				@extend %widget-categories-list;

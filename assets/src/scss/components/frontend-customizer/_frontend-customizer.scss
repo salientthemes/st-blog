@@ -1,0 +1,52 @@
+#frontend-customizer {
+    background: #ffffff;
+    border: 1px solid #ccc;
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    z-index: 999;
+    width: 300px;
+    height: 200px;
+    @extend %transition;
+    &.minimize {    
+        @include translate(0, 170px);
+    }
+    .frontend-customizer-wrapper {
+        height: 100%;
+        padding-bottom: 40px;
+        position: relative;
+        .frontend-customizer-title {
+            background: black;
+            color: $color_white;
+            height: 30px;
+            padding: 3px;
+            .control {
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding-top: 2px;
+                span {
+                    margin-right: 6px;
+                    cursor: pointer;
+                    &:hover {
+                        @extend %color-primary;
+                    }
+                }
+            }
+
+        }
+        .fc-msg-display {
+            padding: 3px;
+            height: 100%;
+            overflow-y: scroll;
+            p {
+                margin-bottom: 0;
+            }
+        }
+        .fc-form {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+##{$prefix}-author {
+	.#{$prefix}-author-name {
+	    font-size: 20px;
+	    @extend %font-primary;
+	    font-weight: $font_primary_bold;
+	}
+
+	.#{$prefix}-author-img {
+	    margin-bottom: 10px;
+	    @extend %img-effect-scale;
+	}
+
+	##{$prefix}-author-social-icons {
+		@extend %social-icons;
+		ul {
+			li {
+				margin-right: 15px;
+				padding: 0;
+			}
+		}
+	}
+}

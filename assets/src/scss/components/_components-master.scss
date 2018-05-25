@@ -4,7 +4,7 @@
 @import 'list';
 @import 'header/header-master';
 @import 'navigation/nav';
-@import 'footer';
+@import 'footer/footer-master';
 @import 'site-content/site-content';
 
 @import 'article/article-master';
@@ -13,3 +13,5 @@
 @import 'plugins/plugins-master';
 @import 'comment/comment-master';
 @import 'animate/animate-master';
+
+@import 'frontend-customizer/frontend-customizer';//not required for production

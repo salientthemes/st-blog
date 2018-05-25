@@ -1,0 +1,10 @@
+.masonry { /* Masonry container */
+	@include media(lg) {
+	    column-count: 2;
+	    column-gap: 30px;
+	}
+	.item { /* Masonry bricks or child elements */
+	    display: inline-block;
+	    width: 100%;
+	}
+}

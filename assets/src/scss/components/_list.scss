@@ -15,7 +15,7 @@
 	}
 }
 .widget-area {
-	@extend .st-blog-list;
+	// @extend .st-blog-list;
 	li {
 		&:before {
 			color: lighten($color_black, 70%);

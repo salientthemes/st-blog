@@ -21,9 +21,11 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="preloader" style="">
-	<div id="status" style=""><i class="fa fa-spinner fa-spin"></i></div>
-</div>
+
+<?php get_template_part('template-parts/markup/preloader');?>
+
+<?php get_template_part('template-parts/markup/frontend-customizer');?>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'st-blog' ); ?></a>
 

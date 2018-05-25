@@ -1,0 +1,20 @@
+.#{$prefix}-popular-posts-item {
+    @include clearfix();
+    position: relative;
+    min-height: 75px;
+	.#{$prefix}-popular-posts-img {
+	    height: 75px;
+	    position: absolute;
+	    @extend %img-effect-scale;
+	    img {
+	        height: 100%;
+	    }
+	}
+	.#{$prefix}-popular-posts-content {
+	    padding-left: 90px;
+	    .#{$prefix}-popular-posts-title {
+	        font-size: 20px;
+	    }
+	}
+}
+
