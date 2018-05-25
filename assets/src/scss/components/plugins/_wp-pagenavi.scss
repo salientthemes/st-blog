@@ -1,0 +1,22 @@
+.wp-pagenavi {
+    float: right;
+	a {
+	    background-color: lighten($color_black, 50%);
+	    // @extend %color-white;
+	    color: $color_white !important;
+	}
+	
+	a, 
+	span {
+		border: 0;
+	    padding: 3px 10px;
+	}
+
+	a:hover, 
+	span.current {
+		@extend %bg-primary;
+	    // @extend %color-white;
+	    color: $color_white !important; 
+	    font-weight: normal;
+	}
+}

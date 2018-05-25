@@ -1,0 +1,7 @@
+.dark-theme-coloured {
+	.widget-title, .widgettitle {
+		@extend %widget-title;
+
+		color: $color_primary;
+	}
+}

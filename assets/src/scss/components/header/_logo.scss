@@ -1,6 +1,6 @@
 $logo_size: 24;
 
-.st-blog-logo-manage {
+.#{$prefix}-logo-manage {
     @extend %flex;
     @extend %flex-v-center;
 

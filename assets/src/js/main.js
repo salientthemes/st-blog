@@ -1,6 +1,6 @@
 jQuery(window).load(function() {
 	// fixed header
-	jQuery('body').addClass('fixed-header dark-theme');
+	jQuery('body').addClass('fixed-header box-layout');
 
 	// search toggle
 	jQuery('.st-blog-head-search-toggler').click(function() { 
@@ -20,6 +20,7 @@ jQuery(window).load(function() {
 		autoplay: true,
 		autoplaySpeed: 4000,
 		draggable: true,
+		dots: true,
 		fade: true,
 		infinite: true,
 		pauseOnFocus: false,
@@ -28,30 +29,6 @@ jQuery(window).load(function() {
 		nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>',
 		speed: 800,
 		useCSS: true,
-
-		// the magic
-		responsive: [{
-
-		  breakpoint: 1024,
-		  settings: {
-		    slidesToShow: 3,
-		    infinite: true
-		  }
-
-		}, {
-
-		  breakpoint: 600,
-		  settings: {
-		    slidesToShow: 2,
-		    dots: true
-		  }
-
-		}, {
-
-		  breakpoint: 300,
-		  settings: "unslick" // destroys slick
-
-		}]
 	});
 
 	jQuery(".st-blog-featured-slider").slick({
@@ -60,6 +37,7 @@ jQuery(window).load(function() {
 		autoplay: true,
 		autoplaySpeed: 4000,
 		draggable: true,
+		dots: true,
 		infinite: true,
 		pauseOnFocus: false,
 		pauseOnHover: true,
@@ -78,20 +56,30 @@ jQuery(window).load(function() {
 		    infinite: true
 		  }
 
-		}, {
+		}, 
+		{
 
-		  breakpoint: 600,
+		  breakpoint: 991,
 		  settings: {
 		    slidesToShow: 2,
-		    dots: true
 		  }
 
-		}, {
+		}, 
+		{
+
+		  breakpoint: 575,
+		  settings: {
+		    slidesToShow: 1,
+		  }
+
+		}, 
+		/*{
 
 		  breakpoint: 300,
 		  settings: "unslick" // destroys slick
 
-		}]
+		}*/
+		]
 	});
 
 	jQuery(".st-blog-instafeed-slider").slick({
@@ -100,6 +88,7 @@ jQuery(window).load(function() {
 		autoplay: true,
 		autoplaySpeed: 4000,
 		draggable: true,
+		dots: false,
 		infinite: true,
 		pauseOnFocus: false,
 		pauseOnHover: true,
@@ -114,24 +103,34 @@ jQuery(window).load(function() {
 
 		  breakpoint: 1024,
 		  settings: {
-		    slidesToShow: 3,
+		    slidesToShow: 6,
 		    infinite: true
 		  }
 
-		}, {
+		}, 
+		{
 
-		  breakpoint: 600,
+		  breakpoint: 991,
 		  settings: {
-		    slidesToShow: 2,
-		    dots: true
+		    slidesToShow: 4,
 		  }
 
-		}, {
+		}, 
+		{
+
+		  breakpoint: 575,
+		  settings: {
+		    slidesToShow: 2,
+		  }
+
+		}, 
+		/*{
 
 		  breakpoint: 300,
 		  settings: "unslick" // destroys slick
 
-		}]
+		}*/
+		]
 	});
 
 	// hide_preloader

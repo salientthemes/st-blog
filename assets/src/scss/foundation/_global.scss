@@ -52,6 +52,6 @@ textarea,
   @extend %img-cover;
 }
 
-.st-blog-title {
+.#{$prefix}-title {
   @extend %font-primary;
 }

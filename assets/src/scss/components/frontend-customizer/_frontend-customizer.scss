@@ -1,6 +1,7 @@
 #frontend-customizer {
     background: #ffffff;
     border: 1px solid #ccc;
+    font-size: 13px;
     position: fixed;
     bottom: 0;
     right: 20px;
@@ -13,7 +14,7 @@
     }
     .frontend-customizer-wrapper {
         height: 100%;
-        padding-bottom: 40px;
+        padding-bottom: 70px;
         position: relative;
         .frontend-customizer-title {
             background: black;

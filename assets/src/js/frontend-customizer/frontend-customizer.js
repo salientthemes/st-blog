@@ -20,9 +20,9 @@ function create_chatbox_ui() {
 				<span class="minimize"><i class="fas fa-minus"></i></span>
 			</div>
 		</div>
-		<div class="fc-msg-display"><p class="text-right">Hello my friend!</p></div>
+		<div class="fc-msg-display"><p class="text-right">Hello my friend! Want AI to customize theme?</p></div>
 		<form class="fc-form">
-			<input type="text" class="fc-input-msg" value="">
+			<input type="text" class="fc-input-msg" value="" placeholder="Please type something">
 		</form>
 	</div>
 	`;
@@ -61,19 +61,47 @@ function frontend_customizer_run($input_msg) {
 
 	switch ($input_msg) {
 	    case 'help':
-	        bot_msg = "type 'dark-theme disable'";
+	        bot_msg = `type '1 or dark-theme-coloured enable'<br>
+	        			type '2 or dark-theme enable<br>
+	        			type '-3 or box-layout disable'
+	        			'`;
 	        break;
-	    case 'dark-theme disable':
-	        bot_msg = "disabling dark-theme";
-	        dark_theme('disable');
+
+	    case '1':
+	    case 'dark-theme-coloured enable':
+	        bot_msg = "enabling dark-theme-coloured";
+	        dark_theme_coloured('enable');
 	        break;
+	    case '-1':
+	    case 'dark-theme-coloured disable':
+	        bot_msg = "disabling dark-theme-coloured";
+	        dark_theme_coloured('disable');
+	        break;
+
+	    case '2':
 	    case 'dark-theme enable':
 	        bot_msg = "enabling dark-theme";
 	        dark_theme('enable');
 	        break;
+	    case '-2':
+	    case 'dark-theme disable':
+	        bot_msg = "disabling dark-theme";
+	        dark_theme('disable');
+	        break;
+
+	    case '3':
+	    case 'box-layout enable':
+	        bot_msg = "enabling box-layout";
+	        box_layout('enable');
+	        break;
+	    case '-3':
+	    case 'box-layout disable':
+	        bot_msg = "disabling box-layout";
+	        box_layout('disable');
+	        break;
 
 	    default:
-	    	bot_msg = "type 'help'";
+	    	bot_msg = "I'm still learning. Please type 'help' for now.";
 	}
 
 	return '<p class="text-right">'+bot_msg+'</p>';
@@ -85,5 +113,23 @@ function dark_theme($todo) {
 	}
 	else {
 		jQuery('body').removeClass('dark-theme');
+	}
+}
+
+function dark_theme_coloured($todo) {
+	if($todo == 'enable') {
+		jQuery('body').addClass('dark-theme dark-theme-coloured');//.dark-theme-coloured requires .dark-theme
+	}
+	else {
+		jQuery('body').removeClass('dark-theme-coloured');
+	}
+}
+
+function box_layout($todo) {
+	if($todo == 'enable') {
+		jQuery('body').addClass('box-layout');
+	}
+	else {
+		jQuery('body').removeClass('box-layout');
 	}
 }

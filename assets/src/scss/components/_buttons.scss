@@ -2,3 +2,14 @@
 a.btn {
 	@extend %btn-style;
 }
+
+.readmore {
+	i {
+		margin-left: 5px;
+	}
+	&:after {
+		content: "\f30b";
+		@extend %font-awesome;
+		margin-left: 10px;
+	}
+}

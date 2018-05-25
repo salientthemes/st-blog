@@ -1,11 +1,10 @@
 
-
 // added extra class for head search
-.st-blog-header-wrap {
+.#{$prefix}-header-wrap {
     position: relative;
     min-height: $header-height;
 
-    .st-blog-header-wrap-nav {
+    .#{$prefix}-header-wrap-nav {
         position: absolute;
         width: 100%;
         left: 0;
@@ -14,29 +13,37 @@
         z-index: 1;
     
         // search toggler
-        .st-blog-head-search-toggler {
+        .#{$prefix}-head-search-toggler {
             background: none;
             border: 0;
             color: $color_black;
             cursor: pointer;
   
             position: absolute;
-            top: 50%;
-            right: 0;
-            margin-top: -#{$head-search-toggler-height / 2}px;
+            // top: 50%;
+            // margin-top: -#{$head-search-toggler-height / 2}px;
+            top: 0;
+            height: 100%;
+            right: 15px;
+            width: 55px;
+            @include transition($transition);
             .fa-search {
                 &:before {
-                    @include transition($transition);
                 }
                 &:hover {
-                    color: $color_primary;
+                }
+            }
+            &:hover {
+                background-color: $color_white;
+                i {
+                    color: $color_primary;                    
                 }
             }
         }
     }
 
     // search
-    .st-blog-head-search {
+    .#{$prefix}-head-search {
         background: #f5f5f5;
         padding: 27px 0;
         position: absolute;
@@ -50,13 +57,14 @@
 
 
 body.head-search-active {
-    .st-blog-header-wrap {
+    .#{$prefix}-header-wrap {
         position: relative;
         min-height: $header-height;
 
-        .st-blog-header-wrap-nav {
+        .#{$prefix}-header-wrap-nav {
             // search toggler
-            .st-blog-head-search-toggler {
+            .#{$prefix}-head-search-toggler {
+                background-color: $color_white;
                 .fa-search {
                     @extend %color-primary;
                     &:before {
@@ -67,7 +75,7 @@ body.head-search-active {
         }
 
         // search
-        .st-blog-head-search {
+        .#{$prefix}-head-search {
             @include translate(0, 100%);
         }
     }

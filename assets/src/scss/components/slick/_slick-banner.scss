@@ -1,13 +1,13 @@
-#st-blog-banner {
-    .st-blog-banner-slider {
+##{$prefix}-banner {
+    .#{$prefix}-banner-slider {
         .slick-slide {
             position: relative;
             
-            .st-blog-banner-image {
+            .#{$prefix}-banner-image {
                 @extend %img-cover;
                 height: calc(100vh - 200px);
             
-                .st-blog-banner-caption {
+                .#{$prefix}-banner-caption {
                     position: absolute;
                     left: 0;
                     text-align: center;
@@ -22,6 +22,14 @@
         }
         
         // slick arrow
+
+        // slick-dots
+        ul.slick-dots {
+            position: absolute;
+            bottom: 20px;
+            right: 50px;
+            z-index: 1;
+        }
 
     }
 }

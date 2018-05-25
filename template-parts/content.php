@@ -38,7 +38,7 @@
 		// added for design
 		the_excerpt();
 
-		echo '<a href="'.get_the_permalink().'" class="btn">Read More</a>';
+		echo '<a href="'.get_the_permalink().'" class="readmore">Read More</a>';
 		
 		// the_content( sprintf(
 		// 	wp_kses(

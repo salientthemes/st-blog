@@ -37,11 +37,11 @@ get_header();
 					<?php
 				endif;
 					
-					echo '<div class="masonry">';
+					echo '<div class="st-blog-masonry">';
 
 						/* Start the Loop */
 						while ( have_posts() ) :
-							echo '<div class="item article-grid">';
+							echo '<div class="st-blog-item article-grid">';
 							
 							the_post();
 
@@ -58,7 +58,8 @@ get_header();
 
 					echo '</div><!-- .masonry -->';
 
-				the_posts_navigation();
+				// the_posts_navigation();
+					 wp_pagenavi(); 
 
 			else :
 

@@ -1,0 +1,39 @@
+// dark-theme
+.dark-theme {
+	// social icons
+	##{$prefix}-social-icons {
+		@extend %social-icons;
+		ul {
+			li {
+				a {
+					@extend %btn-style;
+				}
+			}
+		}
+	}
+}
+
+// dark-theme-coloured
+.dark-theme-coloured {
+	.btn,
+	a.btn,
+	button,
+	input[type="submit"],
+	.st-blog-header-wrap .st-blog-head-search form .search-submit {
+		@extend %btn-style;
+
+		@extend %btn-style-coloured;
+	}
+
+	// social icons
+	##{$prefix}-social-icons {
+		@extend %social-icons;
+		ul {
+			li {
+				a {
+					@extend %btn-style-coloured;
+				}
+			}
+		}
+	}
+}

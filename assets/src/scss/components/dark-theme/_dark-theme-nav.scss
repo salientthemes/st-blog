@@ -1,0 +1,18 @@
+// dark-theme nav
+body.dark-theme nav#site-navigation ul.menu > li {
+	> a {
+		color: $color_white;
+		@include transition($transition);
+		&:hover {
+			@extend %color-primary;
+			background: $color_white;
+		}
+	}
+
+	&.current-menu-item {
+		a {
+			@extend %color-primary;
+			background: $color_white;
+		}
+	}
+}

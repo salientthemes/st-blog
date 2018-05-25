@@ -1,30 +1,32 @@
 $article_image_height: 220px;
 
-article {
-	&.hentry {
-    	margin-bottom: 40px;
-	}
-	.entry-title {
-		@extend %entry-title;
-	}
-	.image {
-	    overflow: hidden;
-	    margin-bottom: 15px;
-	    
-		.post-thumbnail {
-		    margin-bottom: 10px;
-		    display: block;
+.site-content {
+	article {
+		&.hentry {
+	    	margin-bottom: 40px;
+		}
+		.entry-title {
+			@extend %entry-title;
+		}
+		.image {
+		    overflow: hidden;
+		    margin-bottom: 15px;
+		    
+			.post-thumbnail {
+			    margin-bottom: 10px;
+			    display: block;
+			}
+		}
+		span.cat-links {
+		    margin-right: 10px;
 		}
 	}
-	span.cat-links {
-	    margin-right: 10px;
-	}
-}
 
-.article-grid {
-	article {
-		.image {
-			max-height: $article_image_height;
+	.article-grid {
+		article {
+			.image {
+				max-height: $article_image_height;
+			}
 		}
 	}
 }

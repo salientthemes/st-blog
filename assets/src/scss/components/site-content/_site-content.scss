@@ -15,11 +15,21 @@ body:not(.home) {
 	    padding-left: 15px; 
 	    padding-right: 15px;   
 	}
-	#primary {
-	    width: 70%;
+	@include media(sm) {
+		#primary {
+		    width: 60%;
+		}
+		#secondary {
+		    width: 40%;
+		}
 	}
-	#secondary {
-	    width: 30%;
+	@include media(lg) {
+		#primary {
+		    width: 70%;
+		}
+		#secondary {
+		    width: 30%;
+		}
 	}
 }
 

@@ -1,0 +1,35 @@
+body.dark-theme {
+	.site-header {	
+		.#{$prefix}-header-wrap-nav {
+		    background: $color_black;
+		    color: $color_white;
+		    // logo
+		    .#{$prefix}-logo-manage {
+		    	.site-branding {
+		    		.site-title {
+		    			a {
+		    				color: $color_white;
+		    			}
+		    		}
+		    	}
+		    }
+		    // search toggler
+		    .#{$prefix}-head-search-toggler {
+		    	color: $color_white;
+		    }
+		}
+	}
+
+
+	&.dark-theme-coloured {
+		.site-header {
+			.#{$prefix}-header-wrap-nav {
+				@extend %bg-primary;
+			}
+		}
+
+		.site-footer {
+			@extend %bg-primary;
+		}
+	}
+}
