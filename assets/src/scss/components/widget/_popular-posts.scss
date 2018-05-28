@@ -15,8 +15,12 @@
 	    .#{$prefix}-popular-posts-title {
 	        font-size: 20px;
 	        a {
-	        	color: $color_black;
+	        	// color: $color_black;
+	        	@extend %color-black;
 	        	font-weight: $font_primary_medium;
+	        	&:hover {
+	        		@extend %color-primary;
+	        	}
 	        }
 	    }
 	}

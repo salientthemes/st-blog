@@ -24,7 +24,7 @@
             // margin-top: -#{$head-search-toggler-height / 2}px;
             top: 0;
             height: 100%;
-            right: 15px;
+            right: 44px;
             width: 55px;
             @include transition($transition);
             .fa-search {
@@ -38,6 +38,9 @@
                 i {
                     color: $color_primary;                    
                 }
+            }
+            @include media(md) {
+                right: 15px;
             }
         }
     }

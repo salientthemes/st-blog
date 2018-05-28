@@ -55,14 +55,14 @@
 }
 
 %entry-title {
-  color: $color_black;
+  color: $color_title;
   font-size: 24px;
   font-weight: $font_primary_medium;
   a {
-    color: $color_black;
-  }
-  a:not(.btn) {
-    color: $color_black;
+    color: $color_title;
+    &:hover {
+      color: $color_primary;
+    }
   }
 }
 

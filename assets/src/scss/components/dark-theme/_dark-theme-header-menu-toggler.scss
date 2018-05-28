@@ -1,0 +1,22 @@
+body.dark-theme {
+	header.site-header {
+		// menu toggler
+		.st-blog-header-wrap-nav .container {
+
+			.st-blog-menu-toggler-manage {
+
+				#menu-icon.menu-toggler {
+					span {
+						@extend %bg-white;
+					}
+				    &:hover {
+				    	@extend %bg-white;
+				    	span {
+				    		@extend %bg-primary;
+				    	}
+				    }
+				}
+			}
+		}
+	}
+}

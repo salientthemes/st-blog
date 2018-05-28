@@ -20,7 +20,8 @@ $mr-line-animation: 0.35s ease;
     
     span {
         display: block;
-        position: absolute;
+        // position: absolute;
+        margin-bottom: 7px;
         height: 2px;
         width: 100%;
         background: $mr-line-color;

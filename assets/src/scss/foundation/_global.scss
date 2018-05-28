@@ -34,7 +34,7 @@ textarea,
 	}
 }
 
-.site-content a:not(.btn) {
+.site-content a {//:not(.btn)
 	color: lighten($color_black, 50%);
 	&:visited {
 		color: lighten($color_black, 50%);	

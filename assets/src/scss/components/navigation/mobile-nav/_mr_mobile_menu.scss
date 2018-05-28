@@ -7,8 +7,8 @@ $mr_overlay_color   : rgba(#000, 0.8);
 $mr_menu_width      : 300px;   
 $mr_menu_color      : #272727;
 $mr_menu_text_color : #fff;  
-$mr-font            : Oswald; // if you inherit font then remove this variable
-$prefix             : 'mr-mobile';
+$mr-font            : 'Roboto Condensed', sans-serif; // if you inherit font then remove this variable
+$mr_prefix             : 'mr-mobile';
 
 //  font-size
 $mr-fs-first-level  : 16px; /* fs = font size */
@@ -24,8 +24,10 @@ $mr_close_button_size      : 20px;
 $mr_close_button_position  : right;
 $mr_colse_button_animation : true;
 
+$mr_menu_z_index: 9999;
+
 //Browser reset
-.#{$prefix}-menu{
+.#{$mr_prefix}-menu{
     ul {
         margin: 0;
         padding: 0;
@@ -35,14 +37,14 @@ $mr_colse_button_animation : true;
 
 // OVERLAY FOR MOBILE MENU
 @if ( $overlay ){
-  .#{$prefix}-menu-overlay {
+  .#{$mr_prefix}-menu-overlay {
       background-color: rgba( $mr_overlay_color, 0.6 );
       position: fixed;
       left: 0;
       bottom: 0;
       right: 0;
       top: 0;
-      z-index: 99;
+      z-index: $mr_menu_z_index - 1;
       opacity: 0;
       visibility: hidden;
       -webkit-transition: all 0.3s ease-in-out;
@@ -87,13 +89,13 @@ body {
 }
 
 //gh-shift-menu
-.#{$prefix}-menu {
+.#{$mr_prefix}-menu {
     position: fixed;
     top: 0;
     height: 100%;
     overflow-y: auto;
     width: $mr_menu_width;
-    z-index: 100;
+    z-index: $mr_menu_z_index;
     overflow-x: hidden;
     background-color: darken($mr_menu_color, 10%);
     -webkit-transition: $mr_menu_animation;
@@ -141,7 +143,7 @@ body {
             > a {
                 padding: 8px 35px 8px 15px;
                 display: block;
-                font-weight: 300;
+                font-weight: 400;
                 font-size: $mr-fs-first-level;
                 text-transform: capitalize;
                 color: $mr_menu_text_color;

@@ -33,8 +33,8 @@
 		<div class="st-blog-header-wrap">
 			<div class="st-blog-header-wrap-nav">
 				<div class="container">
-					<div class="row">
-						<div class="col-3 st-blog-logo-manage">
+					<div class="row st-blog-header-row">
+						<div class="col-lg-3 col-md-4 st-blog-logo-manage">
 							<div class="site-branding">
 								<?php
 								the_custom_logo();
@@ -64,7 +64,14 @@
 								<?php endif; ?>
 							</div><!-- .site-branding -->					
 						</div><!-- site brand-->
-						<div class="col-9 text-right">
+						<div class="col-lg-9 col-md-8 text-right st-blog-menu-toggler-manage">
+							<button class="menu-toggler" id="menu-icon">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+							
 							<nav id="site-navigation" class="main-navigation">
 								<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'st-blog' ); ?></button>
 								<?php

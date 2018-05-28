@@ -2,6 +2,9 @@ jQuery(window).load(function() {
 	// fixed header
 	jQuery('body').addClass('fixed-header box-layout');
 
+	// mr mobile menu
+	jQuery('#site-navigation').mrMobileMenu ();
+
 	// search toggle
 	jQuery('.st-blog-head-search-toggler').click(function() { 
 		// console.log('clicked');

@@ -149,7 +149,7 @@ function dark_theme_coloured($todo) {
 		jQuery('body').addClass('dark-theme dark-theme-coloured');//.dark-theme-coloured requires .dark-theme
 	}
 	else {
-		jQuery('body').removeClass('dark-theme-coloured');
+		jQuery('body').removeClass('dark-theme-coloured dark-theme-coloured');//if dark-theme-coloured is enabled
 	}
 }
 
