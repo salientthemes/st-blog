@@ -1,6 +1,7 @@
 $slick-arrow-height: 40;
 .slick-slider {
 	overflow: hidden;
+	
 	// arrow
 	.slick-arrow {
 	    position: absolute;
@@ -14,4 +15,21 @@ $slick-arrow-height: 40;
 		  left: 0;
 		}
 	}
+}
+
+.slick-slider .slick-arrow {
+    transition: 0.4s all ease;
+}
+
+.slick-slider .slick-arrow.slick-prev {
+    transform: translate(-100px, 0);
+}
+
+.slick-slider .slick-arrow.slick-next {
+    transform: translate(100px, 0);
+}
+
+.slick-slider:hover .slick-arrow.slick-prev,
+.slick-slider:hover .slick-arrow.slick-next {
+    transform: translate(0px, 0);
 }

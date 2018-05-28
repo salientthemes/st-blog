@@ -54,18 +54,6 @@
     color: $color_black;
 }
 
-.#{$prefix}-overlay {
-  &:after {    
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.40);
-    content: "";
-    position: absolute;
-    top: 0;
-  }
-
-}
-
 %entry-title {
   color: $color_black;
   font-size: 24px;

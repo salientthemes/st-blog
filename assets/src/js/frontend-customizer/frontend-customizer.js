@@ -12,6 +12,10 @@ jQuery(window).load(function(){
 });
 
 function create_chatbox_ui() {
+	var username = '';
+	if(jQuery('#frontend-customizer-ip').text()) {
+		username = jQuery('#frontend-customizer-ip').text() + ' ji';
+	}
 	var markup = 
 	`<div class="frontend-customizer-wrapper">
 		<div class="frontend-customizer-title">
@@ -20,7 +24,7 @@ function create_chatbox_ui() {
 				<span class="minimize"><i class="fas fa-minus"></i></span>
 			</div>
 		</div>
-		<div class="fc-msg-display"><p class="text-right">Hello my friend! Want AI to customize theme?</p></div>
+		<div class="fc-msg-display"><p class="text-right">Hello `+username+`! Want AI to customize theme?</p></div>
 		<form class="fc-form">
 			<input type="text" class="fc-input-msg" value="" placeholder="Please type something">
 		</form>
@@ -62,8 +66,10 @@ function frontend_customizer_run($input_msg) {
 	switch ($input_msg) {
 	    case 'help':
 	        bot_msg = `type '1 or dark-theme-coloured enable'<br>
-	        			type '2 or dark-theme enable<br>
-	        			type '-3 or box-layout disable'
+	        			type '2 or dark-theme enable'<br>
+	        			type '-3 or box-layout disable'<br>
+	        			type '4 or left-sidebar enable'<br>
+	        			type '5 or no-sidebar enable'
 	        			'`;
 	        break;
 
@@ -100,6 +106,28 @@ function frontend_customizer_run($input_msg) {
 	        box_layout('disable');
 	        break;
 
+	    case '4':
+	    case 'left-sidebar enable':
+	        bot_msg = "enabling st-blog-left-sidebar";
+	        left_sidebar('enable');
+	        break;
+	    case '-4':
+	    case 'left-sidebar disable':
+	        bot_msg = "disabling st-blog-left-sidebar";
+	        left_sidebar('disable');
+	        break;
+
+	    case '5':
+	    case 'no-sidebar enable':
+	        bot_msg = "enabling st-blog-no-sidebar";
+	        no_sidebar('enable');
+	        break;
+	    case '-5':
+	    case 'no-sidebar disable':
+	        bot_msg = "disabling st-blog-no-sidebar";
+	        no_sidebar('disable');
+	        break;
+
 	    default:
 	    	bot_msg = "I'm still learning. Please type 'help' for now.";
 	}
@@ -131,5 +159,23 @@ function box_layout($todo) {
 	}
 	else {
 		jQuery('body').removeClass('box-layout');
+	}
+}
+
+function left_sidebar($todo) {
+	if($todo == 'enable') {
+		jQuery('body').addClass('st-blog-left-sidebar');
+	}
+	else {
+		jQuery('body').removeClass('st-blog-left-sidebar');
+	}
+}
+
+function no_sidebar($todo) {
+	if($todo == 'enable') {
+		jQuery('body').addClass('st-blog-no-sidebar');
+	}
+	else {
+		jQuery('body').removeClass('st-blog-no-sidebar');
 	}
 }

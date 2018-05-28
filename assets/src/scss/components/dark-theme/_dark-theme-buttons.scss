@@ -1,5 +1,16 @@
 // dark-theme
 .dark-theme {
+	.site-content {
+		a.readmore,
+		.readmore {
+			@extend %btn-style;
+			color: $color_white;
+			&:hover {
+				color: $color_white;
+			}
+		}
+	}
+
 	// social icons
 	##{$prefix}-social-icons {
 		@extend %social-icons;

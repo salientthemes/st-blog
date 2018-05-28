@@ -41,7 +41,7 @@ get_header();
 
 						/* Start the Loop */
 						while ( have_posts() ) :
-							echo '<div class="st-blog-item article-grid">';
+							echo '<div class="st-blog-item article-grid text-center">';
 							
 							the_post();
 

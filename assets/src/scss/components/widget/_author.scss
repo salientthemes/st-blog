@@ -13,6 +13,7 @@
 
 	##{$prefix}-author-social-icons {
 		@extend %social-icons;
+		margin-top: 20px;
 		ul {
 			li {
 				margin-right: 15px;

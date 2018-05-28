@@ -33,3 +33,22 @@
 
     }
 }
+
+
+##{$prefix}-banner {
+    .#{$prefix}-banner-slider {
+        .#{$prefix}-overlay {
+            &:after {    
+                background-color: rgba(0, 0, 0, 0);
+            }
+        }
+        
+        &:hover {
+            .#{$prefix}-overlay {
+                &:after {
+                    background-color: rgba(0, 0, 0, 0.40);
+                }
+            }
+        }
+    }
+}

@@ -20,7 +20,7 @@ jQuery(window).load(function() {
 		autoplay: true,
 		autoplaySpeed: 4000,
 		draggable: true,
-		dots: true,
+		dots: false,
 		fade: true,
 		infinite: true,
 		pauseOnFocus: false,
