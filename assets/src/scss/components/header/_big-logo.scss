@@ -1,0 +1,29 @@
+@include media(xs) {
+	body.big-logo.big-logo-enable .#{$prefix}-header-row, 
+	body.big-logo.big-logo-enable .#{$prefix}-header-row .#{$prefix}-logo-manage {
+	    display: block;
+	    text-align: center;
+	}
+
+	body.big-logo.big-logo-enable .#{$prefix}-header-row .#{$prefix}-logo-manage {
+	    padding-bottom: 10px;
+	    padding-top: 20px;
+	}
+}
+
+@include media(md) {
+	body.big-logo.big-logo-enable .#{$prefix}-header-row .#{$prefix}-logo-manage .site-branding .site-title {
+		margin-bottom: 10px;
+	}
+
+	body.big-logo.big-logo-enable header.site-header .#{$prefix}-header-wrap-nav .container .#{$prefix}-menu-toggler-manage {
+	    position: inherit;
+	}
+	body.big-logo.big-logo-enable nav#site-navigation ul#primary-menu {
+	    float: none;
+	    left: 50%;
+	    margin-right: 0;
+	    position: absolute;
+	    @include translate(-50%, 0)
+	}
+}

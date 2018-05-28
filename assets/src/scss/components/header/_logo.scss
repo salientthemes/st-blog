@@ -1,6 +1,7 @@
 $logo_size: 24;
 
-.st-blog-header-row {
+.#{$prefix}-header-row {
+	@extend %flex;
 	min-height: $header-height;
 	.#{$prefix}-logo-manage {
 	    @extend %flex;

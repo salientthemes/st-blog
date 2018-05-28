@@ -1,23 +1,23 @@
 .box-layout {
 	// featured item
-	.st-blog-featured-item {
+	.#{$prefix}-featured-item {
 		@extend %box-layout;
 	}
 
 	// blog item
-	.st-blog-item { 
+	.#{$prefix}-item { 
 		article {
 		    @extend %box-layout;
 		}
 	}
 
 	// author
-	.st-blog-author-item {
+	.#{$prefix}-author-item {
 		@extend %box-layout;
 	}
 
 	// popular-posts
-	.st-blog-popular-posts-item {
+	.#{$prefix}-popular-posts-item {
 		@extend %box-layout;
 		min-height: 95px;
 	}

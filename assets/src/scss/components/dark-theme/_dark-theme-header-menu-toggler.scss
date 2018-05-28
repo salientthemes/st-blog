@@ -1,9 +1,9 @@
 body.dark-theme {
 	header.site-header {
 		// menu toggler
-		.st-blog-header-wrap-nav .container {
+		.#{$prefix}-header-wrap-nav .container {
 
-			.st-blog-menu-toggler-manage {
+			.#{$prefix}-menu-toggler-manage {
 
 				#menu-icon.menu-toggler {
 					span {

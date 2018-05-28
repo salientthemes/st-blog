@@ -1,9 +1,9 @@
 header.site-header {
 
 	// menu toggler
-	.st-blog-header-wrap-nav .container {
+	.#{$prefix}-header-wrap-nav .container {
 	    position: relative;
-		.st-blog-menu-toggler-manage {
+		.#{$prefix}-menu-toggler-manage {
 		    position: absolute;
 		    top: 0;
 		    right: 15px;

@@ -12,13 +12,22 @@
                     left: 0;
                     text-align: center;
                     top: 50%;
-                    transform: translate(0,-50%);
+                    // transform: translate(0,-50%);
+                    transform: translate(0, -50%) scale(0);
+                    @include transition($transition);
                     max-width: 600px;
                     margin: auto;
                     right: 0;
                     z-index: 99;                
                 }
-            }            
+            }     
+            &.slick-active {
+                .#{$prefix}-banner-image {                
+                    .#{$prefix}-banner-caption {     
+                        transform: translate(0, -50%) scale(1);        
+                    }
+                } 
+            }       
         }
         
         // slick arrow

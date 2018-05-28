@@ -29,12 +29,16 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'st-blog' ); ?></a>
 
+	<!-- scroll-top -->
+	<a href="#!" id="st-blog-scroll-top" class="btn"><i class="fas fa-long-arrow-alt-up"></i>Scroll Top</a>
+
+	<!-- header -->
 	<header id="masthead" class="site-header">
 		<div class="st-blog-header-wrap">
 			<div class="st-blog-header-wrap-nav">
 				<div class="container">
-					<div class="row st-blog-header-row">
-						<div class="col-lg-3 col-md-4 st-blog-logo-manage">
+					<div class="st-blog-header-row">
+						<div class="st-blog-logo-manage">
 							<div class="site-branding">
 								<?php
 								the_custom_logo();
@@ -64,7 +68,7 @@
 								<?php endif; ?>
 							</div><!-- .site-branding -->					
 						</div><!-- site brand-->
-						<div class="col-lg-9 col-md-8 text-right st-blog-menu-toggler-manage">
+						<div class="text-right st-blog-menu-toggler-manage">
 							<button class="menu-toggler" id="menu-icon">
 								<span></span>
 								<span></span>

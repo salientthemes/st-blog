@@ -13,11 +13,22 @@
 
 	// social icons
 	##{$prefix}-social-icons {
-		@extend %social-icons;
 		ul {
 			li {
 				a {
-					@extend %btn-style;
+					@extend %btn-style;	
+				}
+				a[href*="facebook.com"]:hover {
+					background-color: $color_facebook;
+				}
+				a[href*="twitter.com"]:hover {
+					background-color: $color_twitter;
+				}
+				a[href*="instagram.com"]:hover {
+					background-color: $color_instagram;
+				}
+				a[href*="pinterest.com"]:hover {
+					background-color: $color_pinterest;
 				}
 			}
 		}
@@ -30,7 +41,7 @@
 	a.btn,
 	button,
 	input[type="submit"],
-	.st-blog-header-wrap .st-blog-head-search form .search-submit {
+	.#{$prefix}-header-wrap .#{$prefix}-head-search form .search-submit {
 		@extend %btn-style;
 
 		@extend %btn-style-coloured;

@@ -81,6 +81,9 @@
   padding: 4px 10px;
   line-height: 28px;
   @include transition($transition);
+  &:hover {
+    padding-left: 20px;
+  }
   a {
     color: lighten($color_black, 50%);
     &:hover {

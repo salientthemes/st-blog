@@ -3,6 +3,7 @@ a.btn {
 	@extend %btn-style;
 }
 
+// readmore
 .readmore {
 	display: inline-block;
 	i {
@@ -12,5 +13,21 @@ a.btn {
 		content: "\f30b";
 		@extend %font-awesome;
 		margin-left: 10px;
+	}
+}
+
+// scroll-top
+##{$prefix}-scroll-top {
+	position: fixed;
+	bottom: 40px;
+	right: 20px;
+	z-index: 9;
+	@include transition($transition);
+	@include translate(0, 100px);
+	&.active {
+		@include translate(0, 0);
+	}
+	i {
+		margin-right: 10px;
 	}
 }

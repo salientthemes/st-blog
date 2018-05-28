@@ -1,6 +1,29 @@
+function st_blog_head_search_form_position() {
+	// position search form again - placed in three place in this js
+	jQuery('.st-blog-head-search').css({ 'top': jQuery('.st-blog-header-row').height() + 'px' });	
+}
+
+function page_size_padding() {
+	// page padding again
+	jQuery('#page.site').css({ 'padding-top': jQuery('.st-blog-header-row').height() + 'px' });	
+}
+jQuery(window).resize(function() {
+	// position search form - placed in two place
+	st_blog_head_search_form_position();
+
+	// page margin again
+	page_size_padding();
+});
+
 jQuery(window).load(function() {
 	// fixed header
-	jQuery('body').addClass('fixed-header box-layout');
+	jQuery('body').addClass('fixed-header box-layout big-logo big-logo-enable');
+
+	// position search form
+	st_blog_head_search_form_position();
+
+	// page margin again
+	page_size_padding();
 
 	// mr mobile menu
 	jQuery('#site-navigation').mrMobileMenu ();
@@ -14,6 +37,35 @@ jQuery(window).load(function() {
 		if(jQuery('body').hasClass('head-search-active')) {
 			jQuery('header.site-header .st-blog-head-search input.search-field').focus();
 		}
+	});
+
+	// scroll top
+	jQuery(window).scroll(function() { 
+		if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+	        // document.getElementById("scroll-top").style.display = "block";
+	        jQuery("#scroll-top").addClass('active');
+
+	        if(jQuery('body').hasClass('big-logo')) {
+	        	jQuery("body").removeClass('big-logo-enable');
+				
+				// position search form
+				st_blog_head_search_form_position();	        	
+	        }
+	    } else {
+	        // document.getElementById("scroll-top").style.display = "none";
+	        jQuery("#scroll-top").addClass('active');
+
+	        if(jQuery('body').hasClass('big-logo')) {
+	        	jQuery("body").addClass('big-logo-enable');//don't want to add big-logo on default scroll
+				
+				// position search form
+				st_blog_head_search_form_position();	        	
+	        }
+	    } 
+	});
+
+	jQuery('#scroll-top').click(function() {
+		jQuery("html, body").animate({ scrollTop: 0 }, "slow");
 	});
 
 	// slick_init

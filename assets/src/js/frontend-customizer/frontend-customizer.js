@@ -69,7 +69,9 @@ function frontend_customizer_run($input_msg) {
 	        			type '2 or dark-theme enable'<br>
 	        			type '-3 or box-layout disable'<br>
 	        			type '4 or left-sidebar enable'<br>
-	        			type '5 or no-sidebar enable'
+	        			type '5 or no-sidebar enable'<br>
+	        			type '-6 or big-logo disable'<br>
+	        			type '0 or hide to minimize'
 	        			'`;
 	        break;
 
@@ -128,6 +130,23 @@ function frontend_customizer_run($input_msg) {
 	        no_sidebar('disable');
 	        break;
 
+	    case '6':
+	    case 'big-logo enable':
+	        bot_msg = "enabling big-logo";
+	        big_logo('enable');
+	        break;
+	    case '-6':
+	    case 'big-logo disable':
+	        bot_msg = "disabling big-logo";
+	        big_logo('disable');
+	        break;
+
+	    case '0':
+	    case 'hide':
+	        bot_msg = "minimizing";
+	        jQuery('#frontend-customizer .control .minimize').trigger('click');
+	        break;
+
 	    default:
 	    	bot_msg = "I'm still learning. Please type 'help' for now.";
 	}
@@ -140,7 +159,7 @@ function dark_theme($todo) {
 		jQuery('body').addClass('dark-theme');
 	}
 	else {
-		jQuery('body').removeClass('dark-theme');
+		jQuery('body').removeClass('dark-theme dark-theme-coloured');
 	}
 }
 
@@ -149,7 +168,7 @@ function dark_theme_coloured($todo) {
 		jQuery('body').addClass('dark-theme dark-theme-coloured');//.dark-theme-coloured requires .dark-theme
 	}
 	else {
-		jQuery('body').removeClass('dark-theme-coloured dark-theme-coloured');//if dark-theme-coloured is enabled
+		jQuery('body').removeClass('dark-theme-coloured');//if dark-theme-coloured is enabled
 	}
 }
 
@@ -177,5 +196,20 @@ function no_sidebar($todo) {
 	}
 	else {
 		jQuery('body').removeClass('st-blog-no-sidebar');
+	}
+}
+
+function big_logo($todo) {
+	if($todo == 'enable') {
+		jQuery('body').addClass('big-logo');
+
+		st_blog_head_search_form_position();
+		page_size_padding();
+	}
+	else {
+		jQuery('body').removeClass('big-logo');
+
+		st_blog_head_search_form_position();
+		page_size_padding();
 	}
 }

@@ -17,6 +17,9 @@ body.dark-theme {
 		    .#{$prefix}-head-search-toggler {
 		    	color: $color_white;
 		    	right: 54px;
+		    	@include media(md) {
+		    		right: 15px;
+		    	}
 		    }
 		}
 	}
