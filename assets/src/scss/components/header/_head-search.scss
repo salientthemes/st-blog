@@ -2,7 +2,6 @@
 // added extra class for head search
 .#{$prefix}-header-wrap {
     position: relative;
-    min-height: $header-height;
 
     .#{$prefix}-header-wrap-nav {
         position: absolute;

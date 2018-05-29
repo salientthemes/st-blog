@@ -24,10 +24,12 @@ a.btn {
 	z-index: 9;
 	@include transition($transition);
 	@include translate(0, 100px);
-	&.active {
-		@include translate(0, 0);
-	}
 	i {
 		margin-right: 10px;
 	}
+}
+body.scrolled-down {
+	##{$prefix}-scroll-top {
+		@include translate(0, 0);
+	}	
 }

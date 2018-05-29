@@ -22,15 +22,15 @@
 
 <body <?php body_class(); ?>>
 
+<!-- scroll-top -->
+<a href="#!" id="st-blog-scroll-top" class="btn"><i class="fas fa-long-arrow-alt-up"></i>Scroll Top</a>
+
 <?php get_template_part('template-parts/markup/preloader');?>
 
 <?php get_template_part('template-parts/markup/frontend-customizer');?>
 
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'st-blog' ); ?></a>
-
-	<!-- scroll-top -->
-	<a href="#!" id="st-blog-scroll-top" class="btn"><i class="fas fa-long-arrow-alt-up"></i>Scroll Top</a>
 
 	<!-- header -->
 	<header id="masthead" class="site-header">

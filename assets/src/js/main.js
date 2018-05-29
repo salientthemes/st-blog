@@ -3,16 +3,28 @@ function st_blog_head_search_form_position() {
 	jQuery('.st-blog-head-search').css({ 'top': jQuery('.st-blog-header-row').height() + 'px' });	
 }
 
-function page_size_padding() {
+function search_icon_alignment() {
+	if(jQuery('body').hasClass('big-logo big-logo-enable')) {
+		jQuery('.st-blog-head-search-toggler').css({'padding-top': jQuery('.big-logo .st-blog-logo-manage').outerHeight() + 'px'});
+	}
+	else {
+		jQuery('.st-blog-head-search-toggler').css({'padding-top': '10px'});
+	}
+}
+
+function alignment_and_padding() {
 	// page padding again
 	jQuery('#page.site').css({ 'padding-top': jQuery('.st-blog-header-row').height() + 'px' });	
+
+	// search icon padding
+	search_icon_alignment();
 }
 jQuery(window).resize(function() {
 	// position search form - placed in two place
 	st_blog_head_search_form_position();
 
 	// page margin again
-	page_size_padding();
+	alignment_and_padding();
 });
 
 jQuery(window).load(function() {
@@ -23,7 +35,7 @@ jQuery(window).load(function() {
 	st_blog_head_search_form_position();
 
 	// page margin again
-	page_size_padding();
+	alignment_and_padding();
 
 	// mr mobile menu
 	jQuery('#site-navigation').mrMobileMenu ();
@@ -42,19 +54,21 @@ jQuery(window).load(function() {
 	// scroll top
 	jQuery(window).scroll(function() { 
 		if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-	        // document.getElementById("scroll-top").style.display = "block";
-	        jQuery("#scroll-top").addClass('active');
+			// scrolled down
+	        // document.getElementById("st-blog-scroll-top").style.display = "block";
+	        jQuery("body").addClass('scrolled-down');
 
 	        if(jQuery('body').hasClass('big-logo')) {
 	        	jQuery("body").removeClass('big-logo-enable');
 	        	jQuery("body").addClass('big-logo-disable');//and hide logo on scroll
 				
 				// position search form
-				st_blog_head_search_form_position();	        	
+				st_blog_head_search_form_position();	
+				search_icon_alignment();        	
 	        }
 	    } else {
-	        // document.getElementById("scroll-top").style.display = "none";
-	        jQuery("#scroll-top").addClass('active');
+	        // document.getElementById("st-blog-scroll-top").style.display = "none";
+	        jQuery("body").removeClass('scrolled-down');
 
 	        if(jQuery('body').hasClass('big-logo')) {
 	        	jQuery("body").addClass('big-logo-enable');//don't want to add big-logo on default scroll
@@ -62,11 +76,12 @@ jQuery(window).load(function() {
 				
 				// position search form
 				st_blog_head_search_form_position();	        	
+				search_icon_alignment();
 	        }
 	    } 
 	});
 
-	jQuery('#scroll-top').click(function() {
+	jQuery('#st-blog-scroll-top').click(function() {
 		jQuery("html, body").animate({ scrollTop: 0 }, "slow");
 	});
 

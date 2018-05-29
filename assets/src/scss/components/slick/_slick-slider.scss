@@ -4,15 +4,22 @@ $slick-arrow-height: 40;
 	
 	// arrow
 	.slick-arrow {
+		background: none;
+		font-size: 40px;
 	    position: absolute;
 		z-index: 1;
 		top: 50%;
 		margin-top: -#{$slick-arrow-height/2}px;
+		opacity: 0.7;
 		&.slick-next {
 		  right: 0;
 		}
 		&.slick-prev {
 		  left: 0;
+		}
+		&:hover {
+			background: none;
+			opacity: 1;
 		}
 	}
 }

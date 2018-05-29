@@ -1,0 +1,33 @@
+body.logo-right {
+    // logo
+    .st-blog-logo-manage {
+        width: 220px;
+        float: right;
+
+        // some fixes while shifting logo to the right
+        .site-branding {
+            text-align: right;
+            padding-top: 5px;
+        }
+    }
+
+    // menu
+    .st-blog-menu-toggler-manage {
+        width: calc(100% - 220px);
+        float: left;
+        // some fixes while shifting menu to the left
+        nav#site-navigation ul {
+            margin-right: 0;
+            margin-left: 55px;
+            float: left;
+        }
+
+    }
+    
+    // searc icon
+    .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler {
+        right: auto;
+        left: 15px;
+    }
+
+}

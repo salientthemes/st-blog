@@ -1,11 +1,10 @@
 $logo_size: 24;
 
 .#{$prefix}-header-row {
-	@extend %flex;
-	min-height: $header-height;
+	// @extend %flex;
 	.#{$prefix}-logo-manage {
-	    @extend %flex;
-	    @extend %flex-v-center;
+	    // @extend %flex;
+	    // @extend %flex-v-center;
 
 		.site-branding {
 			.site-title {
