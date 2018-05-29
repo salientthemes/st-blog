@@ -1,13 +1,13 @@
+body.big-logo .#{$prefix}-header-row .#{$prefix}-logo-manage {
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
 @include media(xs) {
-	body.big-logo.big-logo-enable .#{$prefix}-header-row, 
-	body.big-logo.big-logo-enable .#{$prefix}-header-row .#{$prefix}-logo-manage {
+	body.big-logo .#{$prefix}-header-row, 
+	body.big-logo .#{$prefix}-header-row .#{$prefix}-logo-manage {
 	    display: block;
 	    text-align: center;
-	}
-
-	body.big-logo.big-logo-enable .#{$prefix}-header-row .#{$prefix}-logo-manage {
-	    padding-bottom: 10px;
-	    padding-top: 20px;
 	}
 }
 
@@ -38,9 +38,6 @@
 
 	body.big-logo.big-logo-enable nav#site-navigation {
 	    text-align: center;
-	}
-	.big-logo.big-logo-enable .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler {
-	    padding-top: $header-height;//header height
 	}
 
 

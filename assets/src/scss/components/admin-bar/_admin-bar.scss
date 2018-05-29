@@ -1,0 +1,27 @@
+$admin-bar-height: 32px;
+$admin-bar-height-782: 46px;
+
+// admin-bar - ie logged in
+body.admin-bar.fixed-header .site-header {
+    top: $admin-bar-height;
+
+	@media screen and (max-width: 782px) {
+		top: $admin-bar-height-782;		
+	}
+
+	@media screen and (max-width: 600px) {
+		position: absolute;
+	}
+}
+
+body.admin-bar .mr-mobile-menu {
+    padding-top: $admin-bar-height;
+
+	@media screen and (max-width: 782px) {
+		padding-top: $admin-bar-height-782;		
+	}
+
+	@media screen and (max-width: 600px) {
+		// position: absolute;
+	}
+}

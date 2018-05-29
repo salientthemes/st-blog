@@ -84,10 +84,13 @@
 									'menu_id'        => 'primary-menu',
 								) );
 								?>
+
+								<!-- search toggle icon -->
+								<button class="st-blog-head-search-toggler d-none d-lg-block"><i class="fas fa-search"></i></button>
 							</nav><!-- #site-navigation -->		
 
 							<!-- search toggle icon -->
-							<button class="st-blog-head-search-toggler"><i class="fas fa-search"></i></button>
+							<button class="st-blog-head-search-toggler d-lg-none"><i class="fas fa-search"></i></button>
 						</div><!-- site nav -->
 					</div>
 				</div>

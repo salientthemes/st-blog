@@ -9,7 +9,7 @@
 			</div>
 		  	<div class="st-blog-featured-caption text-center">
 		  		<span class="st-blog-category"><a href="#!">Category</a></span>
-		  		<h2 class="st-blog-title"><a href="#!">Beautiful Slider Heading</a></h2>
+		  		<h2 class="st-blog-title mb-3 mt-2"><a href="#!">Beautiful Slider Heading</a></h2>
 		  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
 		  		<a href="#!" class="readmore">Read More</a>
 		  	</div>
@@ -21,7 +21,7 @@
 			</div>
 		  	<div class="st-blog-featured-caption text-center">
 		  		<span class="st-blog-category"><a href="#!">Category</a></span>
-		  		<h2 class="st-blog-title"><a href="#!">Beautiful Slider Heading</a></h2>
+		  		<h2 class="st-blog-title mb-3 mt-2"><a href="#!">Beautiful Slider Heading</a></h2>
 		  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
 		  		<a href="#!" class="readmore">Read More</a>
 		  	</div>
@@ -33,7 +33,7 @@
 			</div>
 		  	<div class="st-blog-featured-caption text-center">
 		  		<span class="st-blog-category"><a href="#!">Category</a></span>
-		  		<h2 class="st-blog-title"><a href="#!">Beautiful Slider Heading</a></h2>
+		  		<h2 class="st-blog-title mb-3 mt-2"><a href="#!">Beautiful Slider Heading</a></h2>
 		  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
 		  		<a href="#!" class="readmore">Read More</a>
 		  	</div>
@@ -45,7 +45,7 @@
 			</div>
 		  	<div class="st-blog-featured-caption text-center">
 		  		<span class="st-blog-category"><a href="#!">Category</a></span>
-		  		<h2 class="st-blog-title"><a href="#!">Beautiful Slider Heading</a></h2>
+		  		<h2 class="st-blog-title mb-3 mt-2"><a href="#!">Beautiful Slider Heading</a></h2>
 		  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
 		  		<a href="#!" class="readmore">Read More</a>
 		  	</div>
@@ -57,7 +57,7 @@
 			</div>
 		  	<div class="st-blog-featured-caption text-center">
 		  		<span class="st-blog-category"><a href="#!">Category</a></span>
-		  		<h2 class="st-blog-title"><a href="#!">Beautiful Slider Heading</a></h2>
+		  		<h2 class="st-blog-title mb-3 mt-2"><a href="#!">Beautiful Slider Heading</a></h2>
 		  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
 		  		<a href="#!" class="readmore">Read More</a>
 		  	</div>

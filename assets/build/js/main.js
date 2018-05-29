@@ -4,12 +4,19 @@ function st_blog_head_search_form_position() {
 }
 
 function search_icon_alignment() {
-	if(jQuery('body').hasClass('big-logo big-logo-enable')) {
-		jQuery('.st-blog-head-search-toggler').css({'padding-top': jQuery('.big-logo .st-blog-logo-manage').outerHeight() + 'px'});
+	/*var break_md = 991;
+
+	if(jQuery(window).width() > break_md) {
+		if(jQuery('body').hasClass('big-logo big-logo-enable')) {
+			jQuery('.st-blog-head-search-toggler').css({'padding-top': jQuery('.big-logo .st-blog-logo-manage').outerHeight() + 'px'});
+		}
+		else {
+			jQuery('.st-blog-head-search-toggler').css({'padding-top': '10px'});
+		}
 	}
 	else {
 		jQuery('.st-blog-head-search-toggler').css({'padding-top': '10px'});
-	}
+	}*/
 }
 
 function alignment_and_padding() {
@@ -19,6 +26,7 @@ function alignment_and_padding() {
 	// search icon padding
 	search_icon_alignment();
 }
+
 jQuery(window).resize(function() {
 	// position search form - placed in two place
 	st_blog_head_search_form_position();

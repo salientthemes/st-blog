@@ -5,7 +5,20 @@
             
             .#{$prefix}-banner-image {
                 @extend %img-cover;
-                height: calc(100vh - 200px);
+                height: calc(100vh - 100px);
+
+                /* iPad in portrait */
+                @media only screen 
+                // and (min-device-width : 768px) 
+                // and (max-device-width : 1024px) 
+                and (orientation : portrait) { 
+                    /* STYLES GO HERE */ 
+                    height: 40vh;
+                }
+
+                @include media(lg) {
+                    height: calc(100vh - 200px);    
+                }
             
                 .#{$prefix}-banner-caption {
                     position: absolute;
@@ -18,7 +31,14 @@
                     max-width: 600px;
                     margin: auto;
                     right: 0;
-                    z-index: 99;                
+                    z-index: 99;
+                    .st-blog-title {
+                        @include font-size(20);
+                        
+                        @include media(xs) {
+                            @include font-size(30);
+                        }
+                    }            
                 }
             }     
             &.slick-active {

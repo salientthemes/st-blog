@@ -5,7 +5,7 @@
 		<figure class="st-blog-author-img">
 			<img src="https://gdurl.com/OkX7">
 		</figure>
-		<h4 class="st-blog-author-name">Mary Ocean</h4>
+		<h4 class="st-blog-author-name my-3">Mary Ocean</h4>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
 		<a href="#!" class="readmore">Learn More</a>
