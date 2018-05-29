@@ -42,26 +42,21 @@ body {
 .site-footer, .site-footer .widget-title {
   color: #000; }
 
-.site-content article .entry-title {
+.site-content .st-blog-item article .entry-title, #st-blog-featured .slick-list .slick-slide .st-blog-featured-caption .st-blog-title {
   color: #000;
   font-size: 20px;
   font-size: 1.33333rem;
   font-weight: 400; }
-  @media (min-width: 575px) {
-    .site-content article .entry-title {
-      font-size: 24px;
-      font-size: 1.6rem; } }
-  .site-content article .entry-title a {
+  .site-content .st-blog-item article .entry-title a, #st-blog-featured .slick-list .slick-slide .st-blog-featured-caption .st-blog-title a {
     color: #000; }
-    .site-content article .entry-title a:hover {
+    .site-content .st-blog-item article .entry-title a:hover, #st-blog-featured .slick-list .slick-slide .st-blog-featured-caption .st-blog-title a:hover {
       color: #EF3F3D; }
 
-.widget-title, .widgettitle, .dark-theme-coloured .widget-title, .dark-theme-coloured .widgettitle {
+.page-title, .entry-title, .widget-title, .widgettitle, .dark-theme-coloured .widget-title, .dark-theme-coloured .widgettitle {
   color: #000;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 15px;
-  text-align: center;
   text-transform: uppercase; }
 
 aside .widget_categories ul li,
@@ -384,7 +379,7 @@ body.scrolled-down #st-blog-scroll-top {
 .st-blog-header-row .st-blog-logo-manage .site-branding .site-description {
   margin-bottom: 0; }
 
-header.site-header {
+header.site-header .st-blog-header-wrap-nav {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); }
 
 .st-blog-header-wrap {
@@ -489,8 +484,12 @@ header.site-header .st-blog-header-wrap-nav .container {
         margin-bottom: 0; }
 
 body.big-logo .st-blog-header-row .st-blog-logo-manage {
-  padding-bottom: 15px;
-  padding-top: 15px; }
+  padding-bottom: 10px;
+  padding-top: 10px; }
+  @media (min-width: 992px) {
+    body.big-logo .st-blog-header-row .st-blog-logo-manage {
+      padding-bottom: 0;
+      padding-top: 20px; } }
 
 @media (min-width: 575px) {
   body.big-logo .st-blog-header-row,
@@ -499,7 +498,7 @@ body.big-logo .st-blog-header-row .st-blog-logo-manage {
     text-align: center; } }
 @media (min-width: 992px) {
   body.big-logo.big-logo-enable .st-blog-header-row .st-blog-logo-manage .site-branding .site-title {
-    margin-bottom: 10px; }
+    margin-bottom: 0px; }
 
   body.big-logo.big-logo-enable header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage {
     position: inherit; }
@@ -531,8 +530,8 @@ body.big-logo .st-blog-header-row .st-blog-logo-manage {
     text-align: center; }
 
   body.big-logo nav#site-navigation ul.menu > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px; }
+    padding-top: 15px;
+    padding-bottom: 15px; }
 
   body.big-logo header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage {
     min-height: auto; }
@@ -892,6 +891,9 @@ body.st-blog-no-sidebar #primary {
 body.st-blog-no-sidebar #secondary {
   display: none; }
 
+body.error404 .st-blog-site-content #primary {
+  width: 100%; }
+
 .site-content article.hentry {
   margin-bottom: 40px; }
 .site-content article .image {
@@ -904,6 +906,10 @@ body.st-blog-no-sidebar #secondary {
   margin-right: 10px; }
 .site-content .article-grid article .image {
   max-height: 200px; }
+.site-content .st-blog-item article .entry-title {
+  text-transform: inherit;
+  font-size: 20px;
+  font-size: 1.33333rem; }
 
 .st-blog-masonry {
   /* Masonry container */ }
@@ -1013,7 +1019,7 @@ body:not(.dark-theme) #st-blog-social-icons ul li a[href*="pinterest.com"]:hover
     position: absolute;
     z-index: 1;
     top: 50%;
-    margin-top: -20px;
+    margin-top: -40px;
     opacity: 0.7; }
     .slick-slider .slick-arrow.slick-next {
       right: 0; }
@@ -1098,11 +1104,8 @@ body:not(.dark-theme) #st-blog-social-icons ul li a[href*="pinterest.com"]:hover
       margin-bottom: 5px;
       display: inline-block;
       text-transform: uppercase; }
-    #st-blog-featured .slick-list .slick-slide .st-blog-featured-caption .st-blog-title {
-      font-size: 16px;
-      font-weight: 400; }
-      #st-blog-featured .slick-list .slick-slide .st-blog-featured-caption .st-blog-title a {
-        color: #000; }
+    #st-blog-featured .slick-list .slick-slide .st-blog-featured-caption .st-blog-title a {
+      color: #000; }
 
 ul.slick-dots {
   margin-top: 30px;

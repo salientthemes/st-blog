@@ -1,6 +1,10 @@
 body.big-logo .#{$prefix}-header-row .#{$prefix}-logo-manage {
-    padding-bottom: 15px;
-    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    @include media(md) {
+    	padding-bottom: 0;
+    	padding-top: 20px;
+    }
 }
 
 @include media(xs) {
@@ -13,7 +17,7 @@ body.big-logo .#{$prefix}-header-row .#{$prefix}-logo-manage {
 
 @include media(md) {
 	body.big-logo.big-logo-enable .#{$prefix}-header-row .#{$prefix}-logo-manage .site-branding .site-title {
-		margin-bottom: 10px;
+		margin-bottom: 0px;
 	}
 
 	body.big-logo.big-logo-enable header.site-header .#{$prefix}-header-wrap-nav .container .#{$prefix}-menu-toggler-manage {
@@ -60,8 +64,8 @@ body.big-logo .#{$prefix}-header-row .#{$prefix}-logo-manage {
 
 
 	body.big-logo nav#site-navigation ul.menu > li > a {
-	    padding-top: 10px;
-	    padding-bottom: 10px;
+	    padding-top: 15px;
+	    padding-bottom: 15px;
 	}
 
 	body.big-logo header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage {

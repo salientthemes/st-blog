@@ -57,3 +57,7 @@ body.#{$prefix}-no-sidebar {
 		display: none;
 	}
 }
+
+body.error404 .st-blog-site-content #primary {
+    width: 100%;
+}

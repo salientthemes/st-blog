@@ -5,9 +5,6 @@ $article_image_height: 200px;
 		&.hentry {
 	    	margin-bottom: 40px;
 		}
-		.entry-title {
-			@extend %entry-title;
-		}
 		.image {
 		    overflow: hidden;
 		    margin-bottom: 15px;
@@ -28,5 +25,16 @@ $article_image_height: 200px;
 				max-height: $article_image_height;
 			}
 		}
+	}
+
+	// blog item
+	.st-blog-item {
+		article {
+			.entry-title {
+				@extend %entry-title;
+				text-transform: inherit;
+				@include font-size(20);
+			}
+		}	
 	}
 }

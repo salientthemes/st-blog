@@ -30,8 +30,9 @@ $featured-heading-font-size: 16px;
 				    }
 				}
 				.#{$prefix}-title {
-				    font-size: $featured-heading-font-size;
-				    font-weight: $font_primary_medium;
+				    // font-size: $featured-heading-font-size;
+				    // font-weight: $font_primary_medium;
+				    @extend %entry-title;
 				    a {
 				    	color: $color_black;
 				    	&:hover {

@@ -59,7 +59,7 @@
   @include font-size(20);
   font-weight: $font_primary_medium;
   @include media(xs) {
-    @include font-size(24);  
+    // @include font-size(24);  
   }
   a {
     color: $color_title;
@@ -74,7 +74,7 @@
   font-size: 24px;
   font-weight: $font_primary_bold;
   margin-bottom: 15px;
-  text-align: center;
+  // text-align: center;
   text-transform: uppercase;
 }
 

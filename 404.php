@@ -10,12 +10,15 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area text-center">
 		<main id="main" class="site-main">
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'st-blog' ); ?></h1>
+					<h1 class="page-title">
+						<i class="fas fa-frown"></i>
+						<?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'st-blog' ); ?>
+					</h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
@@ -33,34 +36,10 @@ get_header();
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-	<aside id="secondary" class="widget-area">
-		<?php
-		the_widget( 'WP_Widget_Recent_Posts' );
-		?>
-
-		<div class="widget widget_categories">
-			<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'st-blog' ); ?></h2>
-			<ul>
-				<?php
-				wp_list_categories( array(
-					'orderby'    => 'count',
-					'order'      => 'DESC',
-					'show_count' => 1,
-					'title_li'   => '',
-					'number'     => 10,
-				) );
-				?>
-			</ul>
-		</div><!-- .widget -->
-
-		<?php
-		/* translators: %1$s: smiley */
-		$st_blog_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'st-blog' ), convert_smilies( ':)' ) ) . '</p>';
-		the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$st_blog_archive_content" );
-
-		the_widget( 'WP_Widget_Tag_Cloud' );
-		?>
-	</aside>
+	<?php 
+	// sidebar
+	//get_template_part('template-parts/markup/sidebar-404'); 
+	?>
 
 <?php
 get_footer();
