@@ -19,13 +19,16 @@ function getRealIpAddr()
 }
 
 function getUserName() {
+  $username = '';
+  
   $ip = getRealIpAddr();
 
   $ip_list = array(
-    '192.168.2.28' => 'Nikesh',
+    // '192.168.2.28' => 'Nikesh',
     '192.168.2.29' => 'Simanta',
     '192.168.2.37' => 'Ashok',
     '192.168.2.40' => 'Abiral',
+    '192.168.2.79' => 'Kabiraj',
     '192.168.2.200' => 'EVision',
   );
 

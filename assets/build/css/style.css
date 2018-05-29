@@ -417,7 +417,8 @@ header.site-header {
     -o-transform: translate(0, -100%);
     -ms-transform: translate(0, -100%);
     -webkit-transform: translate(0, -100%);
-    transform: translate(0, -100%); }
+    transform: translate(0, -100%);
+    opacity: 0; }
 
 body.head-search-active .st-blog-header-wrap {
   position: relative;
@@ -431,7 +432,8 @@ body.head-search-active .st-blog-header-wrap {
     -o-transform: translate(0, 0%);
     -ms-transform: translate(0, 0%);
     -webkit-transform: translate(0, 0%);
-    transform: translate(0, 0%); }
+    transform: translate(0, 0%);
+    opacity: 1; }
 
 body.fixed-header .site-header {
   position: fixed;
@@ -447,10 +449,8 @@ body.admin-bar.fixed-header .site-header {
 header.site-header .st-blog-header-wrap-nav .container {
   position: relative; }
   header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage {
-    position: absolute;
     top: 0;
-    right: 15px;
-    min-height: 90px; }
+    right: 15px; }
     @media (min-width: 575px) {
       header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage {
         right: 0; } }
@@ -496,14 +496,51 @@ header.site-header .st-blog-header-wrap-nav .container {
 
   body.big-logo.big-logo-enable nav#site-navigation ul#primary-menu {
     float: none;
-    left: 50%;
-    margin-right: 0;
-    position: absolute;
-    -moz-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0); } }
+    margin-right: 0; }
+
+  body.big-logo.big-logo-enable nav#site-navigation ul#primary-menu {
+    overflow: hidden;
+    margin: 0 auto;
+    display: inline-block;
+    position: inherit;
+    max-height: 90px; }
+
+  body.big-logo.big-logo-enable nav#site-navigation .menu-primary-container {
+    text-align: center;
+    max-height: 90px; }
+
+  .big-logo.big-logo-disable .st-blog-header-row .st-blog-logo-manage {
+    display: none; }
+
+  .big-logo.big-logo-disable nav#site-navigation ul {
+    float: none;
+    display: inline-block; }
+
+  .big-logo.big-logo-disable header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage {
+    right: auto;
+    width: 100%; }
+
+  .big-logo.big-logo-disable .menu-primary-container {
+    text-align: center; }
+
+  body.big-logo nav#site-navigation ul.menu > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+  body.big-logo header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage {
+    min-height: auto; }
+
+  body.big-logo .main-navigation {
+    float: none; }
+
+  body.big-logo .main-navigation li {
+    float: none; } }
+body.logo-left .st-blog-logo-manage {
+  width: 220px; }
+body.logo-left .st-blog-menu-toggler-manage {
+  width: calc(100% - 220px);
+  float: right; }
+
 nav#site-navigation ul {
   float: right;
   margin: 0;
@@ -534,7 +571,7 @@ nav#site-navigation ul.menu > li {
   font-weight: normal; }
   nav#site-navigation ul.menu > li > a {
     display: inline-block;
-    padding: 33px 1rem;
+    padding: 7px 1rem;
     text-transform: uppercase; }
 
 nav#site-navigation ul.menu ul {
@@ -848,9 +885,7 @@ body.st-blog-no-sidebar #secondary {
     .st-blog-masonry {
       column-count: 2; } }
   .st-blog-masonry .st-blog-item {
-    /* Masonry bricks or child elements */
-    display: inline-block;
-    width: 100%; }
+    /* Masonry bricks or child elements */ }
 
 @media (min-width: 768px) {
   body.st-blog-no-sidebar .st-blog-masonry {
@@ -1034,7 +1069,8 @@ ul.slick-dots {
   display: block; }
 
 .wp-pagenavi {
-  float: right; }
+  float: right;
+  margin-top: 20px; }
   .wp-pagenavi a {
     background-color: gray;
     color: #ffffff !important; }
@@ -1131,6 +1167,7 @@ body.dark-theme .site-footer {
   transition: 0.4s all ease; }
 
 #frontend-customizer {
+  display: none;
   background: #ffffff;
   border: 1px solid #ccc;
   font-size: 13px;

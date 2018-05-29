@@ -47,6 +47,7 @@ jQuery(window).load(function() {
 
 	        if(jQuery('body').hasClass('big-logo')) {
 	        	jQuery("body").removeClass('big-logo-enable');
+	        	jQuery("body").addClass('big-logo-disable');//and hide logo on scroll
 				
 				// position search form
 				st_blog_head_search_form_position();	        	
@@ -57,6 +58,7 @@ jQuery(window).load(function() {
 
 	        if(jQuery('body').hasClass('big-logo')) {
 	        	jQuery("body").addClass('big-logo-enable');//don't want to add big-logo on default scroll
+	        	jQuery("body").removeClass('big-logo-disable');//and show logo
 				
 				// position search form
 				st_blog_head_search_form_position();	        	
@@ -75,7 +77,7 @@ jQuery(window).load(function() {
 		autoplay: true,
 		autoplaySpeed: 4000,
 		draggable: true,
-		dots: false,
+		dots: true,
 		fade: true,
 		infinite: true,
 		pauseOnFocus: false,

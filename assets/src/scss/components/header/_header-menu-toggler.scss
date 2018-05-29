@@ -4,10 +4,10 @@ header.site-header {
 	.#{$prefix}-header-wrap-nav .container {
 	    position: relative;
 		.#{$prefix}-menu-toggler-manage {
-		    position: absolute;
+		    // position: absolute;
 		    top: 0;
 		    right: 15px;
-		    min-height: $header-height;
+		    // min-height: $header-height;
 
 		    @include media(xs) {
 		    	right: 0;

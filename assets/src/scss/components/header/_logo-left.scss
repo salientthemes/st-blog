@@ -1,0 +1,12 @@
+body.logo-left {
+	// logo
+	.st-blog-logo-manage {
+	    width: 220px;
+	}
+
+	// menu
+	.st-blog-menu-toggler-manage {
+	    width: calc(100% - 220px);
+	    float: right;
+	}
+}

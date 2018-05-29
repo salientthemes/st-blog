@@ -1,5 +1,7 @@
 <section id="st-blog-featured" class="mb-5">	
 	<div class="container site-content">
+		<h1 class="widget-title text-center">Featured Posts</h1>
+		
 		<div class="st-blog-featured-slider text-center">
 		  <div class="st-blog-featured-item">
 		  	<div class="st-blog-featured-image">

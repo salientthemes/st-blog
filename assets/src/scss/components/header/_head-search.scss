@@ -53,6 +53,7 @@
         width: 100%;
         @include transition($transition);
         @include translate(0, -100%);
+        opacity: 0;
 
         @extend %widget-search;
     }
@@ -80,6 +81,7 @@ body.head-search-active {
         // search
         .#{$prefix}-head-search {
             @include translate(0, 0%);
+            opacity: 1;
         }
     }
 }
