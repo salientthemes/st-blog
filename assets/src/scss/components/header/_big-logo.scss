@@ -47,14 +47,14 @@ body.big-logo .#{$prefix}-header-row .#{$prefix}-logo-manage {
 
 
 	// big-logo disable on scroll
-	.big-logo.big-logo-disable .st-blog-header-row .st-blog-logo-manage {
+	.big-logo.big-logo-disable .#{$prefix}-header-row .#{$prefix}-logo-manage {
 	    display: none;
 	}
 	.big-logo.big-logo-disable nav#site-navigation ul {
 	    float: none;
 	    display: inline-block;
 	}
-	.big-logo.big-logo-disable header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage {
+	.big-logo.big-logo-disable header.site-header .#{$prefix}-header-wrap-nav .container .#{$prefix}-menu-toggler-manage {
 	    right: auto;
 	    width: 100%;
 	}
@@ -68,7 +68,7 @@ body.big-logo .#{$prefix}-header-row .#{$prefix}-logo-manage {
 	    padding-bottom: 15px;
 	}
 
-	body.big-logo header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage {
+	body.big-logo header.site-header .#{$prefix}-header-wrap-nav .container .#{$prefix}-menu-toggler-manage {
 	    min-height: auto;
 	}
 

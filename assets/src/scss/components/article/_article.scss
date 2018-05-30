@@ -28,7 +28,7 @@ $article_image_height: 200px;
 	}
 
 	// blog item
-	.st-blog-item {
+	.#{$prefix}-item {
 		article {
 			.entry-title {
 				@extend %entry-title;

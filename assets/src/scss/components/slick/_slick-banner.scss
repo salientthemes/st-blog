@@ -32,7 +32,7 @@
                     margin: auto;
                     right: 0;
                     z-index: 99;
-                    .st-blog-title {
+                    .#{$prefix}-title {
                         @include font-size(20);
                         
                         @include media(xs) {

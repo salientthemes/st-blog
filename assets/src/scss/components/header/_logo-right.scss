@@ -1,10 +1,10 @@
 body.logo-right {
 
-    .st-blog-header-row {
+    .#{$prefix}-header-row {
         @include clearfix();
         
         // logo
-        .st-blog-logo-manage {
+        .#{$prefix}-logo-manage {
             width: 220px;
             float: right;
 
@@ -16,7 +16,7 @@ body.logo-right {
         }
 
         // menu
-        .st-blog-menu-toggler-manage {
+        .#{$prefix}-menu-toggler-manage {
             width: calc(100% - 220px);
             float: left;
             // some fixes while shifting menu to the left
@@ -30,7 +30,7 @@ body.logo-right {
     }
     
     // searc icon
-    .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler {
+    .#{$prefix}-header-wrap .#{$prefix}-header-wrap-nav .#{$prefix}-head-search-toggler {
         right: auto;
         left: 15px;
     }

@@ -58,6 +58,6 @@ body.#{$prefix}-no-sidebar {
 	}
 }
 
-body.error404 .st-blog-site-content #primary {
+body.error404 .#{$prefix}-site-content #primary {
     width: 100%;
 }

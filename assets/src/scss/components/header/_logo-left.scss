@@ -1,8 +1,8 @@
 body.logo-left {
-	.st-blog-header-row {
+	.#{$prefix}-header-row {
 		@include clearfix();
 		// logo
-		.st-blog-logo-manage {
+		.#{$prefix}-logo-manage {
 		    width: 220px;
 		    float: left;
 		    .site-branding {
@@ -11,7 +11,7 @@ body.logo-left {
 		}
 
 		// menu
-		.st-blog-menu-toggler-manage {
+		.#{$prefix}-menu-toggler-manage {
 		    width: calc(100% - 220px);
 		    float: right;
 		}
