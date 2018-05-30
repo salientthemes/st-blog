@@ -32,6 +32,10 @@ function create_chatbox_ui() {
 	`;
 
 	jQuery(frontend_customizer_id).html(markup);
+
+	if(username != '') {
+		jQuery(frontend_customizer_id).addClass('d-block');
+	}
 }
 
 function minimize_chatbox() {
