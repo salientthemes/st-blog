@@ -1,16 +1,19 @@
 body.logo-left {
-	// logo
-	.st-blog-logo-manage {
-	    width: 220px;
-	    float: left;
-	    .site-branding {
-	    	padding-top: 5px;
-	    }
-	}
+	.st-blog-header-row {
+		@include clearfix();
+		// logo
+		.st-blog-logo-manage {
+		    width: 220px;
+		    float: left;
+		    .site-branding {
+		    	padding-top: 5px;
+		    }
+		}
 
-	// menu
-	.st-blog-menu-toggler-manage {
-	    width: calc(100% - 220px);
-	    float: right;
+		// menu
+		.st-blog-menu-toggler-manage {
+		    width: calc(100% - 220px);
+		    float: right;
+		}
 	}
 }
