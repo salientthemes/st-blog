@@ -7,6 +7,8 @@
  * @package st-blog
  */
 
+require get_template_directory() . '/inc/init.php';
+
 if ( ! function_exists( 'st_blog_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -45,7 +47,7 @@ if ( ! function_exists( 'st_blog_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'st-blog' ),
-			'menu-2' => esc_html__( 'Social Nav', 'st-blog' ),
+
 		) );
 
 		/*
@@ -75,8 +77,8 @@ if ( ! function_exists( 'st_blog_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
+			// 'height'      => 250,
+			// 'width'       => 250,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
@@ -99,56 +101,38 @@ function st_blog_content_width() {
 }
 add_action( 'after_setup_theme', 'st_blog_content_width', 0 );
 
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function st_blog_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'st-blog' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'st-blog' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Widget 1 ', 'st-blog' ),
-		'id'            => 'footer-1',
-		'description'   => esc_html__( 'Add widgets here.', 'st-blog' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Widget 2 ', 'st-blog' ),
-		'id'            => 'footer-2',
-		'description'   => esc_html__( 'Add widgets here.', 'st-blog' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Widget 3 ', 'st-blog' ),
-		'id'            => 'footer-3',
-		'description'   => esc_html__( 'Add widgets here.', 'st-blog' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	
-}
-add_action( 'widgets_init', 'st_blog_widgets_init' );
+/*breadcrum function*/
+
+if ( ! function_exists( 'st_blog_simple_breadcrumb' ) ) :
+
+	/**
+	 * Simple breadcrumb.
+	 *
+	 * @since 1.0.0
+	 */
+	function st_blog_simple_breadcrumb() {
+
+		if ( ! function_exists( 'breadcrumb_trail' ) ) {
+			require_once get_template_directory() . '/assets/frameworks/breadcrumbs/breadcrumbs.php';
+		}
+
+		$breadcrumb_args = array(
+			'container'   => 'div',
+			'show_browse' => false,
+		);
+		breadcrumb_trail( $breadcrumb_args );
+
+	}
+
+endif;
+
 
 /**
  * Enqueue scripts and styles.
  */
 function st_blog_scripts() {
+	global $st_blog_customizer_all_values;
+
 	$suffix = '';
 	/*$suffix = '.min';
 	
@@ -173,10 +157,10 @@ function st_blog_scripts() {
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/build/js/bootstrap'.$suffix.'.js', array(), true );
 	wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/build/js/slick'.$suffix.'.js', array(), true );
 	wp_enqueue_script( 'mobile-menu', get_template_directory_uri() . '/assets/build/js/mrMobileMenu'.$suffix.'.js', array(), true );
-	wp_enqueue_script( 'jquery-main', get_template_directory_uri() . '/assets/build/js/main'.$suffix.'.js', array(), true );
+	wp_enqueue_script( 'st-blog-custom-js', get_template_directory_uri() . '/assets/build/js/st-blog-custom-js'.$suffix.'.js', array(), true );
 
-	// frontend-customzer - chat
-	wp_enqueue_script( 'frontend-customizer', get_template_directory_uri() . '/assets/src/js/frontend-customizer/frontend-customizer.js', array(), true );
+
+	wp_localize_script( 'st-blog-custom-js', 'customzier_values', $st_blog_customizer_all_values);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -194,15 +178,6 @@ require get_template_directory() . '/inc/custom-header.php';
  */
 require get_template_directory() . '/inc/template-tags.php';
 
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-require get_template_directory() . '/inc/template-functions.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
@@ -211,7 +186,21 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-/**
- * Load functions
- */
-require get_template_directory() . '/inc/functions/functions.php';
+if ( !function_exists('st_blog_primary_menu')  ) :
+	/**
+	 * Fallback menu to primary-menu
+	 * 
+	 * @since  st-blog 1.0.0
+	 */
+	function st_blog_primary_menu()
+	{
+
+		?>
+		<ul id="menu">
+			<li><a href="<?php echo esc_url( home_url( '/' ) );?>"><?php esc_html_e('Home','st-blog');?></a></li>
+			<li><a href="<?php echo esc_url( admin_url( '/nav-menus.php' ) );?>"><?php esc_html_e('Set Primary Menu','st-blog');?></a></li>
+		</ul>
+	<?php
+	}
+endif;
+

@@ -17,9 +17,7 @@ get_header();
 	</div><!-- .st-blog-site-content -->
 </div><!-- #content.container -->
 
-<?php get_template_part('template-parts/markup/banner');?>
-
-<?php get_template_part('template-parts/markup/featured');?>
+<?php do_action('st_blog_homepage');?>
 
 <div class="container site-content">
 	<div class="st-blog-site-content">

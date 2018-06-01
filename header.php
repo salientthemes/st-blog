@@ -1,6 +1,6 @@
 <?php
 /**
- * The header for our theme
+ * The header for our theme.
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
@@ -9,101 +9,101 @@
  * @package st-blog
  */
 
-?>
-<!doctype html>
-<html <?php language_attributes(); ?>>
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
+/**
+ * st_blog_action_before_head hook
+ * @since st-blog 1.0.0
+ *
+ * @hooked st_blog_set_global -  0
+ * @hooked st_blog_doctype -  10
+ */
+do_action( 'st_blog_action_before_head' );?>
 
-	<?php wp_head(); ?>
+
+
+<head>
+
+	<?php
+	/**
+	 * st_blog_action_before_wp_head hook
+	 * @since st-blog 1.0.0
+	 *
+	 * @hooked st_blog_before_wp_head -  10
+	 */
+	do_action( 'st_blog_action_before_wp_head' );
+
+	wp_head();
+
+	/**
+	 * st_blog_action_after_wp_head hook
+	 * @since st-blog 1.0.0
+	 *
+	 * @hooked null
+	 */
+	do_action( 'st_blog_action_after_wp_head' );
+	?>
+
 </head>
 
 <body <?php body_class(); ?>>
+	<div id="preloader" style="">
+	<div id="status" style=""><i class="fa fa-spinner fa-spin"></i></div>
+</div>
 
-<!-- scroll-top -->
-<a href="#!" id="st-blog-scroll-top" class="btn"><i class="fas fa-long-arrow-alt-up"></i>Scroll Top</a>
+<?php
+/**
+ * st_blog_action_before hook
+ * @since st-blog 1.0.0
+ *
+ * @hooked st_blog_page_start - 15
+ */
+do_action( 'st_blog_action_before' );
 
-<?php get_template_part('template-parts/markup/preloader');?>
+/**
+ * st_blog_action_before_header hook
+ * @since st-blog 1.0.0
+ *
+ * @hooked st_blog_skip_to_content - 10
+ */
+do_action( 'st_blog_action_before_header' );
 
-<?php get_template_part('template-parts/markup/frontend-customizer');?>
+/**
+ * st_blog_action_header hook
+ * @since st-blog 1.0.0
+ *
+ * @hooked st_blog_after_header - 10
+ */
+do_action( 'st_blog_action_header' );
 
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'st-blog' ); ?></a>
+/**
+ * st_blog_action_nav_page_start hook
+ * @since st-blog 1.0.0
+ *
+ * @hooked page start and navigations - 10
+ */
+do_action( 'st_blog_action_nav_page_start' );
 
-	<!-- header -->
-	<header id="masthead" class="site-header">
-		<div class="st-blog-header-wrap">
-			<div class="st-blog-header-wrap-nav">
-				<div class="container">
-					<div class="st-blog-header-row">
-						<div class="st-blog-logo-manage">
-							<div class="site-branding">
-								<?php
-								the_custom_logo();
-								if ( is_front_page() && is_home() ) :
-									?>
-									<h1 class="site-title">
-										<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-											<!-- <img src="<?php echo get_template_directory_uri();?>/assets/build/img/logo.png"> -->
-											<?php bloginfo( 'name' ); ?>
-										</a>
-									</h1>
-									<?php
-								else :
-									?>
-									<h1 class="site-title">
-										<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-											<!-- <img src="<?php echo get_template_directory_uri();?>/assets/build/img/logo.png"> -->
-											<?php bloginfo( 'name' ); ?>
-										</a>
-									</h1>
-									<?php
-								endif;
-								$st_blog_description = get_bloginfo( 'description', 'display' );
-								if ( $st_blog_description || is_customize_preview() ) :
-									?>
-									<p class="site-description"><?php echo $st_blog_description; /* WPCS: xss ok. */ ?></p>
-								<?php endif; ?>
-							</div><!-- .site-branding -->					
-						</div><!-- site brand-->
-						<div class="text-right st-blog-menu-toggler-manage">
-							<button class="menu-toggler" id="menu-icon">
-								<span></span>
-								<span></span>
-								<span></span>
-								<span></span>
-							</button>
-							
-							<nav id="site-navigation" class="main-navigation">
-								<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'st-blog' ); ?></button>
-								<?php
-								wp_nav_menu( array(
-									'theme_location' => 'menu-1',
-									'menu_id'        => 'primary-menu',
-								) );
-								?>
+/**
+ * st_blog_action_on_header hook
+ * @since st-blog 1.0.0
+ *
+ * @hooked page start and navigations - 10
+ */
+do_action( 'st_blog_action_on_header' );
 
-								<!-- search toggle icon -->
-								<button class="st-blog-head-search-toggler d-none d-lg-block"><i class="fas fa-search"></i></button>
-							</nav><!-- #site-navigation -->		
+/**
+ * st_blog_action_before_content hook
+ * @since st-blog 1.0.0
+ *
+ * @hooked null
+ */
+do_action( 'st_blog_action_before_content' );
+?>
 
-							<!-- search toggle icon -->
-							<button class="st-blog-head-search-toggler d-lg-none"><i class="fas fa-search"></i></button>
-						</div><!-- site nav -->
-					</div>
-				</div>
-			</div>
 
-			<div class="st-blog-head-search">
-				<div class="container">
-				    <?php get_search_form();?>
-			    </div>
-			</div>
-		</div>
-	</header><!-- #masthead -->
 
-	<div id="content" class="site-content container">
-		<div class="st-blog-site-content">
+
+
+	
+
+	
 
