@@ -32,6 +32,6 @@ if ( ! function_exists( 'st_blog_widget_section' ) ) :
         <?php
     }
 endif;
-add_action( 'st_blog_action_front_page', 'st_blog_widget_section', 50 );
+add_action( 'st_blog_homepage', 'st_blog_widget_section', 50 );
 
                                               

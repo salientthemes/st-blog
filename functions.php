@@ -168,6 +168,16 @@ function st_blog_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'st_blog_scripts' );
 
+/*added admin css for meta*/
+function salient_news_wp_admin_style($hook) {
+	
+	if ( 'widgets.php' == $hook ) {
+		wp_enqueue_media();
+		wp_enqueue_script( 'st-blog-widgets-script', get_template_directory_uri() . '/assets/build/js/widgets.js', array( 'jquery' ), '1.0.0' );
+	}
+}
+add_action( 'admin_enqueue_scripts', 'salient_news_wp_admin_style' );
+
 /**
  * Implement the Custom Header feature.
  */

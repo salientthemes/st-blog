@@ -95,5 +95,7 @@ function st_blog_widgets_init() {
 }
 add_action( 'widgets_init', 'st_blog_widgets_init' );
 
-require get_template_directory() . '/inc/widgets/mainpage-salient-tab-widget.php';;
-require get_template_directory() . '/inc/widgets/mainpage-salient-widget-author.php';
+require get_template_directory() . '/inc/widgets/mainpage-st-blog-tab.php';
+require get_template_directory() . '/inc/widgets/mainpage-st-blog-widget-author.php';
+require get_template_directory() . '/inc/widgets/mainpage-st-blog-instagaram.php';
+
