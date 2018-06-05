@@ -15,18 +15,9 @@ function st_blog_widgets_init() {
         'after_title'   => '</h2>',
     ) );
 
-    register_sidebar( array(
-        'name'          => esc_html__( 'Home/Main Front Page Widget', 'st-blog' ),
-        'id'            => 'homepage-main-section',
-        'description'   => '',
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
-    ) );
 
     register_sidebar( array(
-        'name'          => esc_html__( 'Home/Front Page Full Width Widget', 'st-blog' ),
+        'name'          => esc_html__( 'Home/Front Page Instagram Widget', 'st-blog' ),
         'id'            => 'full-width-widget',
         'description'   => '',
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -34,17 +25,6 @@ function st_blog_widgets_init() {
         'before_title'  => '<h2 class="widget-title">',
         'after_title'   => '</h2>',
     ) );
-
-    register_sidebar( array(
-        'name'          => esc_html__('Home/Front Page Sidebar Widget','st-blog'),
-        'id'            => 'front-sidebar-tab-widget',
-        'description'   => '',
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2 class= "widget-title">',
-        'after_title'   => '</h2>',
-    ) );
-
    $st_blog_get_all_options = st_blog_get_all_options(1);
    $st_blog_footer_widgets_number =$st_blog_get_all_options['st-blog-footer-sidebar-number'];
 

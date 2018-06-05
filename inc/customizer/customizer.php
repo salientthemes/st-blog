@@ -52,6 +52,9 @@ require get_template_directory(). '/inc/customizer/Feature-slider/slider-setting
 
 require get_template_directory(). '/inc/customizer/Feature-Trending-Post/trending-options.php'; 
 
+require get_template_directory(). '/inc/customizer/Footer-social-media/options.php'; 
+
+
 global $st_blog_panels;
 global $st_blog_sections;
 global $st_blog_settings_controls;

@@ -15,10 +15,10 @@ if ( ! function_exists( 'st_blog_widget_section' ) ) :
         <div class="container pdr0">
             <section class="st-custom-widget-section clearfix"><!-- salient news home custom widget section -->
                 <div class="st-custom-left-section ">
-                    <?php dynamic_sidebar( 'homepage-main-section' ); ?>
+                    
                 </div>
                 <div class="st-custom-right-section clearfix">
-                    <?php dynamic_sidebar('front-sidebar-tab-widget'); ?>    
+                        
                 </div>
             </section>
         </div>     
