@@ -966,6 +966,9 @@ aside .widget {
   height: 125px; }
   .st-blog-instafeed-slider .st-blog-instafeed-image a {
     display: block; }
+  .st-blog-instafeed-slider .st-blog-instafeed-image img {
+    width: 100%;
+    height: auto; }
 
 .null-instagram-feed {
   text-align: center; }
@@ -1002,10 +1005,12 @@ body:not(.dark-theme) #st-blog-social-icons ul li a[href*="pinterest.com"]:hover
   .st-blog-popular-posts-item:after {
     clear: both; }
   .st-blog-popular-posts-item .st-blog-popular-posts-img {
+    width: 75px;
     height: 75px;
     position: absolute; }
     .st-blog-popular-posts-item .st-blog-popular-posts-img img {
-      height: 100%; }
+      width: 100%;
+      height: auto; }
   .st-blog-popular-posts-item .st-blog-popular-posts-content {
     padding-left: 90px; }
     .st-blog-popular-posts-item .st-blog-popular-posts-content .st-blog-popular-posts-title {

@@ -16,12 +16,11 @@ if ( !function_exists('st_blog_widget_blcok') ) :
 		global $st_blog_customizer_all_values;
 
 		if ( is_active_sidebar('full-width-widget')  ) {  ?>
-			<div class="container">
-				<div class="row">
-					<section class="st-full-width-widget-style clearfix" id="st-full-width">
-						<?php dynamic_sidebar('full-width-widget'); ?>
-					</section>
-				</div>
+			<!-- instagram -->
+			<div class="container-">
+				<section class="st-full-width-widget-style clearfix" id="st-full-width">
+					<?php dynamic_sidebar('full-width-widget'); ?>
+				</section>
 			</div>			
 		<?php }
 	}

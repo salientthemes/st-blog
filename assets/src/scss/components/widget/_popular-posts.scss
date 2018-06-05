@@ -3,11 +3,14 @@
     position: relative;
     min-height: 75px;
 	.#{$prefix}-popular-posts-img {
+		width: 75px;
 	    height: 75px;
 	    position: absolute;
 	    @extend %img-effect-scale;
 	    img {
-	        height: 100%;
+	    	width: 100%;
+	        // height: 100%;
+	        height: auto;
 	    }
 	}
 	.#{$prefix}-popular-posts-content {

@@ -146,7 +146,7 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
                             <?php endif; ?>
                         </div>
                         <div class="st-blog-popular-posts-content">
-                            <h2><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h2>
+                            <h4 class="st-blog-popular-posts-title"><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h4>
                             <div class="post-meta-content">
                                 <?php
                                     $author_name = get_the_author_meta('nickname');
