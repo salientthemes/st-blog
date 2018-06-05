@@ -1,7 +1,12 @@
+.widget {
+	li {
+		list-style: none;		
+		
+	}
+}
 .#{$prefix}-list {
 	li {
-		list-style: none;
-		margin-bottom: 8px;
+		/* margin-bottom: 8px;
 		@extend %transition;
 
 		&:before {
@@ -11,7 +16,7 @@
 		}
 		&:hover {
 			padding-left: 10px;
-		}
+		} */
 	}
 }
 .widget-area {

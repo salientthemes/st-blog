@@ -1,4 +1,7 @@
-.btn,
+.btn {
+	@extend %btn-style;
+}
+
 a.btn {
 	@extend %btn-style;
 }

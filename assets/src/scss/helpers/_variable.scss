@@ -25,6 +25,9 @@ $color_black: #000;
 
 $color_primary: #EF3F3D;//red-orange
 $color_secondary: #272727;
+$color_link: lighten($color_black, 50%);
+$color_link_hover: $color_primary;
+
 $text_light: #8e8e8e;
 
 $color_title: $color_black;

@@ -1,5 +1,6 @@
 $masonry_column_gap: 6%;//or 30px
 .#{$prefix}-masonry { /* Masonry container */
+	margin-bottom: 40px;
 	@include media(md) {
 	    column-count: 2;
 	    column-gap: $masonry_column_gap;
@@ -13,7 +14,7 @@ $masonry_column_gap: 6%;//or 30px
 	}
 }
 
-body.#{$prefix}-no-sidebar {
+body.salient-no-sidebar {
 	.#{$prefix}-masonry {
 		@include media(sm) {
 		    column-count: 2;

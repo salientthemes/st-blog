@@ -36,7 +36,8 @@ body:not(.home) {
 	}
 }
 
-body.#{$prefix}-left-sidebar {
+// body.#{$prefix}-left-sidebar {
+body.salient-left-sidebar {
 	#primary,
 	#secondary {
 		float: right;
@@ -49,7 +50,7 @@ body.#{$prefix}-left-sidebar {
 	}
 }
 
-body.#{$prefix}-no-sidebar {
+body.salient-no-sidebar {
 	#primary {
 		width: 100%;
 	}

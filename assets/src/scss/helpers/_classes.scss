@@ -1,3 +1,8 @@
+// transition
+%transition {
+  @include transition($transition);
+}
+
 %img-cover {
     background-size: cover;
     background-position: center center;
@@ -18,6 +23,19 @@
 }
 %color-black {
     color: $color_black;
+}
+
+%color-link {
+    color: $color_link;
+    &:hover {
+      color: $color_link_hover;
+    }
+    &:visited {
+      // color: $color_link;  
+      &:hover {
+        // color: $color_link_hover;
+      }
+    }
 }
 
 %bg-primary {
@@ -81,10 +99,10 @@
 %widget-categories-list {
   background-color: $color_light_grey;
   list-style: none;
-  margin-bottom: 3px;
   padding: 4px 10px;
   line-height: 28px;
-  @include transition($transition);
+  // margin-bottom: 3px;
+  // @include transition($transition);
   &:hover {
     padding-left: 20px;
   }
@@ -93,6 +111,19 @@
     &:hover {
       color: $color_primary;
     }
+  }
+
+
+  margin-bottom: 8px;
+  @extend %transition;
+
+  &:before {
+    @extend %font-awesome;
+      content: "\f101";
+      margin-right: 5px;
+  }
+  &:hover {
+    // padding-left: 10px;
   }
 }
 
@@ -163,11 +194,7 @@
   }
 }
 
-// transition
-%transition {
-  @include transition($transition);
-}
-
+// flex
 %flex {
   display: -ms-flexbox;
   display: -webkit-flex;

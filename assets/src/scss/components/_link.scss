@@ -1,0 +1,15 @@
+a {
+	@extend %color-link;
+}
+// .site-content a {//:not(.btn)
+// 	color: lighten($color_black, 50%);
+// 	&:visited {
+// 		color: lighten($color_black, 50%);	
+// 		&:hover {
+// 			@extend %color-primary;
+// 		}
+// 	}
+// 	&:hover {
+// 		@extend %color-primary;
+// 	}
+// }
