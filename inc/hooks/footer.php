@@ -15,6 +15,7 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
     </div><!-- #content -->
 
         <?php get_template_part('template-parts/markup/instafeed');?>
+        <?php do_action('st_blog_action_front_page');?>
     
     <?php get_template_part('template-parts/markup/social-icons');?>
     <!-- </section> -->

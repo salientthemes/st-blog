@@ -1,6 +1,5 @@
 <?php
 
-
 function st_blog_register_instagram_widget() {
 	register_widget( 'st_blog_instagram_widget' );
 }
