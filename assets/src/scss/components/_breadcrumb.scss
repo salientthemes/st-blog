@@ -1,0 +1,23 @@
+.breadcrumbs {
+    margin-bottom: 15px;
+	.trail-items {
+		.trail-item {
+		    display: inline-block;
+		}
+
+		.trail-item+.trail-item {
+		    padding-left: .5rem;
+		}
+
+		.trail-item+.trail-item::before {
+		    display: inline-block;
+		    padding-right: .5rem;
+		    color: #6c757d;
+		    content: "/";
+		}
+
+		.trail-item a {
+		    color: $color_primary;
+		}
+	}
+}

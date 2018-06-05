@@ -368,6 +368,20 @@ body.scrolled-down #st-blog-scroll-top {
 .widget-area li:before {
   color: #b3b3b3; }
 
+.breadcrumbs {
+  margin-bottom: 15px; }
+  .breadcrumbs .trail-items .trail-item {
+    display: inline-block; }
+  .breadcrumbs .trail-items .trail-item + .trail-item {
+    padding-left: .5rem; }
+  .breadcrumbs .trail-items .trail-item + .trail-item::before {
+    display: inline-block;
+    padding-right: .5rem;
+    color: #6c757d;
+    content: "/"; }
+  .breadcrumbs .trail-items .trail-item a {
+    color: #EF3F3D; }
+
 .st-blog-header-row .st-blog-logo-manage .site-branding .site-title {
   font-size: 24px;
   font-size: 1.6rem;
