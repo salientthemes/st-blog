@@ -1089,8 +1089,8 @@ body:not(.dark-theme) #st-blog-social-icons ul li a[href*="pinterest.com"]:hover
         font-size: 1.33333rem; }
         @media (min-width: 575px) {
           #st-blog-banner .st-blog-banner-slider .slick-slide .st-blog-banner-image .st-blog-banner-caption .st-blog-title {
-            font-size: 30px;
-            font-size: 2rem; } }
+            font-size: 36px;
+            font-size: 2.4rem; } }
   #st-blog-banner .st-blog-banner-slider .slick-slide.slick-active .st-blog-banner-image .st-blog-banner-caption {
     transform: translate(0, -50%) scale(1); }
 #st-blog-banner .st-blog-banner-slider ul.slick-dots {
