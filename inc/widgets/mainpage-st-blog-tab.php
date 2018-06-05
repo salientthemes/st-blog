@@ -5,7 +5,7 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
     /**
      * Latest News Widget Class
      *
-     * @since salient-news 1.0.0
+     * @since st-blog 1.0.0
      *
      */
     class st_blog_tab_widget extends WP_Widget {
@@ -13,9 +13,9 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
         function __construct()
         {
             parent :: __construct(
-                'salient-news-tab-widget', //base_id
-                esc_html__('ST Tab Widget','salient-news'),
-                array( 'description' => esc_html__( 'Home page two column third widgets', 'salient-news' ) ) // Args
+                'st-blog-tab-widget', //base_id
+                esc_html__('ST Tab Widget','st-blog'),
+                array( 'description' => esc_html__( 'Home page two column third widgets', 'st-blog' ) ) // Args
             );
         }
 
@@ -33,7 +33,7 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
             $comments_number       = ! empty( $instance['comments_number'] ) ? $instance['comments_number'] : 5;
 
             $custom_class           = apply_filters( 'widget_custom_class', empty( $instance['custom_class'] ) ? '' : $instance['custom_class'], $instance, $this->id_base );
-            $featured_image         = ! empty( $instance['featured_image'] ) ? $instance['featured_image'] : 'salient-news-recent-sidebar';
+            $featured_image         = ! empty( $instance['featured_image'] ) ? $instance['featured_image'] : 'st-blog-recent-sidebar';
             $excerpt_length         = ! empty( $instance['excerpt_length'] ) ? $instance['excerpt_length'] : 50;
 
             // Add Custom class
@@ -259,16 +259,16 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
             ?>
             
             <p>
-                <label for="<?php echo absint($this->get_field_id('title')); ?>"><?php esc_html_e( 'Title:', 'salient-news' ); ?></label>
+                <label for="<?php echo absint($this->get_field_id('title')); ?>"><?php esc_html_e( 'Title:', 'st-blog' ); ?></label>
                 <input class="widefat" id="<?php echo absint($this->get_field_id('title')); ?>" name="<?php echo esc_html($this->get_field_name( 'title' )); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
             </p>
             <p>
-                <label for="<?php echo absint($this->get_field_id('popular_heading')); ?>"><?php esc_html_e( 'Tab1 Heading Title:', 'salient-news' ); ?></label>
+                <label for="<?php echo absint($this->get_field_id('popular_heading')); ?>"><?php esc_html_e( 'Tab1 Heading Title:', 'st-blog' ); ?></label>
                 <input class="widefat" id="<?php echo absint($this->get_field_id('popular_heading')); ?>" name="<?php echo esc_html($this->get_field_name( 'popular_heading' )); ?>" type="text" value="<?php echo esc_attr( $popular_heading ); ?>" />
             </p>
 
             <p>
-                <label for="<?php echo absint($this->get_field_id( 'popular_category' )); ?>"><?php esc_html_e( 'Tab1 Category:', 'salient-news' ); ?></label>
+                <label for="<?php echo absint($this->get_field_id( 'popular_category' )); ?>"><?php esc_html_e( 'Tab1 Category:', 'st-blog' ); ?></label>
                 <?php
                 $cat_args = array(
                     'orderby'         => 'name',
@@ -277,23 +277,23 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
                     'name'            => esc_html($this->get_field_name('popular_category')),
                     'id'              => absint($this->get_field_id('popular_category')),
                     'selected'        => $popular_category,
-                    'show_option_all' => __( 'All Categories','salient-news' ),
+                    'show_option_all' => __( 'All Categories','st-blog' ),
                 );
                 wp_dropdown_categories( $cat_args );
                 ?>
             </p>
 
             <p>
-                <label for="<?php echo absint($this->get_field_id( 'popular_number' )); ?>"><?php esc_html_e('Number of Tab1 Posts:', 'salient-news' ); ?></label>
+                <label for="<?php echo absint($this->get_field_id( 'popular_number' )); ?>"><?php esc_html_e('Number of Tab1 Posts:', 'st-blog' ); ?></label>
                 <input class="widefat1" id="<?php echo absint($this->get_field_id( 'popular_number' )); ?>" name="<?php echo esc_html($this->get_field_name( 'popular_number' )); ?>" type="number" value="<?php echo absint( $popular_number ); ?>" min="1" style="max-width:50px;" />
             </p>
             <p>
-                <label for="<?php echo absint($this->get_field_id('recent_heading')); ?>"><?php esc_html_e( 'Tab2 Heading Title:', 'salient-news' ); ?></label>
+                <label for="<?php echo absint($this->get_field_id('recent_heading')); ?>"><?php esc_html_e( 'Tab2 Heading Title:', 'st-blog' ); ?></label>
                 <input class="widefat" id="<?php echo absint($this->get_field_id('recent_heading')); ?>" name="<?php echo esc_html($this->get_field_name( 'recent_heading' )); ?>" type="text" value="<?php echo esc_attr( $recent_heading ); ?>" />
             </p>
 
             <p>
-                <label for="<?php echo absint($this->get_field_id( 'recent_category' )); ?>"><?php esc_html_e( 'Tab2 Category:', 'salient-news' ); ?></label>
+                <label for="<?php echo absint($this->get_field_id( 'recent_category' )); ?>"><?php esc_html_e( 'Tab2 Category:', 'st-blog' ); ?></label>
                 <?php
                 $cat_args = array(
                     'orderby'         => 'name',
@@ -302,7 +302,7 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
                     'name'            => esc_html($this->get_field_name('recent_category')),
                     'id'              => absint($this->get_field_id('recent_category')),
                     'selected'        => $recent_category,
-                    'show_option_all' => __( 'All Categories','salient-news' ),
+                    'show_option_all' => __( 'All Categories','st-blog' ),
                 );
                 wp_dropdown_categories( $cat_args );
                 ?>
