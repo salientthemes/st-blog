@@ -42,3 +42,8 @@ require get_template_directory() . '/inc/hooks/feature-slider.php';
 
 require get_template_directory() . '/inc/hooks/trending-post.php';
 
+require get_template_directory() . '/inc/hooks/full-width-widget.php';
+
+
+
+

@@ -21,14 +21,7 @@ if ( ! function_exists( 'st_blog_widget_section' ) ) :
                     <?php dynamic_sidebar('front-sidebar-tab-widget'); ?>    
                 </div>
             </section>
-        </div>
-        <div class="container">
-            <div class="row">
-                <section class="st-full-width-widget-style clearfix" id="st-full-width">
-                    <?php dynamic_sidebar('full-width-widget'); ?>
-                </section>
-            </div>
-        </div>      
+        </div>     
         <?php
     }
 endif;
