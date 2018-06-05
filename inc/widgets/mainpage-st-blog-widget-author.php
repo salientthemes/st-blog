@@ -42,19 +42,20 @@ if ( !class_exists('st_blog_author_widget') ) :
             //
             ?>
             <section id="st-blog-author" class="widget widget_author">
-            <div class="st-author-widget clearfix">                
-                <?php if ( ! empty( $image_url ) ) {
-                ?>
-                    <div class="st-blog-author-item text-center">    
-                        <img alt="image-alt" class="st-blog-author-img" src="<?php echo esc_url($image_url); ?>">   
-                    </div>
+            <div class="st-author-widget clearfix"> 
+                           
+                <div class="st-blog-author-item text-center">    
+                    <?php if ( ! empty( $image_url ) ) { ?>
+                        <figure class="st-blog-author-img">
+                            <img alt="image-alt" class="st-blog-author-img" src="<?php echo esc_url($image_url); ?>">   
+                        </figure>
                     <?php } ?>
 
-                    <div class="st-blog-author-name my-3">
-                        <h2><a href="<?php echo esc_url( $author_link ); ?>"><?php echo esc_html( $author_name ); ?></a></h2>               
+                    
+                        <h4 class="st-blog-author-name my-3"><a href="<?php echo esc_url( $author_link ); ?>"><?php echo esc_html( $author_name ); ?></a></h4>               
                         <p><?php echo esc_html( $description ); ?></p>
                         <a href="<?php echo esc_url( $author_link ); ?>" class="readmore">know more</a>
-                    </div><!-- author description -->   
+                </div><!-- /.st-blog-author-item -->                    
                             
             </div> 
             <?php

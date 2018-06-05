@@ -48,23 +48,30 @@ if ( !class_exists('st_blog_tab_widget') ) :
            echo wp_kses_post($args['before_widget']);
            ?>
            <div id="st-blog-popular-posts" class="widget widget_popular_posts">
-                <ul>
-                    <li class="nav nav-tabs"><a href="javascript:void();" data-tag="<?php echo esc_attr( $tab_id ); ?>-popular" class="activelink"><?php echo esc_html($popular_heading);?></a></li>
-                    <li class="clickme"><a href="javascript:void();" data-tag="<?php echo esc_attr( $tab_id ); ?>-recent"><?php echo esc_html($recent_heading);?></a></li>
-                    <li class="clickme"><a href="javascript:void();" data-tag="<?php echo esc_attr( $tab_id ); ?>-comments"><?php echo esc_html($comments_heading);?></a></li>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <!-- <a class="nav-link active" id="popular-tab" data-toggle="tab" href="#popular" role="tab" aria-controls="popular" aria-selected="true"> -->
+                        <a href="#<?php echo esc_attr( $tab_id ); ?>-popular" class="nav-link active" data-toggle="tab" role="tab" aria-controls="<?php echo esc_attr( $tab_id ); ?>-popular" aria-selected="true"><?php echo esc_html($popular_heading);?></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#<?php echo esc_attr( $tab_id ); ?>-recent" class="nav-link" data-toggle="tab" role="tab" aria-controls="<?php echo esc_attr( $tab_id ); ?>-recent" aria-selected="false"><?php echo esc_html($recent_heading);?></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#<?php echo esc_attr( $tab_id ); ?>-comments" class="nav-link" data-toggle="tab" role="tab" aria-controls="<?php echo esc_attr( $tab_id ); ?>-comments" aria-selected="false"><?php echo esc_html($comments_heading);?></a>
+                    </li>
                 </ul> 
                 <div class="clear"></div>  
 
-                <div class="tab">
-                    <div class="list" id="<?php echo esc_attr( $tab_id ); ?>-popular" class="tab-content first-tab">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="<?php echo esc_attr( $tab_id ); ?>-popular" role="tabpanel" aria-labelledby="<?php echo esc_attr( $tab_id ); ?>-popular-tab">
                         <?php  $this->render_news( 'popular', $instance ); ?>
                     </div>
-                    <div class="list hide" id="<?php echo esc_attr( $tab_id ); ?>-recent" class="tab-content second-tab">
+                    <div class="tab-pane fade" id="<?php echo esc_attr( $tab_id ); ?>-recent" role="tabpanel" aria-labelledby="<?php echo esc_attr( $tab_id ); ?>-recent-tab">
                         <?php $this->render_news( 'recent', $instance ); ?>
 
 
                     </div>
-                    <div class="list hide" id="<?php echo esc_attr( $tab_id ); ?>-sport" class="tab-content third-tab">
+                    <div class="tab-pane fade" id="<?php echo esc_attr( $tab_id ); ?>-comments" role="tabpanel" aria-labelledby="<?php echo esc_attr( $tab_id ); ?>-comments-tab">
                         <?php $this->render_news( 'sport', $instance ); ?>
                     </div>
                 </div>
@@ -119,19 +126,20 @@ if ( !class_exists('st_blog_tab_widget') ) :
                 <?php foreach ($all_posts as $key => $post ) : ?>
                     <?php setup_postdata( $post ) ?>
 
-                    <div class="tab-cat-wrapper clearfix">
-                        <div class="tab-image">
+                    <div class="st-blog-popular-posts-item mb-4 clearfix">
+                        <div class="st-blog-popular-posts-img">
                             <?php if ( has_post_thumbnail( $post->ID ) ) : ?>
                                 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ) ); ?>
                             <?php if ( ! empty( $image ) ) : ?>
-                                    <a href="<?php the_permalink();?>"><img class="img-responsive" src="<?php echo esc_url( $image[0] ); ?>" alt="" /></a>
+                                    <a href="<?php the_permalink();?>"><img width="75" height="75" class="img-responsive" src="<?php echo esc_url( $image[0] ); ?>" alt="" /></a>
                                 <?php endif; ?>
                             <?php else : ?>
-                                <img class="img-responsive" src="<?php echo get_template_directory_uri() . '../assets/images/fs.jpg'; ?>" alt="" />
+                                <img width="75" height="75" class="img-responsive" src="<?php echo get_template_directory_uri() . '../assets/images/fs.jpg'; ?>" alt="" />
                             <?php endif; ?>
                         </div>
-                        <div class="tab-heading-title">
-                            <h2><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h2>
+                        <div class="st-blog-popular-posts-content">
+                            <h4 class="st-blog-popular-posts-title"><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h4>
+                            
                             <div class="post-meta-content">
                                 <?php
                                     $author_name = get_the_author_meta('nickname');
