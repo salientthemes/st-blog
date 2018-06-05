@@ -201,14 +201,14 @@ input[type=checkbox], input[type=radio] {
     content: "\f30b";
     margin-left: 10px; }
 
-.widget_media_gallery figure.gallery-item, #st-blog-instafeed .st-blog-instafeed-image, #st-blog-author .st-blog-author-img, .st-blog-popular-posts-item .st-blog-popular-posts-img, #st-blog-featured .slick-list .slick-slide .st-blog-featured-image, .image {
+.widget_media_gallery figure.gallery-item, .st-blog-instafeed-slider .st-blog-instafeed-image, #st-blog-author .st-blog-author-img, .st-blog-popular-posts-item .st-blog-popular-posts-img, #st-blog-featured .slick-list .slick-slide .st-blog-featured-image, .image {
   overflow: hidden; }
-  .widget_media_gallery figure.gallery-item img, #st-blog-instafeed .st-blog-instafeed-image img, #st-blog-author .st-blog-author-img img, .st-blog-popular-posts-item .st-blog-popular-posts-img img, #st-blog-featured .slick-list .slick-slide .st-blog-featured-image img, .image img {
+  .widget_media_gallery figure.gallery-item img, .st-blog-instafeed-slider .st-blog-instafeed-image img, #st-blog-author .st-blog-author-img img, .st-blog-popular-posts-item .st-blog-popular-posts-img img, #st-blog-featured .slick-list .slick-slide .st-blog-featured-image img, .image img {
     -webkit-transition: 0.4s all ease-in-out;
     -moz-transition: 0.4s all ease-in-out;
     -o-transition: 0.4s all ease-in-out;
     transition: 0.4s all ease-in-out; }
-  .widget_media_gallery figure.gallery-item:hover img, #st-blog-instafeed .st-blog-instafeed-image:hover img, #st-blog-author .st-blog-author-img:hover img, .st-blog-popular-posts-item .st-blog-popular-posts-img:hover img, #st-blog-featured .slick-list .slick-slide .st-blog-featured-image:hover img, .image:hover img {
+  .widget_media_gallery figure.gallery-item:hover img, .st-blog-instafeed-slider .st-blog-instafeed-image:hover img, #st-blog-author .st-blog-author-img:hover img, .st-blog-popular-posts-item .st-blog-popular-posts-img:hover img, #st-blog-featured .slick-list .slick-slide .st-blog-featured-image:hover img, .image:hover img {
     -moz-transform: scale(1.05);
     -o-transform: scale(1.05);
     -ms-transform: scale(1.05);
@@ -962,11 +962,15 @@ aside .widget {
   .widget_media_gallery figure.gallery-item img {
     width: 100%; }
 
-#st-blog-instafeed .st-blog-instafeed-image {
+.st-blog-instafeed-slider .st-blog-instafeed-image {
   height: 125px; }
-  #st-blog-instafeed .st-blog-instafeed-image img {
-    height: 100%;
-    width: 100%; }
+  .st-blog-instafeed-slider .st-blog-instafeed-image a {
+    display: block; }
+
+.null-instagram-feed {
+  text-align: center; }
+  .null-instagram-feed .follow-me {
+    margin-top: 10px; }
 
 body:not(.dark-theme) #st-blog-social-icons ul li a[href*="facebook.com"]:hover {
   color: #3B5998; }

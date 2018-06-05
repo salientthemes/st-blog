@@ -1,11 +1,22 @@
-##{$prefix}-instafeed {
+// ##{$prefix}-instafeed
+.#{$prefix}-instafeed-slider {
 	.#{$prefix}-instafeed-image {
 		height: 125px;
 		@extend %img-effect-scale;
+		a {
+			display: block;
+		}
 		img {
 			// showing demo images
-			height: 100%;
-			width: 100%;
+			// height: 100%;
+			// width: 100%;
 		}
+	}
+}
+
+.null-instagram-feed {
+	text-align: center;
+	.follow-me {
+		margin-top: 10px;
 	}
 }

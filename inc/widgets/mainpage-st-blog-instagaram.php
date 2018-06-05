@@ -20,7 +20,7 @@ Class st_blog_instagram_widget extends WP_Widget {
 	function widget( $args, $instance ) {
 		$title 		= empty( $instance['title'] ) ? '' : apply_filters( 'widget_title', $instance['title'] );
 		$username 	= empty( $instance['username'] ) ? '' : $instance['username'];
-		$limit 		= empty( $instance['number'] ) ? 9 : $instance['number'];
+		$limit 		= empty( $instance['number'] ) ? '' : $instance['number'];
 		$size 		= empty( $instance['size'] ) ? 'large' : $instance['size'];
 		$target 	= empty( $instance['target'] ) ? '_self' : $instance['target'];
 		$link 		= empty( $instance['link'] ) ? '' : $instance['link'];
@@ -47,13 +47,13 @@ Class st_blog_instagram_widget extends WP_Widget {
 				$imgclass 			= apply_filters( 'wpiw_img_class', '' );
 				$template_part 		= apply_filters( 'wpiw_template_part', 'parts/st-blog.php' );
 				?>
-				<ul class="<?php echo esc_attr( $ulclass ); ?> col-md-12 instagram-slider"><?php
+				<ul class="<?php echo esc_attr( $ulclass ); ?> instagram-slider st-blog-instafeed-slider"><?php
 				foreach( $media_array as $item ) {
 					// copy the else line into a new file (parts/st-blog.php) within your theme and customise accordingly.
 					if ( locate_template( $template_part ) !== '' ) {
 						include locate_template( $template_part );
 					} else {
-						echo '<li class="hentry col-md-2 ' . esc_attr( $liclass ) . '"><a href="' . esc_url( $item['link'] ) . '" target="' . esc_attr( $target ) . '"  class="' . esc_attr( $aclass ) . '"><img src="' . esc_url( $item[$size] ) . '"  alt="' . esc_attr( $item['description'] ) . '" title="' . esc_attr( $item['description'] ) . '"  class="' . esc_attr( $imgclass ) . '"/></a></li>';
+						echo '<li class="st-blog-instafeed-image' . esc_attr( $liclass ) . '"><a href="' . esc_url( $item['link'] ) . '" target="' . esc_attr( $target ) . '"  class="' . esc_attr( $aclass ) . '"><img src="' . esc_url( $item[$size] ) . '"  alt="' . esc_attr( $item['description'] ) . '" title="' . esc_attr( $item['description'] ) . '"  class="' . esc_attr( $imgclass ) . '"/></a></li>';
 					}
 				}
 				?>
@@ -72,7 +72,7 @@ Class st_blog_instagram_widget extends WP_Widget {
 				break;
 		}
 		if ( '' !== $link ) {
-			?><p class="<?php echo esc_attr( $linkclass ); ?> follow-me"><a href="<?php echo trailingslashit( esc_url( $url ) ); ?>" rel="me" target="<?php echo esc_attr( $target ); ?>" class="<?php echo esc_attr( $linkaclass ); ?> button"><i class="fa fa-instagram"></i> <?php echo wp_kses_post( $link ); ?></a></p><?php
+			?><p class="<?php echo esc_attr( $linkclass ); ?> follow-me"><a href="<?php echo trailingslashit( esc_url( $url ) ); ?>" rel="me" target="<?php echo esc_attr( $target ); ?>" class="<?php echo esc_attr( $linkaclass ); ?> button btn"><i class="fab fa-instagram"></i> <?php echo wp_kses_post( $link ); ?></a></p><?php
 		}
 		do_action( 'wpiw_after_widget', $instance );
 		echo $args['after_widget'];

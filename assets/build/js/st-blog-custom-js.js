@@ -170,7 +170,7 @@ jQuery(window).load(function() {
 	jQuery(".st-blog-instafeed-slider").slick({
 		// normal options...
 		arrows: false,
-		autoplay: true,
+		autoplay: false,
 		autoplaySpeed: 4000,
 		draggable: true,
 		dots: false,
