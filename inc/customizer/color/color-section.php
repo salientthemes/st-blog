@@ -1,27 +1,32 @@
 <?php
-global$st_blog_sections;
-global$st_blog_settings_controls;
-global$st_blog_customizer_defaults;
+global $st_blog_panels;
+global $st_blog_sections;
+global $st_blog_settings_controls;
+global $st_blog_customizer_defaults;
 
 /*defaults values*/
-$st_blog_customizer_defaults['st-blog-site-identity-color'] = '#313131';
-$st_blog_customizer_defaults['st-blog-primary-color'] = '#0288d1';
-$st_blog_customizer_defaults['st-blog-heading-section-title-color'] = '#000000';
-$st_blog_customizer_defaults['st-blog-post-page-title-color'] = '#000000';
-$st_blog_customizer_defaults['st-blog-tincket-color'] = '#000000';
-$st_blog_customizer_defaults['st-blog-menu-background-color'] = '#1a2431'; 
-$st_blog_customizer_defaults['st-blog-menu-text-color'] = '#fff';
-$st_blog_customizer_defaults['st-blog-color-reset'] = '';
+$st_blog_customizer_defaults['st-blog-site-identity-color']     = '#313131';
+$st_blog_customizer_defaults['st-blog-primary-color']           = '#EF3F3D';
+$st_blog_customizer_defaults['st-blog-menu-background-color']   = '#ffffff';
+$st_blog_customizer_defaults['st-blog-menu-text-color']         = '#000';
+$st_blog_customizer_defaults['st-blog-latest-blog-title-color'] = '#000';
+$st_blog_customizer_defaults['st-blog-h1-h6-color']             = '#000';
+$st_blog_customizer_defaults['st-blog-button-color']            = '#fff';
+$st_blog_customizer_defaults['st-blog-color-reset']             = '';
 
 
+// color panels
+$st_blog_panels['st-blog-color-fonts-panles']  = array(
+    'title'     => esc_html__('Colors And Fonts','st-blog'),
+    'priority'  => 100
+);
 
 /*Default color*/
 $st_blog_sections['colors'] = array(
         'priority'       => 40,
-        'title'          => esc_html__( 'Colors Options', 'st-blog' )
+        'title'          => esc_html__( 'Colors Options', 'st-blog' ),
+        'panel'         => 'st-blog-color-fonts-panles'   
     );
-
-
 
 /**
  * Reset color settings to default
@@ -41,11 +46,9 @@ if ( ! function_exists( 'st_blog_color_reset' ) ) :
             /*setting fields */
            $st_blog_customizer_saved_values['st-blog-site-identity-color']            = $st_blog_customizer_defaults['st-blog-site-identity-color'] ;
            $st_blog_customizer_saved_values['st-blog-primary-color']                  = $st_blog_customizer_defaults['st-blog-primary-color'] ;
-           $st_blog_customizer_saved_values['st-blog-heading-section-title-color']     = $st_blog_customizer_defaults['st-blog-heading-section-title-color'];
-           $st_blog_customizer_saved_values['st-blog-post-page-title-color']          = $st_blog_customizer_defaults['st-blog-post-page-title-color'];
            $st_blog_customizer_saved_values['st-blog-menu-background-color']          = $st_blog_customizer_defaults['st-blog-menu-background-color'];
            $st_blog_customizer_saved_values['st-blog-menu-text-color']                = $st_blog_customizer_defaults['st-blog-menu-text-color'];
-           $st_blog_customizer_saved_values['st-blog-tincket-color']                  = $st_blog_customizer_defaults['st-blog-tincket-color'];
+           $st_blog_customizer_saved_values['st-blog-latest-blog-title-color']        = $st_blog_customizer_defaults['st-blog-latest-blog-title-color'];
 
             remove_theme_mod( 'background_color' );
            $st_blog_customizer_saved_values['st-blog-color-reset']                    = '';
@@ -116,41 +119,43 @@ $st_blog_settings_controls['st-blog-menu-text-color'] = array(
     )
 );
 
-$st_blog_settings_controls['st-blog-heading-section-title-color'] = array(
-    'setting' => array(
-        'default' => $st_blog_customizer_defaults['st-blog-heading-section-title-color'],
-    ),
-    'control' => array(
-        'label'                 =>  esc_html__( 'Section Heading Title Color', 'st-blog' ),
-        'section'               => 'colors',
-        'type'                  => 'color',
-        'priority'              => 45,
-        'active_callback'       => ''
-    )
-);
 
-$st_blog_settings_controls['st-blog-post-page-title-color'] = array(
+$st_blog_settings_controls['st-blog-latest-blog-title-color'] = array(
     'setting' => array(
-        'default' => $st_blog_customizer_defaults['st-blog-post-page-title-color'],
+        'default' => $st_blog_customizer_defaults['st-blog-latest-blog-title-color'],
     ),
     'control' => array(
-        'label'                 =>  esc_html__( 'Post Page Title Color', 'st-blog' ),
-        'section'               => 'colors',
-        'type'                  => 'color',
-        'priority'              => 50,
-        'active_callback'       => ''
-    )
-);
-
-$st_blog_settings_controls['st-blog-tincket-color'] = array(
-    'setting' => array(
-        'default' => $st_blog_customizer_defaults['st-blog-tincket-color'],
-    ),
-    'control' => array(
-        'label'                 =>  esc_html__( 'Ticker  Color', 'st-blog' ),
+        'label'                 =>  esc_html__( 'Latest Blog Title color', 'st-blog' ),
         'section'               => 'colors',
         'type'                  => 'color',
         'priority'              => 60,
+        'active_callback'       => ''
+    )
+);
+
+$st_blog_settings_controls['st-blog-h1-h6-color'] = array(
+    'setting' => array(
+        'default' => $st_blog_customizer_defaults['st-blog-h1-h6-color'],
+    ),
+    'control' => array(
+        'label'                 =>  esc_html__( 'H1-H6 Color', 'st-blog' ),
+        'section'               => 'colors',
+        'type'                  => 'color',
+        'priority'              => 70,
+        'active_callback'       => ''
+    )
+);
+
+
+$st_blog_settings_controls['st-blog-button-color'] = array(
+    'setting' => array(
+        'default' => $st_blog_customizer_defaults['st-blog-button-color'],
+    ),
+    'control' => array(
+        'label'                 =>  esc_html__( 'Button Color', 'st-blog' ),
+        'section'               => 'colors',
+        'type'                  => 'color',
+        'priority'              => 90,
         'active_callback'       => ''
     )
 );

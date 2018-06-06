@@ -27,6 +27,41 @@ $st_blog_sections['st-blog-social-section'] = array(
 	'priority'		=> 10
 );
 
+
+$st_bolg_all_social_media_name = array(
+	'twitter'		=> 'twitter',
+	'facebook'		=> 'facebook',
+	'google-plus'	=> 'google-plus',
+	'flickr'		=> 'flickr',
+	'pinterest'		=> 'pinterest',
+	'youtube'		=> 'youtube',
+	'vimeo'			=> 'vimeo',
+	'tumblr'		=> 'tumblr',
+	'dribbble'		=> 'dribbble',
+	'linkedin'		=> 'linkedin',
+	'instagram'		=> 'instagram',
+	'email'			=> 'email'
+
+);
+
+
+$st_bolg_all_social_media_link = array(
+	'https://twitter.com/'		    =>  'twitter',
+	'https://www.facebook.com/'		=>  'facebook',
+	'https://plus.google.com/'	    =>  'google-plus',
+	'https://www.flickr.com/' 	    =>  'flickr',
+	'https://www.pinterest.com/'    =>  'pinterest',
+	'https://www.youtube.com/'		=>  'youtube',
+	'https://vimeo.com/'			=>  'vimeo',
+	'https://www.tumblr.com/'		=>  'tumblr',
+	'https://dribbble.com/'         =>  'dribbble',
+	'https://www.linkedin.com/'	    =>  'linkedin',
+	'https://www.instagram.com/'	=>  'instagram',
+	'https://accounts.google.com/'	=>  'email'
+
+);
+
+
 // enable options
 $st_blog_settings_controls['st-blog-enable-social-media']   =  array(
 	'setting' => array(
@@ -50,22 +85,7 @@ $st_blog_settings_controls['st-blog-social-media-name-one'] = array(
 		'label'				=> esc_html__('Social Media Name First','st-blog'),
 		'section'			=> 'st-blog-social-section',
 		'type'				=> 'select',
-		'choices' => array(
-			'twitter'			=> esc_html__('twitter','st-blog'),
-			'facebook'			=> esc_html__('facebook','st-blog'),
-			'google-plus'		=> esc_html__('google-plus','st-blog'),
-			'flickr'			=> esc_html__('flickr','st-blog'),
-			'pinterest'			=> esc_html__('pinterest','st-blog'),
-			'youtube'			=> esc_html__('youtube','st-blog'),
-			'vimeo'				=> esc_html__('vimeo','st-blog'),
-			'tumblr'			=> esc_html__('tumblr','st-blog'),
-			'dribbble'			=> esc_html__('dribbble','st-blog'),
-			'linkedin'			=> esc_html__('linkedin','st-blog'),
-			'instagram'			=> esc_html__('instagram','st-blog'),
-			'email'			    => esc_html__('email','st-blog'),
-
-
-		),
+		'choices'			=> $st_bolg_all_social_media_name, 
 		'priority'			=> 20,
 		'active_callback'	=> ''	
 	)	
@@ -81,22 +101,7 @@ $st_blog_settings_controls['st-blog-social-link-one'] = array(
 		'label'				=> esc_html__('Social Media Link First','st-blog'),
 		'section'			=> 'st-blog-social-section',
 		'type'				=> 'select',
-		'choices' => array(
-			'https://twitter.com/'			=> esc_html__('https://twitter.com/','st-blog'),
-			'https://www.facebook.com/'		=> esc_html__('https://www.facebook.com/','st-blog'),
-			'https://plus.google.com/'		=> esc_html__('https://plus.google.com/','st-blog'),
-			'https://www.flickr.com/'		=> esc_html__('https://www.flickr.com/','st-blog'),
-			'https://www.pinterest.com/'	=> esc_html__('pinterest','st-blog'),
-			'youtube'						=> esc_html__('youtube','st-blog'),
-			'https://www.youtube.com/'		=> esc_html__('https://www.youtube.com/','st-blog'),
-			'tumblr'						=> esc_html__('tumblr','st-blog'),
-			'https://www.tumblr.com/'		=> esc_html__('https://www.tumblr.com/','st-blog'),
-			'https://www.linkedin.com/'		=> esc_html__('https://www.linkedin.com/','st-blog'),
-			'https://www.instagram.com/'	=> esc_html__('https://www.instagram.com/','st-blog'),
-			'https://accounts.google.com/'	=> esc_html__('https://accounts.google.com/','st-blog'),
-
-
-		),
+		'choices' 			=> $st_bolg_all_social_media_link,
 		'priority'			=> 30,
 		'active_callback'	=> ''	
 	)	
@@ -112,22 +117,7 @@ $st_blog_settings_controls['st-blog-social-media-name-two'] = array(
 		'label'				=> esc_html__('Social Media Name Second','st-blog'),
 		'section'			=> 'st-blog-social-section',
 		'type'				=> 'select',
-		'choices' => array(
-			'twitter'			=> esc_html__('twitter','st-blog'),
-			'facebook'			=> esc_html__('facebook','st-blog'),
-			'google-plus'		=> esc_html__('google-plus','st-blog'),
-			'flickr'			=> esc_html__('flickr','st-blog'),
-			'pinterest'			=> esc_html__('pinterest','st-blog'),
-			'youtube'			=> esc_html__('youtube','st-blog'),
-			'vimeo'				=> esc_html__('vimeo','st-blog'),
-			'tumblr'			=> esc_html__('tumblr','st-blog'),
-			'dribbble'			=> esc_html__('dribbble','st-blog'),
-			'linkedin'			=> esc_html__('linkedin','st-blog'),
-			'instagram'			=> esc_html__('instagram','st-blog'),
-			'email'			    => esc_html__('email','st-blog'),
-
-
-		),
+		'choices' 			=>  $st_bolg_all_social_media_name,
 		'priority'			=> 40,
 		'active_callback'	=> ''	
 	)	
@@ -143,22 +133,7 @@ $st_blog_settings_controls['st-blog-social-link-two'] = array(
 		'label'				=> esc_html__('Social Media Link Second','st-blog'),
 		'section'			=> 'st-blog-social-section',
 		'type'				=> 'select',
-		'choices' => array(
-			'https://twitter.com/'			=> esc_html__('https://twitter.com/','st-blog'),
-			'https://www.facebook.com/'		=> esc_html__('https://www.facebook.com/','st-blog'),
-			'https://plus.google.com/'		=> esc_html__('https://plus.google.com/','st-blog'),
-			'https://www.flickr.com/'		=> esc_html__('https://www.flickr.com/','st-blog'),
-			'https://www.pinterest.com/'	=> esc_html__('pinterest','st-blog'),
-			'youtube'						=> esc_html__('youtube','st-blog'),
-			'https://www.youtube.com/'		=> esc_html__('https://www.youtube.com/','st-blog'),
-			'tumblr'						=> esc_html__('tumblr','st-blog'),
-			'https://www.tumblr.com/'		=> esc_html__('https://www.tumblr.com/','st-blog'),
-			'https://www.linkedin.com/'		=> esc_html__('https://www.linkedin.com/','st-blog'),
-			'https://www.instagram.com/'	=> esc_html__('https://www.instagram.com/','st-blog'),
-			'https://accounts.google.com/'	=> esc_html__('https://accounts.google.com/','st-blog'),
-
-
-		),
+		'choices' 			=> $st_bolg_all_social_media_link,
 		'priority'			=> 50,
 		'active_callback'	=> ''	
 	)	
@@ -174,22 +149,7 @@ $st_blog_settings_controls['st-blog-social-media-name-three'] = array(
 		'label'				=> esc_html__('Social Media Name Three','st-blog'),
 		'section'			=> 'st-blog-social-section',
 		'type'				=> 'select',
-		'choices' => array(
-			'twitter'			=> esc_html__('twitter','st-blog'),
-			'facebook'			=> esc_html__('facebook','st-blog'),
-			'google-plus'		=> esc_html__('google-plus','st-blog'),
-			'flickr'			=> esc_html__('flickr','st-blog'),
-			'pinterest'			=> esc_html__('pinterest','st-blog'),
-			'youtube'			=> esc_html__('youtube','st-blog'),
-			'vimeo'				=> esc_html__('vimeo','st-blog'),
-			'tumblr'			=> esc_html__('tumblr','st-blog'),
-			'dribbble'			=> esc_html__('dribbble','st-blog'),
-			'linkedin'			=> esc_html__('linkedin','st-blog'),
-			'instagram'			=> esc_html__('instagram','st-blog'),
-			'email'			    => esc_html__('email','st-blog'),
-
-
-		),
+		'choices' 			=> $st_bolg_all_social_media_name,
 		'priority'			=> 60,
 		'active_callback'	=> ''	
 	)	
@@ -205,22 +165,7 @@ $st_blog_settings_controls['st-blog-social-link-three'] = array(
 		'label'				=> esc_html__('Social Media Link Three','st-blog'),
 		'section'			=> 'st-blog-social-section',
 		'type'				=> 'select',
-		'choices' => array(
-			'https://twitter.com/'			=> esc_html__('https://twitter.com/','st-blog'),
-			'https://www.facebook.com/'		=> esc_html__('https://www.facebook.com/','st-blog'),
-			'https://plus.google.com/'		=> esc_html__('https://plus.google.com/','st-blog'),
-			'https://www.flickr.com/'		=> esc_html__('https://www.flickr.com/','st-blog'),
-			'https://www.pinterest.com/'	=> esc_html__('pinterest','st-blog'),
-			'youtube'						=> esc_html__('youtube','st-blog'),
-			'https://www.youtube.com/'		=> esc_html__('https://www.youtube.com/','st-blog'),
-			'tumblr'						=> esc_html__('tumblr','st-blog'),
-			'https://www.tumblr.com/'		=> esc_html__('https://www.tumblr.com/','st-blog'),
-			'https://www.linkedin.com/'		=> esc_html__('https://www.linkedin.com/','st-blog'),
-			'https://www.instagram.com/'	=> esc_html__('https://www.instagram.com/','st-blog'),
-			'https://accounts.google.com/'	=> esc_html__('https://accounts.google.com/','st-blog'),
-
-
-		),
+		'choices' 			=> $st_bolg_all_social_media_link,
 		'priority'			=> 70,
 		'active_callback'	=> ''	
 	)	
@@ -236,22 +181,7 @@ $st_blog_settings_controls['st-blog-social-media-name-four'] = array(
 		'label'				=> esc_html__('Social Media Name Four','st-blog'),
 		'section'			=> 'st-blog-social-section',
 		'type'				=> 'select',
-		'choices' => array(
-			'twitter'			=> esc_html__('twitter','st-blog'),
-			'facebook'			=> esc_html__('facebook','st-blog'),
-			'google-plus'		=> esc_html__('google-plus','st-blog'),
-			'flickr'			=> esc_html__('flickr','st-blog'),
-			'pinterest'			=> esc_html__('pinterest','st-blog'),
-			'youtube'			=> esc_html__('youtube','st-blog'),
-			'vimeo'				=> esc_html__('vimeo','st-blog'),
-			'tumblr'			=> esc_html__('tumblr','st-blog'),
-			'dribbble'			=> esc_html__('dribbble','st-blog'),
-			'linkedin'			=> esc_html__('linkedin','st-blog'),
-			'instagram'			=> esc_html__('instagram','st-blog'),
-			'email'			    => esc_html__('email','st-blog'),
-
-
-		),
+		'choices' 			=> $st_bolg_all_social_media_name, 
 		'priority'			=> 80,
 		'active_callback'	=> ''	
 	)	
@@ -267,22 +197,7 @@ $st_blog_settings_controls['st-blog-social-link-four'] = array(
 		'label'				=> esc_html__('Social Media Link Four','st-blog'),
 		'section'			=> 'st-blog-social-section',
 		'type'				=> 'select',
-		'choices' => array(
-			'https://twitter.com/'			=> esc_html__('https://twitter.com/','st-blog'),
-			'https://www.facebook.com/'		=> esc_html__('https://www.facebook.com/','st-blog'),
-			'https://plus.google.com/'		=> esc_html__('https://plus.google.com/','st-blog'),
-			'https://www.flickr.com/'		=> esc_html__('https://www.flickr.com/','st-blog'),
-			'https://www.pinterest.com/'	=> esc_html__('pinterest','st-blog'),
-			'youtube'						=> esc_html__('youtube','st-blog'),
-			'https://www.youtube.com/'		=> esc_html__('https://www.youtube.com/','st-blog'),
-			'tumblr'						=> esc_html__('tumblr','st-blog'),
-			'https://www.tumblr.com/'		=> esc_html__('https://www.tumblr.com/','st-blog'),
-			'https://www.linkedin.com/'		=> esc_html__('https://www.linkedin.com/','st-blog'),
-			'https://www.instagram.com/'	=> esc_html__('https://www.instagram.com/','st-blog'),
-			'https://accounts.google.com/'	=> esc_html__('https://accounts.google.com/','st-blog'),
-
-
-		),
+		'choices' 			=> $st_bolg_all_social_media_link,
 		'priority'			=> 90,
 		'active_callback'	=> ''	
 	)	

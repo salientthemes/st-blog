@@ -5,13 +5,6 @@ global $st_blog_settings_controls;
 global $st_blog_repeated_settings_controls;
 global $st_blog_customizer_defaults;
 
-/*creating panel for fonts-setting*/
-$st_blog_panels['st-blog-fonts'] =
-    array(
-        'title'          => esc_html__( 'Font Setting', 'st-blog' ),
-        'priority'       => 43
-    );
-
 /*font array*/
 global $st_blog_google_fonts;
 $st_blog_google_fonts = array(
@@ -146,14 +139,17 @@ $st_blog_google_fonts = array(
 $st_blog_customizer_defaults['st-blog-font-family-site-identity']     = 'Raleway:400,300,500,600,700,900';
 $st_blog_customizer_defaults['st-blog-font-family-menu']              = 'Raleway:400,300,500,600,700,900';
 $st_blog_customizer_defaults['st-blog-font-family-h1-h6']             = 'Raleway:400,300,500,600,700,900';
+$st_blog_customizer_defaults['st-blog-font-family-section-title']     = 'Raleway:400,300,500,600,700,900';
+$st_blog_customizer_defaults['st-blog-font-family-button-text']       = 'Raleway:400,300,500,600,700,900';
+$st_blog_customizer_defaults['st-blog-footer-copy-right-text']        = 'Raleway:400,300,500,600,700,900';  
 
 
 /*section*/
 $st_blog_sections['st-blog-family'] =
     array(
-        'priority'       => 20,
+        'priority'       => 50,
         'title'          => esc_html__( 'Font Family', 'st-blog' ),
-        'panel'          => 'st-blog-fonts',
+        'panel'          => 'st-blog-color-fonts-panles',
     );
 
 /*setting - controls*/
@@ -168,7 +164,7 @@ $st_blog_settings_controls['st-blog-font-family-site-identity'] =
             'section'               => 'st-blog-family',
             'type'                  => 'select',
             'choices'               => $st_blog_google_fonts,
-            'priority'              => 2,
+            'priority'              => 10,
             'active_callback'       => ''
         )
     );
@@ -184,7 +180,7 @@ $st_blog_settings_controls['st-blog-font-family-menu'] =
             'section'               => 'st-blog-family',
             'type'                  => 'select',
             'choices'               => $st_blog_google_fonts,
-            'priority'              => 4,
+            'priority'              => 20,
             'active_callback'       => ''
         )
     );
@@ -199,8 +195,53 @@ $st_blog_settings_controls['st-blog-font-family-h1-h6'] =
             'section'               => 'st-blog-family',
             'type'                  => 'select',
             'choices'               => $st_blog_google_fonts,
-            'priority'              => 10,
+            'priority'              => 30,
             'active_callback'       => ''
         )
     );
 
+$st_blog_settings_controls['st-blog-font-family-section-title'] =
+    array(
+        'setting' =>     array(
+            'default'              => $st_blog_customizer_defaults['st-blog-font-family-section-title'],
+        ),
+        'control' => array(
+            'label'                 => esc_html__( 'Section Title ', 'st-blog' ),
+            'section'               => 'st-blog-family',
+            'type'                  => 'select',
+            'choices'               => $st_blog_google_fonts,
+            'priority'              => 40,
+            'active_callback'       => ''
+        )
+    );
+
+$st_blog_settings_controls['st-blog-font-family-button-text'] =
+    array(
+        'setting' =>     array(
+            'default'              => $st_blog_customizer_defaults['st-blog-font-family-button-text'],
+        ),
+        'control' => array(
+            'label'                 => esc_html__( 'Button Text', 'st-blog' ),
+            'section'               => 'st-blog-family',
+            'type'                  => 'select',
+            'choices'               => $st_blog_google_fonts,
+            'priority'              => 50,
+            'active_callback'       => ''
+        )
+    );    
+
+$st_blog_settings_controls['st-blog-footer-copy-right-text'] =
+    array(
+        'setting' =>     array(
+            'default'              => $st_blog_customizer_defaults['st-blog-footer-copy-right-text'],
+        ),
+        'control' => array(
+            'label'                 => esc_html__( 'Footer Copy Right Text', 'st-blog' ),
+            'description'           => esc_html__('its only change the fotter copy right text fonts not all footer text','st-blog'),
+            'section'               => 'st-blog-family',
+            'type'                  => 'select',
+            'choices'               => $st_blog_google_fonts,
+            'priority'              => 60,
+            'active_callback'       => ''
+        )
+    );

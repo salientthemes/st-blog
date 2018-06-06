@@ -115,7 +115,6 @@ if ( !function_exists('st_blog_trending_post') ) :
     {
         global $st_blog_customizer_all_values;
         $st_blog_trending_post_title            = $st_blog_customizer_all_values['st-blog-trending-main-title-text'];   
-
         if( 1 != $st_blog_customizer_all_values['st-blog-trending-enbale'] )
         {
             return null;
