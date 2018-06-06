@@ -20,7 +20,8 @@ body.logo-right {
             width: calc(100% - 220px);
             float: left;
             // some fixes while shifting menu to the left
-            nav#site-navigation ul {
+            nav#site-navigation ul.nav-menu,
+            nav#site-navigation ul.menu {
                 margin-right: 0;
                 margin-left: 55px;
                 float: left;
