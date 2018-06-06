@@ -6,7 +6,8 @@ body.logo-left {
 		    width: 220px;
 		    float: left;
 		    .site-branding {
-		    	padding-top: 5px;
+		    	padding-top: 10px;
+		    	padding-bottom: 10px;
 		    }
 		}
 
@@ -14,6 +15,13 @@ body.logo-left {
 		.#{$prefix}-menu-toggler-manage {
 		    width: calc(100% - 220px);
 		    float: right;
+		}
+
+		#site-navigation {
+			ul.nav-menu,
+			ul.menu {
+				margin-right: 55px;
+			}
 		}
 	}
 }

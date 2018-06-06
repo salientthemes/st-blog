@@ -29,7 +29,8 @@
         }
     }
 
-    ul.nav-menu {
+    ul.nav-menu,
+    ul.menu {
 
         > li{
             display: inline-block;
@@ -39,7 +40,7 @@
 
             > a {
                 display: inline-block;
-                padding: 7px 1rem;//33px
+                padding: 25px 1rem;//33px
                 text-transform: uppercase;
             }
             &.current-menu-item {

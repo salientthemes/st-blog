@@ -3,3 +3,23 @@ header.site-header {
 		@include box-shadow(0 2px 2px rgba(0,0,0,0.1));
 	}
 }
+
+.st-blog-logo-left-right-nav,
+.st-blog-big-logo-nav {
+	display: none;
+}
+
+body {
+	&.big-logo {
+		.st-blog-big-logo-nav {
+			display: block;
+		}
+	}
+
+	&.logo-left,
+	&.logo-right {
+		.st-blog-logo-left-right-nav {
+			display: block;
+		}
+	}
+}

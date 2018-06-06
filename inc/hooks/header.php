@@ -227,7 +227,9 @@ function st_blog_header() {
                                 <?php endif; ?>
                             </div><!-- .site-branding -->                   
                         </div><!-- site brand-->
-                        <div class="text-right st-blog-menu-toggler-manage">
+
+                        <!-- left and right nav -->
+                        <div class="text-right st-blog-logo-left-right-nav st-blog-menu-toggler-manage">
                             <button class="menu-toggler" id="menu-icon">
                                 <span></span>
                                 <span></span>
@@ -256,6 +258,38 @@ function st_blog_header() {
                         </div><!-- site nav -->
                     </div>
                 </div>
+
+                <div class="st-blog-header-row st-blog-big-logo-nav">
+                    <!-- full width nav -->
+                    <div class="text-right st-blog-menu-toggler-manage">
+                        <button class="menu-toggler" id="menu-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        
+                        <nav id="site-navigation" class="main-navigation">
+                            <div class="container">
+                            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'st-blog' ); ?></button>
+                            <?php
+                            wp_nav_menu( array(
+                                'theme_location' => 'menu-1',
+                                'menu_id'        => 'primary-menu',
+                                 'fallback_cb'    => 'st_blog_primary_menu'
+                            ) );
+                            ?>
+
+                            <!-- search toggle icon -->
+                            <button class="st-blog-head-search-toggler d-none d-lg-block"><i class="fas fa-search"></i></button>
+                            </div>
+                        </nav><!-- #site-navigation -->     
+
+                        <!-- search toggle icon -->
+                        <button class="st-blog-head-search-toggler d-lg-none"><i class="fas fa-search"></i></button>
+                    </div><!-- site nav -->
+                </div>
+
             </div>
 
             <div class="st-blog-head-search">

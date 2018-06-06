@@ -5,7 +5,7 @@ body.big-logo {
 		    padding-top: 15px;
 			text-align: center;
 		    @include media(md) {
-		    	padding-bottom: 0;
+		    	padding-bottom: 8px;
 		    	padding-top: 20px;
 		    }
 		}
@@ -13,10 +13,11 @@ body.big-logo {
 }
 
 @include media(md) {
-	body.big-logo.big-logo-enable header.site-header .#{$prefix}-header-wrap-nav .container .#{$prefix}-menu-toggler-manage {
+	body.big-logo.big-logo-enable header.site-header .#{$prefix}-header-wrap-nav .#{$prefix}-menu-toggler-manage {
 	    position: inherit;
 	}
-	body.big-logo.big-logo-enable nav#site-navigation ul.nav-menu {
+	body.big-logo.big-logo-enable nav#site-navigation ul.nav-menu,
+	body.big-logo.big-logo-enable nav#site-navigation ul.menu {
 	    float: none;
 	    margin-right: 0;
 	    margin: 0 auto;
@@ -38,7 +39,7 @@ body.big-logo {
 	    float: none;
 	    display: inline-block;
 	}
-	.big-logo.big-logo-disable header.site-header .#{$prefix}-header-wrap-nav .container .#{$prefix}-menu-toggler-manage {
+	.big-logo.big-logo-disable header.site-header .#{$prefix}-header-wrap-nav .#{$prefix}-menu-toggler-manage {
 	    right: auto;
 	    width: 100%;
 	}
@@ -47,12 +48,13 @@ body.big-logo {
 	}
 
 
-	body.big-logo nav#site-navigation ul.nav-menu > li > a {
+	body.big-logo nav#site-navigation ul.nav-menu > li > a,
+	body.big-logo nav#site-navigation ul.menu > li > a {
 	    padding-top: 20px;
 	    padding-bottom: 20px;
 	}
 
-	body.big-logo header.site-header .#{$prefix}-header-wrap-nav .container .#{$prefix}-menu-toggler-manage {
+	body.big-logo header.site-header .#{$prefix}-header-wrap-nav .#{$prefix}-menu-toggler-manage {
 	    min-height: auto;
 	}
 

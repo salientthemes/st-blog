@@ -8,7 +8,7 @@ nav#site-navigation{
     @extend %first-level; 
     @extend %second-level; 
     @extend %n-level; 
-    position: relative;
+    // position: relative;
 }
 
 #menu-icon  {

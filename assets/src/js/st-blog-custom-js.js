@@ -1,6 +1,6 @@
 function st_blog_head_search_form_position() {
 	// position search form again - placed in three place in this js
-	jQuery('.st-blog-head-search').css({ 'top': jQuery('.st-blog-header-row').height() + 'px' });	
+	jQuery('.st-blog-head-search').css({ 'top': jQuery('.st-blog-header-wrap-nav').height() + 'px' });	
 }
 
 function search_icon_alignment() {
@@ -21,7 +21,7 @@ function search_icon_alignment() {
 
 function alignment_and_padding() {
 	// page padding again
-	jQuery('#page.site').css({ 'padding-top': jQuery('.st-blog-header-row').height() + 'px' });	
+	jQuery('#page.site').css({ 'padding-top': jQuery('.st-blog-header-wrap-nav').height() + 'px' });	
 
 	// search icon padding
 	search_icon_alignment();
