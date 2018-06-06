@@ -58,6 +58,7 @@ if ( !class_exists('st_blog_author_widget') ) :
                 </div><!-- /.st-blog-author-item -->                    
                             
             </div> 
+            </section>
             <?php
             //
             echo wp_kses_post($after_widget);

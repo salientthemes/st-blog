@@ -9,7 +9,7 @@ $masonry_column_gap: 6%;//or 30px
 	    column-count: 2;
 	}
 	.#{$prefix}-item { /* Masonry bricks or child elements */
-	    // display: inline-block;
+	    display: inline-block;
 	    // width: 100%;
 	}
 }

@@ -1,7 +1,12 @@
+$instagram_height: 125px;
 // ##{$prefix}-instafeed
 .#{$prefix}-instafeed-slider {
+		height: $instagram_height;
+		overflow: hidden;
 	.#{$prefix}-instafeed-image {
-		height: 125px;
+		display: inline-block;
+		height: $instagram_height;
+		width: calc(100% / 8);
 		@extend %img-effect-scale;
 		a {
 			display: block;
