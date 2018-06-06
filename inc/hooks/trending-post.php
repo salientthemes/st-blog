@@ -158,7 +158,6 @@ if ( !function_exists('st_blog_trending_post') ) :
                                         <img src="<?php echo esc_url($st_blog_trending_post_image);?>">
                                     </div>
                                     <div class="st-blog-featured-caption text-center">
-                                        <span class="st-blog-category"><a href="#!">Category</a></span>
                                         <h2 class="st-blog-title mb-3 mt-2"><a href="<?php echo esc_url($st_blog_trending_array['st-blog-trending-post-url']);?>"><?php echo esc_html($st_blog_trending_array['st-blog-trending-post-title']);?></a></h2>
                                         <p><?php echo esc_html($st_blog_trending_array['st-blog-trending-post-content']);?></p>
                                         <a href="<?php echo esc_url($st_blog_trending_array['st-blog-trending-post-url']);?>" class="readmore"><?php echo esc_html($st_trending_post_button_text);?></a>

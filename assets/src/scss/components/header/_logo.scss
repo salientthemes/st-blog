@@ -7,11 +7,14 @@ $logo_size: 24;
 	    // @extend %flex-v-center;
 
 		.site-branding {
+			.custom-logo-link {
+			    margin-bottom: 10px;
+			}
 			.site-title {
 			    @include font-size($logo_size);
 			    font-weight: $font_primary_bold;
 			    text-transform: uppercase;
-			    margin-bottom: 0;
+			    // margin-bottom: 0;
 			    a {
 			    	color: $color_black;
 			    }

@@ -1,6 +1,7 @@
 %second-level{
-    ul.menu {
+    ul.nav-menu {
             ul{
+                left: 0;
                 position: absolute;
                 top: 100%;
                 width: $nav-sub-menu-width;

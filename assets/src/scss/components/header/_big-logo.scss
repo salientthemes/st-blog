@@ -1,40 +1,24 @@
-body.big-logo .#{$prefix}-header-row .#{$prefix}-logo-manage {
-    padding-bottom: 10px;
-    padding-top: 10px;
-    @include media(md) {
-    	padding-bottom: 0;
-    	padding-top: 20px;
-    }
-}
-
-@include media(xs) {
-	body.big-logo .#{$prefix}-header-row, 
-	body.big-logo .#{$prefix}-header-row .#{$prefix}-logo-manage {
-	    display: block;
-	    text-align: center;
+body.big-logo {
+	.#{$prefix}-header-row {
+		.#{$prefix}-logo-manage {
+		    padding-bottom: 15px;
+		    padding-top: 15px;
+			text-align: center;
+		    @include media(md) {
+		    	padding-bottom: 0;
+		    	padding-top: 20px;
+		    }
+		}
 	}
 }
 
 @include media(md) {
-	body.big-logo.big-logo-enable .#{$prefix}-header-row .#{$prefix}-logo-manage .site-branding .site-title {
-		margin-bottom: 0px;
-	}
-
 	body.big-logo.big-logo-enable header.site-header .#{$prefix}-header-wrap-nav .container .#{$prefix}-menu-toggler-manage {
 	    position: inherit;
 	}
-	body.big-logo.big-logo-enable nav#site-navigation ul#primary-menu {
+	body.big-logo.big-logo-enable nav#site-navigation ul.nav-menu {
 	    float: none;
 	    margin-right: 0;
-	    // @include translate(-50%, 0);
-	    // left: 50%;
-	    // position: absolute;
-	    // width: auto;
-	    // width: 100%;
-	}
-
-
-	body.big-logo.big-logo-enable nav#site-navigation ul#primary-menu {
 	    margin: 0 auto;
 	    display: inline-block;
 	    position: inherit;
@@ -63,9 +47,9 @@ body.big-logo .#{$prefix}-header-row .#{$prefix}-logo-manage {
 	}
 
 
-	body.big-logo nav#site-navigation ul.menu > li > a {
-	    padding-top: 15px;
-	    padding-bottom: 15px;
+	body.big-logo nav#site-navigation ul.nav-menu > li > a {
+	    padding-top: 20px;
+	    padding-bottom: 20px;
 	}
 
 	body.big-logo header.site-header .#{$prefix}-header-wrap-nav .container .#{$prefix}-menu-toggler-manage {
@@ -74,9 +58,8 @@ body.big-logo .#{$prefix}-header-row .#{$prefix}-logo-manage {
 
 	body.big-logo .main-navigation {
 	    float: none;
-	}
-
-	body.big-logo .main-navigation li {
-	    float: none;
+	    li {
+	    	float: none;
+	    }
 	}
 }
