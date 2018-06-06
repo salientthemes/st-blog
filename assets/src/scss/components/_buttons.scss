@@ -8,6 +8,7 @@ a.btn {
 
 // readmore
 .readmore {
+	@extend %font-primary;
 	display: inline-block;
 	i {
 		margin-left: 5px;

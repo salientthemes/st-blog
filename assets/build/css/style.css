@@ -46,7 +46,7 @@ a {
 header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover, body.dark-theme header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage #menu-icon.menu-toggler span, body.dark-theme header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover {
   background-color: #ffffff; }
 
-h1, h2, h3, h4, h5, h6, .st-blog-title, nav#site-navigation ul a, #st-blog-author .st-blog-author-name, #st-blog-featured .slick-list .slick-slide .st-blog-featured-caption .st-blog-category {
+h1, h2, h3, h4, h5, h6, .st-blog-title, .readmore, nav#site-navigation ul a, #st-blog-author .st-blog-author-name, #st-blog-featured .slick-list .slick-slide .st-blog-featured-caption .st-blog-category {
   font-family: "Roboto Condensed", sans-serif; }
 
 .widget_categories ul li:before,
