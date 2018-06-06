@@ -8,7 +8,7 @@ $st_blog_panels['st-blog-theme-options'] =
     );
 
 /*footer options */
-require get_template_directory().'/inc/customizer/theme-option/footer.php';
+// require get_template_directory().'/inc/customizer/theme-option/footer.php';
 
 /*layout options */
 require get_template_directory().'/inc/customizer/theme-option/layout-options.php';

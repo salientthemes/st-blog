@@ -17,7 +17,7 @@ function st_blog_widgets_init() {
 
 
     register_sidebar( array(
-        'name'          => esc_html__( 'Home/Front Page Instagram Widget', 'st-blog' ),
+        'name'          => esc_html__( 'Home/Front Page Full Width Widget', 'st-blog' ),
         'id'            => 'full-width-widget',
         'description'   => '',
         'before_widget' => '<section id="%1$s" class="widget %2$s">',

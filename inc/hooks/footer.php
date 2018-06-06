@@ -39,7 +39,7 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
         function st_blog_widget_before_footer() {
                 global$st_blog_customizer_all_values;
                $st_blog_footer_widgets_number =$st_blog_customizer_all_values['st-blog-footer-sidebar-number'];
-                if( !is_active_sidebar( 'footer-col-one' ) && !is_active_sidebar( 'footer-col-two' ) && !is_active_sidebar( 'footer-col-three' ) && !is_active_sidebar( 'footer-col-four' )){
+                if (!is_active_sidebar('full-width-footer') && !is_active_sidebar( 'footer-col-one' ) && !is_active_sidebar( 'footer-col-two' ) && !is_active_sidebar( 'footer-col-three' ) && !is_active_sidebar( 'footer-col-four' )){
                     return false;
                 }
                 if( 1 == $st_blog_footer_widgets_number ){
@@ -53,7 +53,22 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
                 }
                 else{
               
-                    $col = 'col-md-3 col-sm-3 col-xs-12'; ?>
+                        $col = 'col-md-3 col-sm-3 col-xs-12'; 
+                    } ?>
+
+                     <!-- full width footer -->
+                    <section class="wrapper block-section wrap-contact footer-widget full-width">
+                        <div class="container full-width-footer">
+                            <div class="row">
+                                <div id="full-width-footer">
+                                <?php
+                                if(is_active_sidebar('full-width-footer')){
+                                dynamic_sidebar('full-width-footer');
+                                }
+                                ?>
+                            </div>
+                        </div>
+                    </section><!-- full width widget ended -->
 
                     <div class="footer-wrapper">
                         <div class="container">
@@ -84,8 +99,6 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
                             </div>
                         </div>   
                     </div>  
-        <?php }
-        ?>
         <!-- footer widget -->
         
             
@@ -112,15 +125,18 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
             <div class="site-info">
                 <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'st-blog' ) ); ?>">
                     <?php
-                    /* translators: %s: CMS name, i.e. WordPress. */
-                    printf( esc_html__( 'Proudly powered by %s', 'st-blog' ), 'WordPress' );
-                    ?>
+                        if(isset($st_blog_customizer_all_values['st-blog-copyright-text'])){
+                            echo wp_kses_post( $st_blog_customizer_all_values['st-blog-copyright-text'] );
+                        }
+                        ?>
                 </a>
+                <?php if ( 1 == $st_blog_customizer_all_values['footer-enable-theme-name'] ) { ?>
                 <span class="sep"> | </span>
                     <?php
                     /* translators: 1: Theme name, 2: Theme author. */
                     printf( esc_html__( 'Theme: %1$s by %2$s.', 'st-blog' ), 'st-blog', '<a href="http://salientthemes.com/">Salientthemes</a>' );
                     ?>
+                <?php } ?>    
             </div><!-- .site-info -->
         </div>
         

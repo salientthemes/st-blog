@@ -107,7 +107,7 @@ if( !function_exists('st_blog_feature_slider') ) :
     {
         global $st_blog_customizer_all_values;
        
-        if( 1  != $st_blog_customizer_all_values['st-blog-feature-slider-enable'] )
+        if( 1 != $st_blog_customizer_all_values['st-blog-feature-slider-enable'] )
         {
             return null;
         }

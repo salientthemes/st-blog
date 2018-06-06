@@ -29,7 +29,7 @@ $st_blog_sections['st-blog-feature-section'] = array(
 );
 
 // slider enable disble otions
-$st_blog_settings_controls['log-feature-slider-enable'] = array(
+$st_blog_settings_controls['st-blog-feature-slider-enable'] = array(
     'setting' => array(
         'default'  => $st_blog_customizer_defaults['st-blog-feature-slider-enable']
     ), 
