@@ -246,7 +246,9 @@ function st_blog_header() {
                                 ?>
 
                                 <!-- search toggle icon -->
+                                <?php if ( $st_blog_customizer_all_values['header-search-button-enable'] ) {?>
                                 <button class="st-blog-head-search-toggler d-none d-lg-block"><i class="fas fa-search"></i></button>
+                                <?php } ?>
                             </nav><!-- #site-navigation -->     
 
                             <!-- search toggle icon -->

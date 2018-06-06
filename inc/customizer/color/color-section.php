@@ -12,6 +12,8 @@ $st_blog_customizer_defaults['st-blog-menu-text-color']         = '#000';
 $st_blog_customizer_defaults['st-blog-latest-blog-title-color'] = '#000';
 $st_blog_customizer_defaults['st-blog-h1-h6-color']             = '#000';
 $st_blog_customizer_defaults['st-blog-button-color']            = '#fff';
+$st_blog_customizer_defaults['st-blog-footer-background-color'] = '#fff';
+$st_blog_customizer_defaults['st-blog-footer-text-color']       = '#000';
 $st_blog_customizer_defaults['st-blog-color-reset']             = '';
 
 
@@ -49,6 +51,8 @@ if ( ! function_exists( 'st_blog_color_reset' ) ) :
            $st_blog_customizer_saved_values['st-blog-menu-background-color']          = $st_blog_customizer_defaults['st-blog-menu-background-color'];
            $st_blog_customizer_saved_values['st-blog-menu-text-color']                = $st_blog_customizer_defaults['st-blog-menu-text-color'];
            $st_blog_customizer_saved_values['st-blog-latest-blog-title-color']        = $st_blog_customizer_defaults['st-blog-latest-blog-title-color'];
+           $st_blog_customizer_saved_values['st-blog-footer-background-color']        = $st_blog_customizer_defaults['st-blog-footer-background-color'];
+           $st_blog_customizer_saved_values['st-blog-footer-text-color']              = $st_blog_customizer_defaults['st-blog-footer-text-color'];
 
             remove_theme_mod( 'background_color' );
            $st_blog_customizer_saved_values['st-blog-color-reset']                    = '';
@@ -156,6 +160,32 @@ $st_blog_settings_controls['st-blog-button-color'] = array(
         'section'               => 'colors',
         'type'                  => 'color',
         'priority'              => 90,
+        'active_callback'       => ''
+    )
+);
+
+$st_blog_settings_controls['st-blog-footer-background-color'] = array(
+    'setting' => array(
+        'default' => $st_blog_customizer_defaults['st-blog-footer-background-color'],
+    ),
+    'control' => array(
+        'label'                 =>  esc_html__( 'Footer Background Color', 'st-blog' ),
+        'section'               => 'colors',
+        'type'                  => 'color',
+        'priority'              => 100,
+        'active_callback'       => ''
+    )
+);
+
+$st_blog_settings_controls['st-blog-footer-text-color'] = array(
+    'setting' => array(
+        'default' => $st_blog_customizer_defaults['st-blog-footer-text-color'],
+    ),
+    'control' => array(
+        'label'                 =>  esc_html__( 'Footer Text Color', 'st-blog' ),
+        'section'               => 'colors',
+        'type'                  => 'color',
+        'priority'              => 110,
         'active_callback'       => ''
     )
 );

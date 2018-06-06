@@ -139,7 +139,6 @@ $st_blog_google_fonts = array(
 $st_blog_customizer_defaults['st-blog-font-family-site-identity']     = 'Raleway:400,300,500,600,700,900';
 $st_blog_customizer_defaults['st-blog-font-family-menu']              = 'Raleway:400,300,500,600,700,900';
 $st_blog_customizer_defaults['st-blog-font-family-h1-h6']             = 'Raleway:400,300,500,600,700,900';
-$st_blog_customizer_defaults['st-blog-font-family-section-title']     = 'Raleway:400,300,500,600,700,900';
 $st_blog_customizer_defaults['st-blog-font-family-button-text']       = 'Raleway:400,300,500,600,700,900';
 $st_blog_customizer_defaults['st-blog-footer-copy-right-text']        = 'Raleway:400,300,500,600,700,900';  
 
@@ -196,21 +195,6 @@ $st_blog_settings_controls['st-blog-font-family-h1-h6'] =
             'type'                  => 'select',
             'choices'               => $st_blog_google_fonts,
             'priority'              => 30,
-            'active_callback'       => ''
-        )
-    );
-
-$st_blog_settings_controls['st-blog-font-family-section-title'] =
-    array(
-        'setting' =>     array(
-            'default'              => $st_blog_customizer_defaults['st-blog-font-family-section-title'],
-        ),
-        'control' => array(
-            'label'                 => esc_html__( 'Section Title ', 'st-blog' ),
-            'section'               => 'st-blog-family',
-            'type'                  => 'select',
-            'choices'               => $st_blog_google_fonts,
-            'priority'              => 40,
             'active_callback'       => ''
         )
     );

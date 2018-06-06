@@ -136,7 +136,6 @@ function st_blog_google_fonts()
 	$st_blog_font_family_site_identity   = $st_blog_customizer_all_values['st-blog-font-family-site-identity'];
 	$st_blog_font_family_menu			 = $st_blog_customizer_all_values['st-blog-font-family-menu'];
 	$st_blog_font_family_h1_h6			 = $st_blog_customizer_all_values['st-blog-font-family-h1-h6'];
-	$st_blog_font_family_section_title   = $st_blog_customizer_all_values['st-blog-font-family-section-title'];
 	$st_blog_font_family_button_text	 = $st_blog_customizer_all_values['st-blog-font-family-button-text'];
 	$st_blog_font_family_copy_right_text = $st_blog_customizer_all_values['st-blog-footer-copy-right-text'];
 
@@ -144,7 +143,6 @@ function st_blog_google_fonts()
 	$st_blog_fonts[] = $st_blog_font_family_site_identity;
 	$st_blog_fonts[] = $st_blog_font_family_menu;
 	$st_blog_fonts[] = $st_blog_font_family_h1_h6;
-	$st_blog_fonts[] = $st_blog_font_family_section_title;
 	$st_blog_fonts[] = $st_blog_font_family_button_text;
 	$st_blog_fonts[] = $st_blog_font_family_copy_right_text;
 
@@ -281,7 +279,6 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
         $st_blog_customizer_defaults['st-blog-font-family-site-identity']     = 'Raleway:400,300,500,600,700,900';
 		$st_blog_customizer_defaults['st-blog-font-family-menu']              = 'Raleway:400,300,500,600,700,900';
 		$st_blog_customizer_defaults['st-blog-font-family-h1-h6']             = 'Raleway:400,300,500,600,700,900';
-		$st_blog_customizer_defaults['st-blog-font-family-section-title']     = 'Raleway:400,300,500,600,700,900';
 		$st_blog_customizer_defaults['st-blog-font-family-button-text']       = 'Raleway:400,300,500,600,700,900';
 		$st_blog_customizer_defaults['st-blog-footer-copy-right-text']        = 'Raleway:400,300,500,600,700,900';
 
@@ -304,6 +301,8 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
         
         $st_blog_h1_h6 				    		= $st_blog_customizer_all_values['st-blog-h1-h6-color'];
         $st_blog_button_color				    = $st_blog_customizer_all_values['st-blog-button-color'];
+        $st_blog_footer_background 				= $st_blog_customizer_all_values['st-blog-footer-background-color'];
+        $st_blog_footer_text_color				= $st_blog_customizer_all_values['st-blog-footer-text-color'];
 
         
       
@@ -335,7 +334,7 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
                 font-family: '<?php echo esc_attr( $st_blog_font_family_button_text ); ?>'!important;
             }
 
-              /* fo0ter fonts*/
+              /* footer fonts*/
             .readmore{
                 font-family: '<?php echo esc_attr( $st_blog_font_family_copy_right_text ); ?>'!important;
             }
@@ -371,7 +370,7 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
 		#st-full-width .widget-title:after,
 		.news-heading-only:after,
 		#st-widget-style-3 .st-widget-3-heading-desc:after,
-		.salient-social-section ul a {
+		a.btn {
         	background-color: <?php echo esc_attr( $st_blog_primary_color_option ) ;?>!important;;
         }            
 
@@ -433,25 +432,12 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
         <?php
         }
 
-        if( !empty($st_blog_post_page_title_color) )
-        {?>
-            .site-content .st-blog-item article .entry-title a
-            {
-                color: <?php echo esc_attr( $st_blog_post_page_title_color ) ;?>!important;;
-            }
-
-        <?php
-        }
         
         if( !empty($st_blog_post_page_title_color) )
         {?>
             
-            #st-widget-style-3 h2 a,
-            .left-style h2 a,
-            .right-style h2 a,
-            .st-sidebar-tab-style .tab-heading-title h2 a, .st-sidebar-tab-style .post-meta-content span a,
-            .st-sidebar-slider h2 a,
-            #trending-section .news-heading-only h2 a,
+           #st-blog-featured .slick-list .slick-slide .st-blog-featured-caption .st-blog-title a,
+           .site-content .st-blog-item article .entry-title a
            
             {
                 color: <?php echo esc_attr( $st_blog_post_page_title_color ) ;?>!important;
@@ -476,6 +462,24 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
         	nav#site-navigation ul a
         	{
         		color: <?php echo esc_attr($st_blog_menu_text_color);?>!important;
+        	}
+
+        <?php }
+
+        if( !empty($st_blog_footer_background) )
+        {?>
+        	.site-footer .site-info
+        	{
+        		background-color: <?php echo esc_attr($st_blog_footer_background);?>!important;
+        	}
+
+        <?php }
+
+        if( !empty($st_blog_footer_text_color) )
+        {?>
+        	.site-info, .site-info a
+        	{
+        		color: <?php echo esc_attr($st_blog_footer_text_color);?>!important;
         	}
 
         <?php }

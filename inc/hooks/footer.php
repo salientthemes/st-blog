@@ -123,12 +123,12 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
             <!-- footer site info -->
             <div class="site-content py-0">
             <div class="site-info">
-                <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'st-blog' ) ); ?>">
-                    <?php
+                <?php
                         if(isset($st_blog_customizer_all_values['st-blog-copyright-text'])){
                             echo wp_kses_post( $st_blog_customizer_all_values['st-blog-copyright-text'] );
                         }
                         ?>
+                <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'st-blog' ) ); ?>">
                 </a>
                 <?php if ( 1 == $st_blog_customizer_all_values['footer-enable-theme-name'] ) { ?>
                 <span class="sep"> | </span>

@@ -7,6 +7,7 @@
 	global $st_blog_customizer_defaults;
 
 	$st_blog_customizer_defaults['header-logo-left-middel-right']	= '';
+	$st_blog_customizer_defaults['header-search-button-enable']		= 1;
 	$st_blog_customizer_defaults['footer-enable-theme-name']   		= 1;
 	$st_blog_customizer_defaults['st-blog-footer-sidebar-number'] 	= 4;
 	$st_blog_customizer_defaults['st-blog-copyright-text'] 			= esc_html__('Copyright &copy; All right reserved.','st-blog'); 
@@ -28,6 +29,19 @@
             'priority'              => 10,
         )
     );
+
+	$st_blog_settings_controls['header-search-button-enable'] = array(
+	    'setting' =>  array(
+	        'default'              =>$st_blog_customizer_defaults['header-search-button-enable'],
+	    ),
+	    'control' => array(
+	        'label'                 =>  esc_html__( 'Enable/Disable Search Button', 'st-blog' ),
+	        'section'               => 'header-footer-section',
+	        'type'                  => 'checkbox',
+	        'priority'              => 10,
+	    )
+    );
+
 
 	$st_blog_settings_controls['st-blog-footer-sidebar-number'] = array(
 	    'setting' => array(
