@@ -12,7 +12,7 @@ if ( !function_exists('st_fetaure_slider_array')  ) :
  function st_fetaure_slider_array($from_slider)
  {
     global $st_blog_customizer_all_values;
-    $st_blog_feature_slider_number_of_slider   = absint($st_blog_customizer_all_values['st-blog-number-of-slider']);
+    $st_blog_feature_slider_number_of_slider                         = absint($st_blog_customizer_all_values['st-blog-number-of-slider']);
     $st_blog_feature_slider_content_array[0]['st-blog-fs-title']     = '';
     $st_blog_feature_slider_content_array[0]['st-blog-fs-content']   = '';
     $st_blog_feature_slider_content_array[0]['st-blog-fs-image']     = '';

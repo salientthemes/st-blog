@@ -13,14 +13,14 @@ if ( !function_exists('st_blog_social_media') ) :
  function st_blog_social_media()
  {
  	global $st_blog_customizer_all_values;
- 	$st_blog_social_media_name_one   = $st_blog_customizer_all_values['st-blog-social-media-name-one'];
- 	$st_blog_social_media_link_one   = $st_blog_customizer_all_values['st-blog-social-link-one'];
- 	$st_blog_social_media_name_two   = $st_blog_customizer_all_values['st-blog-social-media-name-two'];
- 	$st_blog_social_media_link_two   = $st_blog_customizer_all_values['st-blog-social-link-two'];
- 	$st_blog_social_media_name_three = $st_blog_customizer_all_values['st-blog-social-media-name-three'];
- 	$st_blog_social_media_link_three = $st_blog_customizer_all_values['st-blog-social-link-three'];
- 	$st_blog_social_media_name_four  = $st_blog_customizer_all_values['st-blog-social-media-name-four'];
- 	$st_blog_social_media_link_four  = $st_blog_customizer_all_values['st-blog-social-link-four'];
+ 	$st_blog_social_media_name_one   = esc_html($st_blog_customizer_all_values['st-blog-social-media-name-one']);
+ 	$st_blog_social_media_link_one   = esc_url($st_blog_customizer_all_values['st-blog-social-link-one']);
+ 	$st_blog_social_media_name_two   = esc_html($st_blog_customizer_all_values['st-blog-social-media-name-two']);
+ 	$st_blog_social_media_link_two   = esc_url($st_blog_customizer_all_values['st-blog-social-link-two']);
+ 	$st_blog_social_media_name_three = esc_html($st_blog_customizer_all_values['st-blog-social-media-name-three']);
+ 	$st_blog_social_media_link_three = esc_url($st_blog_customizer_all_values['st-blog-social-link-three']);
+ 	$st_blog_social_media_name_four  = esc_html($st_blog_customizer_all_values['st-blog-social-media-name-four']);
+ 	$st_blog_social_media_link_four  = esc_url($st_blog_customizer_all_values['st-blog-social-link-four']);
 
  	if( 1 != $st_blog_customizer_all_values['st-blog-enable-social-media'] )
  	{

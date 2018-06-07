@@ -46,7 +46,7 @@ require get_template_directory() . '/inc/hooks/full-width-widget.php';
 
 require get_template_directory() . '/inc/hooks/homepage-social-meadia.php';
 
-
+require get_template_directory() . '/inc/hooks/inline-style.php';
 
 
 

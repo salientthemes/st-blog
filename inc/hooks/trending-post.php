@@ -13,8 +13,8 @@ if ( !function_exists('st_blog_trending_post_array') ) :
   function st_blog_trending_post_array($from_slider)
   {
     global $st_blog_customizer_all_values;
-    $st_blog_trending_post_number         = $st_blog_customizer_all_values['st-blog-trending-number-post'];
-    $st_blog_trending_single_number_word  = $st_blog_customizer_all_values['st-blog-trending-single-number-of-words'];
+    $st_blog_trending_post_number         = esc_html($st_blog_customizer_all_values['st-blog-trending-number-post']);
+    $st_blog_trending_single_number_word  = absint($st_blog_customizer_all_values['st-blog-trending-single-number-of-words']);
 
     $st_blog_trending_post_content_array[0]['st-blog-trending-post-title'] = '';
     $st_blog_trending_post_content_array[0]['st-blog-trending-post-content'] = '';
