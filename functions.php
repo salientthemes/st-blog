@@ -209,7 +209,7 @@ function st_blog_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	wp_add_inline_style( 'st-blog-style', st_blog_inline_style() );
+	wp_add_inline_style( 'theme-style', st_blog_inline_style() );
 }
 add_action( 'wp_enqueue_scripts', 'st_blog_scripts' );
 
@@ -305,9 +305,9 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
         $st_blog_footer_text_color				= $st_blog_customizer_all_values['st-blog-footer-text-color'];
 
         
-      
+      ob_start();
         ?>
-        <style type="text/css">
+      
 
         /*site identity font family*/
             .site-title,
@@ -486,8 +486,10 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
         <?php }
 
    		?>
-        </style>
+       
     <?php
+
+    return ob_get_clean();
     }
 endif;
 
