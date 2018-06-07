@@ -45,23 +45,6 @@ $st_bolg_all_social_media_name = array(
 );
 
 
-$st_bolg_all_social_media_link = array(
-	'https://twitter.com/'		    =>  'https://twitter.com/',
-	'https://www.facebook.com/'		=>  'https://www.facebook.com/',
-	'https://plus.google.com/'	    =>  'https://plus.google.com/',
-	'https://www.flickr.com/' 	    =>  'https://www.flickr.com/',
-	'https://www.pinterest.com/'    =>  'https://www.pinterest.com/',
-	'https://www.youtube.com/'		=>  'https://www.youtube.com/',
-	'https://vimeo.com/'			=>  'https://vimeo.com/',
-	'https://www.tumblr.com/'		=>  'https://www.tumblr.com/',
-	'https://dribbble.com/'         =>  'https://dribbble.com/',
-	'https://www.linkedin.com/'	    =>  'https://www.linkedin.com/',
-	'https://www.instagram.com/'	=>  'https://www.instagram.com/',
-	'https://accounts.google.com/'	=>  'https://accounts.google.com/'
-
-);
-
-
 // enable options
 $st_blog_settings_controls['st-blog-enable-social-media']   =  array(
 	'setting' => array(
@@ -100,8 +83,7 @@ $st_blog_settings_controls['st-blog-social-link-one'] = array(
 	'control' => array(
 		'label'				=> esc_html__('Social Media Link First','st-blog'),
 		'section'			=> 'st-blog-social-section',
-		'type'				=> 'select',
-		'choices' 			=> $st_bolg_all_social_media_link,
+		'type'				=> 'text',
 		'priority'			=> 30,
 		'active_callback'	=> ''	
 	)	
@@ -132,8 +114,7 @@ $st_blog_settings_controls['st-blog-social-link-two'] = array(
 	'control' => array(
 		'label'				=> esc_html__('Social Media Link Second','st-blog'),
 		'section'			=> 'st-blog-social-section',
-		'type'				=> 'select',
-		'choices' 			=> $st_bolg_all_social_media_link,
+		'type'				=> 'text',
 		'priority'			=> 50,
 		'active_callback'	=> ''	
 	)	
@@ -164,8 +145,7 @@ $st_blog_settings_controls['st-blog-social-link-three'] = array(
 	'control' => array(
 		'label'				=> esc_html__('Social Media Link Three','st-blog'),
 		'section'			=> 'st-blog-social-section',
-		'type'				=> 'select',
-		'choices' 			=> $st_bolg_all_social_media_link,
+		'type'				=> 'text',
 		'priority'			=> 70,
 		'active_callback'	=> ''	
 	)	
@@ -196,8 +176,7 @@ $st_blog_settings_controls['st-blog-social-link-four'] = array(
 	'control' => array(
 		'label'				=> esc_html__('Social Media Link Four','st-blog'),
 		'section'			=> 'st-blog-social-section',
-		'type'				=> 'select',
-		'choices' 			=> $st_bolg_all_social_media_link,
+		'type'				=> 'text',
 		'priority'			=> 90,
 		'active_callback'	=> ''	
 	)	

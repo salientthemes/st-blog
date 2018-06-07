@@ -21,7 +21,7 @@ $st_blog_customizer_defaults['st-blog-trending-image-enable']			= 1;
 
 // create a new panel for trending
 $st_blog_panels['st-blog-trending-panel'] = array(
-	'title'		=> esc_html__('Feature Treanding News','st-blog'),
+	'title'		=> esc_html__('Feature Trending News','st-blog'),
 	'priority'	=> 200
 );
 
@@ -122,7 +122,7 @@ $st_blog_settings_controls['st-blog-trending-select-from-category'] = array(
 		'default'				=> $st_blog_customizer_defaults['st-blog-trending-select-from-category']	
 	),
 	'control' => array(
-		'label'					=> esc_html__('Select page for trending','st-blog'),
+		'label'					=> esc_html__('Select category for trending','st-blog'),
 		'section'				=> 'st-blog-trending-section',
 		'type'					=> 'category_dropdown',
 		'priority'				=> 50,

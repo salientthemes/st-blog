@@ -6,8 +6,8 @@ global $st_blog_settings_controls;
 global $st_blog_repeated_settings_controls;
 global $st_blog_customizer_defaults;
 
-$st_blog_customizer_defaults['st-blog-select-post-form']            = 'from-page';
-$st_blog_customizer_defaults['st-blog-select-post-from-category']   = 0;
+$st_blog_customizer_defaults['st-blog-select-post-form']            = 'from-category';
+$st_blog_customizer_defaults['st-blog-select-post-from-category']   = 1;
 $st_blog_customizer_defaults['st-blog-select-post-from-page']       = 0;
 
 // slider setting option's
@@ -29,8 +29,8 @@ $st_blog_settings_controls['st-blog-select-post-form'] = array(
         'section'       => 'st-blog-feature-setting',
         'type'          => 'select',
         'choices' => array(
-            'from-post'         => esc_html__('From-Page','st-blog'),
-            'from-category'     => esc_html__('from-category','st-blog')
+            'from-category'     => esc_html__('from-category','st-blog'),
+            'from-post'         => esc_html__('From-Page','st-blog')
         ),
         'priority'              => 30,
         'active_callback'       => ''
