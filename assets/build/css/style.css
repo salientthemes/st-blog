@@ -943,6 +943,8 @@ body:not(.home) .site-content {
     float: left;
     padding-left: 15px;
     padding-right: 15px; }
+  .st-blog-site-content #primary {
+    margin-bottom: 40px; }
   @media (min-width: 768px) {
     .st-blog-site-content #primary {
       width: 60%; }
@@ -989,8 +991,7 @@ body.error404 .st-blog-site-content #primary {
   font-size: 1.33333rem; }
 
 .st-blog-masonry {
-  /* Masonry container */
-  margin-bottom: 40px; }
+  /* Masonry container */ }
   @media (min-width: 992px) {
     .st-blog-masonry {
       column-count: 2;

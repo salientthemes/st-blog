@@ -17,6 +17,9 @@ body:not(.home) {
 	    padding-left: 15px; 
 	    padding-right: 15px;   
 	}
+	#primary {
+		margin-bottom: 40px;
+	}
 	@include media(sm) {
 		#primary {
 		    width: 60%;
