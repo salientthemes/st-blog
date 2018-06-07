@@ -168,6 +168,15 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
 
         <?php }
 
+         if( !empty($st_blog_button_color) )
+        {?>
+            a.readmore, .readmore
+            {
+                background-color: <?php echo esc_attr($st_blog_button_color);?>!important;
+            }
+
+        <?php }
+
    		?>
        </style>
     <?php

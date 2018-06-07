@@ -46,18 +46,18 @@ $st_bolg_all_social_media_name = array(
 
 
 $st_bolg_all_social_media_link = array(
-	'https://twitter.com/'		    =>  'twitter',
-	'https://www.facebook.com/'		=>  'facebook',
-	'https://plus.google.com/'	    =>  'google-plus',
-	'https://www.flickr.com/' 	    =>  'flickr',
-	'https://www.pinterest.com/'    =>  'pinterest',
-	'https://www.youtube.com/'		=>  'youtube',
-	'https://vimeo.com/'			=>  'vimeo',
-	'https://www.tumblr.com/'		=>  'tumblr',
-	'https://dribbble.com/'         =>  'dribbble',
-	'https://www.linkedin.com/'	    =>  'linkedin',
-	'https://www.instagram.com/'	=>  'instagram',
-	'https://accounts.google.com/'	=>  'email'
+	'https://twitter.com/'		    =>  'https://twitter.com/',
+	'https://www.facebook.com/'		=>  'https://www.facebook.com/',
+	'https://plus.google.com/'	    =>  'https://plus.google.com/',
+	'https://www.flickr.com/' 	    =>  'https://www.flickr.com/',
+	'https://www.pinterest.com/'    =>  'https://www.pinterest.com/',
+	'https://www.youtube.com/'		=>  'https://www.youtube.com/',
+	'https://vimeo.com/'			=>  'https://vimeo.com/',
+	'https://www.tumblr.com/'		=>  'https://www.tumblr.com/',
+	'https://dribbble.com/'         =>  'https://dribbble.com/',
+	'https://www.linkedin.com/'	    =>  'https://www.linkedin.com/',
+	'https://www.instagram.com/'	=>  'https://www.instagram.com/',
+	'https://accounts.google.com/'	=>  'https://accounts.google.com/'
 
 );
 
