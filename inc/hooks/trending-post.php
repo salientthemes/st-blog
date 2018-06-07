@@ -129,6 +129,7 @@ if ( !function_exists('st_blog_trending_post') ) :
             $st_trending_post_button_enable     = $st_blog_customizer_all_values['st-blog-trending-button-enable'];
             $st_trending_post_image_enable      = $st_blog_customizer_all_values['st-blog-trending-image-enable']; ?>
 
+
             <section id="st-blog-featured" class="mb-5">    
                 <div class="container site-content">
                     <h1 class="widget-title text-center"><?php echo esc_html($st_blog_trending_post_title);?></h1>
@@ -143,7 +144,7 @@ if ( !function_exists('st_blog_trending_post') ) :
                                 }
                                 if ( empty($st_blog_trending_array['st-blog-trending-post-image']) ) 
                                 {
-                                    $st_blog_trending_post_image = get_template_directory_uri().'/assets/images/no-image.png'; 
+                                    $st_blog_trending_post_image = '';
                                 }
                                 else
                                 {
@@ -152,17 +153,22 @@ if ( !function_exists('st_blog_trending_post') ) :
                         
                             
                                 ?>
-                                
-                                <div class="st-blog-featured-item">
-                                    <div class="st-blog-featured-image">
-                                        <img src="<?php echo esc_url($st_blog_trending_post_image);?>">
-                                    </div>
-                                    <div class="st-blog-featured-caption text-center">
-                                        <h2 class="st-blog-title mb-3 mt-2"><a href="<?php echo esc_url($st_blog_trending_array['st-blog-trending-post-url']);?>"><?php echo esc_html($st_blog_trending_array['st-blog-trending-post-title']);?></a></h2>
-                                        <p><?php echo esc_html($st_blog_trending_array['st-blog-trending-post-content']);?></p>
-                                        <a href="<?php echo esc_url($st_blog_trending_array['st-blog-trending-post-url']);?>" class="readmore"><?php echo esc_html($st_trending_post_button_text);?></a>
-                                    </div>
-                                </div>                  
+                                <?php if ( !empty($st_blog_trending_post_image) && !empty($st_blog_trending_array['st-blog-trending-post-url']) && !empty($st_blog_trending_array['st-blog-trending-post-title']) && !empty($st_blog_trending_array['st-blog-trending-post-content']) && !empty($st_blog_trending_array['st-blog-trending-post-url']) &&  !empty($st_trending_post_button_text) ) {  ?>
+                                        <div class="st-blog-featured-item">
+                                            <?php if (!empty($st_blog_trending_post_image)){ ?>
+                                                <div class="st-blog-featured-image">
+                                                    <img src="<?php echo esc_url($st_blog_trending_post_image);?>">
+                                                </div>
+                                            <?php } ?>    
+                                            <div class="st-blog-featured-caption text-center">
+                                                <h2 class="st-blog-title mb-3 mt-2"><a href="<?php echo esc_url($st_blog_trending_array['st-blog-trending-post-url']);?>"><?php echo esc_html($st_blog_trending_array['st-blog-trending-post-title']);?></a></h2>
+                                                <p><?php echo esc_html($st_blog_trending_array['st-blog-trending-post-content']);?></p>
+                                                <?php if ( !empty($st_blog_trending_array['st-blog-trending-post-url']) &&  !empty($st_trending_post_button_text)) { ?>
+                                                    <a href="<?php echo esc_url($st_blog_trending_array['st-blog-trending-post-url']);?>" class="readmore"><?php echo esc_html($st_trending_post_button_text);?></a>
+                                                <?php }?>    
+                                            </div>
+                                        </div> 
+                                <?php } ?>                         
                                 
                             <?php 
                             $i++;
