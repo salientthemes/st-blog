@@ -89,68 +89,11 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
         if( !empty($st_blog_primary_color_option) ){
         ?>
 
-        .header-btn-group i,
-        .st-sidebar-tab-style li.clickme a,
-        #return-to-top, .author-more,
-        form.search-form input.search-submit,
-        .st-author-description h2:after,
-        #trending-section .widget-title:after,
-        #secondary .widget-title:after,
-        #pollSlider-button,
-        .st-main-footer h2:after,
-        .header-btn-group i,
-        a.read-more-btn,
-        #return-to-top,
-        #return-to-top:hover,
-        form.search-form input.search-submit,
-        input#submit,
-        .error-404.not-found input.search-submit,
-        .author-more,
-        .st-custom-widget-section .widget-title:after,
-		#st-full-width .widget-title:after,
-		.news-heading-only:after,
-		#st-widget-style-3 .st-widget-3-heading-desc:after,
-		a.btn,
-		.btn {
+        .st-blog-header-wrap .st-blog-head-search form .search-submit:hover, .widget_search form .search-submit:hover, .btn:hover, .readmore:hover, .wpcf7-form .wpcf7-submit:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .dark-theme .site-content .readmore:hover, .dark-theme #st-blog-social-icons ul li a:hover, .dark-theme-coloured button:hover, .dark-theme-coloured .btn, .dark-theme-coloured a.btn, .dark-theme-coloured button, .dark-theme-coloured input[type="submit"], .dark-theme-coloured .st-blog-header-wrap .st-blog-head-search form .search-submit, .dark-theme-coloured #st-blog-social-icons ul li a, .pagination .nav-links a:hover, .wp-pagenavi a:hover, .pagination .nav-links span.current, .wp-pagenavi span.current, header.site-header .st-blog-header-wrap-nav .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover span, ul.slick-dots li button:hover, ul.slick-dots li.slick-active button, body.dark-theme.dark-theme-coloured .site-header .st-blog-header-wrap-nav, body.dark-theme.dark-theme-coloured .site-footer, body.dark-theme header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover span {
         	background-color: <?php echo esc_attr( $st_blog_primary_color_option ) ;?>;
         }            
 
-       #st-full-width .slick-dots li.slick-active button:before,
-       .author-more:hover,
-       #trending-section .slick-dots li.slick-active button:before,
-       .st-main-footer a:hover,
-       .site-branding .site-title a span,
-       ul.slick-dots li.slick-active button:before,
-       .top-header .top-nav-bar ul li a:hover,
-		.site-branding .site-title a:hover,
-		#site-navigation a:hover,
-		.random i:hover,
-		#content .entry-title a:hover,
-		header.entry-header a:hover,
-		#content article a:hover,
-		.st-main-footer a:hover,
-		#secondary ul li a:hover,
-		#secondary a:hover,
-		.st-slider-caption h2 a:hover,
-		.left-style h2 a:hover,
-		.right-style h2 a:hover,
-		.st-sidebar-tab-style .tab-heading-title h2 a:hover,
-		.st-sidebar-slider h2 a:hover,
-		.style-2-desc h2 a:hover,
-		.latest-blog-st h2 a:hover,
-		section#st-full-width h2 a:hover,
-		.thumbnailstyle-heading-title h2 a:hover,
-		.st-widget-style-1 .st-w-post-meta a:hover,
-		.post-meta-content span a:hover,
-		.st-author-description h2 a:hover,
-		#trending-section .news-heading-only h2 a:hover,
-		#breadcrumb ul li a:hover,
-		.widget li a:hover,
-		.widget a:hover,
-		h2 a:hover,
-		div#st-widget-style-3 h2 a:hover,
-		.st-w-post-meta a:hover,
-		.st-w-post-meta span a:hover {
+        a:hover, .site-content .st-blog-item article .entry-title a:hover, #st-blog-featured .slick-list .slick-slide .st-blog-featured-caption .st-blog-title a:hover, .widget_categories ul li a:hover, .widget_archive ul li a:hover, .widget_recent_entries ul li a:hover, .widget_recent_comments ul li a:hover, .widget_meta ul li a:hover, .widget_pages ul li a:hover, .widget_nav_menu ul li a:hover, a.readmore:hover, .readmore:hover, .breadcrumbs .trail-items .trail-item a, .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler:hover i, body.head-search-active .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler .fa-search, nav#site-navigation ul a:hover, nav#site-navigation ul.nav-menu > li.current-menu-item > a, nav#site-navigation ul.menu > li.current-menu-item > a, .site-footer .site-info a:hover, .st-blog-popular-posts-item .st-blog-popular-posts-content .st-blog-popular-posts-title a:hover, .nav-tabs .nav-item .nav-link.active, #st-blog-featured .slick-list .slick-slide .st-blog-featured-caption .st-blog-category a, body.dark-theme nav#site-navigation ul.menu > li > a:hover, body.dark-theme nav#site-navigation ul.menu > li.current-menu-item a, .dark-theme-coloured .widget-title, .dark-theme-coloured .widgettitle, #frontend-customizer .frontend-customizer-wrapper .frontend-customizer-title .control span:hover {
           color: <?php echo esc_attr( $st_blog_primary_color_option );?>;
         }
 
@@ -158,7 +101,7 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
         #content .nav-links a,
         .author-more,
         {
-        	border-color: <?php echo esc_attr( $st_blog_primary_color_option ) ;?>!important;;
+        	border-color: <?php echo esc_attr( $st_blog_primary_color_option ) ;?>;
         }  
         <?php
         } 
@@ -181,7 +124,7 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
            .site-content .st-blog-item article .entry-title a
            
             {
-                color: <?php echo esc_attr( $st_blog_post_page_title_color ) ;?>!important;
+                color: <?php echo esc_attr( $st_blog_post_page_title_color ) ;?>;
             }
 
         <?php
@@ -193,7 +136,7 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
         	body.big-logo.big-logo-enable nav#site-navigation,
         	header.site-header .st-blog-header-wrap-nav
         	{
-        		background: <?php echo esc_attr($st_blog_menu_background_color);?> !important;
+        		background: <?php echo esc_attr($st_blog_menu_background_color);?>;
         	}
 
         <?php }
@@ -211,7 +154,7 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
         {?>
         	.site-footer .site-info
         	{
-        		background-color: <?php echo esc_attr($st_blog_footer_background);?>!important;
+        		background-color: <?php echo esc_attr($st_blog_footer_background);?>;
         	}
 
         <?php }
@@ -220,7 +163,7 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
         {?>
         	.site-info, .site-info a
         	{
-        		color: <?php echo esc_attr($st_blog_footer_text_color);?>!important;
+        		color: <?php echo esc_attr($st_blog_footer_text_color);?>;
         	}
 
         <?php }

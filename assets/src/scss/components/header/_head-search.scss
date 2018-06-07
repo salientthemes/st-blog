@@ -37,7 +37,7 @@
             &:hover {
                 background-color: $color_white;
                 i {
-                    color: $color_primary;                    
+                    @extend %color-primary;                  
                 }
             }
             @include media(md) {

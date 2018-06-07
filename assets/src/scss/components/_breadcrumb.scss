@@ -17,7 +17,7 @@
 		}
 
 		.trail-item a {
-		    color: $color_primary;
+		    @extend %color-primary;
 		}
 	}
 }

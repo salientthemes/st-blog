@@ -28,7 +28,8 @@
 %color-link {
     color: $color_link;
     &:hover {
-      color: $color_link_hover;
+      // color: $color_link_hover;
+      @extend %color-primary;
     }
     &:visited {
       // color: $color_link;  
@@ -82,13 +83,13 @@
   a {
     color: $color_title;
     &:hover {
-      color: $color_primary;
+      @extend %color-primary;
     }
   }
 }
 
 %widget-title {
-  color: $color_black;
+  @extend %color-black;
   font-size: 24px;
   font-weight: $font_primary_bold;
   margin-bottom: 15px;
@@ -109,7 +110,7 @@
   a {
     color: lighten($color_black, 50%);
     &:hover {
-      color: $color_primary;
+      @extend %color-primary;
     }
   }
 
@@ -135,6 +136,7 @@
 %btn-style {
   // background doesn't let functions style to override
   // background-color: $color_black;
+  @extend %bg-black;
   border: 0;
   border-radius: 0;
   color: $color_white;
@@ -143,8 +145,7 @@
   padding: 5px 10px;
   &:hover {
     color: $color_white;
-    // @extend %bg-primary;
-    background-color: $color_black;
+    @extend %bg-primary;
   }
   @include media(xs) {
     padding: 10px 20px;
@@ -152,7 +153,8 @@
 }
 
 %btn-style-coloured {
-  background-color: $color_primary;
+  // background-color: $color_primary;
+  @extend %bg-primary;
   &:hover {
     background-color: $color_black;
   }
@@ -227,6 +229,31 @@
         margin-left: 10px;
         @extend %font-awesome;
     }
+  }
+}
+
+// pagination
+%pagination {
+  margin: 0 auto;
+  margin-top: 20px;
+  a {
+    background-color: lighten($color_black, 50%);
+    // @extend %color-white;
+    color: $color_white !important;
+  }
+  
+  a, 
+  span {
+    border: 0;
+    padding: 3px 10px;
+  }
+
+  a:hover, 
+  span.current {
+    @extend %bg-primary;
+    // @extend %color-white;
+    color: $color_white !important; 
+    font-weight: normal;
   }
 }
 

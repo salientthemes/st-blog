@@ -26,7 +26,7 @@ a.readmore,
 	color: $color_link;
 	&:hover {
 		background-color: transparent;
-		color: $color_primary;
+		@extend %color-primary;
 	}
 }
 
