@@ -156,7 +156,7 @@ $st_blog_settings_controls['st-blog-button-color'] = array(
         'default' => $st_blog_customizer_defaults['st-blog-button-color'],
     ),
     'control' => array(
-        'label'                 =>  esc_html__( 'Button Color', 'st-blog' ),
+        'label'                 =>  esc_html__( 'Button  Background Color', 'st-blog' ),
         'section'               => 'colors',
         'type'                  => 'color',
         'priority'              => 90,

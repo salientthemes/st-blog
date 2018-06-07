@@ -6,7 +6,6 @@ global$st_blog_customizer_defaults;
 
 /*defaults values*/
 $st_blog_customizer_defaults['st-blog-enable-static-page'] = 1;
-$st_blog_customizer_defaults['st-blog-latest-post-button-text'] = 'Read More';
 $st_blog_customizer_defaults['st-blog-default-layout'] = 'right-sidebar';
 $st_blog_customizer_defaults['st-blog-single-post-image-align'] = 'full';
 $st_blog_customizer_defaults['st-blog-excerpt-length'] = '50';
@@ -29,20 +28,6 @@ $st_blog_settings_controls['st-blog-enable-static-page'] = array(
     'description'           =>  esc_html__( 'If you disable this the static page will be disappera form the home page and other section from customizer will reamin as it is', 'st-blog' ),
     'section'               => 'st-blog-layout-options',
     'type'                  => 'checkbox',
-    'priority'              => 10,
-)
-);
-
-    /*latest-bolg-post-button*/
-$st_blog_settings_controls['st-blog-latest-post-button-text'] = array(
-'setting' => array(
-    'default' => $st_blog_customizer_defaults['st-blog-latest-post-button-text'],
-),
-'control' => array(
-    'label'                 =>  esc_html__( 'Latest Post Button Text', 'st-blog' ),
-    'description'           =>  esc_html__( 'It will be change only the latest blog button text', 'st-blog' ),
-    'section'               => 'st-blog-layout-options',
-    'type'                  => 'text',
     'priority'              => 10,
 )
 );

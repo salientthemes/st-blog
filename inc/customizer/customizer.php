@@ -60,6 +60,9 @@ require get_template_directory(). '/inc/customizer/color/color-section.php';
 
 require get_template_directory(). '/inc/customizer/font/font-section.php'; 
 
+require get_template_directory(). '/inc/customizer/post-display/options.php'; 
+
+
 
 
 global $st_blog_panels;
