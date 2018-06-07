@@ -432,16 +432,16 @@ body.scrolled-down #st-blog-scroll-top {
     color: #6c757d;
     content: "/"; }
 
-.st-blog-header-row .st-blog-logo-manage .site-branding .custom-logo-link {
+.site-branding .custom-logo-link {
   margin-bottom: 10px; }
-.st-blog-header-row .st-blog-logo-manage .site-branding .site-title {
+.site-branding .site-title {
   font-size: 24px;
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase; }
-  .st-blog-header-row .st-blog-logo-manage .site-branding .site-title a {
-    color: #000; }
-.st-blog-header-row .st-blog-logo-manage .site-branding .site-description {
+.site-branding a {
+  color: #000; }
+.site-branding .site-description {
   margin-bottom: 0; }
 
 header.site-header .st-blog-header-wrap-nav {
