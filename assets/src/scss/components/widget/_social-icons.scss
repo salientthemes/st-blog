@@ -6,7 +6,7 @@ body:not(.dark-theme) {
 	##{$prefix}-social-icons {
 		ul {
 			li {
-				a[href*="facebook.com"]:hover {
+				/* a[href*="facebook.com"]:hover {
 					color: $color_facebook;
 				}
 				a[href*="twitter.com"]:hover {
@@ -17,8 +17,9 @@ body:not(.dark-theme) {
 				}
 				a[href*="pinterest.com"]:hover {
 					color: $color_pinterest;
-				}
+				} */
 			}
 		}
 	}
 }
+
