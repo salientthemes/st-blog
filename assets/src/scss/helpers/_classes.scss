@@ -16,8 +16,7 @@
 }
 
 %color-primary {
-    // color: $color_primary;
-    color: blue;
+    color: $color_primary;
 }
 %color-white {
     color: $color_white;
@@ -29,7 +28,8 @@
 %color-link {
     color: $color_link;
     &:hover {
-      color: $color_link_hover;
+      // color: $color_link_hover;
+      @extend %color-primary;
     }
     &:visited {
       // color: $color_link;  
@@ -229,6 +229,31 @@
         margin-left: 10px;
         @extend %font-awesome;
     }
+  }
+}
+
+// pagination
+%pagination {
+  margin: 0 auto;
+  margin-top: 20px;
+  a {
+    background-color: lighten($color_black, 50%);
+    // @extend %color-white;
+    color: $color_white !important;
+  }
+  
+  a, 
+  span {
+    border: 0;
+    padding: 3px 10px;
+  }
+
+  a:hover, 
+  span.current {
+    @extend %bg-primary;
+    // @extend %color-white;
+    color: $color_white !important; 
+    font-weight: normal;
   }
 }
 

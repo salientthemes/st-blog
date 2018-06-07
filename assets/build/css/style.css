@@ -25,14 +25,15 @@ ul {
 ul {
   padding: 0; }
 
-.site-content .st-blog-item article .entry-title a:hover, #st-blog-featured .slick-list .slick-slide .st-blog-featured-caption .st-blog-title a:hover, .widget_categories ul li a:hover,
+a:hover, .site-content .st-blog-item article .entry-title a:hover, #st-blog-featured .slick-list .slick-slide .st-blog-featured-caption .st-blog-title a:hover, .widget_categories ul li a:hover,
 .widget_archive ul li a:hover,
 .widget_recent_entries ul li a:hover,
 .widget_recent_comments ul li a:hover,
 .widget_meta ul li a:hover,
 .widget_pages ul li a:hover,
-.widget_nav_menu ul li a:hover, .breadcrumbs .trail-items .trail-item a, .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler:hover i, body.head-search-active .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler .fa-search, nav#site-navigation ul a:hover, nav#site-navigation ul.nav-menu > li.current-menu-item > a,
-nav#site-navigation ul.menu > li.current-menu-item > a, .st-blog-popular-posts-item .st-blog-popular-posts-content .st-blog-popular-posts-title a:hover, .nav-tabs .nav-item .nav-link.active, #st-blog-featured .slick-list .slick-slide .st-blog-featured-caption .st-blog-category a, body.dark-theme nav#site-navigation ul.menu > li > a:hover, body.dark-theme nav#site-navigation ul.menu > li.current-menu-item a, .dark-theme-coloured .widget-title, .dark-theme-coloured .widgettitle, #frontend-customizer .frontend-customizer-wrapper .frontend-customizer-title .control span:hover {
+.widget_nav_menu ul li a:hover, a.readmore:hover,
+.readmore:hover, .breadcrumbs .trail-items .trail-item a, .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler:hover i, body.head-search-active .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler .fa-search, nav#site-navigation ul a:hover, nav#site-navigation ul.nav-menu > li.current-menu-item > a,
+nav#site-navigation ul.menu > li.current-menu-item > a, .site-footer .site-info a:hover, .st-blog-popular-posts-item .st-blog-popular-posts-content .st-blog-popular-posts-title a:hover, .nav-tabs .nav-item .nav-link.active, #st-blog-featured .slick-list .slick-slide .st-blog-featured-caption .st-blog-category a, body.dark-theme nav#site-navigation ul.menu > li > a:hover, body.dark-theme nav#site-navigation ul.menu > li.current-menu-item a, .dark-theme-coloured .widget-title, .dark-theme-coloured .widgettitle, #frontend-customizer .frontend-customizer-wrapper .frontend-customizer-title .control span:hover {
   color: #EF3F3D; }
 
 .page-title, .entry-title, .widget-title, .widgettitle, .dark-theme-coloured .widget-title, .dark-theme-coloured .widgettitle, .st-blog-popular-posts-item .st-blog-popular-posts-content .st-blog-popular-posts-title a {
@@ -40,8 +41,6 @@ nav#site-navigation ul.menu > li.current-menu-item > a, .st-blog-popular-posts-i
 
 a {
   color: gray; }
-  a:hover {
-    color: #EF3F3D; }
 
 .st-blog-header-wrap .st-blog-head-search form .search-submit:hover, .widget_search form .search-submit:hover, .btn:hover,
 .readmore:hover, .wpcf7-form .wpcf7-submit:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover,
@@ -50,8 +49,9 @@ a {
 .dark-theme-coloured a.btn,
 .dark-theme-coloured button,
 .dark-theme-coloured input[type="submit"],
-.dark-theme-coloured .st-blog-header-wrap .st-blog-head-search form .search-submit, .dark-theme-coloured #st-blog-social-icons ul li a, header.site-header .st-blog-header-wrap-nav .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover span, ul.slick-dots li button:hover, ul.slick-dots li.slick-active button, .wp-pagenavi a:hover,
-.wp-pagenavi span.current, body.dark-theme.dark-theme-coloured .site-header .st-blog-header-wrap-nav, body.dark-theme.dark-theme-coloured .site-footer, body.dark-theme header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover span {
+.dark-theme-coloured .st-blog-header-wrap .st-blog-head-search form .search-submit, .dark-theme-coloured #st-blog-social-icons ul li a, .pagination .nav-links a:hover, .wp-pagenavi a:hover,
+.pagination .nav-links span.current,
+.wp-pagenavi span.current, header.site-header .st-blog-header-wrap-nav .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover span, ul.slick-dots li button:hover, ul.slick-dots li.slick-active button, body.dark-theme.dark-theme-coloured .site-header .st-blog-header-wrap-nav, body.dark-theme.dark-theme-coloured .site-footer, body.dark-theme header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover span {
   background-color: #EF3F3D; }
 
 header.site-header .st-blog-header-wrap-nav .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover, body.dark-theme header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage #menu-icon.menu-toggler span, body.dark-theme header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover {
@@ -226,6 +226,23 @@ input[type=checkbox], input[type=radio] {
     content: "\f30b";
     margin-left: 10px; }
 
+.pagination .nav-links, .wp-pagenavi {
+  margin: 0 auto;
+  margin-top: 20px; }
+  .pagination .nav-links a, .wp-pagenavi a {
+    background-color: gray;
+    color: #ffffff !important; }
+  .pagination .nav-links a, .wp-pagenavi a,
+  .pagination .nav-links span,
+  .wp-pagenavi span {
+    border: 0;
+    padding: 3px 10px; }
+  .pagination .nav-links a:hover, .wp-pagenavi a:hover,
+  .pagination .nav-links span.current,
+  .wp-pagenavi span.current {
+    color: #ffffff !important;
+    font-weight: normal; }
+
 .widget_media_gallery figure.gallery-item, .st-blog-instafeed-slider .st-blog-instafeed-image, #st-blog-author .st-blog-author-img, .st-blog-popular-posts-item .st-blog-popular-posts-img, #st-blog-featured .slick-list .slick-slide .st-blog-featured-image, .image {
   overflow: hidden; }
   .widget_media_gallery figure.gallery-item img, .st-blog-instafeed-slider .st-blog-instafeed-image img, #st-blog-author .st-blog-author-img img, .st-blog-popular-posts-item .st-blog-popular-posts-img img, #st-blog-featured .slick-list .slick-slide .st-blog-featured-image img, .image img {
@@ -358,8 +375,7 @@ a.readmore,
   color: gray; }
   a.readmore:hover,
   .readmore:hover {
-    background-color: transparent;
-    color: #EF3F3D; }
+    background-color: transparent; }
 
 #st-blog-scroll-top {
   position: fixed;
@@ -1202,21 +1218,6 @@ ul.slick-dots {
 
 .wpcf7-form label {
   display: block; }
-
-.wp-pagenavi {
-  float: right;
-  margin-top: 20px; }
-  .wp-pagenavi a {
-    background-color: gray;
-    color: #ffffff !important; }
-  .wp-pagenavi a,
-  .wp-pagenavi span {
-    border: 0;
-    padding: 3px 10px; }
-  .wp-pagenavi a:hover,
-  .wp-pagenavi span.current {
-    color: #ffffff !important;
-    font-weight: normal; }
 
 #comments .comments-title {
   margin-bottom: 20px; }

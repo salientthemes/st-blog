@@ -9,5 +9,10 @@
 	.site-info {
 	    text-align: center;
 	    padding-bottom: 40px;
+	    a {
+	    	&:hover {
+	    		@extend %color-primary;
+	    	}
+	    }
 	}
 }
