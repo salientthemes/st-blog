@@ -205,7 +205,6 @@ function st_blog_header() {
                                     ?>
                                     <h1 class="site-title">
                                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                                            <!-- <img src="<?php echo get_template_directory_uri();?>/assets/build/img/logo.png"> -->
                                             <?php bloginfo( 'name' ); ?>
                                         </a>
                                     </h1>
@@ -214,7 +213,6 @@ function st_blog_header() {
                                     ?>
                                     <h1 class="site-title">
                                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                                            <!-- <img src="<?php echo get_template_directory_uri();?>/assets/build/img/logo.png"> -->
                                             <?php bloginfo( 'name' ); ?>
                                         </a>
                                     </h1>
@@ -243,7 +241,7 @@ function st_blog_header() {
                                 wp_nav_menu( array(
                                     'theme_location' => 'menu-1',
                                     'menu_id'        => 'primary-menu',
-                                     'fallback_cb'    => 'st_blog_primary_menu'
+                                    'fallback_cb'   => 'st_blog_primary_menu'
                                 ) );
                                 ?>
 
