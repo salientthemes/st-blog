@@ -46,18 +46,18 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
                     $col = 'col-md-12';
                 }
                 elseif( 2 == $st_blog_footer_widgets_number ){
-                 $col = 'col-md-6 col-sm-6 col-xs-12';
+                 $col = 'col-sm-6 col-12';
                 }
                 elseif( 3 == $st_blog_footer_widgets_number ){
-                    $col = 'col-md-4 col-sm-4 col-xs-12';
+                    $col = 'col-lg-4 col-sm-6 col-12';
                 }
                 else{
               
-                        $col = 'col-md-3 col-sm-3 col-xs-12'; 
+                        $col = 'col-lg-3 col-sm-6 col-12'; 
                     } ?>
 
                      <!-- full width footer -->
-                    <section class="wrapper block-section wrap-contact footer-widget full-width">
+                    <section>
                         <div class="container full-width-footer">
                             <div class="row">
                                 <div id="full-width-footer">
@@ -70,27 +70,27 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
                         </div>
                     </section><!-- full width widget ended -->
 
-                    <div class="st-blog-footer-widget footer-wrapper">
+                    <div class="st-blog-footer-widget mb-4">
                         <div class="container">
-                            <div class="st-blog-main-footer mt-5">
+                            <div class="st-blog-main-footer">
                                 <div class="row">
                                     <?php if( is_active_sidebar( 'footer-col-one' ) && $st_blog_footer_widgets_number > 0 ) : ?>
-                                        <div class="contact-list <?php echo esc_attr( $col );?>">
+                                        <div class="<?php echo esc_attr( $col );?>">
                                             <?php dynamic_sidebar( 'footer-col-one' ); ?>
                                         </div>
                                     <?php endif; ?>
                                     <?php if( is_active_sidebar( 'footer-col-two' ) && $st_blog_footer_widgets_number > 1 ) : ?>
-                                        <div class="contact-list <?php echo esc_attr( $col );?>">
+                                        <div class="<?php echo esc_attr( $col );?>">
                                             <?php dynamic_sidebar( 'footer-col-two' ); ?>
                                         </div>
                                     <?php endif; ?>
                                     <?php if( is_active_sidebar( 'footer-col-three' ) && $st_blog_footer_widgets_number > 2 ) : ?>
-                                        <div class="contact-list <?php echo esc_attr( $col );?>">
+                                        <div class="<?php echo esc_attr( $col );?>">
                                             <?php dynamic_sidebar( 'footer-col-three' ); ?>
                                         </div>
                                     <?php endif; ?>
                                     <?php if( is_active_sidebar( 'footer-col-four' ) && $st_blog_footer_widgets_number > 2 ) : ?>
-                                        <div class="contact-list <?php echo esc_attr( $col );?>">
+                                        <div class="<?php echo esc_attr( $col );?>">
                                             <?php dynamic_sidebar( 'footer-col-four' ); ?>
                                         </div>
                                     <?php endif; ?>

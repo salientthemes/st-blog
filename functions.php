@@ -190,7 +190,11 @@ function st_blog_scripts() {
 	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/assets/build/css/bootstrap'.$suffix.'.css' );
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/build/css/fontawesome-all'.$suffix.'.css' );
 	wp_enqueue_style( 'slick-style', get_template_directory_uri() . '/assets/build/css/slick'.$suffix.'.css' );
-	wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/assets/build/css/style'.$suffix.'.css' );//theme-style
+
+	//theme-style
+	// wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/assets/build/css/style'.$suffix.'.css' );
+	// testing purpose
+	wp_enqueue_style( 'theme-style', 'http://192.168.2.28/themes/st-blog/wp-content/themes/st-blog/assets/build/css/style'.$suffix.'.css' );
 
 	wp_enqueue_script( 'st-blog-navigation', get_template_directory_uri() . '/assets/build/js/navigation'.$suffix.'.js', array(), '20151215', true );
 

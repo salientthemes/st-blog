@@ -134,7 +134,7 @@ if( !function_exists('st_blog_feature_slider') ) :
                         } 
                         if ( empty($st_blog_fs_array['st-blog-fs-image']) ) 
                         {
-                            $st_blog_feature_slider_image = get_template_directory_uri().'/assets/images/no-image.png'; 
+                            $st_blog_feature_slider_image = ''; 
                         }
                         else
                         {

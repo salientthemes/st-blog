@@ -16,6 +16,7 @@
   transition: 0.4s all ease-in-out; }
 
 .img-cover, #st-blog-banner .st-blog-banner-slider .slick-slide .st-blog-banner-image {
+  background-color: #000;
   background-size: cover;
   background-position: center center; }
 
@@ -32,7 +33,8 @@ a:hover, .site-content .st-blog-item article .entry-title a:hover, #st-blog-feat
 .widget_meta ul li a:hover,
 .widget_pages ul li a:hover,
 .widget_nav_menu ul li a:hover, a.readmore:hover,
-.readmore:hover, .breadcrumbs .trail-items .trail-item a, .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler:hover i, body.head-search-active .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler .fa-search, nav#site-navigation ul a:hover, nav#site-navigation ul.nav-menu > li.current-menu-item > a,
+.readmore:hover, .breadcrumbs .trail-items .trail-item a, .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler:hover i, body.head-search-active .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler .fa-search, nav#site-navigation ul a:hover, nav#site-navigation ul#menu > li.current-menu-item > a,
+nav#site-navigation ul.nav-menu > li.current-menu-item > a,
 nav#site-navigation ul.menu > li.current-menu-item > a, .site-footer .site-info a:hover, .st-blog-popular-posts-item .st-blog-popular-posts-content .st-blog-popular-posts-title a:hover, .nav-tabs .nav-item .nav-link.active, #st-blog-featured .slick-list .slick-slide .st-blog-featured-caption .st-blog-category a, body.dark-theme nav#site-navigation ul.menu > li > a:hover, body.dark-theme nav#site-navigation ul.menu > li.current-menu-item a, .dark-theme-coloured .widget-title, .dark-theme-coloured .widgettitle, #frontend-customizer .frontend-customizer-wrapper .frontend-customizer-title .control span:hover {
   color: #EF3F3D; }
 
@@ -544,7 +546,7 @@ body.scrolled-down #st-blog-scroll-top {
   			@extend %font-awesome;
   		    content: "\f101";
   		    margin-right: 5px;
-  		}
+  		} 
   		&:hover {
   			padding-left: 10px;
   		} */ }
@@ -697,7 +699,8 @@ body.big-logo .st-blog-header-row .st-blog-logo-manage {
     position: inherit; }
 
   body.big-logo.big-logo-enable nav#site-navigation ul.nav-menu,
-  body.big-logo.big-logo-enable nav#site-navigation ul.menu {
+  body.big-logo.big-logo-enable nav#site-navigation ul.menu,
+  body.big-logo.big-logo-enable nav#site-navigation ul#menu {
     float: none;
     margin-right: 0;
     margin: 0 auto;
@@ -722,7 +725,8 @@ body.big-logo .st-blog-header-row .st-blog-logo-manage {
     text-align: center; }
 
   body.big-logo nav#site-navigation ul.nav-menu > li > a,
-  body.big-logo nav#site-navigation ul.menu > li > a {
+  body.big-logo nav#site-navigation ul.menu > li > a,
+  body.big-logo nav#site-navigation ul#menu > li > a {
     padding-top: 20px;
     padding-bottom: 20px; }
 
@@ -796,18 +800,21 @@ nav#site-navigation ul {
   nav#site-navigation ul a {
     color: #000;
     font-weight: 400; }
+nav#site-navigation ul#menu > li,
 nav#site-navigation ul.nav-menu > li,
 nav#site-navigation ul.menu > li {
   display: inline-block;
   font-size: 16px;
   font-size: 1.06667rem;
   font-weight: normal; }
+  nav#site-navigation ul#menu > li > a,
   nav#site-navigation ul.nav-menu > li > a,
   nav#site-navigation ul.menu > li > a {
     display: inline-block;
     padding: 25px 1rem;
     text-transform: uppercase; }
 
+nav#site-navigation ul#menu ul,
 nav#site-navigation ul.nav-menu ul,
 nav#site-navigation ul.menu ul {
   left: 0;
@@ -827,10 +834,12 @@ nav#site-navigation ul.menu ul {
   -moz-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out; }
+  nav#site-navigation ul#menu ul li,
   nav#site-navigation ul.nav-menu ul li,
   nav#site-navigation ul.menu ul li {
     text-align: left;
     width: 100%; }
+    nav#site-navigation ul#menu ul li a,
     nav#site-navigation ul.nav-menu ul li a,
     nav#site-navigation ul.menu ul li a {
       padding: 10px 15px;
@@ -1148,6 +1157,47 @@ body.error404 .st-blog-site-content #primary {
 
 aside .widget {
   margin-bottom: 40px; }
+
+.site-footer .st-blog-footer-widget {
+  background: black;
+  padding: 40px 0 0; }
+.site-footer .st-blog-footer-widget, .site-footer .st-blog-footer-widget .widget-title {
+  color: white; }
+.site-footer .widget {
+  margin-bottom: 40px; }
+.site-footer .widget_categories ul li,
+.site-footer .widget_archive ul li,
+.site-footer .widget_recent_entries ul li,
+.site-footer .widget_recent_comments ul li,
+.site-footer .widget_meta ul li,
+.site-footer .widget_pages ul li,
+.site-footer .widget_nav_menu ul li {
+  background: transparent;
+  padding-left: 0; }
+  .site-footer .widget_categories ul li a,
+  .site-footer .widget_archive ul li a,
+  .site-footer .widget_recent_entries ul li a,
+  .site-footer .widget_recent_comments ul li a,
+  .site-footer .widget_meta ul li a,
+  .site-footer .widget_pages ul li a,
+  .site-footer .widget_nav_menu ul li a {
+    color: white; }
+  .site-footer .widget_categories ul li:hover,
+  .site-footer .widget_archive ul li:hover,
+  .site-footer .widget_recent_entries ul li:hover,
+  .site-footer .widget_recent_comments ul li:hover,
+  .site-footer .widget_meta ul li:hover,
+  .site-footer .widget_pages ul li:hover,
+  .site-footer .widget_nav_menu ul li:hover {
+    padding-left: 10px; }
+    .site-footer .widget_categories ul li:hover a,
+    .site-footer .widget_archive ul li:hover a,
+    .site-footer .widget_recent_entries ul li:hover a,
+    .site-footer .widget_recent_comments ul li:hover a,
+    .site-footer .widget_meta ul li:hover a,
+    .site-footer .widget_pages ul li:hover a,
+    .site-footer .widget_nav_menu ul li:hover a {
+      color: #b3b3b3; }
 
 .widget_calendar .calendar_wrap caption {
   background-color: #f2f2f2;

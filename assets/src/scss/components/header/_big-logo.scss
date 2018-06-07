@@ -17,7 +17,8 @@ body.big-logo {
 	    position: inherit;
 	}
 	body.big-logo.big-logo-enable nav#site-navigation ul.nav-menu,
-	body.big-logo.big-logo-enable nav#site-navigation ul.menu {
+	body.big-logo.big-logo-enable nav#site-navigation ul.menu,
+	body.big-logo.big-logo-enable nav#site-navigation ul#menu {
 	    float: none;
 	    margin-right: 0;
 	    margin: 0 auto;
@@ -49,7 +50,8 @@ body.big-logo {
 
 
 	body.big-logo nav#site-navigation ul.nav-menu > li > a,
-	body.big-logo nav#site-navigation ul.menu > li > a {
+	body.big-logo nav#site-navigation ul.menu > li > a,
+	body.big-logo nav#site-navigation ul#menu > li > a {
 	    padding-top: 20px;
 	    padding-bottom: 20px;
 	    // padding-top: 10px;
