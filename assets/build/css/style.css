@@ -37,10 +37,7 @@ a {
   a:hover {
     color: #EF3F3D; }
 
-.st-blog-header-wrap .st-blog-head-search form .search-submit:hover, .widget_search form .search-submit:hover, .btn:hover, .wpcf7-form .wpcf7-submit:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover,
-.dark-theme .site-content .readmore:hover, .dark-theme #st-blog-social-icons ul li a:hover,
-.dark-theme-coloured a.btn:hover,
-.dark-theme-coloured button:hover, header.site-header .st-blog-header-wrap-nav .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover span, ul.slick-dots li button:hover, ul.slick-dots li.slick-active button, .wp-pagenavi a:hover,
+header.site-header .st-blog-header-wrap-nav .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover span, ul.slick-dots li button:hover, ul.slick-dots li.slick-active button, .wp-pagenavi a:hover,
 .wp-pagenavi span.current, body.dark-theme.dark-theme-coloured .site-header .st-blog-header-wrap-nav, body.dark-theme.dark-theme-coloured .site-footer, body.dark-theme header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover span {
   background-color: #EF3F3D; }
 
@@ -136,13 +133,13 @@ textarea:focus,
 .btn:focus {
   box-shadow: none; }
 
-.st-blog-header-wrap .st-blog-head-search form .search-submit, .widget_search form .search-submit, .btn, a.btn, .wpcf7-form .wpcf7-submit, button, input[type="button"], input[type="reset"], input[type="submit"], .dark-theme .site-content a.readmore,
+.st-blog-header-wrap .st-blog-head-search form .search-submit, .widget_search form .search-submit, a.btn, .btn, a.readmore,
+.readmore, .wpcf7-form .wpcf7-submit, button, input[type="button"], input[type="reset"], input[type="submit"], .dark-theme .site-content a.readmore,
 .dark-theme .site-content .readmore, .dark-theme #st-blog-social-icons ul li a, .dark-theme-coloured .btn,
 .dark-theme-coloured a.btn,
 .dark-theme-coloured button,
 .dark-theme-coloured input[type="submit"],
 .dark-theme-coloured .st-blog-header-wrap .st-blog-head-search form .search-submit {
-  background-color: #000;
   border: 0;
   border-radius: 0;
   color: #ffffff;
@@ -150,12 +147,15 @@ textarea:focus,
   font-size: 15px;
   font-size: 1rem;
   padding: 5px 10px; }
-  .st-blog-header-wrap .st-blog-head-search form .search-submit:hover, .widget_search form .search-submit:hover, .btn:hover, .wpcf7-form .wpcf7-submit:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover,
+  .st-blog-header-wrap .st-blog-head-search form .search-submit:hover, .widget_search form .search-submit:hover, .btn:hover,
+  .readmore:hover, .wpcf7-form .wpcf7-submit:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover,
   .dark-theme .site-content .readmore:hover, .dark-theme #st-blog-social-icons ul li a:hover,
   .dark-theme-coloured a.btn:hover {
-    color: #ffffff; }
+    color: #ffffff;
+    background-color: #000; }
   @media (min-width: 575px) {
-    .st-blog-header-wrap .st-blog-head-search form .search-submit, .widget_search form .search-submit, .btn, a.btn, .wpcf7-form .wpcf7-submit, button, input[type="button"], input[type="reset"], input[type="submit"], .dark-theme .site-content a.readmore,
+    .st-blog-header-wrap .st-blog-head-search form .search-submit, .widget_search form .search-submit, a.btn, .btn, a.readmore,
+    .readmore, .wpcf7-form .wpcf7-submit, button, input[type="button"], input[type="reset"], input[type="submit"], .dark-theme .site-content a.readmore,
     .dark-theme .site-content .readmore, .dark-theme #st-blog-social-icons ul li a, .dark-theme-coloured .btn,
     .dark-theme-coloured a.btn,
     .dark-theme-coloured button,
@@ -348,6 +348,15 @@ textarea:focus,
     content: "\f30b";
     margin-left: 10px; }
 
+a.readmore,
+.readmore {
+  background-color: transparent;
+  color: gray; }
+  a.readmore:hover,
+  .readmore:hover {
+    background-color: transparent;
+    color: #EF3F3D; }
+
 #st-blog-scroll-top {
   position: fixed;
   bottom: 40px;
@@ -532,7 +541,7 @@ body.big-logo .st-blog-header-row .st-blog-logo-manage {
   text-align: center; }
   @media (min-width: 992px) {
     body.big-logo .st-blog-header-row .st-blog-logo-manage {
-      padding-bottom: 8;
+      padding-bottom: 8px;
       padding-top: 20px; } }
 
 @media (min-width: 992px) {
@@ -638,7 +647,8 @@ nav#site-navigation ul {
       transition: all 0.3s ease-in-out; }
   nav#site-navigation ul a {
     color: #000;
-    font-weight: 400; }
+    font-weight: 400;
+    }
 nav#site-navigation ul.nav-menu > li,
 nav#site-navigation ul.menu > li {
   display: inline-block;

@@ -136,11 +136,11 @@ $st_blog_google_fonts = array(
 );
 
 /*defaults values*/
-$st_blog_customizer_defaults['st-blog-font-family-site-identity']     = 'Raleway:400,300,500,600,700,900';
-$st_blog_customizer_defaults['st-blog-font-family-menu']              = 'Raleway:400,300,500,600,700,900';
-$st_blog_customizer_defaults['st-blog-font-family-h1-h6']             = 'Raleway:400,300,500,600,700,900';
-$st_blog_customizer_defaults['st-blog-font-family-button-text']       = 'Raleway:400,300,500,600,700,900';
-$st_blog_customizer_defaults['st-blog-footer-copy-right-text']        = 'Raleway:400,300,500,600,700,900';  
+$st_blog_customizer_defaults['st-blog-font-family-site-identity']     = 'Roboto+Condensed:400,300,400italic,700';
+$st_blog_customizer_defaults['st-blog-font-family-menu']              = 'Roboto+Condensed:400,300,400italic,700';
+$st_blog_customizer_defaults['st-blog-font-family-h1-h6']             = 'Roboto+Condensed:400,300,400italic,700';
+$st_blog_customizer_defaults['st-blog-font-family-button-text']       = 'Roboto+Condensed:400,300,400italic,700';
+$st_blog_customizer_defaults['st-blog-footer-copy-right-text']        = 'Roboto+Condensed:400,300,400italic,700';  
 
 
 /*section*/

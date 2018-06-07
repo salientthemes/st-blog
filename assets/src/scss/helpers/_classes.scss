@@ -133,7 +133,8 @@
 
 // form elements
 %btn-style {
-  background-color: $color_black;
+  // background doesn't let functions style to override
+  // background-color: $color_black;
   border: 0;
   border-radius: 0;
   color: $color_white;
@@ -142,7 +143,8 @@
   padding: 5px 10px;
   &:hover {
     color: $color_white;
-    @extend %bg-primary;
+    // @extend %bg-primary;
+    background-color: $color_black;
   }
   @include media(xs) {
     padding: 10px 20px;

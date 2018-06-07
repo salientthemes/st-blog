@@ -1,8 +1,7 @@
-.btn {
+a.btn {
 	@extend %btn-style;
 }
-
-a.btn {
+.btn {
 	@extend %btn-style;
 }
 
@@ -17,6 +16,17 @@ a.btn {
 		content: "\f30b";
 		@extend %font-awesome;
 		margin-left: 10px;
+	}
+}
+
+a.readmore,
+.readmore {
+	@extend %btn-style;
+	background-color: transparent;
+	color: $color_link;
+	&:hover {
+		background-color: transparent;
+		color: $color_primary;
 	}
 }
 
