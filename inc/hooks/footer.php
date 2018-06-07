@@ -70,32 +70,31 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
                         </div>
                     </section><!-- full width widget ended -->
 
-                    <div class="footer-wrapper">
+                    <div class="st-blog-footer-widget footer-wrapper">
                         <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="row">
-                                        <?php if( is_active_sidebar( 'footer-col-one' ) && $st_blog_footer_widgets_number > 0 ) : ?>
-                                            <div class="contact-list <?php echo esc_attr( $col );?>">
-                                                <?php dynamic_sidebar( 'footer-col-one' ); ?>
-                                            </div>
-                                        <?php endif; ?>
-                                        <?php if( is_active_sidebar( 'footer-col-two' ) && $st_blog_footer_widgets_number > 1 ) : ?>
-                                            <div class="contact-list <?php echo esc_attr( $col );?>">
-                                                <?php dynamic_sidebar( 'footer-col-two' ); ?>
-                                            </div>
-                                        <?php endif; ?>
-                                        <?php if( is_active_sidebar( 'footer-col-three' ) && $st_blog_footer_widgets_number > 2 ) : ?>
-                                            <div class="contact-list <?php echo esc_attr( $col );?>">
-                                                <?php dynamic_sidebar( 'footer-col-three' ); ?>
-                                            </div>
-                                        <?php endif; ?>
-                                        <?php if( is_active_sidebar( 'footer-col-four' ) && $st_blog_footer_widgets_number > 2 ) : ?>
-                                            <div class="contact-list <?php echo esc_attr( $col );?>">
-                                                <?php dynamic_sidebar( 'footer-col-four' ); ?>
-                                            </div>
-                                        <?php endif; ?>
-                                    </div>
+                            <div class="st-blog-main-footer mt-5">
+                                <div class="row">
+                                    <?php if( is_active_sidebar( 'footer-col-one' ) && $st_blog_footer_widgets_number > 0 ) : ?>
+                                        <div class="contact-list <?php echo esc_attr( $col );?>">
+                                            <?php dynamic_sidebar( 'footer-col-one' ); ?>
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php if( is_active_sidebar( 'footer-col-two' ) && $st_blog_footer_widgets_number > 1 ) : ?>
+                                        <div class="contact-list <?php echo esc_attr( $col );?>">
+                                            <?php dynamic_sidebar( 'footer-col-two' ); ?>
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php if( is_active_sidebar( 'footer-col-three' ) && $st_blog_footer_widgets_number > 2 ) : ?>
+                                        <div class="contact-list <?php echo esc_attr( $col );?>">
+                                            <?php dynamic_sidebar( 'footer-col-three' ); ?>
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php if( is_active_sidebar( 'footer-col-four' ) && $st_blog_footer_widgets_number > 2 ) : ?>
+                                        <div class="contact-list <?php echo esc_attr( $col );?>">
+                                            <?php dynamic_sidebar( 'footer-col-four' ); ?>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                         </div>   
                     </div>  
