@@ -449,8 +449,8 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
        
         if( !empty($st_blog_menu_background_color) )
         {?>
-        	.st-news-main-nav,
-        	#site-navigation ul.sub-menu
+        	body.big-logo.big-logo-enable nav#site-navigation,
+        	header.site-header .st-blog-header-wrap-nav
         	{
         		background: <?php echo esc_attr($st_blog_menu_background_color);?> !important;
         	}

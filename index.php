@@ -57,7 +57,16 @@ get_header();
 					echo '</div><!-- .masonry -->';
 
 				// the_posts_navigation();
-					 wp_pagenavi(); 
+					 // wp_pagenavi(); 
+					// if (function_exists('wp-pagenavi')) 
+					// { 
+					// 	wp_pagenavi(); 
+					// } 
+					// else 
+					// {
+					// 	the_posts_navigation();
+					// }
+					 the_posts_pagination( array( 'mid_size' => 1 ) ); 
 
 			else :
 
