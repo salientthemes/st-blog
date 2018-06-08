@@ -96,7 +96,7 @@
             this.createMenu = function() {
                 var closeHTML = defaultConfig.closeIcon ? this.closeMenuIcon() : null,
                     overlayHTML = defaultConfig.overlay ? this.addOverlay() : null;
-                    $('body').append('<div class="mr-mobile-menu" id="mr-mobile-menu">' + closeHTML + mobileMenuHTML + '</div>' + overlayHTML)
+                    $('body').append('<div class="st-mbl-menu" id="st-mbl-menu">' + closeHTML + mobileMenuHTML + '</div>' + overlayHTML)
             };
 
             this.closeMenuIcon = function() {
@@ -104,25 +104,25 @@
             };
 
             this.addOverlay = function() {
-                return ('<div class="mr-mobile-menu-overlay"></div>');
+                return ('<div class="st-mbl-menu-overlay"></div>');
             };
 
             this.addClassOnFirstUl = function(){
-              if($('#mr-mobile-menu ul').first().hasClass('menu')){
+              if($('#st-mbl-menu ul').first().hasClass('menu')){
               }else{
-                $('#mr-mobile-menu ul').first().addClass('menu');
+                $('#st-mbl-menu ul').first().addClass('menu');
               }
             }
 
             this.addDownArrow = function() {
-                var $mobileMenu = $('#mr-mobile-menu'),
-                    $hasSubUl = $('#mr-mobile-menu .menu-item-has-children'),
+                var $mobileMenu = $('#st-mbl-menu'),
+                    $hasSubUl = $('#st-mbl-menu .menu-item-has-children'),
                     haveClassOnLi = $mobileMenu.find('.menu-item-has-children');
 
                 if (haveClassOnLi.length > 0) {
                     $hasSubUl.children('a').append('<span class="mr-arrow-box"><span class="mr-down-arrow"></span></span>');
                 } else {
-                    $('#mr-mobile-menu ul li:has(ul)').children('a').append('<span class="mr-arrow-box"><span class="mr-down-arrow"></span></span>');
+                    $('#st-mbl-menu ul li:has(ul)').children('a').append('<span class="mr-arrow-box"><span class="mr-down-arrow"></span></span>');
                 }
             };
 
@@ -138,9 +138,9 @@
 
             this.menuToggler = function() {
               var menuConfig = {
-                  animation: ['.mr-mobile-menu-overlay', '#mr-mobile-menu', 'body', '#menu-icon'], //where class add element
-                  exceptions: ['#mr-mobile-menu'], //stop propagation
-                  toggler: ['#menu-icon', '.mr-mobile-menu-overlay', '#mr-close'],//class toggle on click
+                  animation: ['.st-mbl-menu-overlay', '#st-mbl-menu', 'body', '#menu-icon'], //where class add element
+                  exceptions: ['#st-mbl-menu'], //stop propagation
+                  toggler: ['#menu-icon', '.st-mbl-menu-overlay', '#mr-close'],//class toggle on click
                   className:'mr-menu-open'
               };
               new classToggler( menuConfig ).init();

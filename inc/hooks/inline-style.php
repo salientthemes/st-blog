@@ -19,7 +19,7 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
 		$st_blog_customizer_defaults['st-blog-font-family-menu']              = 'Roboto+Condensed:400,300,400italic,700';
 		$st_blog_customizer_defaults['st-blog-font-family-h1-h6']             = 'Roboto+Condensed:400,300,400italic,700';
 		$st_blog_customizer_defaults['st-blog-font-family-button-text']       = 'Roboto+Condensed:400,300,400italic,700';
-		$st_blog_customizer_defaults['st-blog-footer-copy-right-text']        = 'Roboto+Condensed:400,300,400italic,700';
+		$st_blog_customizer_defaults['st-blog-footer-copy-right-text']        = 'Open+Sans:400,400italic,600,700';
 
         $st_blog_font_family_site_identity 		= $st_blog_google_fonts[$st_blog_customizer_all_values['st-blog-font-family-site-identity']];
 
@@ -70,13 +70,14 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
                 font-family: '<?php echo esc_attr( $st_blog_font_family_h1_h6 ); ?>'!important;
             }
 
-            /* readmore fonts*/
-            .readmore{
+            /* readmore and fonts*/
+            .readmore,
+            .st-blog-header-wrap .st-blog-head-search form .search-submit, .widget_search form .search-submit, a.btn, .btn, a.readmore, .readmore, .wpcf7-form .wpcf7-submit, button, input[type="button"], input[type="reset"], input[type="submit"], .dark-theme .site-content a.readmore, .dark-theme .site-content .readmore, .dark-theme #st-blog-social-icons ul li a, .dark-theme-coloured .btn, .dark-theme-coloured a.btn, .dark-theme-coloured button, .dark-theme-coloured input[type="submit"], .dark-theme-coloured .st-blog-header-wrap .st-blog-head-search form .search-submit {
                 font-family: '<?php echo esc_attr( $st_blog_font_family_button_text ); ?>'!important;
             }
 
               /* footer fonts*/
-            .readmore{
+            .st-blog-footer-copyright {
                 font-family: '<?php echo esc_attr( $st_blog_font_family_copy_right_text ); ?>'!important;
             }
 

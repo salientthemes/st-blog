@@ -1,6 +1,7 @@
 $sidebar_padding: 3%;
 
-body:not(.home) {
+body.home.page,
+body:not(.home):not(.blog) {
 	.site-content {
 	    padding-top: 30px;
 	    padding-bottom: 20px;
