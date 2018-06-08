@@ -1061,7 +1061,7 @@ nav#site-navigation {
 
 .site-footer .site-info {
   text-align: center;
-  padding-bottom: 40px; }
+  padding: 30px 0 40px; }
 
 body.home.page .site-content,
 body:not(.home):not(.blog) .site-content {
@@ -1483,6 +1483,12 @@ body.dark-theme .site-footer {
 .box-layout .widget_media_gallery .gallery:hover {
   background-color: #f7f7f7;
   transition: 0.4s all ease; }
+.box-layout .site-footer .st-blog-featured-item:hover,
+.box-layout .site-footer .st-blog-item article:hover,
+.box-layout .site-footer .st-blog-author-item:hover,
+.box-layout .site-footer .st-blog-popular-posts-item:hover,
+.box-layout .site-footer .widget_media_gallery .gallery:hover {
+  background-color: transparent; }
 
 body.admin-bar.fixed-header .site-header {
   top: 32px; }

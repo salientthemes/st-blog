@@ -1,8 +1,20 @@
-.box-layout .#{$prefix}-featured-item:hover, 
-.box-layout .#{$prefix}-item article:hover, 
-.box-layout .#{$prefix}-author-item:hover, 
-.box-layout .#{$prefix}-popular-posts-item:hover, 
-.box-layout .widget_media_gallery .gallery:hover {
-    background-color: $color_light_grey;
-    transition: 0.4s all ease;
+.box-layout {
+	.#{$prefix}-featured-item:hover, 
+	.#{$prefix}-item article:hover, 
+	.#{$prefix}-author-item:hover, 
+	.#{$prefix}-popular-posts-item:hover, 
+	.widget_media_gallery .gallery:hover {
+	    background-color: $color_light_grey;
+	    transition: 0.4s all ease;
+	}
+
+	.site-footer {
+		.#{$prefix}-featured-item:hover, 
+		.#{$prefix}-item article:hover, 
+		.#{$prefix}-author-item:hover, 
+		.#{$prefix}-popular-posts-item:hover, 
+		.widget_media_gallery .gallery:hover {
+			background-color: transparent;
+		}
+	}
 }
