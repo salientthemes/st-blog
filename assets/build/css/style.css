@@ -1,6 +1,5 @@
 /* imports all files here */
 /* MIXINS */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700|Roboto+Condensed:300,300i,400,400i,700");
 /* colors */
 /*prifix */
 .widget_categories ul li,
@@ -570,8 +569,7 @@ body.scrolled-down #st-blog-scroll-top {
 .site-branding .site-title {
   font-size: 24px;
   font-size: 1.6rem;
-  font-weight: 700;
-  text-transform: uppercase; }
+  font-weight: 700; }
 .site-branding a {
   color: #000; }
 .site-branding .site-description {
@@ -810,8 +808,7 @@ nav#site-navigation ul.menu > li {
   nav#site-navigation ul.nav-menu > li > a,
   nav#site-navigation ul.menu > li > a {
     display: inline-block;
-    padding: 25px 1rem;
-    text-transform: uppercase; }
+    padding: 25px 1rem; }
 
 nav#site-navigation ul#menu ul,
 nav#site-navigation ul.nav-menu ul,
@@ -851,13 +848,13 @@ nav#site-navigation ul.menu ul ul {
   left: 100%; }
 
 /* fs = font size */
-.mr-mobile-menu ul {
+.st-mbl-menu ul {
   margin: 0;
   padding: 0; }
-.mr-mobile-menu a {
+.st-mbl-menu a {
   text-decoration: none; }
 
-.mr-mobile-menu-overlay {
+.st-mbl-menu-overlay {
   background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   left: 0;
@@ -870,14 +867,14 @@ nav#site-navigation ul.menu ul ul {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
-  .mr-mobile-menu-overlay.mr-menu-open {
+  .st-mbl-menu-overlay.mr-menu-open {
     opacity: 1;
     visibility: visible; }
 
 body {
   overflow-X: hidden; }
 
-.mr-mobile-menu {
+.st-mbl-menu {
   position: fixed;
   top: 0;
   height: 100%;
@@ -890,14 +887,14 @@ body {
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   left: -300px; }
-  .mr-mobile-menu.mr-menu-open {
+  .st-mbl-menu.mr-menu-open {
     left: 0; }
-  .mr-mobile-menu ul.menu {
+  .st-mbl-menu ul.menu {
     margin: 0;
     padding: 0;
     list-style: none;
     font-family: Roboto Condensed, sans-serif; }
-    .mr-mobile-menu ul.menu > li > a {
+    .st-mbl-menu ul.menu > li > a {
       padding: 8px 35px 8px 15px;
       display: block;
       font-weight: 400;
@@ -905,20 +902,20 @@ body {
       text-transform: capitalize;
       color: #fff;
       position: relative; }
-    .mr-mobile-menu ul.menu > li ul {
+    .st-mbl-menu ul.menu > li ul {
       background-color: #272727;
       display: none; }
-      .mr-mobile-menu ul.menu > li ul li {
+      .st-mbl-menu ul.menu > li ul li {
         list-style: none;
         position: relative; }
-        .mr-mobile-menu ul.menu > li ul li a {
+        .st-mbl-menu ul.menu > li ul li a {
           display: block;
           padding: 8px 35px 8px 15px;
           border-bottom: 1px solid #1a1a1a;
           color: #fff;
           font-size: 12px;
           position: relative; }
-        .mr-mobile-menu ul.menu > li ul li ul li a {
+        .st-mbl-menu ul.menu > li ul li ul li a {
           padding: 8px 0 8px 25px; }
 
 .mr-arrow-box {

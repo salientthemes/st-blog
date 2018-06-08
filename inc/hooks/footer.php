@@ -127,7 +127,9 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
                 <div class="container">
                     <?php
                             if(isset($st_blog_customizer_all_values['st-blog-copyright-text'])){
+                                echo '<span class="st-blog-footer-copyright">';
                                 echo wp_kses_post( $st_blog_customizer_all_values['st-blog-copyright-text'] );
+                                echo '</span>';
                             }
                             ?>
                     <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'st-blog' ) ); ?>">
