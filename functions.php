@@ -219,12 +219,14 @@ add_action( 'wp_enqueue_scripts', 'st_blog_scripts' );
 
 
 /**
- * Customizer control scripts and styles.
+ * Customizer control styles and scripts.
  */
 function st_blog_customizer_control_scripts()
 {
 
-    wp_enqueue_style('st-blog-customize-controls', get_template_directory_uri() . '/assets/build/css/admin-style.css');
+    wp_enqueue_style('st-blog-customize-controls-style', get_template_directory_uri() . '/assets/build/css/admin-style.css');
+
+    wp_enqueue_script('st-blog-customize-controls-scripts', get_template_directory_uri() . '/assets/build/js/admin-script/admin-script.js');
 
 }
 

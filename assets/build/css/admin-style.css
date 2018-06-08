@@ -53,4 +53,10 @@
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
   border: 1px solid #3498DB; }
 
+.from-post-selected .customize-control-category_dropdown {
+  display: none !important; }
+
+.from-category-selected .customize-control-dropdown-pages {
+  display: none !important; }
+
 /*# sourceMappingURL=admin-style.css.map */
