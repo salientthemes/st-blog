@@ -10,24 +10,16 @@ $st_blog_customizer_defaults['st-blog-select-post-form']            = 'from-cate
 $st_blog_customizer_defaults['st-blog-select-post-from-category']   = 1;
 $st_blog_customizer_defaults['st-blog-select-post-from-page']       = 0;
 
-// slider setting option's
-$st_blog_sections['st-blog-feature-setting'] = array(
-    'title'     => esc_html__('Feature Slider setting','st-blog'),
-    'panel'     => 'st_blog_feature_slider_panel' ,
-    'priority'  => 200                 
-
-);
-
 // slider post selection
 $st_blog_settings_controls['st-blog-select-post-form'] = array(
     'setting' => array(
         'default'   => $st_blog_customizer_defaults['st-blog-select-post-form']
     ),
     'control' => array(
-        'label'         => esc_html__('Select Slider Post Type','st-blog'),
+        'label'                 => esc_html__('Select Slider Post Type','st-blog'),
         'description'           =>  esc_html__( 'After selecting one of the option, please go back and go to particular section to add', 'st-blog' ),
-        'section'       => 'st-blog-feature-setting',
-        'type'          => 'select',
+        'section'               => 'st-blog-feature-section',
+        'type'                  => 'select',
         'choices' => array(
             'from-category'     => esc_html__('from-category','st-blog'),
             'from-post'         => esc_html__('From-Page','st-blog')
@@ -45,7 +37,7 @@ $st_blog_settings_controls['st-blog-select-post-from-category']  = array(
     'control' => array(
         'label'             => esc_html__('Select a Category For Feature Slider','st-blog'),
         'description'       => esc_html__( 'This option only work when you have selected "Category" in "Slider Post Type". Recommended featured image size 1360 * 530 for posts under selected category', 'st-blog' ),
-        'section'           => 'st-blog-feature-setting' ,
+        'section'           => 'st-blog-feature-section' ,
         'type'              => 'category_dropdown',
         'priority'          => 40,
         'active_callback'   => ''          
@@ -62,7 +54,7 @@ $st_blog_repeated_settings_controls['st-blog-select-post-from-page']  =  array(
         ),
         'control' => array(
             'label'             => esc_html__('Select a Page Fro Feature Slider %s','st-blog'),
-            'section'           => 'st-blog-feature-setting',
+            'section'           => 'st-blog-feature-section',
             'type'              => 'dropdown-pages',
             'priority'          => 50,
             'active_callback'   => ''
@@ -70,7 +62,7 @@ $st_blog_repeated_settings_controls['st-blog-select-post-from-page']  =  array(
     ),
     'st-blog-fs-pages-divider' => array(
         'control' => array(
-            'section'               => 'st-blog-feature-setting',
+            'section'               => 'st-blog-feature-section',
             'type'                  => 'message',
             'priority'              => 50,
             'description'           => '<br /><hr />'

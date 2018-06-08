@@ -40,9 +40,16 @@ global $st_blog_customizer_all_values;
 	<div class="entry-content">
 		<?php
 		// added for design
-		if ( 1 == $st_blog_customizer_all_values['latest-post-show-excerpt'] ){
-			the_excerpt();
+		if( is_singular() ) 
+		{
+			the_content();
 		}
+		else
+		{
+			if ( 1 == $st_blog_customizer_all_values['latest-post-show-excerpt'] ){
+				the_excerpt();
+			}
+		}	
 		
 		// the_content( sprintf(
 		// 	wp_kses(

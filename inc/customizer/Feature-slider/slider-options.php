@@ -14,16 +14,10 @@ $st_blog_customizer_defaults['st-blog-enable-button']               = 1;
 $st_blog_customizer_defaults['st-blog-enable-arrow']                = 1;
 $st_blog_customizer_defaults['st-blog-enable-auto-play']            = 1;
 
-// create a panel section 
-$st_blog_panels['st_blog_feature_slider_panel'] = 
-    array(
-        'title'         => esc_html__('Feature Slider Section','st-blog'),
-        'priority'      => 200
-    );
 
 $st_blog_sections['st-blog-feature-section'] = array(
     'title'     => esc_html__('Feature Slider options','st-blog'),
-    'panel'     => 'st_blog_feature_slider_panel' ,
+    'panel'     => 'st-blog-homepage-panel' ,
     'priority'  => 200                 
 
 );

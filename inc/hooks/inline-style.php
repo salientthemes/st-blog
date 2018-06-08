@@ -40,6 +40,7 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
         
         $st_blog_h1_h6 				    		= $st_blog_customizer_all_values['st-blog-h1-h6-color'];
         $st_blog_button_color				    = $st_blog_customizer_all_values['st-blog-button-color'];
+        $st_blog_button_text_color              = $st_blog_customizer_all_values['st-blog-button-text-color'];
         $st_blog_footer_background 				= $st_blog_customizer_all_values['st-blog-footer-background-color'];
         $st_blog_footer_text_color				= $st_blog_customizer_all_values['st-blog-footer-text-color'];
 
@@ -169,11 +170,20 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
 
         <?php }
 
-         if( !empty($st_blog_button_color) )
+        if( !empty($st_blog_button_color) )
         {?>
             a.readmore, .readmore
             {
                 background-color: <?php echo esc_attr($st_blog_button_color);?>!important;
+            }
+
+        <?php }
+
+        if( !empty($st_blog_button_text_color) )
+        {?>
+            a.readmore, .readmore
+            {
+                color: <?php echo esc_attr($st_blog_button_text_color);?>!important;
             }
 
         <?php }

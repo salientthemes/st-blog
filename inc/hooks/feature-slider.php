@@ -49,10 +49,11 @@ if ( !function_exists('st_fetaure_slider_array')  ) :
             if(!empty ($st_blog_fs_section_post_ids ) ) 
             {
                 $st_blog_feature_slider_args = array(
-                    'post_type'     => 'page',
-                    'post__in'      => $st_blog_fs_section_post_ids,
+                    'post_type'      => 'page',
+                    'post__in'       => $st_blog_fs_section_post_ids,
                     'posts_per_page' => $st_blog_feature_slider_number_of_slider,
-                    'order_by'      => 'post__in'
+                    'order_by'       => 'post__in',
+                    'order'          => 'ASC',
                 );
 
             }
@@ -115,11 +116,11 @@ if( !function_exists('st_blog_feature_slider') ) :
         $st_blog_fs_arrays =  st_fetaure_slider_array($st_blog_select_post_type_options);
         if ( is_array($st_blog_fs_arrays) )
         {
-            $st_blog_fs_enable_button  = $st_blog_customizer_all_values['st-blog-enable-button'];
-            $st_blog_fs_enable_array   = $st_blog_customizer_all_values['st-blog-enable-arrow'];
-            $st_blog_fs_autoplay       = $st_blog_customizer_all_values['st-blog-enable-auto-play'];
-            $st_blog_feature_slider_button_text        = $st_blog_customizer_all_values['st-blog-button text'];
-            $st_blog_feature_slider_number_of_slider   = $st_blog_customizer_all_values['st-blog-number-of-slider'];  
+            $st_blog_fs_enable_button                   = $st_blog_customizer_all_values['st-blog-enable-button'];
+            $st_blog_fs_enable_array                    = $st_blog_customizer_all_values['st-blog-enable-arrow'];
+            $st_blog_fs_autoplay                        = $st_blog_customizer_all_values['st-blog-enable-auto-play'];
+            $st_blog_feature_slider_button_text         = $st_blog_customizer_all_values['st-blog-button text'];
+            $st_blog_feature_slider_number_of_slider    = $st_blog_customizer_all_values['st-blog-number-of-slider'];  
 
         ?>
         <section id="st-blog-banner" class="mb-5">
@@ -145,9 +146,11 @@ if( !function_exists('st_blog_feature_slider') ) :
                         <div class="st-blog-banner-image st-blog-overlay position-relative" style="background-image: url(<?php echo esc_url($st_blog_feature_slider_image); ?>);">
                             <div class="st-blog-banner-caption">
                                 <h2 class="st-blog-title text-white mb-4"><?php echo esc_html($st_blog_fs_array['st-blog-fs-title']);?></h2>
-                                <?php if( $st_blog_fs_enable_button ) {?>
-                                <a href="<?php echo esc_url($st_blog_fs_array['st-blog-fs-url']); ?>" class="btn"><?php echo esc_html($st_blog_feature_slider_button_text); ?></a>
-                                <?php } ?>
+                                <?php if (!empty($st_blog_feature_slider_button_text) ) { ?>
+                                    <?php if( 1 == $st_blog_fs_enable_button ) {?>
+                                        <a href="<?php echo esc_url($st_blog_fs_array['st-blog-fs-url']); ?>" class="btn"><?php echo esc_html($st_blog_feature_slider_button_text); ?></a>
+                                    <?php } ?>
+                                <?php } ?>    
                             </div>
                         </div>
                     <?php

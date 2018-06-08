@@ -12,22 +12,17 @@ $st_blog_customizer_defaults['st-blog-menu-text-color']         = '#000';
 $st_blog_customizer_defaults['st-blog-latest-blog-title-color'] = '#000';
 $st_blog_customizer_defaults['st-blog-h1-h6-color']             = '#000';
 $st_blog_customizer_defaults['st-blog-button-color']            = '#fff';
+$st_blog_customizer_defaults['st-blog-button-text-color']       = '#000';
 $st_blog_customizer_defaults['st-blog-footer-background-color'] = '#fff';
 $st_blog_customizer_defaults['st-blog-footer-text-color']       = '#000';
 $st_blog_customizer_defaults['st-blog-color-reset']             = '';
 
 
-// color panels
-$st_blog_panels['st-blog-color-fonts-panles']  = array(
-    'title'     => esc_html__('Colors And Fonts','st-blog'),
-    'priority'  => 100
-);
-
 /*Default color*/
 $st_blog_sections['colors'] = array(
         'priority'       => 40,
         'title'          => esc_html__( 'Colors Options', 'st-blog' ),
-        'panel'         => 'st-blog-color-fonts-panles'   
+        'panel'         => 'st-blog-homepage-panel'   
     );
 
 /**
@@ -53,6 +48,9 @@ if ( ! function_exists( 'st_blog_color_reset' ) ) :
            $st_blog_customizer_saved_values['st-blog-latest-blog-title-color']        = $st_blog_customizer_defaults['st-blog-latest-blog-title-color'];
            $st_blog_customizer_saved_values['st-blog-footer-background-color']        = $st_blog_customizer_defaults['st-blog-footer-background-color'];
            $st_blog_customizer_saved_values['st-blog-footer-text-color']              = $st_blog_customizer_defaults['st-blog-footer-text-color'];
+           $st_blog_customizer_saved_values['st-blog-button-color']                   = $st_blog_customizer_defaults['st-blog-button-color'];
+           $st_blog_customizer_saved_values['st-blog-button-text-color']              = $st_blog_customizer_defaults['st-blog-button-text-color'];
+           $st_blog_customizer_saved_values['st-blog-h1-h6-color']                    = $st_blog_customizer_defaults['st-blog-h1-h6-color'];
 
             remove_theme_mod( 'background_color' );
            $st_blog_customizer_saved_values['st-blog-color-reset']                    = '';
@@ -164,6 +162,19 @@ $st_blog_settings_controls['st-blog-button-color'] = array(
     )
 );
 
+$st_blog_settings_controls['st-blog-button-text-color'] = array(
+    'setting' => array(
+        'default' => $st_blog_customizer_defaults['st-blog-button-text-color'],
+    ),
+    'control' => array(
+        'label'                 =>  esc_html__( 'Button Text Color', 'st-blog' ),
+        'section'               => 'colors',
+        'type'                  => 'color',
+        'priority'              => 95,
+        'active_callback'       => ''
+    )
+);
+
 $st_blog_settings_controls['st-blog-footer-background-color'] = array(
     'setting' => array(
         'default' => $st_blog_customizer_defaults['st-blog-footer-background-color'],
@@ -176,6 +187,8 @@ $st_blog_settings_controls['st-blog-footer-background-color'] = array(
         'active_callback'       => ''
     )
 );
+
+
 
 $st_blog_settings_controls['st-blog-footer-text-color'] = array(
     'setting' => array(

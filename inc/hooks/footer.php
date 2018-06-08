@@ -38,7 +38,6 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
          */
         function st_blog_widget_before_footer() {
                 global$st_blog_customizer_all_values;
-               $st_blog_footer_widgets_number =$st_blog_customizer_all_values['st-blog-footer-sidebar-number'];
                 if (!is_active_sidebar('full-width-footer') && !is_active_sidebar( 'footer-col-one' ) && !is_active_sidebar( 'footer-col-two' ) && !is_active_sidebar( 'footer-col-three' ) && !is_active_sidebar( 'footer-col-four' )){
                     return false;
                 }
@@ -76,22 +75,22 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
                         <div class="container">
                             <div class="st-blog-main-footer">
                                 <div class="row">
-                                    <?php if( is_active_sidebar( 'footer-col-one' ) && $st_blog_footer_widgets_number > 0 ) : ?>
+                                    <?php if( is_active_sidebar( 'footer-col-one' )  ) : ?>
                                         <div class="<?php echo esc_attr( $col );?>">
                                             <?php dynamic_sidebar( 'footer-col-one' ); ?>
                                         </div>
                                     <?php endif; ?>
-                                    <?php if( is_active_sidebar( 'footer-col-two' ) && $st_blog_footer_widgets_number > 1 ) : ?>
+                                    <?php if( is_active_sidebar( 'footer-col-two' )  ) : ?>
                                         <div class="<?php echo esc_attr( $col );?>">
                                             <?php dynamic_sidebar( 'footer-col-two' ); ?>
                                         </div>
                                     <?php endif; ?>
-                                    <?php if( is_active_sidebar( 'footer-col-three' ) && $st_blog_footer_widgets_number > 2 ) : ?>
+                                    <?php if( is_active_sidebar( 'footer-col-three' )  ) : ?>
                                         <div class="<?php echo esc_attr( $col );?>">
                                             <?php dynamic_sidebar( 'footer-col-three' ); ?>
                                         </div>
                                     <?php endif; ?>
-                                    <?php if( is_active_sidebar( 'footer-col-four' ) && $st_blog_footer_widgets_number > 2 ) : ?>
+                                    <?php if( is_active_sidebar( 'footer-col-four' )  ) : ?>
                                         <div class="<?php echo esc_attr( $col );?>">
                                             <?php dynamic_sidebar( 'footer-col-four' ); ?>
                                         </div>
