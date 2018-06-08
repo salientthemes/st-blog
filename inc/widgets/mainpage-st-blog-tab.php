@@ -26,11 +26,11 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
             $popular_heading        = ! empty( $instance['popular_heading'] ) ? $instance['popular_heading'] : '';
             $popular_category       = ! empty( $instance['popular_category'] ) ? $instance['popular_category'] : 0;
             $popular_number         = ! empty( $instance['popular_number'] ) ? $instance['popular_number'] : 5;
-            $recent_heading       = ! empty( $instance['recent_heading'] ) ? $instance['recent_heading'] : '';
-            $recent_category      = ! empty( $instance['recent_category'] ) ? $instance['recent_category'] : 0;
-            $recent_number        = ! empty( $instance['recent_number'] ) ? $instance['recent_number'] : 5;
-            $comments_heading     = ! empty( $instance['comments_heading'] ) ? $instance['comments_heading'] : '';
-            $comments_number       = ! empty( $instance['comments_number'] ) ? $instance['comments_number'] : 5;
+            $recent_heading         = ! empty( $instance['recent_heading'] ) ? $instance['recent_heading'] : '';
+            $recent_category        = ! empty( $instance['recent_category'] ) ? $instance['recent_category'] : 0;
+            $recent_number          = ! empty( $instance['recent_number'] ) ? $instance['recent_number'] : 5;
+            $comments_heading       = ! empty( $instance['comments_heading'] ) ? $instance['comments_heading'] : '';
+            $comments_number        = ! empty( $instance['comments_number'] ) ? $instance['comments_number'] : 5;
 
             $custom_class           = apply_filters( 'widget_custom_class', empty( $instance['custom_class'] ) ? '' : $instance['custom_class'], $instance, $this->id_base );
             $featured_image         = ! empty( $instance['featured_image'] ) ? $instance['featured_image'] : 'st-blog-recent-sidebar';
@@ -50,16 +50,22 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
            ?>
             <div id="st-blog-popular-posts" class="widget widget_popular_posts">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item">
-                        <!-- <a class="nav-link active" id="popular-tab" data-toggle="tab" href="#popular" role="tab" aria-controls="popular" aria-selected="true"> -->
-                        <a href="#<?php echo esc_attr( $tab_id ); ?>-popular" class="nav-link active" data-toggle="tab" role="tab" aria-controls="<?php echo esc_attr( $tab_id ); ?>-popular" aria-selected="true"><?php echo esc_html($popular_heading);?></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#<?php echo esc_attr( $tab_id ); ?>-recent" class="nav-link" data-toggle="tab" role="tab" aria-controls="<?php echo esc_attr( $tab_id ); ?>-recent" aria-selected="false"><?php echo esc_html($recent_heading);?></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#<?php echo esc_attr( $tab_id ); ?>-comments" class="nav-link" data-toggle="tab" role="tab" aria-controls="<?php echo esc_attr( $tab_id ); ?>-comments" aria-selected="false"><?php echo esc_html($comments_heading);?></a>
-                    </li>
+                    <?php if (!empty($popular_heading) ) { ?>
+                        <li class="nav-item">
+                            <!-- <a class="nav-link active" id="popular-tab" data-toggle="tab" href="#popular" role="tab" aria-controls="popular" aria-selected="true"> -->
+                            <a href="#<?php echo esc_attr( $tab_id ); ?>-popular" class="nav-link active" data-toggle="tab" role="tab" aria-controls="<?php echo esc_attr( $tab_id ); ?>-popular" aria-selected="true"><?php echo esc_html($popular_heading);?></a>
+                        </li>
+                    <?php } ?>    
+                    <?php if (!empty($recent_heading) ) { ?>
+                        <li class="nav-item">
+                            <a href="#<?php echo esc_attr( $tab_id ); ?>-recent" class="nav-link" data-toggle="tab" role="tab" aria-controls="<?php echo esc_attr( $tab_id ); ?>-recent" aria-selected="false"><?php echo esc_html($recent_heading);?></a>
+                        </li>
+                    <?php } ?>    
+                    <?php if( !empty($comments_heading) ) { ?>
+                        <li class="nav-item">
+                            <a href="#<?php echo esc_attr( $tab_id ); ?>-comments" class="nav-link" data-toggle="tab" role="tab" aria-controls="<?php echo esc_attr( $tab_id ); ?>-comments" aria-selected="false"><?php echo esc_html($comments_heading);?></a>
+                        </li>
+                    <?php } ?>    
                 </ul> 
                 <div class="clear"></div>  
 
@@ -73,7 +79,7 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
 
                     </div>
                     <div class="tab-pane fade" id="<?php echo esc_attr( $tab_id ); ?>-comments" role="tabpanel" aria-labelledby="<?php echo esc_attr( $tab_id ); ?>-comments-tab">
-                        <?php $this->render_news( 'sport', $instance ); ?>
+                        <?php $this->render_comments( 'sport', $instance ); ?>
                     </div>
                 </div>
             </div>
@@ -215,12 +221,12 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
 
             $instance['title']                  = sanitize_text_field(strip_tags($new_instance['title']));
             $instance['popular_heading']        = sanitize_text_field(strip_tags($new_instance['popular_heading']));
-             $instance['popular_category']      = sanitize_text_field( $new_instance['popular_category'] );
+            $instance['popular_category']       = sanitize_text_field( $new_instance['popular_category'] );
             $instance['popular_number']         = absint( $new_instance['popular_number'] );
-            $instance['recent_heading']       = sanitize_text_field(strip_tags($new_instance['recent_heading']));
-             $instance['recent_category']     =  sanitize_text_field( $new_instance['recent_category'] );
-            $instance['recent_number']        = absint( $new_instance['recent_number'] );
-            $instance['comments_heading']          = sanitize_text_field(strip_tags($new_instance['comments_heading']));
+            $instance['recent_heading']         = sanitize_text_field(strip_tags($new_instance['recent_heading']));
+            $instance['recent_category']        =  sanitize_text_field( $new_instance['recent_category'] );
+            $instance['recent_number']          = absint( $new_instance['recent_number'] );
+            $instance['comments_heading']       = sanitize_text_field(strip_tags($new_instance['comments_heading']));
             $instance['comments_number']        =  sanitize_text_field( $new_instance['comments_number'] );
             $instance['custom_class']           = sanitize_text_field( $new_instance['custom_class'] );
             
@@ -320,20 +326,10 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
             </p>
 
             <p>
-                <label for="<?php echo absint($this->get_field_id( 'comments_number' )); ?>"><?php esc_html_e( 'tab3 Category:', 'salient-news' ); ?></label>
-                <?php
-                $cat_args = array(
-                    'orderby'         => 'name',
-                    'hide_empty'      => 0,
-                    'taxonomy'        => 'category',
-                    'name'            => esc_html($this->get_field_name('comments_number')),
-                    'id'              => absint($this->get_field_id('comments_number')),
-                    'selected'        => $comments_number,
-                    'show_option_all' => __( 'All Categories','salient-news' ),
-                );
-                wp_dropdown_categories( $cat_args );
-                ?>
+                <label for="<?php echo absint($this->get_field_id( 'comments_number' )); ?>"><?php esc_html_e('Number of tab2 Posts:', 'salient-news' ); ?></label>
+                <input class="widefat1" id="<?php echo absint($this->get_field_id( 'comments_number' )); ?>" name="<?php echo esc_html($this->get_field_name( 'comments_number' )); ?>" type="number" value="<?php echo absint( $comments_number ); ?>" min="1" style="max-width:50px;" />
             </p>
+            
             <p>
                 <label for="<?php echo absint($this->get_field_id('custom_class')); ?>"><?php esc_html_e( 'Custom Class:', 'salient-news' ); ?></label>
                 <input class="widefat" id="<?php echo absint($this->get_field_id('custom_class')); ?>" name="<?php echo esc_attr($this->get_field_name( 'custom_class' )); ?>" type="text" value="<?php echo esc_attr( $custom_class ); ?>" />

@@ -62,7 +62,7 @@ require get_template_directory(). '/inc/customizer/font/font-section.php';
 
 require get_template_directory(). '/inc/customizer/post-display/options.php'; 
 
-
+require get_template_directory(). '/inc/customizer/panel.php'; 
 
 
 global $st_blog_panels;
