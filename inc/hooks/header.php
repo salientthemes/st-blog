@@ -365,34 +365,3 @@ endif;
 add_action( 'st_blog_action_after_title', 'st_blog_add_breadcrumb', 10 );
 
 
-
-if( ! function_exists( 'st_blog_add_breadcrumb' ) ) :
-
-/**
- * Breadcrumb
- *
- * @since st-blog 1.0.0
- *
- * @param null
- * @return null
- *
- */
-    function st_blog_add_breadcrumb(){
-        global $st_blog_customizer_all_values;
-        // Bail if Breadcrumb disabled
-        $breadcrumb_enable_breadcrumb = $st_blog_customizer_all_values['st-blog-enable-breadcrumb' ];
-        if ( 1 != $breadcrumb_enable_breadcrumb ) {
-            return;
-        }
-        // Bail if Home Page
-        if ( is_front_page() || is_home() ) {
-            return;
-        }
-        echo '<div id="breadcrumb" class="breadcrumb-wrap">';
-          echo '<div class="container">';
-            st_blog_simple_breadcrumb();
-          echo '</div><!-- container -->';
-        echo '</div><!-- #breadcrumb -->';
-    }
-endif;
-add_action( 'st_blog_action_after_title', 'st_blog_add_breadcrumb', 10 );

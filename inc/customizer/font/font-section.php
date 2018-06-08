@@ -146,9 +146,9 @@ $st_blog_customizer_defaults['st-blog-footer-copy-right-text']        = 'Roboto+
 /*section*/
 $st_blog_sections['st-blog-family'] =
     array(
-        'priority'       => 50,
+        'priority'       => 70,
         'title'          => esc_html__( 'Font Family', 'st-blog' ),
-        'panel'          => 'st-blog-color-fonts-panles',
+        'panel'          => 'st-blog-homepage-panel',
     );
 
 /*setting - controls*/

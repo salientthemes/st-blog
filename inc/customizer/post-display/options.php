@@ -18,13 +18,13 @@ $st_blog_customizer_defaults['st-blog-latest-post-button-text'] = 'Read More';
 // panel for post display
 $st_blog_panels['latest-post-bolg-panel']	= array(
 	'title'		=> esc_html__('Latest Post Blog','st-blog'),
-	'priority'	=> 110
+	'priority'	=> 30
 );
 
 // section for post display
 $st_blog_sections['latest-post-bolg-section']	= array(
-	'title'		=> esc_html__('Latest Post Blog Options','st-blog'),
-	'panel'		=> 'latest-post-bolg-panel',
+	'title'		=> esc_html__('Post Blog  Display Options','st-blog'),
+	'panel'		=> 'st-blog-homepage-panel',
 	'priority'	=> 20
 );
 

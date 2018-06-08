@@ -75,7 +75,7 @@ global $st_blog_customizer_defaults;
 // require get_template_directory().'/inc/customizer/main-panel.php';
 
 /*customizer theme option's section*/
-require get_template_directory().'/inc/customizer/theme-option/option-panel.php';
+// require get_template_directory().'/inc/customizer/theme-option/option-panel.php';
 
 
 /*Resetting all Values*/

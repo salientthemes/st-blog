@@ -12,11 +12,11 @@ $st_blog_customizer_defaults['st-blog-excerpt-length'] = '50';
 $st_blog_customizer_defaults['st-blog-archive-layout'] = 'thumbnail-and-excerpt';
 $st_blog_customizer_defaults['st-blog-archive-image-align'] = 'full';
 
-$st_blog_sections['st-blog-layout-options'] = array(
-    'priority'       => 20,
-    'title'          => esc_html__( 'Layout Options', 'st-blog' ),
-    'panel'          => 'st-blog-theme-options',
-);
+// $st_blog_sections['st-blog-back-all-theme-setting'] = array(
+//     'priority'       => 20,
+//     'title'          => esc_html__( 'Layout Options', 'st-blog' ),
+//     'panel'          => 'st-blog-theme-options',
+// );
 
     /*home page static page display*/
 $st_blog_settings_controls['st-blog-enable-static-page'] = array(
@@ -26,7 +26,7 @@ $st_blog_settings_controls['st-blog-enable-static-page'] = array(
 'control' => array(
     'label'                 =>  esc_html__( 'Enable Static Front Page', 'st-blog' ),
     'description'           =>  esc_html__( 'If you disable this the static page will be disappera form the home page and other section from customizer will reamin as it is', 'st-blog' ),
-    'section'               => 'st-blog-layout-options',
+    'section'               => 'st-blog-back-all-theme-setting',
     'type'                  => 'checkbox',
     'priority'              => 10,
 )
@@ -42,14 +42,14 @@ $st_blog_settings_controls['st-blog-default-layout'] = array(
     'control' => array(
         'label'                 =>  esc_html__( 'Default Layout', 'st-blog' ),
         'description'           =>  esc_html__( 'Please note that this section can be overridden for individual page/posts', 'st-blog' ),
-        'section'               => 'st-blog-layout-options',
+        'section'               => 'st-blog-back-all-theme-setting',
         'type'                  => 'select',
         'choices'               => array(
             'right-sidebar' => esc_html__( 'Content - Primary Sidebar', 'st-blog' ),
             'left-sidebar' => esc_html__( 'Primary Sidebar - Content', 'st-blog' ),
             'no-sidebar' => esc_html__( 'No Sidebar', 'st-blog' )
         ),
-        'priority'              => 10,
+        'priority'              => 20,
         'active_callback'       => ''
     )
 );
@@ -61,7 +61,7 @@ $st_blog_settings_controls['st-blog-single-post-image-align'] = array(
     ),
     'control' => array(
         'label'                 =>  esc_html__( 'Alignment Of Image In Single Post/Page', 'st-blog' ),
-        'section'               => 'st-blog-layout-options',
+        'section'               => 'st-blog-back-all-theme-setting',
         'type'                  => 'select',
         'choices'               => array(
             'full'      => esc_html__( 'Full', 'st-blog' ),
@@ -81,7 +81,7 @@ $st_blog_settings_controls['st-blog-single-post-image-align'] = array(
             ),
             'control' => array(
                 'label'                 =>  esc_html__( 'Excerpt Length (in words)', 'st-blog' ),
-                'section'               => 'st-blog-layout-options',
+                'section'               => 'st-blog-back-all-theme-setting',
                 'type'                  => 'number',
                 'priority'              => 40,
             )
@@ -93,7 +93,7 @@ $st_blog_settings_controls['st-blog-archive-layout'] = array(
     ),
     'control' => array(
         'label'                 =>  esc_html__( 'Archive Layout', 'st-blog' ),
-        'section'               => 'st-blog-layout-options',
+        'section'               => 'st-blog-back-all-theme-setting',
         'type'                  => 'select',
         'choices'               => array(
             'excerpt-only' => esc_html__( 'Excerpt Only', 'st-blog' ),

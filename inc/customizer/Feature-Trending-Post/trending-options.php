@@ -19,17 +19,13 @@ $st_blog_customizer_defaults['st-blog-trending-slider-autoplay-enable']	= 1;
 $st_blog_customizer_defaults['st-blog-trending-slider-time']			= 4000;
 $st_blog_customizer_defaults['st-blog-trending-image-enable']			= 1;
 
-// create a new panel for trending
-$st_blog_panels['st-blog-trending-panel'] = array(
-	'title'		=> esc_html__('Feature Trending News','st-blog'),
-	'priority'	=> 200
-);
+
 
 // create a section for trending
 $st_blog_sections['st-blog-trending-section'] = array(
 	'title'		=> esc_html__('All Trending Post Options','st-blog'),
-	'panel'		=> 'st-blog-trending-panel',
-	'priority'	=> 10
+	'panel'		=> 'st-blog-homepage-panel',
+	'priority'	=> 20
 );
 
 // enable Options for Trending news

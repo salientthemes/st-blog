@@ -18,13 +18,13 @@ $st_blog_customizer_defaults['st-blog-social-link-four']			= '';
 
 $st_blog_panels['st-blog-social-panel'] = array(
 	'title'			=> esc_html__('Social Media','st-blog'),
-	'priority'		=> 220,
+	'priority'		=> 240,
 );
 
 $st_blog_sections['st-blog-social-section'] = array(
 	'title'			=> esc_html__('All Social Option','st-blog'),
-	'panel'			=> 'st-blog-social-panel',
-	'priority'		=> 10
+	'panel'			=> 'st-blog-homepage-panel',
+	'priority'		=> 50
 );
 
 

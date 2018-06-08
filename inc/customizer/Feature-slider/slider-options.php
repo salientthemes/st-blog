@@ -18,7 +18,7 @@ $st_blog_customizer_defaults['st-blog-enable-auto-play']            = 1;
 $st_blog_sections['st-blog-feature-section'] = array(
     'title'     => esc_html__('Feature Slider options','st-blog'),
     'panel'     => 'st-blog-homepage-panel' ,
-    'priority'  => 200                 
+    'priority'  => 10                 
 
 );
 

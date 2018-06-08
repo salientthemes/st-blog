@@ -186,7 +186,7 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
         function render_comments( $instance ) {
 
             $comment_args = array(
-                'number'      => $instance['comments_number'],
+                // 'number'      => $instance['comments_number'],
                 'status'      => 'approve',
                 'post_status' => 'publish',
             );

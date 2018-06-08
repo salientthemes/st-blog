@@ -13,8 +13,8 @@
 
 	$st_blog_sections['header-footer-section'] 	= array(
 		'title'		=> esc_html__('Header Footer  options','st-blog'),
-		// 'panels'	=> 'header-footer-panel',
-		'priority'	=> 10
+		'panel'		=> 'st-blog-homepage-panel',
+		'priority'	=> 5
 	);
 
 	$st_blog_settings_controls['footer-enable-theme-name'] = array(
