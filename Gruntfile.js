@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                     filter: 'isFile'
                 }]
             }, 
-            js: {
+            /*js: {
                 files: [{
                     expand: true,
                     cwd: './assets/src/js/',
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
                     dest: './assets/build/js/',
                     filter: 'isFile'
                 }]
-            }, 
+            }, */
             css: {
                 files: [{
                     expand: true,

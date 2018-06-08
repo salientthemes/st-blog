@@ -1,3 +1,20 @@
+$color_white: #ffffff;
+$color_customize: #5cb85c;
+$color_customize_dark: #4cae4c;
+
+#customize-theme-controls li#accordion-panel-st-blog-homepage-panel h3 {
+    background-color: $color_customize;
+    border-color: $color_customize_dark;
+    color: $color_white;
+    &:after {
+        color: $color_white;
+    }
+    &:hover {
+        background-color: $color_customize_dark;
+    }
+}
+
+// radio and checkbox
 .customize-control-checkbox input[type=checkbox] {
     border: 1px solid rgba(0, 0, 0, 0.1);
     display: inline-block;

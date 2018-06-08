@@ -22,7 +22,7 @@ $st_blog_settings_controls['st-blog-select-post-form'] = array(
         'type'                  => 'select',
         'choices' => array(
             'from-category'     => esc_html__('from-category','st-blog'),
-            'from-post'         => esc_html__('From-Page','st-blog')
+            'from-page'         => esc_html__('From-Page','st-blog')
         ),
         'priority'              => 30,
         'active_callback'       => ''
@@ -59,13 +59,5 @@ $st_blog_repeated_settings_controls['st-blog-select-post-from-page']  =  array(
             'priority'          => 50,
             'active_callback'   => ''
         )
-    ),
-    'st-blog-fs-pages-divider' => array(
-        'control' => array(
-            'section'               => 'st-blog-feature-section',
-            'type'                  => 'message',
-            'priority'              => 50,
-            'description'           => '<br /><hr />'
-        )
-    )      
+    ),  
 );
