@@ -122,20 +122,22 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
             <!-- footer site info -->
             <div class="site-content py-0">
             <div class="site-info">
-                <?php
-                        if(isset($st_blog_customizer_all_values['st-blog-copyright-text'])){
-                            echo wp_kses_post( $st_blog_customizer_all_values['st-blog-copyright-text'] );
-                        }
-                        ?>
-                <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'st-blog' ) ); ?>">
-                </a>
-                <?php if ( 1 == $st_blog_customizer_all_values['footer-enable-theme-name'] ) { ?>
-                <span class="sep"> | </span>
+                <div class="container">
                     <?php
-                    /* translators: 1: Theme name, 2: Theme author. */
-                    printf( esc_html__( 'Theme: %1$s by %2$s.', 'st-blog' ), 'st-blog', '<a href="http://salientthemes.com/">Salientthemes</a>' );
-                    ?>
-                <?php } ?>    
+                            if(isset($st_blog_customizer_all_values['st-blog-copyright-text'])){
+                                echo wp_kses_post( $st_blog_customizer_all_values['st-blog-copyright-text'] );
+                            }
+                            ?>
+                    <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'st-blog' ) ); ?>">
+                    </a>
+                    <?php if ( 1 == $st_blog_customizer_all_values['footer-enable-theme-name'] ) { ?>
+                    <span class="sep"> | </span>
+                        <?php
+                        /* translators: 1: Theme name, 2: Theme author. */
+                        printf( esc_html__( 'Theme: %1$s by %2$s.', 'st-blog' ), 'st-blog', '<a href="http://salientthemes.com/">Salientthemes</a>' );
+                        ?>
+                    <?php } ?>    
+                </div>
             </div><!-- .site-info -->
         </div>
         
@@ -168,7 +170,7 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
             ?>
                 
             <!-- scroll-top -->
-            <a href="#!" id="st-blog-scroll-top" class="btn"><i class="fas fa-long-arrow-alt-up"></i>Scroll Top</a><!-- return to top button -->
+            <a href="#!" id="st-blog-scroll-top" class="btn"><i class="fas fa-long-arrow-alt-up"></i></a><!-- return to top button -->
             <?php
             } ?>
         </div><!-- #page -->
