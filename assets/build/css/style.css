@@ -1063,7 +1063,8 @@ nav#site-navigation {
   text-align: center;
   padding-bottom: 40px; }
 
-body:not(.home) .site-content {
+body.home.page .site-content,
+body:not(.home):not(.blog) .site-content {
   padding-top: 30px;
   padding-bottom: 20px; }
 
