@@ -217,6 +217,20 @@ function st_blog_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'st_blog_scripts' );
 
+
+/**
+ * Customizer control scripts and styles.
+ */
+function st_blog_customizer_control_scripts()
+{
+
+    wp_enqueue_style('st-blog-customize-controls', get_template_directory_uri() . '/assets/build/css/admin-style.css');
+
+}
+
+add_action('customize_controls_enqueue_scripts', 'st_blog_customizer_control_scripts', 0);
+
+
 /*added admin css for meta*/
 function st_blog_wp_admin_style($hook) {
 	

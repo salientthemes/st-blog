@@ -92,17 +92,13 @@ jQuery(window).load(function() {
 	jQuery('#st-blog-scroll-top').click(function() {
 		jQuery("html, body").animate({ scrollTop: 0 }, "slow");
 	});
-	// slider Jqury
-	var SliderSpeed  	= customzier_values['st-blog-slider-time-select'];
-	var SliderAutoPlay  = customzier_values['st-blog-enable-auto-play'];
-	var SliderArrow		= customzier_values['st-blog-enable-arrow'];
 
 	// slick_init
 	jQuery(".st-blog-banner-slider").slick({
 		// normal options...
-		arrows: ( SliderArrow == 1) ? true  : false ,
-		autoplay: ( SliderAutoPlay == 1 ) ? true : false,
-		autoplaySpeed: SliderSpeed,
+		arrows: true,
+		autoplay: true,
+		autoplaySpeed: 4000,
 		draggable: true,
 		dots: true,
 		fade: true,
@@ -115,7 +111,6 @@ jQuery(window).load(function() {
 		useCSS: true,
 	});
 
-	
 	jQuery(".st-blog-featured-slider").slick({
 		// normal options...
 		arrows: false,
