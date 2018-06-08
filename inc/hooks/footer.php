@@ -71,7 +71,7 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
                         </div>
                     </section><!-- full width widget ended -->
 
-                    <div class="st-blog-footer-widget mb-4">
+                    <div class="st-blog-footer-widget">
                         <div class="container">
                             <div class="st-blog-main-footer">
                                 <div class="row">
