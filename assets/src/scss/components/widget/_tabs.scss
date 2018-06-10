@@ -3,13 +3,35 @@
 		.nav-link {
 			padding-left: 9px;
 			padding-right: 9px;
-			&.active {
-		    	@extend %color-primary;
-		    }
+			// &.active {
+		 //    	@extend %color-primary;
+		 //    }
 		}
 	} 
 }
 
 .tab-content {
     padding-top: 15px;
+}
+
+.nav-tabs {
+	li {
+		&.nav-item {
+		    width: 33.33%;
+		    background: $color_black;
+		    border-left: 2px solid #efefef;
+		    text-align: center;
+
+		    a {
+		    	color: $color_white;
+		    }
+
+		    a{
+		    	&.active {
+		    		background: $color_primary;
+		    		color: $color_white;
+		    	}
+		    }
+		}
+	}
 }

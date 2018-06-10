@@ -1,4 +1,4 @@
-$sidebar_padding: 3%;
+$sidebar_padding: 5%;
 
 body.home.page,
 body:not(.home):not(.blog) {
@@ -32,10 +32,10 @@ body:not(.home):not(.blog) {
 	}
 	@include media(md) {
 		#primary {
-		    width: 70%;
+		    width: 65%;
 		}
 		#secondary {
-		    width: 30%;
+		    width: 35%;
 		}
 	}
 }

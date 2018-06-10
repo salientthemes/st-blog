@@ -124,7 +124,7 @@ if( !function_exists('st_blog_feature_slider') ) :
 
         ?>
         <section id="st-blog-banner" class="mb-5">
-            <div class="st-blog-banner-slider">
+            <div class="container st-blog-banner-slider">
                 <?php
                     $i = 0;
                     foreach($st_blog_fs_arrays as $st_blog_fs_array)
@@ -148,7 +148,7 @@ if( !function_exists('st_blog_feature_slider') ) :
                                 <h2 class="st-blog-title text-white mb-4"><?php echo esc_html($st_blog_fs_array['st-blog-fs-title']);?></h2>
                                 <?php if (!empty($st_blog_feature_slider_button_text) ) { ?>
                                     <?php if( 1 == $st_blog_fs_enable_button ) {?>
-                                        <a href="<?php echo esc_url($st_blog_fs_array['st-blog-fs-url']); ?>" class="btn"><?php echo esc_html($st_blog_feature_slider_button_text); ?></a>
+                                        <a href="<?php echo esc_url($st_blog_fs_array['st-blog-fs-url']); ?>" class="btn st-blog-theme-btn"><?php echo esc_html($st_blog_feature_slider_button_text); ?></a>
                                     <?php } ?>
                                 <?php } ?>    
                             </div>
