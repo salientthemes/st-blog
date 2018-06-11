@@ -1152,6 +1152,25 @@ body.error404 .st-blog-site-content #primary {
   body.salient-no-sidebar .st-blog-masonry {
     column-count: 3; } }
 
+.posted-on a:before, .byline:before, .author-link a:before, .date-link:before {
+  font-family: Font Awesome\ 5 Free;
+  padding-right: 10px;
+  font-size: 13px; }
+
+.posted-on a:before {
+  content: "\f133"; }
+
+.byline:before {
+  content: "\f007";
+  padding-left: 10px; }
+
+.author-link a:before {
+  content: "\f007"; }
+
+.date-link:before {
+  content: "\f133";
+  padding-left: 10px; }
+
 aside .widget {
   margin-bottom: 40px; }
 

@@ -9,7 +9,7 @@ Class st_blog_instagram_widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'null-instagram-feed',
-			__( 'ST-Blog-Instagram', 'st-blog' ),
+			__( 'ST Blog Instagram', 'st-blog' ),
 			array(
 				'classname' => 'null-instagram-feed',
 				'description' => esc_html__( 'Displays your latest Instagram photos', 'st-blog' ),

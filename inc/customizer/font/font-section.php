@@ -140,14 +140,14 @@ $st_blog_customizer_defaults['st-blog-font-family-site-identity']     = 'Roboto+
 $st_blog_customizer_defaults['st-blog-font-family-menu']              = 'Roboto+Condensed:400,300,400italic,700';
 $st_blog_customizer_defaults['st-blog-font-family-h1-h6']             = 'Roboto+Condensed:400,300,400italic,700';
 $st_blog_customizer_defaults['st-blog-font-family-button-text']       = 'Roboto+Condensed:400,300,400italic,700';
-$st_blog_customizer_defaults['st-blog-footer-copy-right-text']        = 'Roboto+Condensed:400,300,400italic,700';  
+$st_blog_customizer_defaults['st-blog-footer-copy-right-text']        = 'Open+Sans:400,400italic,600,700';  
 
 
 /*section*/
 $st_blog_sections['st-blog-family'] =
     array(
         'priority'       => 50,
-        'title'          => esc_html__( 'Font Family', 'st-blog' ),
+        'title'          => esc_html__( 'Font Family Options', 'st-blog' ),
         'panel'          => 'st-blog-homepage-panel',
     );
 
@@ -220,8 +220,8 @@ $st_blog_settings_controls['st-blog-footer-copy-right-text'] =
             'default'              => $st_blog_customizer_defaults['st-blog-footer-copy-right-text'],
         ),
         'control' => array(
-            'label'                 => esc_html__( 'Footer Copy Right Text', 'st-blog' ),
-            'description'           => esc_html__('its only change the fotter copy right text fonts not all footer text','st-blog'),
+            'label'                 => esc_html__( 'Footer Copyright Text', 'st-blog' ),
+            'description'           => esc_html__('It only changes the footer copyright text fonts, not all footer text','st-blog'),
             'section'               => 'st-blog-family',
             'type'                  => 'select',
             'choices'               => $st_blog_google_fonts,

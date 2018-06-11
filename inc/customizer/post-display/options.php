@@ -23,7 +23,7 @@ $st_blog_panels['latest-post-bolg-panel']	= array(
 
 // section for post display
 $st_blog_sections['latest-post-bolg-section']	= array(
-	'title'		=> esc_html__('Post Blog  Display Options','st-blog'),
+	'title'		=> esc_html__('Post Blog Display Options','st-blog'),
 	'panel'		=> 'st-blog-homepage-panel',
 	'priority'	=> 20
 );

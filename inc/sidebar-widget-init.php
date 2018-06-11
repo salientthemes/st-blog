@@ -19,7 +19,7 @@ function st_blog_widgets_init() {
     register_sidebar( array(
         'name'          => esc_html__( 'Home/Front Page Full Width Widget', 'st-blog' ),
         'id'            => 'full-width-widget',
-        'description'   => '<h2>'.esc_html__('Displays on footer section full width','st-blog').'</h2>',
+        'description'   => ''.esc_html__('Displays on footer section full width','st-blog').'',
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
         'before_title'  => '<h2 class="widget-title">',

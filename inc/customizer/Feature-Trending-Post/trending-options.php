@@ -76,7 +76,7 @@ $st_blog_settings_controls['st-blog-trending-number-post'] =  array(
         'default'   => $st_blog_customizer_defaults['st-blog-trending-number-post']
     ),
     'control' => array(
-        'label'             => esc_html__('Select Number Of Trending Post','st-blog'),
+        'label'             => esc_html__('Select number of Trending Post','st-blog'),
         'section'           => 'st-blog-trending-section',
         'type'              => 'select',
         'choices'           => array(
@@ -104,8 +104,8 @@ $st_blog_settings_controls['st-blog-trending-select-post-from'] = array(
 		'section'			=> 'st-blog-trending-section',
 		'type'				=> 'select',
 		'choices' => array(
-			'from-category'	=> esc_html__('From-Category','st-blog'),
-			'from-page'		=> esc_html__('From-page','st-blog'),	
+			'from-category'	=> esc_html__('Choose From Category','st-blog'),
+			'from-page'		=> esc_html__('Choose From Page','st-blog'),	
 		),
 		'priority'			=> 40,
 		'active_callback'	=> ''
@@ -118,7 +118,7 @@ $st_blog_settings_controls['st-blog-trending-select-from-category'] = array(
 		'default'				=> $st_blog_customizer_defaults['st-blog-trending-select-from-category']	
 	),
 	'control' => array(
-		'label'					=> esc_html__('Select category for trending','st-blog'),
+		'label'					=> esc_html__('Select Category for trending','st-blog'),
 		'section'				=> 'st-blog-trending-section',
 		'type'					=> 'category_dropdown',
 		'priority'				=> 50,

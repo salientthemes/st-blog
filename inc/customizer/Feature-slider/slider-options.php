@@ -48,7 +48,7 @@ $st_blog_settings_controls['st-blog-number-of-slider'] =  array(
         'default'   => $st_blog_customizer_defaults['st-blog-number-of-slider']
     ),
     'control' => array(
-        'label'             => esc_html__('Select Number Of Slider','st-blog'),
+        'label'             => esc_html__('Select Number of Slider','st-blog'),
         'section'           => 'st-blog-feature-section',
         'type'              => 'select',
         'choices'           => array(

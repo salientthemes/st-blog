@@ -21,8 +21,8 @@ $st_blog_settings_controls['st-blog-select-post-form'] = array(
         'section'               => 'st-blog-feature-section',
         'type'                  => 'select',
         'choices' => array(
-            'from-category'     => esc_html__('from-category','st-blog'),
-            'from-page'         => esc_html__('From-Page','st-blog')
+            'from-category'     => esc_html__('Choose From Category','st-blog'),
+            'from-page'         => esc_html__('Choose From Page','st-blog')
         ),
         'priority'              => 30,
         'active_callback'       => ''
@@ -53,7 +53,7 @@ $st_blog_repeated_settings_controls['st-blog-select-post-from-page']  =  array(
             'default'   => $st_blog_customizer_defaults['st-blog-select-post-from-page'] 
         ),
         'control' => array(
-            'label'             => esc_html__('Select a Page Fro Feature Slider %s','st-blog'),
+            'label'             => esc_html__('Select a Page from Feature Slider %s','st-blog'),
             'section'           => 'st-blog-feature-section',
             'type'              => 'dropdown-pages',
             'priority'          => 50,

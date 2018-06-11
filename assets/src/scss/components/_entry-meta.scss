@@ -1,0 +1,38 @@
+%common-style {
+ 	font-family: $font_awesome;
+    padding-right: 10px;
+    font-size: 13px;
+}
+.posted-on{
+	a {
+		&:before {
+		    content: "\f133";	
+		    @extend %common-style;	   
+		}
+	}
+} 
+
+.byline {
+	&:before {
+		content: "\f007";	
+		padding-left: 10px;
+	    @extend %common-style;
+    }	 
+}
+
+.author-link {
+	a {
+		&:before {
+		    content: "\f007";	
+		    @extend %common-style;	   
+		}	
+	}
+}
+
+.date-link {
+	&:before {
+	    content: "\f133";	
+	    @extend %common-style;
+	    padding-left: 10px;	   
+	}
+}

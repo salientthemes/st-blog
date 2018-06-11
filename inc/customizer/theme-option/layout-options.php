@@ -61,7 +61,7 @@ $st_blog_settings_controls['st-blog-single-post-image-align'] = array(
         'default'  =>$st_blog_customizer_defaults['st-blog-single-post-image-align'],
     ),
     'control' => array(
-        'label'                 =>  esc_html__( 'Alignment Of Image In Single Post/Page', 'st-blog' ),
+        'label'                 =>  esc_html__( 'Alignment of Image in Single Post/Page', 'st-blog' ),
         'section'               => 'st-blog-back-all-theme-setting',
         'type'                  => 'select',
         'choices'               => array(
