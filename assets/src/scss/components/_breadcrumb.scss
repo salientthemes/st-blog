@@ -9,7 +9,7 @@
 		    padding-left: .5rem;
 		}
 
-		.trail-item + .trail-item::before {
+		.trail-item+.trail-item::before {
 		    display: inline-block;
 		    padding-right: .5rem;
 		    color: #6c757d;

@@ -92,6 +92,7 @@
 %widget-title {
   @extend %color-black;
   font-size: 24px;
+  font-weight: $font_primary_bold;
   margin-bottom: 15px;
   // text-align: center;
   text-transform: uppercase;
@@ -245,9 +246,7 @@
   a, 
   span {
     border: 0;
-    padding: 16px 20px;
-    border-radius: 3px;
-     @include transition(all .3s);
+    padding: 3px 10px;
   }
 
   a:hover, 

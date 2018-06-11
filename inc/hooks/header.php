@@ -269,19 +269,17 @@ function st_blog_header() {
                         
                         <nav id="site-navigation" class="main-navigation">
                             <div class="container">
-                                <div class="st-menu-border border-top border-bottom my-4">
-                                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'st-blog' ); ?></button>
-                                    <?php
-                                    wp_nav_menu( array(
-                                        'theme_location' => 'menu-1',
-                                        'menu_id'        => 'primary-menu',
-                                         'fallback_cb'    => 'st_blog_primary_menu'
-                                    ) );
-                                    ?>
+                            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'st-blog' ); ?></button>
+                            <?php
+                            wp_nav_menu( array(
+                                'theme_location' => 'menu-1',
+                                'menu_id'        => 'primary-menu',
+                                 'fallback_cb'    => 'st_blog_primary_menu'
+                            ) );
+                            ?>
 
-                                    <!-- search toggle icon -->
-                                    <button class="st-blog-head-search-toggler d-none d-lg-block"><i class="fas fa-search"></i></button>
-                                </div>
+                            <!-- search toggle icon -->
+                            <button class="st-blog-head-search-toggler d-none d-lg-block"><i class="fas fa-search"></i></button>
                             </div>
                         </nav><!-- #site-navigation -->     
 
@@ -292,8 +290,8 @@ function st_blog_header() {
 
             </div>
 
-            <div class="container st-blog-head-search">
-                <div class="">
+            <div class="st-blog-head-search">
+                <div class="container">
                     <?php get_search_form();?>
                 </div>
             </div>

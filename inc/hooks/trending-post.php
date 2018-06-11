@@ -132,7 +132,7 @@ if ( !function_exists('st_blog_trending_post') ) :
 
             <section id="st-blog-featured" class="mb-5">    
                 <div class="container site-content">
-                    <h2 class="widget-title text-center mb-5"><?php echo esc_html($st_blog_trending_post_title);?></h2>
+                    <h1 class="widget-title text-center"><?php echo esc_html($st_blog_trending_post_title);?></h1>
                     <div class="st-blog-featured-slider text-center">
                         <?php
                             $i = 0;
@@ -162,11 +162,9 @@ if ( !function_exists('st_blog_trending_post') ) :
                                             <?php } ?>    
                                             <div class="st-blog-featured-caption text-center">
                                                 <h2 class="st-blog-title mb-3 mt-2"><a href="<?php echo esc_url($st_blog_trending_array['st-blog-trending-post-url']);?>"><?php echo esc_html($st_blog_trending_array['st-blog-trending-post-title']);?></a></h2>
-                                                <p class="my-4"><?php echo esc_html($st_blog_trending_array['st-blog-trending-post-content']);?></p>
+                                                <p><?php echo esc_html($st_blog_trending_array['st-blog-trending-post-content']);?></p>
                                                 <?php if ( !empty($st_blog_trending_array['st-blog-trending-post-url']) &&  !empty($st_trending_post_button_text)) { ?>
-                                                  <div class="my-4 d-block w-100">
                                                     <a href="<?php echo esc_url($st_blog_trending_array['st-blog-trending-post-url']);?>" class="readmore"><?php echo esc_html($st_trending_post_button_text);?></a>
-                                                  </div>
                                                 <?php }?>    
                                             </div>
                                         </div> 

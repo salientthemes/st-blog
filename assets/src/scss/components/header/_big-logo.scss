@@ -5,7 +5,8 @@ body.big-logo {
 		    padding-top: 15px;
 			text-align: center;
 		    @include media(md) {
-		    	padding: 30px 0 10px;
+		    	padding-bottom: 8px;
+		    	padding-top: 20px;
 		    }
 		}
 	}
@@ -68,4 +69,3 @@ body.big-logo {
 	    }
 	}
 }
-

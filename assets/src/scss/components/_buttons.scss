@@ -24,7 +24,6 @@ a.readmore,
 	@extend %btn-style;
 	background-color: transparent;
 	color: $color_link;
-	box-shadow: 0 0 4px #bbb8b8;
 	&:hover {
 		background-color: transparent;
 		@extend %color-primary;
@@ -46,10 +45,3 @@ body.scrolled-down {
 		@include translate(0, 0);
 	}	
 }
-
-a {
-	&.#{$prefix}-theme-btn {
-		 padding: 13px 65px;
-	}
-}
-
