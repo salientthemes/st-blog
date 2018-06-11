@@ -1,15 +1,23 @@
 .nav-tabs {
+	@extend %bg-black;
 	.nav-item {
+		margin-bottom: 0;
 		.nav-link {
-			padding-left: 9px;
-			padding-right: 9px;
+			@extend %bg-black;
+			@extend %color-white;
+			// padding-left: 9px;
+			// padding-right: 9px;
+			padding: .9rem 0.7rem;
+			border-radius: 0;
+			border: 0;
+			text-transform: uppercase;
 			&.active {
-		    	@extend %color-primary;
+		    	@extend %bg-primary;
 		    }
 		}
 	} 
 }
 
 .tab-content {
-    padding-top: 15px;
+    // padding-top: 15px;
 }

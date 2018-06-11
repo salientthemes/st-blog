@@ -19,7 +19,7 @@ get_header();
 
 <?php do_action('st_blog_homepage');?>
 
-<div class="container site-content">
+<div id="home-content" class="container site-content">
 	<div class="st-blog-site-content">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main">

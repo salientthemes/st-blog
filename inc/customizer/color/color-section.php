@@ -11,8 +11,8 @@ $st_blog_customizer_defaults['st-blog-menu-background-color']   = '#ffffff';
 $st_blog_customizer_defaults['st-blog-menu-text-color']         = '#000';
 $st_blog_customizer_defaults['st-blog-latest-blog-title-color'] = '#000';
 $st_blog_customizer_defaults['st-blog-h1-h6-color']             = '#000';
-$st_blog_customizer_defaults['st-blog-button-color']            = '#fff';
-$st_blog_customizer_defaults['st-blog-button-text-color']       = '#000';
+$st_blog_customizer_defaults['st-blog-button-color']            = '#000';//fff
+$st_blog_customizer_defaults['st-blog-button-text-color']       = '#fff';//000
 $st_blog_customizer_defaults['st-blog-footer-background-color'] = '#fff';
 $st_blog_customizer_defaults['st-blog-footer-text-color']       = '#000';
 $st_blog_customizer_defaults['st-blog-color-reset']             = '';
@@ -100,7 +100,7 @@ $st_blog_settings_controls['st-blog-menu-background-color'] = array(
         'default' => $st_blog_customizer_defaults['st-blog-menu-background-color'],
     ),
     'control' => array(
-        'label'                 =>  esc_html__( 'Menu background Color', 'st-blog' ),
+        'label'                 =>  esc_html__( 'Menu Background Color', 'st-blog' ),
         'section'               => 'colors',
         'type'                  => 'color',
         'priority'              => 35,
@@ -113,7 +113,7 @@ $st_blog_settings_controls['st-blog-menu-text-color'] = array(
         'default' => $st_blog_customizer_defaults['st-blog-menu-text-color'],
     ),
     'control' => array(
-        'label'                 =>  esc_html__( 'Menu text Color', 'st-blog' ),
+        'label'                 =>  esc_html__( 'Menu Text Color', 'st-blog' ),
         'section'               => 'colors',
         'type'                  => 'color',
         'priority'              => 40,
@@ -127,7 +127,7 @@ $st_blog_settings_controls['st-blog-latest-blog-title-color'] = array(
         'default' => $st_blog_customizer_defaults['st-blog-latest-blog-title-color'],
     ),
     'control' => array(
-        'label'                 =>  esc_html__( 'Latest Blog Title color', 'st-blog' ),
+        'label'                 =>  esc_html__( 'Latest Blog Title Color', 'st-blog' ),
         'section'               => 'colors',
         'type'                  => 'color',
         'priority'              => 60,

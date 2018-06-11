@@ -1,4 +1,9 @@
 body.big-logo {
+	.site-branding {
+		.site-title {
+			@include font-size(52);//$logo_size
+		}
+	}
 	.#{$prefix}-header-row {
 		.#{$prefix}-logo-manage {
 		    padding-bottom: 15px;

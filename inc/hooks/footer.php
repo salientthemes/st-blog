@@ -41,8 +41,11 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
                 if (!is_active_sidebar('full-width-footer') && !is_active_sidebar( 'footer-col-one' ) && !is_active_sidebar( 'footer-col-two' ) && !is_active_sidebar( 'footer-col-three' ) && !is_active_sidebar( 'footer-col-four' )){
                     return false;
                 }
-                $col = 'col';
-                /*if( 1 == $st_blog_footer_widgets_number ){
+                
+                $col = 'col st-blog-footer-widget-col';
+
+                /*//for responsive
+                if( 1 == $st_blog_footer_widgets_number ){
                     $col = 'col-md-12';
                 }
                 elseif( 2 == $st_blog_footer_widgets_number ){
@@ -51,8 +54,7 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
                 elseif( 3 == $st_blog_footer_widgets_number ){
                     $col = 'col-lg-4 col-sm-6 col-12';
                 }
-                else{
-              
+                else{              
                     $col = 'col-lg-3 col-sm-6 col-12'; 
                 }*/ 
                 ?>
@@ -137,7 +139,7 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
                     <span class="sep"> | </span>
                         <?php
                         /* translators: 1: Theme name, 2: Theme author. */
-                        printf( esc_html__( 'Theme: %1$s by %2$s.', 'st-blog' ), 'st-blog', '<a href="http://salientthemes.com/">Salientthemes</a>' );
+                        printf( esc_html__( 'Theme: %1$s by %2$s', 'ST Blog' ), 'ST Blog', '<a href="http://salientthemes.com/">Salient Themes</a>' );
                         ?>
                     <?php } ?>    
                 </div>
