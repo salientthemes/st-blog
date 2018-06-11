@@ -49,6 +49,13 @@
 %bg-black {
     background-color: $color_black;
 }
+%bg-box-color {
+    background-color: $color_white;
+    @include transition($transition);
+    &:hover {
+      background-color: $color_light_grey;
+    }
+}
 
 %border-primary {
     border-color: $color_primary;
@@ -76,7 +83,7 @@
 
 %entry-title {
   color: $color_title;
-  @include font-size(20);
+  @include font-size(24);//20
   font-weight: $font_primary_medium;
   @include media(xs) {
     // @include font-size(24);  
@@ -91,7 +98,7 @@
 
 %widget-title {
   @extend %color-black;
-  font-size: 24px;
+  @include font-size(30);//24
   font-weight: $font_primary_bold;
   margin-bottom: 15px;
   // text-align: center;
@@ -142,14 +149,14 @@
   border-radius: 0;
   color: $color_white;
   cursor: pointer;
-  @include font-size(15);
+  @include font-size(18);//15
   padding: 5px 10px;
   &:hover {
     color: $color_white;
     @extend %bg-primary;
   }
   @include media(xs) {
-    padding: 10px 20px;
+    padding: 12px 25px;//10px 20px
   }
 }
 
@@ -240,21 +247,20 @@
   a {
     background-color: lighten($color_black, 50%);
     // @extend %color-white;
-    color: $color_white !important;
   }
   
   a, 
   span {
-    border: 0;
-    padding: 3px 10px;
+    @extend %btn-style;
+    // border: 0;
+    // padding: 3px 10px;
   }
 
   a:hover, 
   span.current {
     @extend %bg-primary;
-    // @extend %color-white;
-    color: $color_white !important; 
-    font-weight: normal;
+    // @extend %color-white; 
+    // font-weight: normal;
   }
 }
 
@@ -280,6 +286,7 @@
       list-style: none;
       margin-right: 30px;
       a {
+        text-transform: capitalize;
         &:before {
           font-family: Font Awesome\ 5 Brands;
           margin-right: 14px;

@@ -140,7 +140,7 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
                 <?php foreach ( $all_posts as $key => $post ) : ?>
                     <?php setup_postdata( $post ); ?>
                     
-                    <div class="st-blog-popular-posts-item mb-4 clearfix">
+                    <div class="st-blog-popular-posts-item clearfix">
                         <div class="st-blog-popular-posts-img">
                             <?php if ( has_post_thumbnail( $post->ID ) ) : ?>
                                 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ) ); ?>
@@ -195,18 +195,18 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
             <?php if ( ! empty( $comments ) ) : ?>
                 <ul class="comments-list">
                     <?php foreach ( $comments as $key => $comment ) : ?>
-                        <li class="comment-list">
-                        <div class="comments-thumb">
-                            <?php $comment_author_url = get_comment_author_url( $comment ); ?>
-                            <?php if ( ! empty( $comment_author_url) ) : ?>
-                                <a href="<?php echo esc_url( $comment_author_url ); ?>"><?php echo get_avatar( $comment, 65 ); ?></a>
-                            <?php else : ?>
-                                <?php echo get_avatar( $comment, 65 ); ?>
-                            <?php endif; ?>
-                        </div><!-- .comments-thumb -->
-                        <div class="comments-content">
-                            <?php echo get_comment_author_link( $comment ); ?>&nbsp;<?php echo esc_html_x( 'on', 'Tabbed Widget', 'newslite' ); ?>&nbsp;<a href="<?php echo esc_url( get_comment_link( $comment ) );?>"><?php echo get_the_title( $comment->comment_post_ID ); ?></a>
-                        </div><!-- .comments-content -->
+                        <li class="comment-list st-blog-popular-posts-item">
+                            <div class="comments-thumb st-blog-popular-posts-img">
+                                <?php $comment_author_url = get_comment_author_url( $comment ); ?>
+                                <?php if ( ! empty( $comment_author_url) ) : ?>
+                                    <a href="<?php echo esc_url( $comment_author_url ); ?>"><?php echo get_avatar( $comment, 65 ); ?></a>
+                                <?php else : ?>
+                                    <?php echo get_avatar( $comment, 65 ); ?>
+                                <?php endif; ?>
+                            </div><!-- .comments-thumb -->
+                            <div class="comments-content st-blog-popular-posts-content">
+                                <?php echo get_comment_author_link( $comment ); ?>&nbsp;<?php echo esc_html_x( 'on', 'Tabbed Widget', 'newslite' ); ?>&nbsp;<a href="<?php echo esc_url( get_comment_link( $comment ) );?>"><?php echo get_the_title( $comment->comment_post_ID ); ?></a>
+                            </div><!-- .comments-content -->
                         </li>
                     <?php endforeach; ?>
                 </ul><!-- .comments-list -->

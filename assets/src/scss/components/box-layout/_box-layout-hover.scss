@@ -1,11 +1,12 @@
 .box-layout {
-	.#{$prefix}-featured-item:hover, 
-	.#{$prefix}-item article:hover, 
-	.#{$prefix}-author-item:hover, 
-	.#{$prefix}-popular-posts-item:hover, 
-	.widget_media_gallery .gallery:hover {
-	    background-color: $color_light_grey;
-	    transition: 0.4s all ease;
+	.#{$prefix}-featured-item, 
+	.#{$prefix}-item article, 
+	.#{$prefix}-author-item, 
+	.#{$prefix}-popular-posts-item, 
+	.widget_media_gallery .gallery {
+	    // background-color: $color_light_grey;
+	    // @include transition($transition);
+	    @extend %bg-box-color;
 	}
 
 	.site-footer {
@@ -13,7 +14,7 @@
 		.#{$prefix}-item article:hover, 
 		.#{$prefix}-author-item:hover, 
 		.#{$prefix}-popular-posts-item:hover, 
-		.widget_media_gallery .gallery:hover {
+		.widget_media_gallery .gallery {
 			background-color: transparent;
 		}
 	}

@@ -2,7 +2,9 @@
     .#{$prefix}-banner-slider {
         .slick-slide {
             position: relative;
-            
+            > div {
+                line-height: 0;
+            }            
             .#{$prefix}-banner-image {
                 @extend %img-cover;
                 height: calc(100vh - 100px);
@@ -36,7 +38,7 @@
                         @include font-size(20);
                         
                         @include media(xs) {
-                            @include font-size(36);
+                            @include font-size(52);//36
                         }
                     }            
                 }

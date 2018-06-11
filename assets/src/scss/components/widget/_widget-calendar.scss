@@ -1,11 +1,25 @@
 .widget_calendar {
-	.calendar_wrap {
-		caption {
-		    background-color: #f2f2f2;
-		    caption-side: top;
-		    margin-bottom: 6px;
-		    padding: 5px;
+	caption {
+	    // background-color: #f2f2f2;
+		border: 1px solid #eee;
+		border-bottom: 0;
+	    caption-side: top;
+	    padding: 5px;
+	    text-align: center;
+	}
+
+
+	table {
+	    border-top: 1px solid #eee;
+	    border-left: 1px solid #eee;
+		th, td {
+		    border-bottom: 1px solid #eee;
+		    border-right: 1px solid #eee;
 		    text-align: center;
+
+		    a {
+		    	// color: $color_white;
+		    }
 		}
 	}
 }

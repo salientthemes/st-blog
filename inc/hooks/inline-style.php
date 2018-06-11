@@ -174,7 +174,14 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
         {?>
             a.readmore, .readmore
             {
-                background-color: <?php echo esc_attr($st_blog_button_color);?>!important;
+                background-color: 
+                <?php if(esc_attr($st_blog_button_color) == '#fff')
+                {
+                  echo esc_attr($st_blog_button_color);  
+                } else { 
+                    echo 'transparent';
+                }
+                ?>;
             }
 
         <?php }
@@ -183,7 +190,7 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
         {?>
             a.readmore, .readmore
             {
-                color: <?php echo esc_attr($st_blog_button_text_color);?>!important;
+                color: <?php echo esc_attr($st_blog_button_text_color);?>;
             }
 
         <?php }

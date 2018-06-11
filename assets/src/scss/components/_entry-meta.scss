@@ -36,3 +36,7 @@
 	    padding-left: 10px;	   
 	}
 }
+
+.author-link, .date-link, .byline, .posted-on {
+	@include font-size(14);
+}

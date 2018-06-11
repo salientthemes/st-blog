@@ -2,6 +2,7 @@
     @include clearfix();
     position: relative;
     min-height: 75px;
+    
 	.#{$prefix}-popular-posts-img {
 		width: 75px;
 	    height: 75px;
@@ -25,6 +26,33 @@
 	        		@extend %color-primary;
 	        	}
 	        }
+	    }
+   	}
+
+   	.#{$prefix}-popular-posts-content {
+	    .post-meta-content {
+	    	.date-link {
+	    		display: block;
+	    		&:before {
+	    			padding-left: 0;
+	    		}
+	    	}
+	    	@include media(xs) {
+	    		.date-link {
+	    			display: inline-block;
+	    			&:before {
+	    				padding-left: 10px;
+	    			}
+	    		}
+	    	}
+	    	@include media(sm) {
+	    		.date-link {
+	    			display: block;
+	    			&:before {
+	    				padding-left: 0px;
+	    			}
+	    		}
+	    	}
 	    }
 	}
 }

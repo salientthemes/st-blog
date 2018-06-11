@@ -121,7 +121,7 @@ jQuery(window).load(function() {
 		infinite: true,
 		pauseOnFocus: false,
 		pauseOnHover: true,
-		slidesToShow: 4,
+		slidesToShow: 3,
 		prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>',
 		nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>',
 		speed: 800,
@@ -162,7 +162,7 @@ jQuery(window).load(function() {
 		]
 	});
 
-	jQuery(".st-blog-instafeed-slider").slick({
+	jQuery(".st-blog-full-width-widget .st-blog-instafeed-slider").slick({
 		// normal options...
 		arrows: false,
 		autoplay: true,

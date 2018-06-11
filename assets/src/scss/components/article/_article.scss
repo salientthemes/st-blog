@@ -33,7 +33,7 @@ $article_image_height: 200px;
 			.entry-title {
 				@extend %entry-title;
 				text-transform: inherit;
-				@include font-size(20);
+				// @include font-size(20);
 			}
 		}	
 	}
