@@ -15,3 +15,26 @@ body {
 	unicode-bidi: embed;
 }
 */
+
+body {
+	text-align: right;
+}
+
+.st-blog-popular-posts-item .st-blog-popular-posts-content {
+    padding-left: 0;
+    padding-right: 90px;
+}
+
+.widget_categories ul li, .widget_archive ul li, .widget_recent_entries ul li, .widget_recent_comments ul li, .widget_meta ul li, .widget_pages ul li, .widget_nav_menu ul li {
+	padding-right: 40px;
+	position: relative;
+}
+.widget_categories ul li:before, .widget_archive ul li:before, .widget_recent_entries ul li:before, .widget_recent_comments ul li:before, .widget_meta ul li:before, .widget_pages ul li:before, .widget_nav_menu ul li:before {
+	position: absolute;
+	right: 10px;
+}
+.widget_categories ul li:after, .widget_archive ul li:after, .widget_recent_entries ul li:after, .widget_recent_comments ul li:after, .widget_meta ul li:after, .widget_pages ul li:after, .widget_nav_menu ul li:after {
+	/* content: "\f101";
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 900; */
+}
