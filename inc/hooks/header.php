@@ -118,12 +118,18 @@ function st_blog_body_class($st_blog_body_classes ) {
         else{
            $st_blog_body_classes[] = 'salient-right-sidebar';
         }
+
+        
     }
-    return$st_blog_body_classes;
+    
+        return$st_blog_body_classes;
 
 }
 endif;
 add_filter( 'body_class', 'st_blog_body_class', 10, 1);
+
+
+
 
 if ( ! function_exists( 'st_blog_before_page_start' ) ) :
 /**
@@ -141,6 +147,57 @@ function st_blog_before_page_start() {
 }
 endif;
 add_action( 'st_blog_action_before', 'st_blog_before_page_start', 10 );
+
+
+if ( ! function_exists( 'st_blog_body_class' ) ) :
+/**
+ * add body class
+ *
+ * @since newslite 1.0.0
+ *
+ * @param null
+ * @return null
+ *
+ */
+function st_blog_body_class( $st_blog_body_classes ) {
+  global $st_blog_customizer_all_values;
+  $st_blog_alternate_layout = '';
+    if ($st_blog_customizer_all_values['st-blog-alternate-layout'] == 1) {
+      $st_blog_alternate_layout = " alternate";
+    } else {
+      $st_blog_alternate_layout = " non-alternate";
+    }
+    $st_blog_body_layout = $st_blog_customizer_all_values['st-blog-default-body-layout'];
+    if(!is_front_page() || ( is_front_page())){
+        $st_blog_default_layout = st_blog_default_layout();
+        if( !empty( $st_blog_default_layout ) ){
+            if( 'left-sidebar' == $st_blog_default_layout ){
+                $st_blog_body_classes[] = 'salient-left-sidebar'. $st_blog_alternate_layout .' '. $st_blog_body_layout;
+            }
+            elseif( 'right-sidebar' == $st_blog_default_layout ){
+                $st_blog_body_classes[] = 'salient-right-sidebar'. $st_blog_alternate_layout .' '. $st_blog_body_layout ;
+            }
+            elseif( 'both-sidebar' == $st_blog_default_layout ){
+                $st_blog_body_classes[] = 'salient-both-sidebar' . $st_blog_alternate_layout .' '. $st_blog_body_layout ;
+            }
+            elseif( 'no-sidebar' == $st_blog_default_layout ){
+                $st_blog_body_classes[] = 'salient-no-sidebar'. $st_blog_alternate_layout .' '. $st_blog_body_layout ;
+            }
+            else{
+                $st_blog_body_classes[] = 'salient-right-sidebar'. $st_blog_alternate_layout .' '. $st_blog_body_layout;
+            }
+        }
+        else{
+            $st_blog_body_classes[] = 'salient-right-sidebar'. $st_blog_alternate_layout .' '. $st_blog_body_layout;
+        }
+    }
+    return $st_blog_body_classes;
+
+}
+endif;
+add_filter( 'body_class', 'st_blog_body_class', 10, 1);
+
+
 
 if ( ! function_exists( 'st_blog_page_start' ) ) :
 /**
