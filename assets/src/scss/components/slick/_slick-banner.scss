@@ -17,7 +17,7 @@
                 }
 
                 @include media(lg) {
-                    height: calc(100vh - 200px);    
+                    height: 60vh;    
                 }
             
                 .#{$prefix}-banner-caption {
@@ -36,7 +36,7 @@
                         @include font-size(20);
                         
                         @include media(xs) {
-                            @include font-size(36);
+                            @include font-size(55);
                         }
                     }            
                 }
@@ -68,7 +68,7 @@
     .#{$prefix}-banner-slider {
         .#{$prefix}-overlay {
             &:after {    
-                background-color: rgba(0, 0, 0, 0);
+                // background-color: rgba(0, 0, 0, 0);
             }
         }
         
@@ -80,4 +80,8 @@
             }
         }
     }
+}
+
+.#{$prefix}-featured-item {
+    margin: 5px;
 }

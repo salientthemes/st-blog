@@ -54,7 +54,9 @@ if ( !class_exists('st_blog_author_widget') ) :
                     
                         <h4 class="st-blog-author-name my-3"><a href="<?php echo esc_url( $author_link ); ?>"><?php echo esc_html( $author_name ); ?></a></h4>               
                         <p><?php echo esc_html( $description ); ?></p>
-                        <a href="<?php echo esc_url( $author_link ); ?>" class="readmore">know more</a>
+                        <div class="my-4">
+                            <a href="<?php echo esc_url( $author_link ); ?>" class="readmore">know more</a>
+                        </div>
                 </div><!-- /.st-blog-author-item -->                    
                             
             </div> 

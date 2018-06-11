@@ -1,11 +1,12 @@
 .widget_tag_cloud {
 	.tagcloud {
 		a {
-			background: $color_light_grey;
-			display: inline-block;
-			margin-right: 5px;
-			margin-bottom: 5px;
-			padding: 3px 5px;
+			background: $color_primary;
+		    display: inline-block;
+		    margin-bottom: 5px;
+		    padding: 3px 5px;
+		    font-size: 0.875rem !important;
+		    color: $color_white;
 		}
 	}
 }
