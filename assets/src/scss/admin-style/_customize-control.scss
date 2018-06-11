@@ -48,7 +48,7 @@ $color_customize_dark: #4cae4c;
 }
 
 .customize-control-checkbox input[type=checkbox]:after {
-    background: #F44336;
+    background: #EF3F3D;
     border: 1px solid rgba(0, 0, 0, 0.1);
     transform: translate3d(0, -50%, 0);
 }
@@ -61,7 +61,7 @@ $color_customize_dark: #4cae4c;
 }
 
 .customize-control-checkbox input[type=checkbox]:checked:after {
-    background: #009688;
+    background: $color_customize;
     transform: translate3d(100%, -50%, 0);
 }
 

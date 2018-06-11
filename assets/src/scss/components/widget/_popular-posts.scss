@@ -33,8 +33,10 @@
 	    .post-meta-content {
 	    	.date-link {
 	    		display: block;
-	    		&:before {
-	    			padding-left: 0;
+	    		a {
+		    		&:before {
+		    			padding-left: 0;
+		    		}
 	    		}
 	    	}
 	    	@include media(xs) {
@@ -48,9 +50,11 @@
 	    	@include media(sm) {
 	    		.date-link {
 	    			display: block;
-	    			&:before {
-	    				padding-left: 0px;
-	    			}
+		    		a {
+			    		&:before {
+			    			padding-left: 0;
+			    		}
+		    		}
 	    		}
 	    	}
 	    }

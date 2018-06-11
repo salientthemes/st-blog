@@ -25,3 +25,11 @@ body.admin-bar .mr-mobile-menu {
 		// position: absolute;
 	}
 }
+
+body.admin-bar {
+	&.search {
+		.readmore {
+			margin-bottom: 10px;
+		}
+	}
+}

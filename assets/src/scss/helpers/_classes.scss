@@ -103,6 +103,9 @@
   margin-bottom: 15px;
   // text-align: center;
   text-transform: uppercase;
+  a {
+    @extend %color-black;
+  }
 }
 
 %widget-categories-list {
@@ -182,15 +185,18 @@
 
 %widget-search {
   form {
+      height: $search_height;
       position: relative;
       padding-right: $head-search-btn-width;
       label {
+          height: 100%;
           margin-bottom: 0;
           width: 100%;
           .search-field {
               /* border-radius: 0;
               width: 100%; */
               @extend %input-style;
+              height: 100%;
           }
       }
 
@@ -278,6 +284,124 @@
 }
 
 // social icons
+%social-icons-text {
+  ul {
+    li {
+      a[href*="facebook.com"]::after {
+          content: "facebook";
+      }
+
+      a[href*="twitter.com"]::after {
+          content: "twitter";
+      }
+
+      a[href*="linkedin.com"]::after {
+          content: "linkedin";
+      }
+
+      a[href*="plus.google.com"]::after {
+          content: "google plus";
+      }
+
+      a[href*="youtube.com"]::after {
+          content: "youtube";
+      }
+
+      a[href*="dribbble.com"]::after {
+          content: "dribbble";
+      }
+
+      a[href*="pinterest.com"]::after {
+          content: "pinterest";
+      }
+
+      a[href*="bitbucket.org"]::after {
+          content: "bitbucket";
+      }
+
+      a[href*="github.com"]::after {
+          content: "github";
+      }
+
+      a[href*="codepen.io"]::after {
+          content: "codepen";
+      }
+
+      a[href*="flickr.com"]::after {
+          content: "flickr";
+      }
+
+      a[href$="/feed/"]::after {
+          content: "feed";
+      }
+
+      a[href*="foursquare.com"]::after {
+          content: "foursquare";
+      }
+
+      a[href*="instagram.com"]::after {
+          content: "instagram";
+      }
+
+      a[href*="tumblr.com"]::after {
+          content: "tumblr";
+      }
+
+      a[href*="reddit.com"]::after {
+          content: "reddit";
+      }
+
+      a[href*="vimeo.com"]::after {
+          content: "vimeo";
+      }
+
+      a[href*="digg.com"]::after {
+          content: "digg";
+      }
+
+      a[href*="twitch.tv"]::after {
+          content: "twitch";
+      }
+
+      a[href*="stumbleupon.com"]::after {
+          content: "stumbleupon";
+      }
+
+      a[href*="delicious.com"]::after {
+          content: "delicious";          
+      }
+
+      a[href*="mailto:"]::after {
+          content: "mailto";
+      }
+      a[href*="soundcloud.com"]::after {
+          content: "soundcloud";
+      }
+      a[href*="wordpress.org"]::after {
+          content: "wordpress";
+      }
+      a[href*="wordpress.com"]::after {
+          content: "wordpress";
+      }
+
+      a[href*="jsfiddle.net"]::after {
+          content: "jsfiddle";
+      }
+
+      a[href*="tripadvisor.com"]::after {
+          content: "tripadvisor";
+      }
+
+      a[href*="angel.co"]::after {
+          content: "angel";
+      }
+
+      a[href*="slack.com"]::after {
+          content: "slack";
+      }
+    }
+  }
+}
 %social-icons {
   ul {
     text-align: center;

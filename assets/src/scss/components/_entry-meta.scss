@@ -30,10 +30,12 @@
 }
 
 .date-link {
-	&:before {
-	    content: "\f133";	
-	    @extend %common-style;
-	    padding-left: 10px;	   
+	a {
+		&:before {
+		    content: "\f133";	
+		    @extend %common-style;
+		    padding-left: 10px;	   
+		}
 	}
 }
 
