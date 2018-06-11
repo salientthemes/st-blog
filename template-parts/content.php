@@ -30,8 +30,9 @@ global $st_blog_customizer_all_values;
 			?>
 			<div class="entry-meta">
 				<?php
-				st_blog_posted_on();
 				st_blog_posted_by();
+				st_blog_posted_on();
+				
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>

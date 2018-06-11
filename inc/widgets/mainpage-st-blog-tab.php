@@ -79,7 +79,7 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
 
                     </div>
                     <div class="tab-pane fade" id="<?php echo esc_attr( $tab_id ); ?>-comments" role="tabpanel" aria-labelledby="<?php echo esc_attr( $tab_id ); ?>-comments-tab">
-                        <?php $this->render_comments( 'sport', $instance ); ?>
+                        <?php $this->render_comments(  $instance ); ?>
                     </div>
                 </div>
             </div>
@@ -183,10 +183,9 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
          * @param array $instance Parameters.
          * @return void
          */
-        function render_comments( $instance ) {
-
+        function render_comments(  $instance ) {
             $comment_args = array(
-                // 'number'      => $instance['comments_number'],
+                'number'      => $instance['comments_number'],
                 'status'      => 'approve',
                 'post_status' => 'publish',
             );
@@ -206,7 +205,7 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
                             <?php endif; ?>
                         </div><!-- .comments-thumb -->
                         <div class="comments-content">
-                            <?php echo get_comment_author_link( $comment ); ?>&nbsp;<?php echo esc_html_x( 'on', 'Tabbed Widget', 'onlinemag' ); ?>&nbsp;<a href="<?php echo esc_url( get_comment_link( $comment ) );?>"><?php echo get_the_title( $comment->comment_post_ID ); ?></a>
+                            <?php echo get_comment_author_link( $comment ); ?>&nbsp;<?php echo esc_html_x( 'on', 'Tabbed Widget', 'newslite' ); ?>&nbsp;<a href="<?php echo esc_url( get_comment_link( $comment ) );?>"><?php echo get_the_title( $comment->comment_post_ID ); ?></a>
                         </div><!-- .comments-content -->
                         </li>
                     <?php endforeach; ?>
@@ -242,11 +241,11 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
                 'popular_heading'   => '',
                 'popular_category'  => '',
                 'popular_number'    => 5,
-                'recent_heading'  => '',
-                'recent_category' => '',
-                'recent_number'   => 5,
-                'comments_heading'     => '',
-                'comments_number'    => '',
+                'recent_heading'    => '',
+                'recent_category'   => '',
+                'recent_number'     => 5,
+                'comments_heading'  => '',
+                'comments_number'   => '',
                 'custom_class'      => ''
                
             ) );
@@ -321,12 +320,11 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
                 <input class="widefat1" id="<?php echo absint($this->get_field_id( 'recent_number' )); ?>" name="<?php echo esc_html($this->get_field_name( 'recent_number' )); ?>" type="number" value="<?php echo absint( $recent_number ); ?>" min="1" style="max-width:50px;" />
             </p>
             <p>
-                <label for="<?php echo absint($this->get_field_id('comments_heading')); ?>"><?php esc_html_e( 'Tab3 Heading Title:', 'salient-news' ); ?></label>
+                <label for="<?php echo absint($this->get_field_id('comments_heading')); ?>"><?php _e( 'Comment Heading Title:', 'newslite' ); ?></label>
                 <input class="widefat" id="<?php echo absint($this->get_field_id('comments_heading')); ?>" name="<?php echo esc_html($this->get_field_name( 'comments_heading' )); ?>" type="text" value="<?php echo esc_attr( $comments_heading ); ?>" />
             </p>
-
             <p>
-                <label for="<?php echo absint($this->get_field_id( 'comments_number' )); ?>"><?php esc_html_e('Number of tab2 Posts:', 'salient-news' ); ?></label>
+                <label for="<?php echo absint($this->get_field_id( 'comments_number' )); ?>"><?php _e('Number of Coments Posts:', 'newslite' ); ?></label>
                 <input class="widefat1" id="<?php echo absint($this->get_field_id( 'comments_number' )); ?>" name="<?php echo esc_html($this->get_field_name( 'comments_number' )); ?>" type="number" value="<?php echo absint( $comments_number ); ?>" min="1" style="max-width:50px;" />
             </p>
             

@@ -52,17 +52,19 @@ require get_template_directory(). '/inc/customizer/Feature-slider/slider-setting
 
 require get_template_directory(). '/inc/customizer/Feature-Trending-Post/trending-options.php'; 
 
-require get_template_directory(). '/inc/customizer/Footer-social-media/options.php'; 
+// require get_template_directory(). '/inc/customizer/Footer-social-media/options.php'; 
 
-require get_template_directory(). '/inc/customizer/Header-Footer/header-footer-options.php'; 
+// require get_template_directory(). '/inc/customizer/Header-Footer/header-footer-options.php'; 
 
-require get_template_directory(). '/inc/customizer/color/color-section.php';
+// require get_template_directory(). '/inc/customizer/color/color-section.php';
 
-require get_template_directory(). '/inc/customizer/font/font-section.php'; 
+// require get_template_directory(). '/inc/customizer/font/font-section.php'; 
 
-require get_template_directory(). '/inc/customizer/post-display/options.php'; 
+// require get_template_directory(). '/inc/customizer/post-display/options.php'; 
 
 require get_template_directory(). '/inc/customizer/panel.php'; 
+
+require get_template_directory(). '/inc/customizer/theme-option/theme-panel.php';
 
 
 global $st_blog_panels;

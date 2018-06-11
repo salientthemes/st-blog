@@ -24,7 +24,7 @@ $st_blog_customizer_defaults['st-blog-trending-image-enable']			= 1;
 // create a section for trending
 $st_blog_sections['st-blog-trending-section'] = array(
 	'title'		=> esc_html__('All Trending Post Options','st-blog'),
-	'panel'		=> 'st-blog-homepage-panel',
+	// 'panel'		=> 'st-blog-homepage-panel',
 	'priority'	=> 20
 );
 
