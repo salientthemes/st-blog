@@ -47,7 +47,7 @@ $st_blog_settings_controls['st-blog-social-link1'] = array(
 		'default'	=> $st_blog_customizer_defaults['st-blog-social-link1']
 	),
 	'control' => array(
-		'label'				=> esc_html__('Social Media Link First','st-blog'),
+		'label'				=> esc_html__('Social Media Link 1','st-blog'),
 		'section'			=> 'st-blog-social-section',
 		'type'				=> 'url',
 		'priority'			=> 20,
@@ -61,7 +61,7 @@ $st_blog_settings_controls['st-blog-social-link2'] = array(
 		'default'	=> $st_blog_customizer_defaults['st-blog-social-link2']
 	),
 	'control' => array(
-		'label'				=> esc_html__('Social Media Link First','st-blog'),
+		'label'				=> esc_html__('Social Media Link 2','st-blog'),
 		'section'			=> 'st-blog-social-section',
 		'type'				=> 'url',
 		'priority'			=> 30,
@@ -75,7 +75,7 @@ $st_blog_settings_controls['st-blog-social-link3'] = array(
 		'default'	=> $st_blog_customizer_defaults['st-blog-social-link3']
 	),
 	'control' => array(
-		'label'				=> esc_html__('Social Media Link First','st-blog'),
+		'label'				=> esc_html__('Social Media Link 3','st-blog'),
 		'section'			=> 'st-blog-social-section',
 		'type'				=> 'url',
 		'priority'			=> 40,
@@ -89,7 +89,7 @@ $st_blog_settings_controls['st-blog-social-link4'] = array(
 		'default'	=> $st_blog_customizer_defaults['st-blog-social-link4']
 	),
 	'control' => array(
-		'label'				=> esc_html__('Social Media Link First','st-blog'),
+		'label'				=> esc_html__('Social Media Link 4','st-blog'),
 		'section'			=> 'st-blog-social-section',
 		'type'				=> 'url',
 		'priority'			=> 50,
