@@ -61,9 +61,15 @@ if ( !class_exists('st_blog_author_widget') ) :
                     
                         <h4 class="st-blog-author-name my-3"><a href="<?php echo esc_url( $author_link ); ?>"><?php echo esc_html( $author_name ); ?></a></h4>               
                         <p><?php echo esc_html( $description ); ?></p>
-                        <a href="<?php echo esc_url($social_link1); ?>"> facebbok</a>
                         <a href="<?php echo esc_url( $author_link ); ?>" class="readmore">Know More</a>
 
+                        <div id="st-blog-author-social-icons" class="">
+                            <ul>
+                                <li><a href="https://facebook.com/"></a></li>
+                                <li><a href="https://twitter.com/"></a></li>
+                                <li><a href="https://instagram.com/"></a></li>
+                            </ul>
+                        </div>
                 </div><!-- /.st-blog-author-item -->                    
                             
             </div> 
@@ -103,7 +109,7 @@ if ( !class_exists('st_blog_author_widget') ) :
                 'author_name'        => '',
                 'description'        => '',
                 'custom_class'       => '',
-                'button_text'       => 'know more',
+                'button_text'       => 'Know More',
 
                 'social_link1'      => '',
                 'social_link2'      => '',
@@ -171,16 +177,19 @@ if ( !class_exists('st_blog_author_widget') ) :
             </p>
             <hr/>
             <p>
-                <label for="<?php echo absint($this->get_field_id( 'social_link1' )); ?>"><?php esc_html_e( 'social Link First:', 'st-blog' ); ?></label>
+
+                <label for="<?php echo absint($this->get_field_id( 'social_link1' )); ?>"><?php esc_html_e( 'Social Media Link 1:', 'st-blog' ); ?></label>
                 <input class="widefat" id="<?php echo absint($this->get_field_id( 'social_link1' )); ?>" name="<?php echo esc_html($this->get_field_name( 'social_link1' ) ); ?>" type="text" value="<?php echo esc_attr( $social_link1 ); ?>" />
             </p>
             <p>
-                <label for="<?php echo absint($this->get_field_id( 'social_link2' )); ?>"><?php esc_html_e( 'social Link Second:', 'st-blog' ); ?></label>
+                <label for="<?php echo absint($this->get_field_id( 'social_link2' )); ?>"><?php esc_html_e( 'Social Media Link 2:', 'st-blog' ); ?></label>
                 <input class="widefat" id="<?php echo absint($this->get_field_id( 'social_link2' )); ?>" name="<?php echo esc_html($this->get_field_name( 'social_link2' ) ); ?>" type="text" value="<?php echo esc_attr( $social_link2 ); ?>" />
             </p>
             <p>
-                <label for="<?php echo absint($this->get_field_id( 'social_link3' )); ?>"><?php esc_html_e( 'social Link Third:', 'st-blog' ); ?></label>
+                <label for="<?php echo absint($this->get_field_id( 'social_link3' )); ?>"><?php esc_html_e( 'Social Media Link 3:', 'st-blog' ); ?></label>
                 <input class="widefat" id="<?php echo absint($this->get_field_id( 'social_link3' )); ?>" name="<?php echo esc_html($this->get_field_name( 'social_link3' ) ); ?>" type="text" value="<?php echo esc_attr( $social_link3 ); ?>" />
+
+                
             </p>
 
             <p>
