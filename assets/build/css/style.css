@@ -281,6 +281,65 @@ input[type=checkbox], input[type=radio] {
     -webkit-transform: scale(1.05);
     transform: scale(1.05); }
 
+#st-blog-social-icons ul li a[href*="facebook.com"]::after {
+  content: "facebook"; }
+#st-blog-social-icons ul li a[href*="twitter.com"]::after {
+  content: "twitter"; }
+#st-blog-social-icons ul li a[href*="linkedin.com"]::after {
+  content: "linkedin"; }
+#st-blog-social-icons ul li a[href*="plus.google.com"]::after {
+  content: "google plus"; }
+#st-blog-social-icons ul li a[href*="youtube.com"]::after {
+  content: "youtube"; }
+#st-blog-social-icons ul li a[href*="dribbble.com"]::after {
+  content: "dribbble"; }
+#st-blog-social-icons ul li a[href*="pinterest.com"]::after {
+  content: "pinterest"; }
+#st-blog-social-icons ul li a[href*="bitbucket.org"]::after {
+  content: "bitbucket"; }
+#st-blog-social-icons ul li a[href*="github.com"]::after {
+  content: "github"; }
+#st-blog-social-icons ul li a[href*="codepen.io"]::after {
+  content: "codepen"; }
+#st-blog-social-icons ul li a[href*="flickr.com"]::after {
+  content: "flickr"; }
+#st-blog-social-icons ul li a[href$="/feed/"]::after {
+  content: "feed"; }
+#st-blog-social-icons ul li a[href*="foursquare.com"]::after {
+  content: "foursquare"; }
+#st-blog-social-icons ul li a[href*="instagram.com"]::after {
+  content: "instagram"; }
+#st-blog-social-icons ul li a[href*="tumblr.com"]::after {
+  content: "tumblr"; }
+#st-blog-social-icons ul li a[href*="reddit.com"]::after {
+  content: "reddit"; }
+#st-blog-social-icons ul li a[href*="vimeo.com"]::after {
+  content: "vimeo"; }
+#st-blog-social-icons ul li a[href*="digg.com"]::after {
+  content: "digg"; }
+#st-blog-social-icons ul li a[href*="twitch.tv"]::after {
+  content: "twitch"; }
+#st-blog-social-icons ul li a[href*="stumbleupon.com"]::after {
+  content: "stumbleupon"; }
+#st-blog-social-icons ul li a[href*="delicious.com"]::after {
+  content: "delicious"; }
+#st-blog-social-icons ul li a[href*="mailto:"]::after {
+  content: "mailto"; }
+#st-blog-social-icons ul li a[href*="soundcloud.com"]::after {
+  content: "soundcloud"; }
+#st-blog-social-icons ul li a[href*="wordpress.org"]::after {
+  content: "wordpress"; }
+#st-blog-social-icons ul li a[href*="wordpress.com"]::after {
+  content: "wordpress"; }
+#st-blog-social-icons ul li a[href*="jsfiddle.net"]::after {
+  content: "jsfiddle"; }
+#st-blog-social-icons ul li a[href*="tripadvisor.com"]::after {
+  content: "tripadvisor"; }
+#st-blog-social-icons ul li a[href*="angel.co"]::after {
+  content: "angel"; }
+#st-blog-social-icons ul li a[href*="slack.com"]::after {
+  content: "slack"; }
+
 #st-blog-social-icons ul, #st-blog-author #st-blog-author-social-icons ul, .dark-theme-coloured #st-blog-social-icons ul {
   text-align: center; }
   #st-blog-social-icons ul li, #st-blog-author #st-blog-author-social-icons ul li, .dark-theme-coloured #st-blog-social-icons ul li {

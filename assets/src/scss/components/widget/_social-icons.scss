@@ -2,7 +2,7 @@
 	@extend %social-icons;
 
 	// with text
-	// @extend %social-icons-text;
+	@extend %social-icons-text;
 }
 
 body:not(.dark-theme) {
