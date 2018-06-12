@@ -18,6 +18,8 @@ $featured-heading-font-size: 16px;
 				    @extend %img-effect-scale;
 				    img {
 				    	margin-bottom: 10px;
+				    	width: 100%;
+				    	height: auto;
 				    }
 			    }
 

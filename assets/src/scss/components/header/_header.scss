@@ -4,21 +4,21 @@ header.site-header {
 	}
 }
 
-.st-blog-logo-left-right-nav,
-.st-blog-big-logo-nav {
+.#{$prefix}-logo-left-right-nav,
+.#{$prefix}-big-logo-nav {
 	display: none;
 }
 
 body {
 	&.big-logo {
-		.st-blog-big-logo-nav {
+		.#{$prefix}-big-logo-nav {
 			display: block;
 		}
 	}
 
 	&.logo-left,
 	&.logo-right {
-		.st-blog-logo-left-right-nav {
+		.#{$prefix}-logo-left-right-nav {
 			display: block;
 		}
 	}

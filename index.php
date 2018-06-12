@@ -39,7 +39,7 @@ get_header();
 
 						/* Start the Loop */
 						while ( have_posts() ) :
-							echo '<div class="st-blog-item article-grid text-center">';
+							echo '<div class="st-blog-item article-grid">';
 							
 							the_post();
 

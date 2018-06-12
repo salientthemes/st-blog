@@ -1,34 +1,34 @@
 body.custom-background {
-	#st-blog-featured .container,
+	##{$prefix}-featured .container,
 	.container.site-content,
-	.st-blog-full-width-widget .container {
+	.#{$prefix}-full-width-widget .container {
 		background-color: $color_white;
 	}
 
 	// .mb-5
-	#st-blog-banner,
-	#st-blog-featured,
-	#st-blog-social-icons {
+	##{$prefix}-banner,
+	##{$prefix}-featured,
+	##{$prefix}-social-icons {
 	    margin-bottom: 0 !important;
 	}
 
-	#st-blog-featured .container,
+	##{$prefix}-featured .container,
 	#home-content,
-	.st-blog-full-width-widget .container,
-	#st-blog-social-icons .container {
+	.#{$prefix}-full-width-widget .container,
+	##{$prefix}-social-icons .container {
 	    padding-top: 3rem;
 	}
 
-	.st-blog-full-width-widget .container {
+	.#{$prefix}-full-width-widget .container {
 	    // padding-bottom: 3rem;
 	}
 
-	.st-blog-full-width-widget .container .widget,
+	.#{$prefix}-full-width-widget .container .widget,
 	.null-instagram-feed .follow-me {
 	    margin-bottom: 0;
 	}
 
-	#st-blog-social-icons .container {
+	##{$prefix}-social-icons .container {
 	    padding-bottom: 3rem;
 	}
 }
