@@ -1345,7 +1345,8 @@ body:not(.dark-theme) #st-blog-social-icons ul li {
 #st-blog-author .st-blog-author-img {
   margin-bottom: 10px; }
 #st-blog-author #st-blog-author-social-icons {
-  margin-top: 20px; }
+  margin-top: 20px;
+  margin-bottom: 10px; }
   #st-blog-author #st-blog-author-social-icons ul li {
     margin-right: 15px;
     padding: 0; }
