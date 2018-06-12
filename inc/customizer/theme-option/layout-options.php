@@ -128,12 +128,12 @@ $st_blog_settings_controls['st-blog-default-body-layout'] =
                 'default'              => $st_blog_customizer_defaults['st-blog-default-body-layout'],
             ),
             'control' => array(
-                'label'                 =>  esc_html__( 'Default Body Layout', 'st-blog' ),
+                'label'                 =>  esc_html__( 'Blog Post Layout', 'st-blog' ),
                 'section'               => 'st-blog-back-all-theme-setting',
                 'type'                  => 'select',
                 'choices'               => array(
-                    'boxed'         => esc_html__( 'Boxed', 'st-blog' ),
-                    'full-width'    => esc_html__( 'Full Width', 'st-blog' ),
+                    'boxed'         => esc_html__( 'Grid Layout', 'st-blog' ),
+                    'full-width'    => esc_html__( 'Full Width Layout', 'st-blog' ),
                 ),
                 'priority'              => 70,
                 'active_callback'       => ''

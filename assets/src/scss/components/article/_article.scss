@@ -1,6 +1,6 @@
 $article_image_height: 200px;
 
-.site-content {
+// .site-content {
 	article {
 		&.hentry {
 	    	margin-bottom: 40px;
@@ -19,14 +19,6 @@ $article_image_height: 200px;
 		}
 	}
 
-	.article-grid {
-		article {
-			.image {
-				max-height: $article_image_height;
-			}
-		}
-	}
-
 	// blog item
 	.#{$prefix}-item {
 		article {
@@ -37,4 +29,37 @@ $article_image_height: 200px;
 			}
 		}	
 	}
+// }
+
+body.boxed {
+	// blog item
+	.#{$prefix}-item {
+		article {
+			.image {
+				max-height: $article_image_height;
+			}
+		}
+	}
 }
+
+// doesn't look good
+// body.full-width {
+// 	.#{$prefix}-item {
+// 		article {			
+// 			@include clearfix();
+// 			.image {
+// 				float: left;
+// 				padding-right: 20px;
+// 				width: 40%;
+// 				.post-thumbnail {
+// 					overflow: hidden;
+// 				}
+// 			}
+
+// 			.entry-header, .entry-content, .entry-footer {
+// 			    width: 60%;
+// 			    float: left;
+// 			}
+// 		}
+// 	}
+// }
