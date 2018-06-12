@@ -30,6 +30,7 @@ if ( !class_exists('st_blog_author_widget') ) :
             $open_in_new_window = empty($instance['open_in_new_window']) ? '' : $instance['open_in_new_window'];
             $author_name        = empty($instance['author_name']) ? '' : $instance['author_name'];
             $description        = empty($instance['description']) ? '' : $instance['description'];
+            $button_text        = empty($instance['button_text']) ? '' : $instance['button_text']; 
             $custom_class       = apply_filters( 'widget_custom_class', empty( $instance['custom_class'] ) ? '' : $instance['custom_class'], $instance, $this->id_base );
 
             if ( $custom_class ) {
@@ -74,6 +75,7 @@ if ( !class_exists('st_blog_author_widget') ) :
             $instance['description']        =   wp_kses_post( $new_instance['description'] );
             $instance['open_in_new_window'] =   isset( $new_instance['open_in_new_window'] );
             $instance['custom_class']       =   sanitize_text_field( $new_instance['custom_class'] );
+            $instance['button_text']        =   sanitize_text_field($new_instance['button_text'] ) ;
 
             return $instance;
         }
@@ -90,6 +92,7 @@ if ( !class_exists('st_blog_author_widget') ) :
                 'author_name'        => '',
                 'description'        => '',
                 'custom_class'       => '',
+                'button_text'       => 'know more',
             ) );
             $title                  = esc_attr( $instance['title'] );
             $image_url              = esc_url( $instance['image_url'] );
@@ -98,6 +101,7 @@ if ( !class_exists('st_blog_author_widget') ) :
             $author_name            = esc_attr( $instance['author_name'] );
             $description            = esc_attr( $instance['description'] );
             $custom_class           = esc_attr( $instance['custom_class'] );
+            $button_text            = esc_attr( $instance['button_text'] );
 
             ?>
             <p>
@@ -141,6 +145,11 @@ if ( !class_exists('st_blog_author_widget') ) :
                 <textarea class="widefat" id="<?php echo $this->get_field_id( 'description' ); ?>" name="<?php echo ($this->get_field_name( 'description' )); ?>"><?php echo esc_attr( $description ); ?></textarea>
             </p>
             <hr />
+            <p>
+                <label for="<?php echo absint($this->get_field_id( 'button_text' )); ?>"><?php esc_html_e( 'Button text:', 'salient-news' ); ?></label>
+                <input class="widefat" id="<?php echo absint($this->get_field_id( 'button_text' )); ?>" name="<?php echo esc_html($this->get_field_name( 'button_text' )); ?>" type="text" value="<?php echo esc_attr( $button_text ); ?>" />
+            </p>
+
             <p>
                 <label for="<?php echo ($this->get_field_id( 'custom_class' )); ?>"><?php esc_html_e( 'Custom Class:', 'salient-news' ); ?></label>
                 <input class="widefat" id="<?php echo ($this->get_field_id( 'custom_class' )); ?>" name="<?php echo ($this->get_field_name( 'custom_class' )); ?>" type="text" value="<?php echo esc_attr( $custom_class ); ?>" />

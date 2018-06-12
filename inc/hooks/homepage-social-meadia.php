@@ -30,7 +30,6 @@ if ( !function_exists('st_blog_social_media') ) :
 					<li><a href="<?php echo esc_url($st_blog_social_media_link); ?>"></a></li>
 				</ul>
 			</div>
-			<button>Add NEW ACCount</button>
 		</div>
 	</section>
  	<?php
