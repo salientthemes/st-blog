@@ -24,7 +24,7 @@ $instagram_height: 125px;
 }
 
 // full-width
-.st-blog-full-width-widget {
+.#{$prefix}-full-width-widget {
 	.#{$prefix}-instafeed-slider {
 			height: $instagram_height;
 			overflow: hidden;

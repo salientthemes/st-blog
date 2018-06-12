@@ -19,7 +19,7 @@
 
 // site-footer widgets
 .site-footer {
-	.st-blog-footer-widget {
+	.#{$prefix}-footer-widget {
 	    background: black;
 	    padding: 40px 0 0;
 	    a {
@@ -31,20 +31,20 @@
 
 	    // columns
 	    @media (max-width: 991px) {
-		    .st-blog-footer-widget-col {
+		    .#{$prefix}-footer-widget-col {
 			    -ms-flex: 0 0 50%;
 			    flex: 0 0 50%;
 			}
 		}
 	    @media (max-width: 575px) {
-		    .st-blog-footer-widget-col {
+		    .#{$prefix}-footer-widget-col {
 			    -ms-flex: 0 0 100%;
 			    flex: 0 0 100%;
 			}
 		}
 	}
 
-	.st-blog-footer-widget, .st-blog-footer-widget .widget-title {
+	.#{$prefix}-footer-widget, .#{$prefix}-footer-widget .widget-title {
 	    color: white;
 	}
 
