@@ -73,6 +73,7 @@ if ( ! class_exists( 'Salient_Customizer' ) ){
                 'email',
                 'password',
                 'dropdown-pages',
+                'button',
             );
 
         /**

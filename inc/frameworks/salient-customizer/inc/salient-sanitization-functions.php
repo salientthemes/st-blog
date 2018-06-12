@@ -8,3 +8,4 @@ require_once trailingslashit( SALIENT_CUSTOMIZER_PATH ) . 'inc/sanitization-func
 require_once trailingslashit( SALIENT_CUSTOMIZER_PATH ) . 'inc/sanitization-functions/sanitize-post.php';
 require_once trailingslashit( SALIENT_CUSTOMIZER_PATH ) . 'inc/sanitization-functions/sanitize-range.php';
 require_once trailingslashit( SALIENT_CUSTOMIZER_PATH ) . 'inc/sanitization-functions/sanitize-select.php';
+require_once trailingslashit( SALIENT_CUSTOMIZER_PATH ) . 'inc/sanitization-functions/sanitize-button.php';
