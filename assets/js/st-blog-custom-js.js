@@ -94,6 +94,16 @@ jQuery(window).load(function() {
 	});
 
 	// slick_init
+	var slick_ltr, slick_rtl;
+
+	var slick_ltr = false;//ltr, rtl both works in false
+
+	if(jQuery('body').hasClass('rtl')) {
+		slick_rtl = true;//rtl works in true
+	} else {
+		slick_rtl = false;//ltr works in false
+	}
+	
 	jQuery(".st-blog-banner-slider").slick({
 		// normal options...
 		arrows: true,
@@ -105,6 +115,8 @@ jQuery(window).load(function() {
 		infinite: true,
 		pauseOnFocus: false,
 		pauseOnHover: true,
+		ltr: slick_ltr,//for rtl support
+		rtl: slick_rtl,
 		prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>',
 		nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>',
 		speed: 800,
@@ -121,6 +133,8 @@ jQuery(window).load(function() {
 		infinite: true,
 		pauseOnFocus: false,
 		pauseOnHover: true,
+		ltr: slick_ltr,//for rtl support
+		rtl: slick_rtl,
 		slidesToShow: 3,
 		prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>',
 		nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>',
@@ -172,6 +186,8 @@ jQuery(window).load(function() {
 		infinite: true,
 		pauseOnFocus: false,
 		pauseOnHover: true,
+		ltr: slick_ltr,//for rtl support
+		rtl: slick_rtl,
 		slidesToShow: 8,
 		prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>',
 		nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>',

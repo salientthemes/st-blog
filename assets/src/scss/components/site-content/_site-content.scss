@@ -32,10 +32,10 @@ body:not(.home):not(.blog) {
 	}
 	@include media(md) {
 		#primary {
-		    width: 70%;
+		    width: 66.66%;
 		}
 		#secondary {
-		    width: 30%;
+		    width: 33.33%;
 		}
 	}
 }
