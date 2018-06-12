@@ -1,4 +1,5 @@
 <?php
+
 if ( !function_exists('st_blog_social_media') ) :
 
  /**
@@ -13,14 +14,9 @@ if ( !function_exists('st_blog_social_media') ) :
  function st_blog_social_media()
  {
  	global $st_blog_customizer_all_values;
- 	$st_blog_social_media_name_one   = esc_html($st_blog_customizer_all_values['st-blog-social-media-name-one']);
- 	$st_blog_social_media_link_one   = esc_url($st_blog_customizer_all_values['st-blog-social-link-one']);
- 	$st_blog_social_media_name_two   = esc_html($st_blog_customizer_all_values['st-blog-social-media-name-two']);
- 	$st_blog_social_media_link_two   = esc_url($st_blog_customizer_all_values['st-blog-social-link-two']);
- 	$st_blog_social_media_name_three = esc_html($st_blog_customizer_all_values['st-blog-social-media-name-three']);
- 	$st_blog_social_media_link_three = esc_url($st_blog_customizer_all_values['st-blog-social-link-three']);
- 	$st_blog_social_media_name_four  = esc_html($st_blog_customizer_all_values['st-blog-social-media-name-four']);
- 	$st_blog_social_media_link_four  = esc_url($st_blog_customizer_all_values['st-blog-social-link-four']);
+ 	$st_blog_social_media_name   = esc_html($st_blog_customizer_all_values['st-blog-social-media-name']);
+ 	$st_blog_social_media_link   = esc_url($st_blog_customizer_all_values['st-blog-social-link']);
+ 	
 
  	if( 1 != $st_blog_customizer_all_values['st-blog-enable-social-media'] )
  	{
@@ -31,15 +27,14 @@ if ( !function_exists('st_blog_social_media') ) :
 		<div class="container site-content">
 			<div class="menu-social-nav-container">
 				<ul id="social-nav" class="menu">
-					<li><a href="<?php echo esc_url($st_blog_social_media_link_one); ?>"><?php echo esc_html($st_blog_social_media_name_one);?></a></li>
-					<li><a href="<?php echo esc_url($st_blog_social_media_link_two); ?>"><?php echo esc_html($st_blog_social_media_name_two);?></a></li>
-					<li><a href="<?php echo esc_url($st_blog_social_media_link_three); ?>"><?php echo esc_html($st_blog_social_media_name_three);?></a></li>
-					<li><a href="<?php echo esc_url($st_blog_social_media_link_four); ?>"><?php echo esc_html($st_blog_social_media_name_four);?></a></li>
+					<li><a href="<?php echo esc_url($st_blog_social_media_link); ?>"></a></li>
 				</ul>
 			</div>
+			<button>Add NEW ACCount</button>
 		</div>
 	</section>
  	<?php
  }
 endif;
 add_action('st_blog_action_front_page','st_blog_social_media',50);
+
