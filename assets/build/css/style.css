@@ -1505,7 +1505,9 @@ body:not(.dark-theme) #st-blog-social-icons ul li {
       overflow: hidden;
       margin-bottom: 15px; }
       #st-blog-featured .slick-list .slick-slide .st-blog-featured-item .st-blog-featured-image img {
-        margin-bottom: 10px; }
+        margin-bottom: 10px;
+        width: 100%;
+        height: auto; }
     #st-blog-featured .slick-list .slick-slide .st-blog-featured-item .st-blog-featured-caption .st-blog-category {
       margin-bottom: 5px;
       display: inline-block;
