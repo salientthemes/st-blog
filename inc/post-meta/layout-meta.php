@@ -91,7 +91,7 @@ function st_blog_layout_options_callback() {
                 $st_blog_single_sidebar_layout_meta = get_post_meta( $post->ID, 'st-blog-default-layout', true );
                 if( false != $st_blog_single_sidebar_layout_meta ){
                    $st_blog_single_sidebar_layout = $st_blog_single_sidebar_layout_meta;
-                   var_dump($st_blog_single_sidebar_layout);die('hait');
+                   
 
                 }
                 foreach ($st_blog_default_layout_options as $field) {
