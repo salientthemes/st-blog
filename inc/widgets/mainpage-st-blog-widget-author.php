@@ -4,7 +4,7 @@ if ( !class_exists('st_blog_author_widget') ) :
     /**
      * Author Widget Class
      *
-     * @since Newslite 1.0
+     * @since st-blog 1.0
      *
      */
 
@@ -87,7 +87,6 @@ if ( !class_exists('st_blog_author_widget') ) :
             $instance['author_link']        =   esc_url_raw( $new_instance['author_link'] );
             $instance['author_name']        =   sanitize_text_field( $new_instance['author_name'] );
             $instance['description']        =   wp_kses_post( $new_instance['description'] );
-            $instance['open_in_new_window'] =   isset( $new_instance['open_in_new_window'] );
             $instance['custom_class']       =   sanitize_text_field( $new_instance['custom_class'] );
             $instance['button_text']        =   sanitize_text_field($new_instance['button_text'] ) ;
 
@@ -107,7 +106,6 @@ if ( !class_exists('st_blog_author_widget') ) :
                 'image_url'          => '',
                 'author_link'        => '',
                 'featured_image'     => '',
-                'open_in_new_window' => true,
                 'author_name'        => '',
                 'description'        => '',
                 'custom_class'       => '',
@@ -120,7 +118,6 @@ if ( !class_exists('st_blog_author_widget') ) :
             $title                  = esc_attr( $instance['title'] );
             $image_url              = esc_url(  $instance['image_url'] );
             $author_link            = esc_url(  $instance['author_link'] );
-            $open_in_new_window     = esc_attr( $instance['open_in_new_window'] );
             $author_name            = esc_attr( $instance['author_name'] );
             $description            = esc_attr( $instance['description'] );
             $custom_class           = esc_attr( $instance['custom_class'] );
@@ -133,14 +130,14 @@ if ( !class_exists('st_blog_author_widget') ) :
 
             ?>
             <p>
-                <label for="<?php echo absint($this->get_field_id( 'title' )); ?>"><?php esc_html_e( 'Title:', 'salient-news' ); ?></label>
+                <label for="<?php echo absint($this->get_field_id( 'title' )); ?>"><?php esc_html_e( 'Title:', 'st-blog' ); ?></label>
                 <input class="widefat" id="<?php echo absint($this->get_field_id( 'title' )); ?>" name="<?php echo esc_html($this->get_field_name( 'title' )); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
             </p>
             <hr />
             <div>
-                <label for="<?php echo ($this->get_field_id( 'image_url' ) ); ?>"><?php esc_html_e( 'Image URL:', 'salient-news' ); ?></label><br/>
-                <input id="<?php echo $this->get_field_id( 'image_url' ); ?>" name="<?php echo ($this->get_field_name( 'image_url' )); ?>" type="text" value="<?php echo esc_attr( $image_url ); ?>" class="img" />
-                <input type="button" class="select-img button button-primary" value="<?php esc_html_e('Upload', 'salient-news' ); ?>" data-uploader_title="<?php esc_html_e( 'Select Image', 'salient-news' ); ?>" data-uploader_button_text="<?php esc_html_e( 'Choose Image', 'salient-news' ); ?>" />
+                <label for="<?php echo absint($this->get_field_id( 'image_url' ) ); ?>"><?php esc_html_e( 'Image URL:', 'st-blog' ); ?></label><br/>
+                <input id="<?php echo absint( $this->get_field_id( 'image_url' ) ); ?>" name="<?php echo esc_html($this->get_field_name( 'image_url' )); ?>" type="text" value="<?php echo esc_attr( $image_url ); ?>" class="img" />
+                <input type="button" class="select-img button button-primary" value="<?php esc_html_e('Upload', 'st-blog' ); ?>" data-uploader_title="<?php esc_html_e( 'Select Image', 'st-blog' ); ?>" data-uploader_button_text="<?php esc_html_e( 'Choose Image', 'st-blog' ); ?>" />
                 <?php
                 $full_image_url = '';
                 if (! empty( $image_url ) ){
@@ -152,48 +149,52 @@ if ( !class_exists('st_blog_author_widget') ) :
                 }
                 ?>
                 <div class="author-preview-wrap" <?php echo esc_url($wrap_style); ?>>
-                    <img src="<?php echo esc_url( $full_image_url ); ?>" alt="<?php esc_html_e( 'Preview', 'salient-news' ); ?>" style="max-width: 100%;"  />
+                    <img src="<?php echo esc_url( $full_image_url ); ?>" alt="<?php esc_html_e( 'Preview', 'st-blog' ); ?>" style="max-width: 100%;"  />
                 </div><!-- .author-preview-wrap -->
 
             </div>
             <p>
-                <label for="<?php echo ($this->get_field_id( 'author_link' )); ?>"><?php esc_html_e( 'Author Link:', 'salient-news' ); ?></label>
-                <input class="widefat" id="<?php echo ($this->get_field_id( 'author_link' )); ?>" name="<?php echo $this->get_field_name( 'author_link' ); ?>" type="text" value="<?php echo esc_attr( $author_link ); ?>" />
+                <label for="<?php echo absint($this->get_field_id( 'author_link' )); ?>"><?php esc_html_e( 'Author Link:', 'st-blog' ); ?></label>
+                <input class="widefat" id="<?php echo absint($this->get_field_id( 'author_link' )); ?>" name="<?php echo esc_html($this->get_field_name( 'author_link' ) ); ?>" type="text" value="<?php echo esc_attr( $author_link ); ?>" />
             </p>
-            <p><input id="<?php echo ($this->get_field_id( 'open_in_new_window' ) ); ?>" name="<?php echo ($this->get_field_name( 'open_in_new_window' )); ?>" type="checkbox" <?php checked( isset( $instance['open_in_new_window'] ) ? $instance['open_in_new_window'] : 0); ?> />&nbsp;<label for="<?php echo $this->get_field_id( 'open_in_new_window' ); ?>"><?php esc_html_e( 'Open in new window', 'salient-news' ); ?></label>
+            
+
+            <p>
+                <label for="<?php echo absint($this->get_field_id( 'author_name' )); ?>"><?php esc_html_e( 'Author Name:', 'st-blog' ); ?></label>
+                <input class="widefat" id="<?php echo absint($this->get_field_id( 'author_name' )); ?>" name="<?php echo esc_html($this->get_field_name( 'author_name' ) ); ?>" type="text" value="<?php echo esc_attr( $author_name ); ?>" />
             </p>
 
             <p>
-                <label for="<?php echo ($this->get_field_id( 'author_name' )); ?>"><?php esc_html_e( 'Author Name:', 'salient-news' ); ?></label>
-                <input class="widefat" id="<?php echo ($this->get_field_id( 'author_name' )); ?>" name="<?php echo $this->get_field_name( 'author_name' ); ?>" type="text" value="<?php echo esc_attr( $author_name ); ?>" />
+                <label for="<?php echo absint($this->get_field_id( 'description' )); ?>"><?php esc_html_e( 'Description:', 'st-blog' ); ?></label>
+                <textarea class="widefat" id="<?php echo absint($this->get_field_id( 'description' ) ); ?>" name="<?php echo esc_html($this->get_field_name( 'description' )); ?>"><?php echo esc_attr( $description ); ?></textarea>
             </p>
-
-            <p>
-                <label for="<?php echo ($this->get_field_id( 'description' )); ?>"><?php esc_html_e( 'Description:', 'salient-news' ); ?></label>
-                <textarea class="widefat" id="<?php echo $this->get_field_id( 'description' ); ?>" name="<?php echo ($this->get_field_name( 'description' )); ?>"><?php echo esc_attr( $description ); ?></textarea>
-            </p>
+            
+            
             <hr />
             <p>
-                <label for="<?php echo absint($this->get_field_id( 'button_text' )); ?>"><?php esc_html_e( 'Button text:', 'salient-news' ); ?></label>
+                <label for="<?php echo absint($this->get_field_id( 'button_text' )); ?>"><?php esc_html_e( 'Button text:', 'st-blog' ); ?></label>
                 <input class="widefat" id="<?php echo absint($this->get_field_id( 'button_text' )); ?>" name="<?php echo esc_html($this->get_field_name( 'button_text' )); ?>" type="text" value="<?php echo esc_attr( $button_text ); ?>" />
             </p>
             <hr/>
             <p>
-                <label for="<?php echo ($this->get_field_id( 'social_link1' )); ?>"><?php esc_html_e( 'Social Media Link 1:', 'salient-news' ); ?></label>
-                <input class="widefat" id="<?php echo ($this->get_field_id( 'social_link1' )); ?>" name="<?php echo $this->get_field_name( 'social_link1' ); ?>" type="text" value="<?php echo esc_attr( $social_link1 ); ?>" />
+
+                <label for="<?php echo absint($this->get_field_id( 'social_link1' )); ?>"><?php esc_html_e( 'Social Media Link 1:', 'st-blog' ); ?></label>
+                <input class="widefat" id="<?php echo absint($this->get_field_id( 'social_link1' )); ?>" name="<?php echo esc_html($this->get_field_name( 'social_link1' ) ); ?>" type="text" value="<?php echo esc_attr( $social_link1 ); ?>" />
             </p>
             <p>
-                <label for="<?php echo ($this->get_field_id( 'social_link2' )); ?>"><?php esc_html_e( 'Social Media Link 2:', 'salient-news' ); ?></label>
-                <input class="widefat" id="<?php echo ($this->get_field_id( 'social_link2' )); ?>" name="<?php echo $this->get_field_name( 'social_link2' ); ?>" type="text" value="<?php echo esc_attr( $social_link2 ); ?>" />
+                <label for="<?php echo absint($this->get_field_id( 'social_link2' )); ?>"><?php esc_html_e( 'Social Media Link 2:', 'st-blog' ); ?></label>
+                <input class="widefat" id="<?php echo absint($this->get_field_id( 'social_link2' )); ?>" name="<?php echo esc_html($this->get_field_name( 'social_link2' ) ); ?>" type="text" value="<?php echo esc_attr( $social_link2 ); ?>" />
             </p>
             <p>
-                <label for="<?php echo ($this->get_field_id( 'social_link3' )); ?>"><?php esc_html_e( 'Social Media Link 3:', 'salient-news' ); ?></label>
-                <input class="widefat" id="<?php echo ($this->get_field_id( 'social_link3' )); ?>" name="<?php echo $this->get_field_name( 'social_link3' ); ?>" type="text" value="<?php echo esc_attr( $social_link3 ); ?>" />
+                <label for="<?php echo absint($this->get_field_id( 'social_link3' )); ?>"><?php esc_html_e( 'Social Media Link 3:', 'st-blog' ); ?></label>
+                <input class="widefat" id="<?php echo absint($this->get_field_id( 'social_link3' )); ?>" name="<?php echo esc_html($this->get_field_name( 'social_link3' ) ); ?>" type="text" value="<?php echo esc_attr( $social_link3 ); ?>" />
+
+                
             </p>
 
             <p>
-                <label for="<?php echo ($this->get_field_id( 'custom_class' )); ?>"><?php esc_html_e( 'Custom Class:', 'salient-news' ); ?></label>
-                <input class="widefat" id="<?php echo ($this->get_field_id( 'custom_class' )); ?>" name="<?php echo ($this->get_field_name( 'custom_class' )); ?>" type="text" value="<?php echo esc_attr( $custom_class ); ?>" />
+                <label for="<?php echo absint($this->get_field_id( 'custom_class' )); ?>"><?php esc_html_e( 'Custom Class:', 'st-blog' ); ?></label>
+                <input class="widefat" id="<?php echo absint($this->get_field_id( 'custom_class' )); ?>" name="<?php echo ($this->get_field_name( 'custom_class' )); ?>" type="text" value="<?php echo esc_attr( $custom_class ); ?>" />
             </p>
             <?php
         }
@@ -207,7 +208,7 @@ if ( ! function_exists( 'st_blog_author_single_widgets' ) ) :
     /**
      * Load widgets
      *
-     * @since Newslite 1.0
+     * @since st-blog 1.0
      *
      */
     function st_blog_author_single_widgets() {        // Author widget
