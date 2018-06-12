@@ -59,9 +59,9 @@ add_action( 'st_blog_action_before_wp_head', 'st_blog_before_wp_head', 10 );
 
 if( ! function_exists( 'st_blog_default_layout' ) ) :
     /**
-     * newslite default layout function
+     * st-blog default layout function
      *
-     * @since  newslite 1.0.0
+     * @since  st-blog 1.0.0
      *
      * @param int
      * @return string
@@ -90,7 +90,7 @@ if ( ! function_exists( 'st_blog_body_class' ) ) :
 /**
  * add body class
  *
- * @since newslite 1.0.0
+ * @since st-blog 1.0.0
  *
  * @param null
  * @return null

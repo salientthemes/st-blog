@@ -1,8 +1,8 @@
 <?php
 /**
- * newslite Custom Metabox
+ * st-blog Custom Metabox
  *
- * @package newslite
+ * @package st-blog
  */
 $st_blog_post_types = array(
     'post',
@@ -21,7 +21,7 @@ function st_blog_add_layout_metabox() {
     foreach ( $st_blog_post_types as $post_type ) {
         add_meta_box(
             'st_blog_layout_options', // $id
-            __( 'Layout options', 'newslite' ), // $title
+            __( 'Layout options', 'st-blog' ), // $title
             'st_blog_layout_options_callback', // $callback
             $post_type, // $page
             'normal', // $context
@@ -30,7 +30,7 @@ function st_blog_add_layout_metabox() {
     }
 
 }
-/* newslite sidebar layout */
+/* st-blog sidebar layout */
 $st_blog_default_layout_options = array(
     'left-sidebar' => array(
         'value'     => 'left-sidebar',
@@ -45,23 +45,23 @@ $st_blog_default_layout_options = array(
         'thumbnail' => get_template_directory_uri() . '/inc/images/no-sidebar.png'
     )
 );
-/* newslite featured layout */
+/* st-blog featured layout */
 $st_blog_single_post_image_align_options = array(
     'full' => array(
         'value' => 'full',
-        'label' => __( 'Full', 'newslite' )
+        'label' => __( 'Full', 'st-blog' )
     ),
     'right' => array(
         'value' => 'right',
-        'label' => __( 'Right ', 'newslite' ),
+        'label' => __( 'Right ', 'st-blog' ),
     ),
     'left' => array(
         'value'     => 'left',
-        'label' => __( 'Left', 'newslite' ),
+        'label' => __( 'Left', 'st-blog' ),
     ),
     'no-image' => array(
         'value'     => 'no-image',
-        'label' => __( 'No Image', 'newslite' )
+        'label' => __( 'No Image', 'st-blog' )
     )
 );
 
@@ -75,7 +75,7 @@ function st_blog_layout_options_callback() {
     /*st-blog-single-post-image-align*/
     $st_blog_single_post_image_align = $st_blog_customizer_saved_values['st-blog-single-post-image-align'];
 
-    /*newslite default layout*/
+    /*st-blog default layout*/
     $st_blog_single_sidebar_layout = $st_blog_customizer_saved_values['st-blog-default-layout'];
 
     wp_nonce_field( basename( __FILE__ ), 'st_blog_layout_options_nonce' );
@@ -83,7 +83,7 @@ function st_blog_layout_options_callback() {
     <table class="form-table page-meta-box">
         <!--Image alignment-->
         <tr>
-            <td colspan="4"><em class="f13"><?php _e( 'Choose Sidebar Template', 'newslite' ); ?></em></td>
+            <td colspan="4"><em class="f13"><?php esc_html_e( 'Choose Sidebar Template', 'st-blog' ); ?></em></td>
         </tr>
         <tr>
             <td>
@@ -110,11 +110,11 @@ function st_blog_layout_options_callback() {
             </td>
         </tr>
         <tr>
-            <td><em class="f13"><?php _e( 'You can set up the sidebar content', 'newslite' ); ?> <a href="<?php echo esc_url( admin_url('/widgets.php') ); ?>"><?php _e( 'here', 'newslite' ); ?></a></em></td>
+            <td><em class="f13"><?php esc_html_e( 'You can set up the sidebar content', 'st-blog' ); ?> <a href="<?php echo esc_url( admin_url('/widgets.php') ); ?>"><?php esc_html_e( 'here', 'st-blog' ); ?></a></em></td>
         </tr>
         <!--Image alignment-->
         <tr>
-            <td colspan="4"><?php _e( 'Featured Image Alignment', 'newslite' ); ?></td>
+            <td colspan="4"><?php esc_html_e( 'Featured Image Alignment', 'st-blog' ); ?></td>
         </tr>
         <tr>
             <td>
@@ -145,8 +145,13 @@ function st_blog_layout_options_callback() {
  */
 function st_blog_save_sidebar_layout( $post_id ) {
     global $post;
+
+    if ( isset( $_POST['st_blog_layout_options_nonce'] ) ) {
+        $_POST[ 'st_blog_layout_options_nonce' ] = sanitize_text_field( wp_unslash( $_POST[ 'st_blog_layout_options_nonce' ] ) );
+    }
+
     // Verify the nonce before proceeding.
-    if ( !isset( $_POST[ 'st_blog_layout_options_nonce' ] ) || !wp_verify_nonce( $_POST[ 'st_blog_layout_options_nonce' ], basename( __FILE__ ) ) ) {
+    if ( !isset( $_POST[ 'st_blog_layout_options_nonce' ] ) || !wp_verify_nonce( sanitize_key($_POST[ 'st_blog_layout_options_nonce' ] ), basename( __FILE__ ) ) ) {
         return;
     }
 
@@ -160,23 +165,23 @@ function st_blog_save_sidebar_layout( $post_id ) {
     }
     
     if(isset($_POST['st-blog-default-layout'])){
-        $old = get_post_meta( $post_id, 'st-blog-default-layout', true);
-        $new = sanitize_text_field($_POST['st-blog-default-layout']);
-        if ($new && $new != $old) {
-            update_post_meta($post_id, 'st-blog-default-layout', $new);
-        } elseif ('' == $new && $old) {
-            delete_post_meta($post_id,'st-blog-default-layout', $old);
+        $old = get_post_meta( $post_id, 'st-blog-default-layout', true );
+        $new = sanitize_text_field( wp_unslash( $_POST['st-blog-default-layout'] ) );
+        if ( $new && $new != $old ) {
+            update_post_meta( $post_id, 'st-blog-default-layout', $new );
+        } elseif ( '' == $new && $old ) {
+            delete_post_meta( $post_id,'st-blog-default-layout', $old );
         }
     }
 
     /*image align*/
     if(isset($_POST['st-blog-single-post-image-align'])){
-        $old = get_post_meta( $post_id, 'st-blog-single-post-image-align', true);
-        $new = sanitize_text_field($_POST['st-blog-single-post-image-align']);
-        if ($new && $new != $old) {
-            update_post_meta($post_id, 'st-blog-single-post-image-align', $new);
-        } elseif ('' == $new && $old) {
-            delete_post_meta($post_id,'st-blog-single-post-image-align', $old);
+        $old = get_post_meta( $post_id, 'st-blog-single-post-image-align', true );
+       $new = sanitize_text_field( wp_unslash ( $_POST['st-blog-single-post-image-align'] ) );
+        if ( $new && $new != $old ) {
+            update_post_meta( $post_id, 'st-blog-single-post-image-align', $new );
+        } elseif ( '' == $new && $old ) {
+            delete_post_meta( $post_id, 'st-blog-single-post-image-align', $old );
         }
     }
 }

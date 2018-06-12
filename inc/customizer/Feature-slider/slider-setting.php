@@ -53,6 +53,7 @@ $st_blog_repeated_settings_controls['st-blog-select-post-from-page']  =  array(
             'default'   => $st_blog_customizer_defaults['st-blog-select-post-from-page'] 
         ),
         'control' => array(
+            /* translators: %s: search page */
             'label'             => esc_html__('Select a Page from Feature Slider %s','st-blog'),
             'section'           => 'st-blog-feature-section',
             'type'              => 'dropdown-pages',

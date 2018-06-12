@@ -134,6 +134,7 @@ $st_blog_repeated_settings_controls['st-blog-trending-select-from-page'] = array
 			'default'			=> $st_blog_customizer_defaults['st-blog-trending-select-from-page']
 		),
 		'control' => array(
+			 /* translators: %s: search page */ 
 			'label'				=> esc_html__('Select page for trending %s','st-blog'),
 			'section'			=> 'st-blog-trending-section',
 			'type'				=> 'dropdown-pages',

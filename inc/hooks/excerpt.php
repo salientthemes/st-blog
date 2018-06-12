@@ -4,7 +4,7 @@ if( ! function_exists( 'st_blog_excerpt_length' ) ) :
     /**
      * Excerpt length
      *
-     * @since  newslite 1.0.0
+     * @since  st-blog 1.0.0
      *
      * @param null
      * @return int
@@ -43,7 +43,7 @@ if ( ! function_exists( 'st_blog_implement_read_more' ) ) :
             return $more;
         }
 
-        // $read_more_text = esc_html__('continue  reading','newslite');
+        // $read_more_text = esc_html__('continue  reading','st-blog');
         $read_more_text = $st_blog_customizer_all_values['st-blog-latest-post-button-text'];
         if ( 1 == $st_blog_customizer_all_values['latest-post-show-button'] )
         {

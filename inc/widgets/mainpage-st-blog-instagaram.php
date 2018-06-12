@@ -25,7 +25,7 @@ Class st_blog_instagram_widget extends WP_Widget {
 		$target 	= empty( $instance['target'] ) ? '_self' : $instance['target'];
 		$link 		= empty( $instance['link'] ) ? '' : $instance['link'];
 
-		echo $args['before_widget'];
+		echo wp_kses_post($args['before_widget']);
 		if ( ! empty( $title ) ) { echo $args['before_title'] . wp_kses_post( $title ) . $args['after_title']; };
 		do_action( 'wpiw_before_widget', $instance );
 
@@ -75,7 +75,7 @@ Class st_blog_instagram_widget extends WP_Widget {
 			?><p class="<?php echo esc_attr( $linkclass ); ?> follow-me"><a href="<?php echo trailingslashit( esc_url( $url ) ); ?>" rel="me" target="<?php echo esc_attr( $target ); ?>" class="<?php echo esc_attr( $linkaclass ); ?> button btn"><i class="fab fa-instagram"></i> <?php echo wp_kses_post( $link ); ?></a></p><?php
 		}
 		do_action( 'wpiw_after_widget', $instance );
-		echo $args['after_widget'];
+		echo wp_kses_post($args['after_widget']);
 	}
 	function form( $instance ) {
 		$instance = wp_parse_args( (array) $instance, array(
@@ -186,12 +186,12 @@ Class st_blog_instagram_widget extends WP_Widget {
 			} // End foreach().
 			// do not set an empty transient - should help catch private or empty accounts.
 			if ( ! empty( $instagram ) ) {
-				$instagram = base64_encode( serialize( $instagram ) );
+				$instagram =  base64_encode( serialize( $instagram ) );
 				set_transient( 'insta-a10-' . $transient_prefix . '-' . sanitize_title_with_dashes( $username ), $instagram, apply_filters( 'null_instagram_cache_time', HOUR_IN_SECONDS * 2 ) );
 			}
 		}
 		if ( ! empty( $instagram ) ) {
-			return unserialize( base64_decode( $instagram ) );
+			return unserialize(  base64_encode( $instagram ) );
 		} else {
 			return new WP_Error( 'no_images', esc_html__( 'Instagram did not return any images.', 'st-blog' ) );
 		}

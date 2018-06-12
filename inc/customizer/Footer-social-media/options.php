@@ -8,7 +8,7 @@ global $st_blog_customizer_defaults;
 
 $st_blog_customizer_defaults['st-blog-enable-social-media']     = 1;
 $st_blog_customizer_defaults['st-blog-social-link']				= '#';
-$st_blog_customizer_defaults['st-blog-social-button']			= 'ADD';
+$st_blog_customizer_defaults['st-blog-social-button']			= esc_html__('ADD','st-blog');
 
 
 $st_blog_panels['st-blog-social-panel'] = array(
@@ -29,7 +29,7 @@ $st_blog_settings_controls['st-blog-enable-social-media']   =  array(
 		'default'   => 	$st_blog_customizer_defaults['st-blog-enable-social-media']
 	),
 	'control' => array(
-		'label'				=> esc_html__('Enable/Disable Social Media'),
+		'label'				=> esc_html__('Enable/Disable Social Media','st-blog'),
 		'section'			=> 'st-blog-social-section',
 		'type'				=> 'checkbox',
 		'priority'			=> 10,

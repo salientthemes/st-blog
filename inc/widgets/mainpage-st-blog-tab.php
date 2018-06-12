@@ -148,7 +148,7 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
                                     <a href="<?php the_permalink();?>"><img class="img-responsive" src="<?php echo esc_url( $image[0] ); ?>" alt="" /></a>
                                 <?php endif; ?>
                             <?php else : ?>
-                                <img class="img-responsive" src="<?php echo get_template_directory_uri() . '../assets/images/fs.jpg'; ?>" alt="" />
+                                <img class="img-responsive" src=" " alt="" />
                             <?php endif; ?>
                         </div>
                         <div class="st-blog-popular-posts-content">
@@ -205,7 +205,7 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
                                 <?php endif; ?>
                             </div><!-- .comments-thumb -->
                             <div class="comments-content st-blog-popular-posts-content">
-                                <?php echo get_comment_author_link( $comment ); ?>&nbsp;<?php echo esc_html_x( 'on', 'Tabbed Widget', 'newslite' ); ?>&nbsp;<a href="<?php echo esc_url( get_comment_link( $comment ) );?>"><?php echo get_the_title( $comment->comment_post_ID ); ?></a>
+                                <?php echo get_comment_author_link( $comment ); ?>&nbsp;<?php echo esc_html_x( 'on', 'Tabbed Widget', 'st-blog' ); ?>&nbsp;<a href="<?php echo esc_url( get_comment_link( $comment ) );?>"><?php echo get_the_title( $comment->comment_post_ID ); ?></a>
                             </div><!-- .comments-content -->
                         </li>
                     <?php endforeach; ?>
@@ -316,20 +316,20 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
 
 
             <p>
-                <label for="<?php echo absint($this->get_field_id( 'recent_number' )); ?>"><?php esc_html_e('Number of tab2 Posts:', 'salient-news' ); ?></label>
+                <label for="<?php echo absint($this->get_field_id( 'recent_number' )); ?>"><?php esc_html_e('Number of tab2 Posts:', 'st-blog' ); ?></label>
                 <input class="widefat1" id="<?php echo absint($this->get_field_id( 'recent_number' )); ?>" name="<?php echo esc_html($this->get_field_name( 'recent_number' )); ?>" type="number" value="<?php echo absint( $recent_number ); ?>" min="1" style="max-width:50px;" />
             </p>
             <p>
-                <label for="<?php echo absint($this->get_field_id('comments_heading')); ?>"><?php _e( 'Comment Heading Title:', 'newslite' ); ?></label>
+                <label for="<?php echo absint($this->get_field_id('comments_heading')); ?>"><?php esc_attr_e( 'Comment Heading Title:', 'st-blog' ); ?></label>
                 <input class="widefat" id="<?php echo absint($this->get_field_id('comments_heading')); ?>" name="<?php echo esc_html($this->get_field_name( 'comments_heading' )); ?>" type="text" value="<?php echo esc_attr( $comments_heading ); ?>" />
             </p>
             <p>
-                <label for="<?php echo absint($this->get_field_id( 'comments_number' )); ?>"><?php _e('Number of Coments Posts:', 'newslite' ); ?></label>
+                <label for="<?php echo absint($this->get_field_id( 'comments_number' )); ?>"><?php esc_attr_e('Number of Coments Posts:', 'st-blog' ); ?></label>
                 <input class="widefat1" id="<?php echo absint($this->get_field_id( 'comments_number' )); ?>" name="<?php echo esc_html($this->get_field_name( 'comments_number' )); ?>" type="number" value="<?php echo absint( $comments_number ); ?>" min="1" style="max-width:50px;" />
             </p>
             
             <p>
-                <label for="<?php echo absint($this->get_field_id('custom_class')); ?>"><?php esc_html_e( 'Custom Class:', 'salient-news' ); ?></label>
+                <label for="<?php echo absint($this->get_field_id('custom_class')); ?>"><?php esc_html_e( 'Custom Class:', 'st-blog' ); ?></label>
                 <input class="widefat" id="<?php echo absint($this->get_field_id('custom_class')); ?>" name="<?php echo esc_attr($this->get_field_name( 'custom_class' )); ?>" type="text" value="<?php echo esc_attr( $custom_class ); ?>" />
             </p>
             <?php
@@ -342,7 +342,7 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
         /**
          * Load widget
          *
-         * @since salient-news 1.0.0
+         * @since st-blog 1.0.0
          *
          */
         function st_blog_tab_post(){

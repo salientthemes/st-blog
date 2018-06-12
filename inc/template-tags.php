@@ -28,7 +28,7 @@ if ( ! function_exists( 'st_blog_posted_on' ) ) :
 		if ( 1 == $st_blog_customizer_all_values['latest-post-show-date'] ){
 			$posted_on = sprintf(
 				/* translators: %s: post date. */
-				esc_html_x( '%s', 'post date', 'st-blog' ),
+				date_i18n( '%s', 'post date', 'st-blog' ),
 				'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 			);
 
