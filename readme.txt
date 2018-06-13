@@ -1,6 +1,8 @@
-=== st-blog ===
+=== ST Blog ===
 
-Contributors: automattic
+by salient Themes
+
+Contributors: salienttheme
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 Requires at least: 4.5
@@ -9,7 +11,7 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called st-blog.
+A starter theme called ST Blog.
 
 == Description ==
 
@@ -25,7 +27,7 @@ Description
 
 = Does this theme support any plugins? =
 
-st-blog includes support for Infinite Scroll in Jetpack.
+ST Blog includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
@@ -45,21 +47,103 @@ Author: 2012-2016 Nicolas Gallagher and Jonathan Neal
 Source: http://necolas.github.io/normalize.css
 License: [MIT](https://opensource.org/licenses/MIT)
 
+bootstrap:
+Author: The Bootstrap Authors
+Source: http://getbootstrap.com
+License: Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+
 slick:
 Author: Ken Wheeler
 Source: http://github.com/kenwheeler/slick
 License: Licensed MIT
 
-
 Font Icons:
-* Font Awesome 5.0.13 by @davegandy - http://fontawesome.io - @fontawesome *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License) 
-
+* Font Awesome 5.0.13 by @fontawesome - http://fontawesome.io - @fontawesome *  License - https://fontawesome.com/license (Fonts: SIL OFL 1.1, Code: MIT License) 
 
 Google font:
 Roboto
 https://fonts.google.com/specimen/Roboto
 License: Apache License, Version 2.0
 
+Archivo Narrow
+https://fonts.google.com/specimen/Archivo+Narrow
+License: Open Font License
+
+Bitter
+https://fonts.google.com/specimen/Bitter
+License: Open Font License
+
+Cookie
+https://fonts.google.com/specimen/Cookie
+License: Open Font License
+
+Exo
+https://fonts.google.com/specimen/Exo
+License: Open Font License
+
+Kreon
+https://fonts.google.com/specimen/Kreon
+License: Open Font License
+
+Lato
+https://fonts.google.com/specimen/Lato
+License: Open Font License
+
+Merriweather
+https://fonts.google.com/specimen/Merriweather
+License: Open Font License
+
+Merriweather
+https://fonts.google.com/specimen/Merriweather
+License: Open Font License
+
+News Cycle
+https://fonts.google.com/specimen/News+Cycle
+License: Open Font License
+
+Oxygen
+https://fonts.google.com/specimen/Playball
+License: Open Font License
+
+Playball
+https://fonts.google.com/specimen/Playball
+License: Open Font License
+
+Tangerine
+https://fonts.google.com/specimen/Tangerine
+License: Open Font License
+
+Ropa Sans
+https://fonts.google.com/specimen/Ropa+Sans
+License: Open Font License
+
+Yanone Kaffeesatz
+https://fonts.google.com/specimen/Yanone+Kaffeesatz
+License: Open Font License
+
+Raleway
+https://fonts.google.com/specimen/Raleway
+License: Open Font License
+
+Ubuntu
+https://fonts.google.com/specimen/Ubuntu
+License: Ubuntu Font License
+
+Breadcrumb Trail:
+Author: Justin Tadlock, 
+Source: http://themehybrid.com/plugins/breadcrumb-trail/
+License: [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html)
+
+Note:
+	If your Image is not align properly, then you can try regenerate thumbnails. So that it can fit on required image size.
 
 == Image used in screenshot ==
-1) https://pixabay.com/en/greece-santorini-landscape-sea-2882696/
+* All images are licensed under [CC0](http://creativecommons.org/publicdomain/zero/1.0/legalcode.txt)
+
+== main slider ==
+1) https://www.pexels.com/photo/women-in-white-button-up-long-sleeved-top-and-black-pants-sitting-on-white-and-brown-bed-920384/
+
+== trending post ==
+1) https://www.pexels.com/photo/woman-sitting-on-bean-bag-white-using-macbook-in-front-of-round-table-with-green-leafed-plant-169915/
+2) https://www.pexels.com/photo/woman-in-white-dress-shirt-and-black-pants-920379/
+3) https://www.pexels.com/photo/woman-running-on-sand-near-white-concrete-building-736505/
