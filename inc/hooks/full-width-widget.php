@@ -17,7 +17,7 @@ if ( !function_exists('st_blog_widget_blcok') ) :
 
 		if ( is_active_sidebar('full-width-widget')  ) {  ?>
 			<!-- instagram -->
-			<section class="st-blog-full-width-widget clearfix" id="st-full-width">
+			<section class="st-blog-full-width-widget clearfix mb-5" id="st-full-width">
 				<div class="container">
 					<?php dynamic_sidebar('full-width-widget'); ?>
 				</div>			

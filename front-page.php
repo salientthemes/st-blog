@@ -7,6 +7,12 @@
 global $st_blog_customizer_all_values;
 
 get_header();
+?>
+
+    </div><!-- .st-blog-site-content -->
+</div><!-- #content.container -->
+
+<?php
 if ( 'posts' == get_option( 'show_on_front' ) ) {
     include( get_home_template() );    
 } else {
@@ -19,7 +25,13 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
          * @hooked busine_Craft_aboutus _page -16
          * @hooked trade_hub_our_service -21
          */
-        do_action( 'st_blog_homepage' );         
+        do_action( 'st_blog_homepage' );    
+        ?>
+
+<div id="home-content" class="container site-content home-static-page">
+    <div class="st-blog-site-content">
+
+        <?php     
 
         $st_blog_static_page = absint($st_blog_customizer_all_values['st-blog-enable-static-page']);
         // $st_blog_static_page = 1;

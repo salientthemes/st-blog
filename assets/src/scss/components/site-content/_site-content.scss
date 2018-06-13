@@ -1,12 +1,12 @@
 $sidebar_padding: 3%;
 
-body.home.page,
-body:not(.home):not(.blog) {
-	.site-content {
-	    padding-top: 30px;
-	    padding-bottom: 20px;
-	}
+// body.home.page,
+body:not(.home):not(.blog) .site-content,
+.home-static-page.site-content {
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
+
 
 .#{$prefix}-site-content {
 	@include clearfix();

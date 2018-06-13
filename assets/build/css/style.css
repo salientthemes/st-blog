@@ -786,6 +786,9 @@ body.big-logo .st-blog-header-row .st-blog-logo-manage {
   body.big-logo.big-logo-enable nav#site-navigation {
     text-align: center; }
 
+  body.big-logo nav#site-navigation .menu-menu-1-container {
+    margin-right: 55px; }
+
   .big-logo.big-logo-disable .st-blog-header-row .st-blog-logo-manage {
     display: none; }
 
@@ -1196,8 +1199,8 @@ nav#site-navigation {
 .site-footer .widget_calendar caption {
   color: #ffffff; }
 
-body.home.page .site-content,
-body:not(.home):not(.blog) .site-content {
+body:not(.home):not(.blog) .site-content,
+.home-static-page.site-content {
   padding-top: 30px;
   padding-bottom: 20px; }
 

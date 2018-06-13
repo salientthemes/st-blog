@@ -11,7 +11,7 @@ Class st_blog_instagram_widget extends WP_Widget {
 			'null-instagram-feed',
 			__( 'ST Blog Instagram', 'st-blog' ),
 			array(
-				'classname' => 'null-instagram-feed',
+				'classname' => 'null-instagram-feed mb-5',
 				'description' => esc_html__( 'Displays your latest Instagram photos', 'st-blog' ),
 				'customize_selective_refresh' => true,
 			)

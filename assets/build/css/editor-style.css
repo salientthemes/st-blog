@@ -1,11 +1,26 @@
 #customize-theme-controls li#accordion-panel-st-blog-homepage-panel h3 {
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+  background-color: #1492ce;
+  border-color: #0073aa;
   color: #ffffff; }
   #customize-theme-controls li#accordion-panel-st-blog-homepage-panel h3:after {
     color: #ffffff; }
   #customize-theme-controls li#accordion-panel-st-blog-homepage-panel h3:hover {
-    background-color: #4cae4c; }
+    background-color: #0073aa;
+    border-left-color: #0073aa; }
+  #customize-theme-controls li#accordion-panel-st-blog-homepage-panel h3 .button {
+    background-color: rgba(44, 121, 44, 0.3); }
+    #customize-theme-controls li#accordion-panel-st-blog-homepage-panel h3 .button:hover {
+      background-color: rgba(44, 121, 44, 0.6); }
+
+#customize-controls #customize-theme-controls .control-section-st-blog h3.accordion-section-title {
+  background-color: #FFC107;
+  border-left-color: #FFC107; }
+  #customize-controls #customize-theme-controls .control-section-st-blog h3.accordion-section-title a.cusbtn {
+    background-color: #1492ce;
+    border-color: #0073aa;
+    color: #ffffff; }
+    #customize-controls #customize-theme-controls .control-section-st-blog h3.accordion-section-title a.cusbtn:hover {
+      background-color: #0073aa; }
 
 .customize-control-checkbox input[type=checkbox] {
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -48,7 +63,7 @@
   transform: translate3d(100%, -50%, 0) scale(1); }
 
 .customize-control-checkbox input[type=checkbox]:checked:after {
-  background: #5cb85c;
+  background: #1492ce;
   transform: translate3d(100%, -50%, 0); }
 
 .customize-control-radio-image input {
