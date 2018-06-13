@@ -21,7 +21,7 @@ $st_blog_customizer_defaults['st-blog-color-reset']             = '';
 /*Default color*/
 $st_blog_sections['colors'] = array(
         'priority'       => 60,
-        'title'          => esc_html__( 'Colors Options', 'st-blog' ),
+        'title'          => esc_html__( 'Colors', 'st-blog' ),
         'panel'         => 'st-blog-homepage-panel'   
     );
 
