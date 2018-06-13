@@ -17,21 +17,9 @@
 		'priority'	=> 5
 	);
 
-	$st_blog_settings_controls['footer-enable-theme-name'] = array(
-        'setting' =>  array(
-            'default'              =>$st_blog_customizer_defaults['footer-enable-theme-name'],
-        ),
-        'control' => array(
-            'label'                 =>  esc_html__( 'Enable/Disable Footer Theme Name', 'st-blog' ),
-            'section'               => 'header-footer-section',
-            'type'                  => 'checkbox',
-            'priority'              => 10,
-        )
-    );
-
 	$st_blog_settings_controls['header-search-button-enable'] = array(
 	    'setting' =>  array(
-	        'default'              =>$st_blog_customizer_defaults['header-search-button-enable'],
+	        'default'              => $st_blog_customizer_defaults['header-search-button-enable'],
 	    ),
 	    'control' => array(
 	        'label'                 =>  esc_html__( 'Enable/Disable Search Button', 'st-blog' ),
@@ -41,12 +29,22 @@
 	    )
     );
 
-
+	$st_blog_settings_controls['footer-enable-theme-name'] = array(
+        'setting' =>  array(
+            'default'              => $st_blog_customizer_defaults['footer-enable-theme-name'],
+        ),
+        'control' => array(
+            'label'                 =>  esc_html__( 'Enable/Disable Footer Theme Name', 'st-blog' ),
+            'section'               => 'header-footer-section',
+            'type'                  => 'checkbox',
+            'priority'              => 20,
+        )
+    );
 
 	$st_blog_settings_controls['st-blog-copyright-text'] =
     array(
         'setting' =>  array(
-            'default'              =>$st_blog_customizer_defaults['st-blog-copyright-text'],
+            'default'              => $st_blog_customizer_defaults['st-blog-copyright-text'],
         ),
         'control' => array(
             'label'                 =>  esc_html__( 'Copyright Text', 'st-blog' ),

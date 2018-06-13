@@ -27,9 +27,15 @@ if ( !function_exists('st_blog_social_media') ) :
 		<div class="container site-content">
 			<div class="menu-social-nav-container">
 				<ul id="social-nav" class="menu">
+          <?php if( !empty($st_blog_social_media_link1)  ) {?>
 					<li><a href="<?php echo esc_url($st_blog_social_media_link1); ?>"></a></li>
-                    <li><a href="<?php echo esc_url($st_blog_social_media_link2); ?>"></a></li>
-                    <li><a href="<?php echo esc_url($st_blog_social_media_link3); ?>"></a></li>
+          <?php } ?>
+          <?php if( !empty($st_blog_social_media_link2)  ) {?>
+          <li><a href="<?php echo esc_url($st_blog_social_media_link2); ?>"></a></li>
+          <?php } ?>
+          <?php if( !empty($st_blog_social_media_link3)  ) {?>
+          <li><a href="<?php echo esc_url($st_blog_social_media_link3); ?>"></a></li>
+          <?php } ?>
 				</ul>
 			</div>
 		</div>

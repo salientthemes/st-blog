@@ -75,7 +75,7 @@ if ( !function_exists('st_blog_trending_post_array') ) :
                 $thumb_image = '';
                 if ( has_post_thumbnail())
                 {
-                    $image        = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_id() ), 'medium');
+                    $image        = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_id() ), 'trending-post-image');
                     $thumb_image  = $image['0'];
                 }
                 $st_blog_trending_post_content_array[$i]['st-blog-trending-post-title'] = get_the_title();

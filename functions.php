@@ -71,6 +71,12 @@ if ( ! function_exists( 'st_blog_setup' ) ) :
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+		//recomended image size
+		add_image_size( 'trending-post-image', 330, 200, true );  //trending image size
+		add_image_size( 'feature-slider-image', 1340, 460, true );  //feature-slider image size
+		// add_image_size( 'feature-slider-image', 1090, 480, true );  //latest-post image size
+
+
 		/**
 		 * Add support for core custom logo.
 		 *
