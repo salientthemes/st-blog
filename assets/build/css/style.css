@@ -1154,8 +1154,18 @@ nav#site-navigation {
     color: #ffffff; }
     .site-footer .st-blog-footer-widget a:hover {
       color: #b3b3b3; }
-  .site-footer .st-blog-footer-widget .btn:hover, .site-footer .st-blog-footer-widget .readmore:hover {
+  .site-footer .st-blog-footer-widget .btn, .site-footer .st-blog-footer-widget .readmore,
+  .site-footer .st-blog-footer-widget .nav-tabs .nav-item .nav-link.active,
+  .site-footer .st-blog-footer-widget .st-blog-popular-posts-item .st-blog-popular-posts-content .st-blog-popular-posts-title a {
     color: #ffffff; }
+    .site-footer .st-blog-footer-widget .btn:hover, .site-footer .st-blog-footer-widget .readmore:hover,
+    .site-footer .st-blog-footer-widget .nav-tabs .nav-item .nav-link.active:hover,
+    .site-footer .st-blog-footer-widget .st-blog-popular-posts-item .st-blog-popular-posts-content .st-blog-popular-posts-title a:hover {
+      color: #ffffff; }
+  .site-footer .st-blog-footer-widget .st-blog-popular-posts-item .st-blog-popular-posts-content .st-blog-popular-posts-title a:hover {
+    color: #b3b3b3; }
+  .site-footer .st-blog-footer-widget .widget_tag_cloud .tagcloud a {
+    background: none; }
   @media (max-width: 991px) {
     .site-footer .st-blog-footer-widget .st-blog-footer-widget-col {
       -ms-flex: 0 0 50%;
@@ -1360,8 +1370,7 @@ aside .widget {
 .st-blog-instafeed-slider .st-blog-instafeed-image {
   display: inline-block;
   height: auto;
-  padding-bottom: 100%;
-  }
+  padding-bottom: 100%; }
   .st-blog-instafeed-slider .st-blog-instafeed-image a {
     display: block; }
 
