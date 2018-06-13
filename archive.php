@@ -23,8 +23,12 @@ get_header();
 		</header><!-- .page-header -->
 
 		<?php
+		echo '<div class="st-blog-masonry">';
+
 		/* Start the Loop */
 		while ( have_posts() ) :
+			echo '<div class="st-blog-item">';
+
 			the_post();
 
 			/*
@@ -33,8 +37,12 @@ get_header();
 			 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 			 */
 			get_template_part( 'template-parts/content', get_post_type() );
+			
+			echo '</div><!-- .st-blog-item -->';
 
 		endwhile;
+
+		echo '</div><!-- .masonry -->';
 
 		the_posts_navigation();
 

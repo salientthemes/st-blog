@@ -25,8 +25,12 @@ get_header();
 		</header><!-- .page-header -->
 
 		<?php
+		echo '<div class="st-blog-masonry">';
+
 		/* Start the Loop */
 		while ( have_posts() ) :
+			echo '<div class="st-blog-item">';
+			
 			the_post();
 
 			/**
@@ -35,8 +39,12 @@ get_header();
 			 * called content-search.php and that will be used instead.
 			 */
 			get_template_part( 'template-parts/content', 'search' );
+			
+			echo '</div><!-- .st-blog-item -->';
 
 		endwhile;
+
+		echo '</div><!-- .masonry -->';
 
 		the_posts_navigation();
 
