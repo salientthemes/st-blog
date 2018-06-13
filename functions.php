@@ -326,8 +326,4 @@ add_filter( 'get_the_archive_title', function ( $title ) {
 
 });
 
-$arg = array(
-    'ID' => $post_id,
-    'post_author' => $user_id,
-);
-wp_update_post( $arg );
+
