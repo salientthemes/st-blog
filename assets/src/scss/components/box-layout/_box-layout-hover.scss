@@ -10,12 +10,12 @@
 	}
 
 	.site-footer {
-		.#{$prefix}-featured-item:hover, 
-		.#{$prefix}-item article:hover, 
-		.#{$prefix}-author-item:hover, 
-		.#{$prefix}-popular-posts-item:hover, 
+		.#{$prefix}-featured-item, 
+		.#{$prefix}-item article, 
+		.#{$prefix}-author-item, 
+		.#{$prefix}-popular-posts-item, 
 		.widget_media_gallery .gallery {
-			background-color: transparent;
+			background-color: transparent !important;
 		}
 	}
 }

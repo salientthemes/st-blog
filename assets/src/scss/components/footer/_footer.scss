@@ -29,6 +29,12 @@
 	    	}
 	    }
 
+	    .btn, .readmore {
+    		&:hover {
+    			color: $color_white;
+    		}
+	    }
+
 	    // columns
 	    @media (max-width: 991px) {
 		    .#{$prefix}-footer-widget-col {

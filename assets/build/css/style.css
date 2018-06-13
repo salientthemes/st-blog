@@ -1154,6 +1154,8 @@ nav#site-navigation {
     color: #ffffff; }
     .site-footer .st-blog-footer-widget a:hover {
       color: #b3b3b3; }
+  .site-footer .st-blog-footer-widget .btn:hover, .site-footer .st-blog-footer-widget .readmore:hover {
+    color: #ffffff; }
   @media (max-width: 991px) {
     .site-footer .st-blog-footer-widget .st-blog-footer-widget-col {
       -ms-flex: 0 0 50%;
@@ -1357,7 +1359,9 @@ aside .widget {
 
 .st-blog-instafeed-slider .st-blog-instafeed-image {
   display: inline-block;
-  height: 125px; }
+  height: auto;
+  padding-bottom: 100%;
+  }
   .st-blog-instafeed-slider .st-blog-instafeed-image a {
     display: block; }
 
@@ -1662,12 +1666,12 @@ body.dark-theme .site-footer {
 .box-layout .st-blog-popular-posts-item {
   min-height: 95px; }
 
-.box-layout .site-footer .st-blog-featured-item:hover,
-.box-layout .site-footer .st-blog-item article:hover,
-.box-layout .site-footer .st-blog-author-item:hover,
-.box-layout .site-footer .st-blog-popular-posts-item:hover,
+.box-layout .site-footer .st-blog-featured-item,
+.box-layout .site-footer .st-blog-item article,
+.box-layout .site-footer .st-blog-author-item,
+.box-layout .site-footer .st-blog-popular-posts-item,
 .box-layout .site-footer .widget_media_gallery .gallery {
-  background-color: transparent; }
+  background-color: transparent !important; }
 
 body.admin-bar.fixed-header .site-header {
   top: 32px; }
