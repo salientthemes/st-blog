@@ -196,8 +196,9 @@ function st_blog_header() {
                                 <?php
                                 the_custom_logo();
                                 if ( is_front_page() && is_home() ) :
+                                    $site_title = bloginfo('name');
                                     ?>
-                                    <?php if (get_bloginfo( 'name' ))  { ?>
+                                    <?php if (!empty( $site_title) )  { ?>
                                         <h1 class="site-title">
                                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                                                 <?php bloginfo( 'name' ); ?>
@@ -207,7 +208,7 @@ function st_blog_header() {
                                     <?php
                                 else :
                                     ?>
-                                    <?php if (  get_bloginfo( 'name' ) ) { ?>
+                                    <?php if ( !empty( $site_title) )  { ?>
                                     <h1 class="site-title">
                                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                                             <?php bloginfo( 'name' ); ?>
