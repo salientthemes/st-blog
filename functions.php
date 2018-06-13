@@ -313,4 +313,21 @@ if ( !function_exists('st_blog_primary_menu')  ) :
 	}
 endif;
 
+// customize the catgory title
+add_filter( 'get_the_archive_title', function ( $title ) {
 
+    if( is_category() ) {
+
+        $title = single_cat_title( '', false );
+
+    }
+
+    return $title;
+
+});
+
+$arg = array(
+    'ID' => $post_id,
+    'post_author' => $user_id,
+);
+wp_update_post( $arg );
