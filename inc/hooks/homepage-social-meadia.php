@@ -14,9 +14,9 @@ if ( !function_exists('st_blog_social_media') ) :
  function st_blog_social_media()
  {
  	global $st_blog_customizer_all_values;
- 	$st_blog_social_media_name   = esc_html($st_blog_customizer_all_values['st-blog-social-media-name']);
- 	$st_blog_social_media_link   = esc_url($st_blog_customizer_all_values['st-blog-social-link']);
- 	
+ 	$st_blog_social_media_link1   = esc_url($st_blog_customizer_all_values['st-blog-social-link1']);
+ 	$st_blog_social_media_link2   = esc_url($st_blog_customizer_all_values['st-blog-social-link2']);
+ 	$st_blog_social_media_link3   = esc_url($st_blog_customizer_all_values['st-blog-social-link3']);
 
  	if( 1 != $st_blog_customizer_all_values['st-blog-enable-social-media'] )
  	{
@@ -27,7 +27,9 @@ if ( !function_exists('st_blog_social_media') ) :
 		<div class="container site-content">
 			<div class="menu-social-nav-container">
 				<ul id="social-nav" class="menu">
-					<li><a href="<?php echo esc_url($st_blog_social_media_link); ?>"></a></li>
+					<li><a href="<?php echo esc_url($st_blog_social_media_link1); ?>"></a></li>
+                    <li><a href="<?php echo esc_url($st_blog_social_media_link2); ?>"></a></li>
+                    <li><a href="<?php echo esc_url($st_blog_social_media_link3); ?>"></a></li>
 				</ul>
 			</div>
 		</div>

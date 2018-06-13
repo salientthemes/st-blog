@@ -6,9 +6,12 @@ global $st_blog_settings_controls;
 global $st_blog_repeated_settings_controls;
 global $st_blog_customizer_defaults;
 
-$st_blog_customizer_defaults['st-blog-enable-social-media']     = 1;
-$st_blog_customizer_defaults['st-blog-social-link']				= '#';
-$st_blog_customizer_defaults['st-blog-social-button']			= esc_html__('ADD','st-blog');
+$st_blog_customizer_defaults['st-blog-enable-social-media']         = 1;
+$st_blog_customizer_defaults['st-blog-social-link1']				= '#';
+$st_blog_customizer_defaults['st-blog-social-link2']				= '#';
+$st_blog_customizer_defaults['st-blog-social-link3']				= '#';
+$st_blog_customizer_defaults['st-blog-social-link4']				= '#';
+
 
 
 $st_blog_panels['st-blog-social-panel'] = array(
@@ -39,39 +42,59 @@ $st_blog_settings_controls['st-blog-enable-social-media']   =  array(
 
 
 // social name link-1
-$st_blog_settings_controls['st-blog-social-link'] = array(
+$st_blog_settings_controls['st-blog-social-link1'] = array(
 	'setting' => array(
-		'default'	=> $st_blog_customizer_defaults['st-blog-social-link']
+		'default'	=> $st_blog_customizer_defaults['st-blog-social-link1']
 	),
 	'control' => array(
-		'label'				=> esc_html__('Social Media Link First','st-blog'),
+		'label'				=> esc_html__('Social Media Link 1','st-blog'),
+		'section'			=> 'st-blog-social-section',
+		'type'				=> 'url',
+		'priority'			=> 20,
+		'active_callback'	=> ''	
+	),
+);
+
+// social name link-2
+$st_blog_settings_controls['st-blog-social-link2'] = array(
+	'setting' => array(
+		'default'	=> $st_blog_customizer_defaults['st-blog-social-link2']
+	),
+	'control' => array(
+		'label'				=> esc_html__('Social Media Link 2','st-blog'),
 		'section'			=> 'st-blog-social-section',
 		'type'				=> 'url',
 		'priority'			=> 30,
 		'active_callback'	=> ''	
 	),
-	'control' => array(
-		'label'				=> esc_html__('Social Media Name First','st-blog'),
-		'section'			=> 'st-blog-social-section',
-		'type'				=> 'text', 
-		'priority'			=> 20,
-		'active_callback'	=> ''	
-	)		
-
 );
 
-// social name link-1
-$st_blog_settings_controls['st-blog-social-button'] = array(
+// social name link-3
+$st_blog_settings_controls['st-blog-social-link3'] = array(
 	'setting' => array(
-		'default'	=> $st_blog_customizer_defaults['st-blog-social-button']
+		'default'	=> $st_blog_customizer_defaults['st-blog-social-link3']
 	),
 	'control' => array(
-		'label'				=> esc_html__('Social button','st-blog'),
+		'label'				=> esc_html__('Social Media Link 3','st-blog'),
 		'section'			=> 'st-blog-social-section',
-		'type'				=> 'button',
-		'priority'			=> 30,
+		'type'				=> 'url',
+		'priority'			=> 40,
 		'active_callback'	=> ''	
-	)	
-
+	),
 );
+
+// social name link-4
+$st_blog_settings_controls['st-blog-social-link4'] = array(
+	'setting' => array(
+		'default'	=> $st_blog_customizer_defaults['st-blog-social-link4']
+	),
+	'control' => array(
+		'label'				=> esc_html__('Social Media Link 4','st-blog'),
+		'section'			=> 'st-blog-social-section',
+		'type'				=> 'url',
+		'priority'			=> 50,
+		'active_callback'	=> ''	
+	),
+);
+
 

@@ -65,9 +65,9 @@ if ( !class_exists('st_blog_author_widget') ) :
 
                         <div id="st-blog-author-social-icons" class="">
                             <ul>
-                                <li><a href="https://facebook.com/"></a></li>
-                                <li><a href="https://twitter.com/"></a></li>
-                                <li><a href="https://instagram.com/"></a></li>
+                                <li><a href="<?php echo esc_url($social_link1); ?>"></a></li>
+                                <li><a href="<?php echo esc_url($social_link2); ?>"></a></li>
+                                <li><a href="<?php echo esc_url($social_link3); ?>"></a></li>
                             </ul>
                         </div>
                 </div><!-- /.st-blog-author-item -->                    
