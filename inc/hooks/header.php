@@ -197,25 +197,31 @@ function st_blog_header() {
                                 the_custom_logo();
                                 if ( is_front_page() && is_home() ) :
                                     ?>
-                                    <h1 class="site-title">
-                                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                                            <?php bloginfo( 'name' ); ?>
-                                        </a>
-                                    </h1>
+                                    <?php if ( !empty( bloginfo( 'name' ) )) { ?>
+                                        <h1 class="site-title">
+                                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                                                <?php bloginfo( 'name' ); ?>
+                                            </a>
+                                        </h1>
+                                    <?php } ?>
                                     <?php
                                 else :
                                     ?>
+                                    <?php if ( !empty( bloginfo( 'name' ) )) { ?>
                                     <h1 class="site-title">
                                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                                             <?php bloginfo( 'name' ); ?>
                                         </a>
                                     </h1>
+                                    <?php } ?>
                                     <?php
                                 endif;
                                 $st_blog_description = get_bloginfo( 'description', 'display' );
                                 if ( $st_blog_description || is_customize_preview() ) :
                                     ?>
-                                    <p class="site-description"><?php echo $st_blog_description; /* WPCS: xss ok. */ ?></p>
+                                    <?php if (!empty($st_blog_description)) { ?>
+                                        <p class="site-description"><?php echo $st_blog_description; /* WPCS: xss ok. */ ?></p>
+                                    <?php } ?>
                                 <?php endif; ?>
                             </div><!-- .site-branding -->                   
                         </div><!-- site brand-->

@@ -9,12 +9,12 @@ global$st_blog_panels;
 
 
 // back-to-top-options
-require get_template_directory() .'/inc/customizer/theme-option/back-to-top.php';
+require trailingslashit( get_template_directory() ) .'/inc/customizer/theme-option/back-to-top.php';
 
 // breadcrumb
-require get_template_directory() .'/inc/customizer/theme-option/breadcrumb.php';
+require trailingslashit( get_template_directory() ) .'/inc/customizer/theme-option/breadcrumb.php';
 
 // layout
 
-require get_template_directory() .'/inc/customizer/theme-option/layout-options.php';
+require trailingslashit( get_template_directory() ) .'/inc/customizer/theme-option/layout-options.php';
 

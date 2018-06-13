@@ -158,8 +158,8 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
                                     $author_name = get_the_author_meta('nickname');
                                     $author_url  = get_author_posts_url(get_the_author_meta('Id'));
                                 ?>
-                                <span class="author-link"><a href="<?php echo esc_url($author_url);?>"><?php echo esc_html($author_name);?></a></span>
-                                <span class="date-link"><a href="#!" rel="bookmark"><?php the_time( get_option( 'date_format' ) ); ?></a></span>
+                                <span class="author-link"><a href="<?php echo esc_url($author_url) . $author_name  ?>  "><?php echo esc_html($author_name);?></a></span>
+                                <span class="date-link"><?php the_time( get_option( 'date_format' ) ); ?></span>
                             </div><!-- post meta -->
                         </div><!-- tab-heading-title -->
                     </div><!-- tab-category-tags-wrapper -->

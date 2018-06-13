@@ -129,7 +129,7 @@ if ( !function_exists('st_blog_trending_post') ) :
             $st_trending_post_button_enable     = $st_blog_customizer_all_values['st-blog-trending-button-enable'];
             $st_trending_post_image_enable      = $st_blog_customizer_all_values['st-blog-trending-image-enable']; ?>
 
-
+            <?php if (!empty($st_blog_trending_array['st-blog-trending-post-image']) && !empty($st_blog_trending_array['st-blog-trending-post-title']) && !empty($st_blog_trending_array['st-blog-trending-post-content'])  ) {?>
             <section id="st-blog-featured" class="mb-5">    
                 <div class="container site-content">
                   <?php if (!empty($st_blog_trending_post_title)) { ?>
@@ -181,6 +181,7 @@ if ( !function_exists('st_blog_trending_post') ) :
                     </div>    
                 </div>
             </section>
+            <?php } ?>
         <?php }    
     }
 endif;

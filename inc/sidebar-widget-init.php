@@ -1,6 +1,6 @@
 <?php
 /**
- * Register widget area.
+ * Register wi )dget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
@@ -75,7 +75,7 @@ function st_blog_widgets_init() {
 }
 add_action( 'widgets_init', 'st_blog_widgets_init' );
 
-require get_template_directory() . '/inc/widgets/mainpage-st-blog-tab.php';
-require get_template_directory() . '/inc/widgets/mainpage-st-blog-widget-author.php';
-require get_template_directory() . '/inc/widgets/mainpage-st-blog-instagaram.php';
+require trailingslashit( get_template_directory() ) . '/inc/widgets/mainpage-st-blog-tab.php';
+require trailingslashit( get_template_directory() ) . '/inc/widgets/mainpage-st-blog-widget-author.php';
+require trailingslashit( get_template_directory() ) . '/inc/widgets/mainpage-st-blog-instagaram.php';
 
