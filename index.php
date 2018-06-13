@@ -39,7 +39,7 @@ get_header();
 
 						/* Start the Loop */
 						while ( have_posts() ) :
-							echo '<div class="st-blog-item article-grid">';
+							echo '<div class="st-blog-item">';
 							
 							the_post();
 
@@ -50,7 +50,7 @@ get_header();
 							 */
 							get_template_part( 'template-parts/content', get_post_type() );
 
-							echo '</div><!-- .item.article-grid -->';
+							echo '</div><!-- .st-blog-item -->';
 
 						endwhile;
 

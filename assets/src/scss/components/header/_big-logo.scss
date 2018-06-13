@@ -1,5 +1,9 @@
 body.big-logo {
 	.site-branding {
+		img.custom-logo {
+		    max-height: 100px;
+		    width: auto;
+		}
 		.site-title {
 			@include font-size(52);//$logo_size
 		}
@@ -36,8 +40,8 @@ body.big-logo {
 	}
 
 	body.big-logo nav#site-navigation {
-	    .menu-menu-1-container {
-		    margin-right: 55px;
+	    .container {
+		    padding-right: 70px;
 		}
 	}
 

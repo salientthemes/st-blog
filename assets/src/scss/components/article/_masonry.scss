@@ -11,7 +11,8 @@ body.boxed {
 		@include media(lg) {
 		    column-count: 2;
 		}
-		.#{$prefix}-item { /* Masonry bricks or child elements */
+		// .#{$prefix}-item
+		article { /* Masonry bricks or child elements */
 		    display: inline-block;
 		    text-align: center;
 		    // width: 100%;

@@ -196,7 +196,7 @@ function st_blog_header() {
                                 <?php
                                 the_custom_logo();
                                 if ( is_front_page() && is_home() ) :
-                                    $site_title = bloginfo('name');
+                                    $site_title = get_bloginfo('name');
                                     ?>
                                     <?php if (!empty( $site_title) )  { ?>
                                         <h1 class="site-title">

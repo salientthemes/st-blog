@@ -759,6 +759,9 @@ header.site-header .st-blog-header-wrap-nav .st-blog-menu-toggler-manage #menu-i
   header.site-header .st-blog-header-wrap-nav .st-blog-menu-toggler-manage #menu-icon.menu-toggler span:nth-child(3) {
     margin-bottom: 0; }
 
+body.big-logo .site-branding img.custom-logo {
+  max-height: 100px;
+  width: auto; }
 body.big-logo .site-branding .site-title {
   font-size: 3.25rem; }
 body.big-logo .st-blog-header-row .st-blog-logo-manage {
@@ -786,8 +789,8 @@ body.big-logo .st-blog-header-row .st-blog-logo-manage {
   body.big-logo.big-logo-enable nav#site-navigation {
     text-align: center; }
 
-  body.big-logo nav#site-navigation .menu-menu-1-container {
-    margin-right: 55px; }
+  body.big-logo nav#site-navigation .container {
+    padding-right: 70px; }
 
   .big-logo.big-logo-disable .st-blog-header-row .st-blog-logo-manage {
     display: none; }
@@ -1292,7 +1295,7 @@ body.boxed .st-blog-masonry {
   @media (min-width: 1199px) {
     body.boxed .st-blog-masonry {
       column-count: 2; } }
-  body.boxed .st-blog-masonry .st-blog-item {
+  body.boxed .st-blog-masonry article {
     /* Masonry bricks or child elements */
     display: inline-block;
     text-align: center; }
