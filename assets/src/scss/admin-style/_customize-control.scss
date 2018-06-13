@@ -2,6 +2,7 @@ $color_white: #ffffff;
 $color_customize: #5cb85c;
 $color_customize_dark: #4cae4c;
 
+// #customize-controls .control-section-st-blog h3.accordion-section-title,
 #customize-theme-controls li#accordion-panel-st-blog-homepage-panel h3 {
     background-color: $color_customize;
     border-color: $color_customize_dark;
@@ -11,6 +12,19 @@ $color_customize_dark: #4cae4c;
     }
     &:hover {
         background-color: $color_customize_dark;
+        border-left-color: #2c792c;
+    }
+    .button {
+        background-color: rgba(44, 121, 44, 0.3);
+        &:hover {
+            background-color: rgba(44, 121, 44, 0.6);
+        }
+    }
+}
+#customize-controls .control-section-st-blog h3.accordion-section-title {
+    background-color: #FFC107;
+    &:hover {
+        background-color: #009688;
     }
 }
 

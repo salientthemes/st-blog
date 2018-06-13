@@ -5,7 +5,17 @@
   #customize-theme-controls li#accordion-panel-st-blog-homepage-panel h3:after {
     color: #ffffff; }
   #customize-theme-controls li#accordion-panel-st-blog-homepage-panel h3:hover {
-    background-color: #4cae4c; }
+    background-color: #4cae4c;
+    border-left-color: #2c792c; }
+  #customize-theme-controls li#accordion-panel-st-blog-homepage-panel h3 .button {
+    background-color: rgba(44, 121, 44, 0.3); }
+    #customize-theme-controls li#accordion-panel-st-blog-homepage-panel h3 .button:hover {
+      background-color: rgba(44, 121, 44, 0.6); }
+
+#customize-controls .control-section-st-blog h3.accordion-section-title {
+  background-color: #FFC107; }
+  #customize-controls .control-section-st-blog h3.accordion-section-title:hover {
+    background-color: #009688; }
 
 .customize-control-checkbox input[type=checkbox] {
   border: 1px solid rgba(0, 0, 0, 0.1);
