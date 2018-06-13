@@ -9,16 +9,15 @@ https://codex.wordpress.org/Right-to-Left_Language_Support
 
 */
 
-/*
+
 body {
 	direction: rtl;
 	unicode-bidi: embed;
 }
-*/
 
-body {
+/*body {
 	text-align: right;
-}
+}*/
 
 .st-blog-popular-posts-item .st-blog-popular-posts-content {
     padding-left: 0;
