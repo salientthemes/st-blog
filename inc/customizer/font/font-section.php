@@ -147,7 +147,7 @@ $st_blog_customizer_defaults['st-blog-footer-copy-right-text']        = 'Open+Sa
 $st_blog_sections['st-blog-family'] =
     array(
         'priority'       => 50,
-        'title'          => esc_html__( 'Font Family Options', 'st-blog' ),
+        'title'          => esc_html__( 'Fonts', 'st-blog' ),
         'panel'          => 'st-blog-homepage-panel',
     );
 

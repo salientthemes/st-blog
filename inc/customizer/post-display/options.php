@@ -23,7 +23,7 @@ $st_blog_panels['latest-post-bolg-panel']	= array(
 
 // section for post display
 $st_blog_sections['latest-post-bolg-section']	= array(
-	'title'		=> esc_html__('Post Blog Display Options','st-blog'),
+	'title'		=> esc_html__('Blog Options','st-blog'),
 	'panel'		=> 'st-blog-homepage-panel',
 	'priority'	=> 20
 );
@@ -118,7 +118,7 @@ $st_blog_settings_controls['st-blog-latest-post-button-text'] = array(
     'default' => $st_blog_customizer_defaults['st-blog-latest-post-button-text'],
 ),
 'control' => array(
-    'label'                 =>  esc_html__( 'Latest Post Button Text', 'st-blog' ),
+    'label'                 =>  esc_html__( 'Button Text', 'st-blog' ),
     'description'           =>  esc_html__( 'It will be change only the latest blog button text', 'st-blog' ),
     'section'               => 'latest-post-bolg-section',
     'type'                  => 'text',
