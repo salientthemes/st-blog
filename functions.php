@@ -313,13 +313,17 @@ if ( !function_exists('st_blog_primary_menu')  ) :
 	}
 endif;
 
-// customize the catgory title
+// customize the catgory title author
 add_filter( 'get_the_archive_title', function ( $title ) {
 
     if( is_category() ) {
 
         $title = single_cat_title( '', false );
 
+    }
+    else if (is_author())
+    {
+    	$title = '<span class="vcard">' . get_the_author() . '</span>' ;
     }
 
     return $title;

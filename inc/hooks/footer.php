@@ -123,29 +123,30 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
             global$st_blog_customizer_all_values;
             ?> 
             <!-- footer site info -->
-            <div class="site-content py-0">
-            <div class="site-info">
-                <div class="container">
-                    <?php
-                            if(isset($st_blog_customizer_all_values['st-blog-copyright-text'])){
-                                echo '<span class="st-blog-footer-copyright">';
-                                echo wp_kses_post( $st_blog_customizer_all_values['st-blog-copyright-text'] );
-                                echo '</span>';
-                            }
-                            ?>
-                    <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'st-blog' ) ); ?>">
-                    </a>
-                    <?php if ( 1 == $st_blog_customizer_all_values['footer-enable-theme-name'] ) { ?>
-                    <span class="sep"> | </span>
-                        <?php
-                        /* translators: 1: Theme name, 2: Theme author. */
-                        printf( esc_html__( 'Theme: %1$s by %2$s', 'st-blog' ), 'ST Blog', sprintf('<a href="%s" target = "_blank" rel="designer">%s</a>', esc_url( 'http://salientthemes.com/' ), esc_html__( 'Salient Themes', 'st-blog' ) )  );
-                        ?>
-                    <?php } ?>    
+            <?php if ( !empty($st_blog_customizer_all_values['st-blog-copyright-text']) && !empty($st_blog_customizer_all_values['footer-enable-theme-name'])  ) { ?>
+                <div class="site-content py-0">
+                    <div class="site-info">
+                        <div class="container">
+                            <?php
+                                    if(isset($st_blog_customizer_all_values['st-blog-copyright-text'])){
+                                        echo '<span class="st-blog-footer-copyright">';
+                                        echo wp_kses_post( $st_blog_customizer_all_values['st-blog-copyright-text'] );
+                                        echo '</span>';
+                                    }
+                                    ?>
+                            <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'st-blog' ) ); ?>">
+                            </a>
+                            <?php if ( 1 == $st_blog_customizer_all_values['footer-enable-theme-name'] ) { ?>
+                            <span class="sep"> | </span>
+                                <?php
+                                /* translators: 1: Theme name, 2: Theme author. */
+                                printf( esc_html__( 'Theme: %1$s by %2$s', 'st-blog' ), 'ST Blog', sprintf('<a href="%s" target = "_blank" rel="designer">%s</a>', esc_url( 'http://salientthemes.com/' ), esc_html__( 'Salient Themes', 'st-blog' ) )  );
+                                ?>
+                            <?php } ?>    
+                        </div>
+                    </div><!-- .site-info -->
                 </div>
-            </div><!-- .site-info -->
-        </div>
-        
+            <?php } ?>
 
         </footer><!-- #colophon -->
         </div><!-- #page -->
