@@ -1199,8 +1199,8 @@ nav#site-navigation {
 .site-footer .widget_calendar caption {
   color: #ffffff; }
 
-body.home.page .site-content,
-body:not(.home):not(.blog) .site-content {
+body:not(.home):not(.blog) .site-content,
+.home-static-page.site-content {
   padding-top: 30px;
   padding-bottom: 20px; }
 
