@@ -1,6 +1,7 @@
 $color_white: #ffffff;
-$color_customize: #5cb85c;
-$color_customize_dark: #4cae4c;
+// $color_customize: #06a294;
+$color_customize: #1492ce;
+$color_customize_dark: #0073aa;
 
 // #customize-controls .control-section-st-blog h3.accordion-section-title,
 #customize-theme-controls li#accordion-panel-st-blog-homepage-panel h3 {
@@ -12,7 +13,7 @@ $color_customize_dark: #4cae4c;
     }
     &:hover {
         background-color: $color_customize_dark;
-        border-left-color: #2c792c;
+        border-left-color: $color_customize_dark;
     }
     .button {
         background-color: rgba(44, 121, 44, 0.3);
@@ -21,10 +22,20 @@ $color_customize_dark: #4cae4c;
         }
     }
 }
-#customize-controls .control-section-st-blog h3.accordion-section-title {
+
+#customize-controls #customize-theme-controls .control-section-st-blog h3.accordion-section-title {
     background-color: #FFC107;
+    border-left-color: #FFC107;
     &:hover {
-        background-color: #009688;
+        // background-color: #009688;
+    }
+    a.cusbtn {
+        background-color: $color_customize;
+        border-color: $color_customize_dark;
+        color: #ffffff;
+        &:hover {
+            background-color: $color_customize_dark;
+        }
     }
 }
 
