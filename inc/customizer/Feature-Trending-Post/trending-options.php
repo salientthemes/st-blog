@@ -21,20 +21,20 @@ $st_blog_customizer_defaults['st-blog-trending-image-enable']			= 1;
 
 
 
-// create a section for trending
+// create a section for Featured Content
 $st_blog_sections['st-blog-trending-section'] = array(
 	'title'		=> esc_html__('Featured Content','st-blog'),
 	// 'panel'		=> 'st-blog-homepage-panel',
 	'priority'	=> 20
 );
 
-// enable Options for Trending news
+// enable Options for Featured Content news
 $st_blog_settings_controls['st-blog-trending-enbale'] = array(
 	'setting'	=> array(
 		'default'			=> $st_blog_customizer_defaults['st-blog-trending-enbale']
 	),
 	'control'=> array(
-		'label'				=> esc_html__('Enable/Disable Trending Post','st-blog'),
+		'label'				=> esc_html__('Enable/Disable Featured Content','st-blog'),
 		'section'			=> 'st-blog-trending-section',
 		'type'				=> 'checkbox',
 		'priority'			=> 10,
@@ -48,7 +48,7 @@ $st_blog_settings_controls['st-blog-trending-main-title-text'] = array(
 		'default'		=> $st_blog_customizer_defaults['st-blog-trending-main-title-text']
 	),
 	'control' => array(
-		'label'				=> esc_html__( 'Trending Title text','st-blog'),
+		'label'				=> esc_html__( 'Title Text','st-blog'),
 		'section'			=> 'st-blog-trending-section',
 		'type'				=> 'text',
 		'priority'			=> 20,
@@ -70,13 +70,13 @@ $st_blog_settings_controls['st-blog-trending-single-number-of-words'] = array(
 	)	
 );
 
-// trending post selection
+// Featured Content post selection
 $st_blog_settings_controls['st-blog-trending-number-post'] =  array(
     'setting'   => array(
         'default'   => $st_blog_customizer_defaults['st-blog-trending-number-post']
     ),
     'control' => array(
-        'label'             => esc_html__('Select number of Trending Post','st-blog'),
+        'label'             => esc_html__('Select number of Post','st-blog'),
         'section'           => 'st-blog-trending-section',
         'type'              => 'select',
         'choices'           => array(
@@ -94,13 +94,13 @@ $st_blog_settings_controls['st-blog-trending-number-post'] =  array(
     )  
 );
 
-// select trending  post type
+// select Featured Content  post type
 $st_blog_settings_controls['st-blog-trending-select-post-from'] = array(
 	'setting' => array(
 		'default'			=> $st_blog_customizer_defaults['st-blog-trending-select-post-from'] 
 	),
 	'control' => array(
-		'label'				=> esc_html__('Select Post type for trending','st-blog'),
+		'label'				=> esc_html__('Select Post type for Featured Content','st-blog'),
 		'section'			=> 'st-blog-trending-section',
 		'type'				=> 'select',
 		'choices' => array(
@@ -118,7 +118,7 @@ $st_blog_settings_controls['st-blog-trending-select-from-category'] = array(
 		'default'				=> $st_blog_customizer_defaults['st-blog-trending-select-from-category']	
 	),
 	'control' => array(
-		'label'					=> esc_html__('Select Category for trending','st-blog'),
+		'label'					=> esc_html__('Select Category for Featured Content','st-blog'),
 		'section'				=> 'st-blog-trending-section',
 		'type'					=> 'category_dropdown',
 		'priority'				=> 50,
@@ -135,7 +135,7 @@ $st_blog_repeated_settings_controls['st-blog-trending-select-from-page'] = array
 		),
 		'control' => array(
 			 /* translators: %s: search page */ 
-			'label'				=> esc_html__('Select page for trending %s','st-blog'),
+			'label'				=> esc_html__('Select page for Featured Content %s','st-blog'),
 			'section'			=> 'st-blog-trending-section',
 			'type'				=> 'dropdown-pages',
 			'priority'			=> 60,
@@ -164,7 +164,7 @@ $st_blog_settings_controls['st-blog-trending-button-enable'] = array(
 		'default'			=> $st_blog_customizer_defaults['st-blog-trending-button-enable']
 	),
 	'control'=> array(
-		'label'				=> esc_html__('Enable/Disable Trending Button','st-blog'),
+		'label'				=> esc_html__('Enable/Disable Featured Content Button','st-blog'),
 		'section'			=> 'st-blog-trending-section',
 		'type'				=> 'checkbox',
 		'priority'			=> 80,
@@ -178,7 +178,7 @@ $st_blog_settings_controls['st-blog-trending-slider-autoplay-enable'] = array(
 		'default'			=> $st_blog_customizer_defaults['st-blog-trending-slider-autoplay-enable']
 	),
 	'control'=> array(
-		'label'				=> esc_html__('Enable/Disable Trending AutoPlay','st-blog'),
+		'label'				=> esc_html__('Enable/Disable Featured Content AutoPlay','st-blog'),
 		'section'			=> 'st-blog-trending-section',
 		'type'				=> 'checkbox',
 		'priority'			=> 90,
@@ -192,7 +192,7 @@ $st_blog_settings_controls['st-blog-trending-slider-time'] = array(
 		'default'			=> $st_blog_customizer_defaults['st-blog-trending-slider-time']
 	),
 	'control'=> array(
-		'label'				=> esc_html__('Select Slider Time For Trending AutoPlay','st-blog'),
+		'label'				=> esc_html__('Select Slider Time For Featured Content AutoPlay','st-blog'),
 		'section'			=> 'st-blog-trending-section',
 		'type'				=> 'text',
 		'priority'			=> 100,

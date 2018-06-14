@@ -7,7 +7,9 @@ $instagram_height: 125px;
 		// overflow: hidden;
 	.#{$prefix}-instafeed-image {
 		display: inline-block;
-		height: $instagram_height;
+		// height: $instagram_height;
+		height: auto;
+		padding-bottom: 100%;
 		@extend %img-effect-scale;
 		a {
 			display: block;
