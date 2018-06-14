@@ -62,7 +62,7 @@ $st_blog_settings_controls['st-blog-trending-single-number-of-words'] = array(
 		'default'		=> $st_blog_customizer_defaults['st-blog-trending-single-number-of-words'] 
 	),
 	'control' => array(
-		'label'				=> esc_html__('Select number of words for content','st-blog'),
+		'label'				=> esc_html__('Number of words for featured content','st-blog'),
 		'section'			=> 'st-blog-trending-section',
 		'type'				=> 'number',
 		'priority'			=> 30,
@@ -164,7 +164,7 @@ $st_blog_settings_controls['st-blog-trending-button-enable'] = array(
 		'default'			=> $st_blog_customizer_defaults['st-blog-trending-button-enable']
 	),
 	'control'=> array(
-		'label'				=> esc_html__('Enable/Disable Featured Content Button','st-blog'),
+		'label'				=> esc_html__('Enable/Disable Button','st-blog'),
 		'section'			=> 'st-blog-trending-section',
 		'type'				=> 'checkbox',
 		'priority'			=> 80,
@@ -178,7 +178,7 @@ $st_blog_settings_controls['st-blog-trending-slider-autoplay-enable'] = array(
 		'default'			=> $st_blog_customizer_defaults['st-blog-trending-slider-autoplay-enable']
 	),
 	'control'=> array(
-		'label'				=> esc_html__('Enable/Disable Featured Content AutoPlay','st-blog'),
+		'label'				=> esc_html__('Enable/Disable AutoPlay','st-blog'),
 		'section'			=> 'st-blog-trending-section',
 		'type'				=> 'checkbox',
 		'priority'			=> 90,
