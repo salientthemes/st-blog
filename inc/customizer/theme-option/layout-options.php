@@ -12,8 +12,9 @@ $st_blog_customizer_defaults['st-blog-single-post-image-align'] = '';
 $st_blog_customizer_defaults['st-blog-excerpt-length'] = '50';
 $st_blog_customizer_defaults['st-blog-archive-layout'] = 'thumbnail-and-excerpt';
 $st_blog_customizer_defaults['st-blog-archive-image-align'] = 'full';
-$st_blog_customizer_defaults['st-blog-alternate-layout'] = 1;
+// $st_blog_customizer_defaults['st-blog-alternate-layout'] = 1;
 $st_blog_customizer_defaults['st-blog-default-body-layout'] = 'boxed';
+
 
 $st_blog_sections['st-blog-back-all-theme-setting'] = array(
     'priority'       => 30,
@@ -108,18 +109,18 @@ $st_blog_settings_controls['st-blog-archive-layout'] = array(
     )
 );
 
-$st_blog_settings_controls['st-blog-alternate-layout'] =
-    array(
-        'setting' =>     array(
-            'default'              => $st_blog_customizer_defaults['st-blog-alternate-layout'],
-        ),
-        'control' => array(
-            'label'                 =>  esc_html__( 'Alternate Archive Image Alignment', 'st-blog' ),
-            'section'               => 'st-blog-back-all-theme-setting',
-            'type'                  => 'checkbox',
-            'priority'              => 60,
-        )
-    );
+// $st_blog_settings_controls['st-blog-alternate-layout'] =
+//     array(
+//         'setting' =>     array(
+//             'default'              => $st_blog_customizer_defaults['st-blog-alternate-layout'],
+//         ),
+//         'control' => array(
+//             'label'                 =>  esc_html__( 'Alternate Archive Image Alignment', 'st-blog' ),
+//             'section'               => 'st-blog-back-all-theme-setting',
+//             'type'                  => 'checkbox',
+//             'priority'              => 60,
+//         )
+//     );
 
 
 $st_blog_settings_controls['st-blog-default-body-layout'] =
@@ -139,3 +140,5 @@ $st_blog_settings_controls['st-blog-default-body-layout'] =
                 'active_callback'       => ''
             )
         );
+
+

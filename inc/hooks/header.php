@@ -98,35 +98,37 @@ if ( ! function_exists( 'st_blog_body_class' ) ) :
  */
 function st_blog_body_class( $st_blog_body_classes ) {
   global $st_blog_customizer_all_values;
-  $st_blog_alternate_layout = '';
-    if ($st_blog_customizer_all_values['st-blog-alternate-layout'] == 1) {
-      $st_blog_alternate_layout = " alternate";
-    } else {
-      $st_blog_alternate_layout = " non-alternate";
-    }
+  // $st_blog_alternate_layout = '';
+    // if ($st_blog_customizer_all_values['st-blog-alternate-layout'] == 1) {
+    //   $st_blog_alternate_layout = " alternate";
+    // } else {
+    //   $st_blog_alternate_layout = " non-alternate";
+    // }
+  $st_blog_logo_layout  = $st_blog_customizer_all_values['st-blog-default-logo-layout'];
+  // var_dump($st_blog_logo_layout);die('k vo ');
     $st_blog_body_layout = $st_blog_customizer_all_values['st-blog-default-body-layout'];
     
     if(!is_front_page() || ( is_front_page())){
         $st_blog_default_layout = st_blog_default_layout();
         if( !empty( $st_blog_default_layout ) ){
             if( 'left-sidebar' == $st_blog_default_layout ){
-                $st_blog_body_classes[] = 'salient-left-sidebar'. $st_blog_alternate_layout .' '. $st_blog_body_layout;
+                $st_blog_body_classes[] = 'salient-left-sidebar '.  $st_blog_logo_layout .' '. $st_blog_body_layout;
             }
             elseif( 'right-sidebar' == $st_blog_default_layout ){
-                $st_blog_body_classes[] = 'salient-right-sidebar'. $st_blog_alternate_layout .' '. $st_blog_body_layout ;
+                $st_blog_body_classes[] = 'salient-right-sidebar '.  $st_blog_logo_layout .' '. $st_blog_body_layout ;
             }
             elseif( 'both-sidebar' == $st_blog_default_layout ){
-                $st_blog_body_classes[] = 'salient-both-sidebar' . $st_blog_alternate_layout .' '. $st_blog_body_layout ;
+                $st_blog_body_classes[] = 'salient-both-sidebar ' .  $st_blog_logo_layout .' '. $st_blog_body_layout ;
             }
             elseif( 'no-sidebar' == $st_blog_default_layout ){
-                $st_blog_body_classes[] = 'salient-no-sidebar'. $st_blog_alternate_layout .' '. $st_blog_body_layout ;
+                    $st_blog_body_classes[] = 'salient-no-sidebar '.  $st_blog_logo_layout .' '. $st_blog_body_layout ;
             }
             else{
-                $st_blog_body_classes[] = 'salient-right-sidebar'. $st_blog_alternate_layout .' '. $st_blog_body_layout;
+                $st_blog_body_classes[] = 'salient-right-sidebar '.  $st_blog_logo_layout .' '. $st_blog_body_layout;
             }
         }
         else{
-            $st_blog_body_classes[] = 'salient-right-sidebar'. $st_blog_alternate_layout .' '. $st_blog_body_layout;
+                $st_blog_body_classes[] = 'salient-right-sidebar ' .  $st_blog_logo_layout .' '. $st_blog_body_layout;
         }
     }
     return $st_blog_body_classes;
@@ -195,26 +197,26 @@ function st_blog_header() {
                             <div class="site-branding">
                                 <?php
                                 the_custom_logo();
-                                if ( is_front_page() && is_home() ) :
-                                    $site_title = get_bloginfo('name');
+                                 if ( is_front_page() && !is_home() ) :
+                                    
                                     ?>
-                                    <?php if (!empty( $site_title) )  { ?>
+                                    
                                         <h1 class="site-title">
                                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                                                <?php bloginfo( 'name' ); ?>
+                                                <?php bloginfo('name'); ?>
                                             </a>
                                         </h1>
-                                    <?php } ?>
+                                    
                                     <?php
                                 else :
                                     ?>
-                                    <?php if ( !empty( $site_title) )  { ?>
+                                    
                                     <h1 class="site-title">
                                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                                            <?php bloginfo( 'name' ); ?>
+                                            <?php bloginfo('name'); ?>
                                         </a>
                                     </h1>
-                                    <?php } ?>
+                                    
                                     <?php
                                 endif;
                                 $st_blog_description = get_bloginfo( 'description', 'display' );
