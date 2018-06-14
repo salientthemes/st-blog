@@ -6,7 +6,7 @@ global $st_blog_settings_controls;
 global $st_blog_repeted_settings_controls;
 global $st_blog_customizer_defaults;
 
-
+$st_blog_customizer_defaults['latest-blog-numbe-of-post']		= 6;
 $st_blog_customizer_defaults['latest-post-show-feature-image']  = 1;
 $st_blog_customizer_defaults['latest-post-show-title']			= 1;
 $st_blog_customizer_defaults['latest-post-show-excerpt']		= 1;
@@ -14,6 +14,8 @@ $st_blog_customizer_defaults['latest-post-show-date']			= 1;
 $st_blog_customizer_defaults['latest-post-show-author']			= 1;
 $st_blog_customizer_defaults['latest-post-show-button']			= 1;
 $st_blog_customizer_defaults['st-blog-latest-post-button-text'] = 'Read More';
+$st_blog_customizer_defaults['lates-blog-pagination']			= 'numeric';
+
 
 // panel for post display
 $st_blog_panels['latest-post-bolg-panel']	= array(
@@ -28,6 +30,20 @@ $st_blog_sections['latest-post-bolg-section']	= array(
 	'priority'	=> 20
 );
 
+// control setting for number of post
+$st_blog_settings_controls['latest-blog-numbe-of-post']  = array(
+	'setting' => array(
+		'default'		=> $st_blog_customizer_defaults['latest-blog-numbe-of-post']
+	),
+	'control' => array(
+		'label'				=> esc_html__('Select number for latest blog','st-blog'),
+		'section'			=> 'latest-post-bolg-section',
+		'type'				=> 'text',
+		'priority'			=> 10,
+		'active_callback'	=> ''
+	)
+);
+
 // control setting for feature image
 $st_blog_settings_controls['latest-post-show-feature-image']  = array(
 	'setting' => array(
@@ -37,10 +53,11 @@ $st_blog_settings_controls['latest-post-show-feature-image']  = array(
 		'label'				=> esc_html__('Show Feature Image','st-blog'),
 		'section'			=> 'latest-post-bolg-section',
 		'type'				=> 'checkbox',
-		'priority'			=> 10,
+		'priority'			=> 15,
 		'active_callback'	=> ''
 	)
 );
+
 
 // control setting for post title
 $st_blog_settings_controls['latest-post-show-title']  = array(
@@ -114,14 +131,32 @@ $st_blog_settings_controls['latest-post-show-button']  = array(
 
     /*latest-bolg-post-button*/
 $st_blog_settings_controls['st-blog-latest-post-button-text'] = array(
-'setting' => array(
-    'default' => $st_blog_customizer_defaults['st-blog-latest-post-button-text'],
-),
-'control' => array(
-    'label'                 =>  esc_html__( 'Button Text', 'st-blog' ),
-    'description'           =>  esc_html__( 'It will be change only the latest blog button text', 'st-blog' ),
-    'section'               => 'latest-post-bolg-section',
-    'type'                  => 'text',
-    'priority'              => 50,
-)
+	'setting' => array(
+	    'default' => $st_blog_customizer_defaults['st-blog-latest-post-button-text'],
+	),
+	'control' => array(
+	    'label'                 =>  esc_html__( 'Button Text', 'st-blog' ),
+	    'description'           =>  esc_html__( 'It will be change only the latest blog button text', 'st-blog' ),
+	    'section'               => 'latest-post-bolg-section',
+	    'type'                  => 'text',
+	    'priority'              => 50,
+	)
 );
+
+$st_blog_settings_controls['lates-blog-pagination'] = array(
+	'setting' => array(
+	    'default' => $st_blog_customizer_defaults['lates-blog-pagination'],
+	),
+	'control' => array(
+	    'label'                 =>  esc_html__( 'pagination', 'st-blog' ),
+	    'description'           =>  esc_html__( 'It will be change only the latest blog pagination', 'st-blog' ),
+	    'section'               => 'latest-post-bolg-section',
+	    'type'                  => 'select',
+	    'choices' => array(
+	    	'numeric'			=> esc_html__('Numeric','st-blog'),
+	    	'default'			=> esc_html__('Default(Older posts/Newer posts)','st-blog'),
+	    ),	
+	    'priority'              => 50,
+	)
+);
+

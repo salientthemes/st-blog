@@ -143,7 +143,7 @@ Note:
 == main slider ==
 1) https://www.pexels.com/photo/women-in-white-button-up-long-sleeved-top-and-black-pants-sitting-on-white-and-brown-bed-920384/
 
-== trending post ==
+== feature-content post ==
 1) https://www.pexels.com/photo/woman-sitting-on-bean-bag-white-using-macbook-in-front-of-round-table-with-green-leafed-plant-169915/
 2) https://www.pexels.com/photo/woman-in-white-dress-shirt-and-black-pants-920379/
 3) https://www.pexels.com/photo/woman-running-on-sand-near-white-concrete-building-736505/

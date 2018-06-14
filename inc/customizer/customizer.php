@@ -50,7 +50,7 @@ require trailingslashit(get_template_directory() ) .'/inc/frameworks/salient-cus
 require trailingslashit(get_template_directory() ) . '/inc/customizer/Feature-slider/slider-options.php'; 
 require trailingslashit(get_template_directory() ) . '/inc/customizer/Feature-slider/slider-setting.php';
 
-require trailingslashit(get_template_directory() ) . '/inc/customizer/Feature-Trending-Post/trending-options.php'; 
+require trailingslashit(get_template_directory() ) . '/inc/customizer/Featured-Content-post/featured-options.php'; 
 
 // require get_template_directory(). '/inc/customizer/Footer-social-media/options.php'; 
 

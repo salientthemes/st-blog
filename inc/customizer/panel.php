@@ -14,8 +14,8 @@ require trailingslashit(get_template_directory() ) .'/inc/customizer/Header-Foot
 // require get_template_directory(). '/inc/customizer/Feature-slider/slider-options.php';
 // require get_template_directory(). '/inc/customizer/Feature-slider/slider-setting.php';
 
-// for trending post
-// require get_template_directory() .'/inc/customizer/Feature-Trending-Post/trending-options.php';
+// for feature-content post
+// require get_template_directory() .'/inc/customizer/Feature-Trending-Post/feature-content-options.php';
 
 // Post display
 require trailingslashit(get_template_directory() ) .  '/inc/customizer/post-display/options.php'; 

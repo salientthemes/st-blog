@@ -40,13 +40,15 @@ require trailingslashit( get_template_directory() ) . '/inc/hooks/homepage-widge
 
 require trailingslashit( get_template_directory() ) . '/inc/hooks/feature-slider.php';
 
-require trailingslashit( get_template_directory() ) . '/inc/hooks/trending-post.php';
+require trailingslashit( get_template_directory() ) . '/inc/hooks/feature-content-post.php';
 
 require trailingslashit( get_template_directory() ) . '/inc/hooks/full-width-widget.php';
 
 require trailingslashit( get_template_directory() ) . '/inc/hooks/homepage-social-meadia.php';
 
 require trailingslashit( get_template_directory() ) . '/inc/hooks/inline-style.php';
+// require trailingslashit( get_template_directory() ) . '/inc/hooks/tag.php';
+
 
 
 

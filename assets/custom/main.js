@@ -104,13 +104,19 @@ jQuery(window).load(function() {
 		slick_rtl = false;//ltr works in false
 	}
 	
+	// slider Jqury
+	var SliderSpeed  	= customzier_values['st-blog-slider-time-select'];
+	var SliderAutoPlay  = customzier_values['st-blog-enable-auto-play'];
+	var SliderArrow		= customzier_values['st-blog-enable-arrow'];
+	var Sliderpager		= customzier_values['st-blog-enable-pager'];
+
 	jQuery(".st-blog-banner-slider").slick({
 		// normal options...
-		arrows: true,
-		autoplay: true,
-		autoplaySpeed: 4000,
+		arrows: ( SliderArrow == 1) ? true  : false ,
+		autoplay: ( SliderAutoPlay == 1 ) ? true : false,
+		autoplaySpeed: SliderSpeed,
 		draggable: true,
-		dots: true,
+		dots: ( Sliderpager == 1) ? true  : false ,
 		fade: true,
 		infinite: true,
 		pauseOnFocus: false,

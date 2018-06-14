@@ -11,7 +11,7 @@
  *
  * @package st-blog
  */
-
+global $st_blog_customizer_all_values;
 get_header();
 ?>
 	</div><!-- .st-blog-site-content -->
@@ -66,7 +66,18 @@ get_header();
 					// {
 					// 	the_posts_navigation();
 					// }
-					 the_posts_pagination( array( 'mid_size' => 1 ) ); 
+					 // the_posts_pagination( array( 'mid_size' => 1 ) ); 
+
+					 $st_blog_pagination = $st_blog_customizer_all_values['lates-blog-pagination'];
+
+					 if (  $st_blog_pagination == 'numeric')
+					 {
+					 	the_posts_pagination(  );
+					 }
+					 else
+					 {
+					 	the_posts_navigation();
+					 }
 
 			else :
 

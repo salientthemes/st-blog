@@ -72,7 +72,7 @@ if ( ! function_exists( 'st_blog_setup' ) ) :
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
 		//recomended image size
-		add_image_size( 'trending-post-image', 330, 200, true );  //trending image size
+		add_image_size( 'feature-content-post-image', 330, 200, true );  //feature-content image size
 		add_image_size( 'feature-slider-image', 1340, 460, true );  //feature-slider image size
 		// add_image_size( 'feature-slider-image', 1090, 480, true );  //latest-post image size
 
@@ -230,7 +230,7 @@ function st_blog_scripts() {
 	wp_enqueue_script( 'custom', get_template_directory_uri() . '/assets/custom/main'.$suffix.'.js', array('jquery'), true );
 
 
-	wp_localize_script( 'st-blog-custom-js', 'customzier_values', $st_blog_customizer_all_values);
+	wp_localize_script( 'custom', 'customzier_values', $st_blog_customizer_all_values);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -330,4 +330,18 @@ add_filter( 'get_the_archive_title', function ( $title ) {
 
 });
 
+// for number of latest blog post
+function st_blog_home_page_number_post( $query ) {
+	$st_blog_customizer_all_values = get_theme_mod( SALIENT_CUSTOMIZER_NAME );
+	$st_blog_number_of_post = $st_blog_customizer_all_values['latest-blog-numbe-of-post'];
+    if ( is_admin() || ! $query->is_main_query() )
+        return;
 
+    if ( is_home() ) {
+        // Display only 1 post for the original blog archive
+        $query->set( 'posts_per_page', $st_blog_number_of_post );
+        return;
+    }
+
+}
+add_action( 'pre_get_posts', 'st_blog_home_page_number_post', 10 );

@@ -13,6 +13,8 @@ $st_blog_customizer_defaults['st-blog-slider-time-select']          = 4000;
 $st_blog_customizer_defaults['st-blog-enable-button']               = 1;
 $st_blog_customizer_defaults['st-blog-enable-arrow']                = 1;
 $st_blog_customizer_defaults['st-blog-enable-auto-play']            = 1;
+$st_blog_customizer_defaults['st-blog-enable-pager']                = 1;
+
 
 // Feature slider panel
 // $st_blog_panels['st-blog-fetaure-slider']  =  array(
@@ -122,7 +124,7 @@ $st_blog_settings_controls['st-blog-enable-arrow']  = array(
     )  
 );
 
-// slider arrow enable
+// slider auto play enable
 $st_blog_settings_controls['st-blog-enable-auto-play']  = array(
     'setting' => array(
         'default'   => $st_blog_customizer_defaults['st-blog-enable-auto-play']
@@ -136,4 +138,16 @@ $st_blog_settings_controls['st-blog-enable-auto-play']  = array(
     )  
 );
 
-
+// slider pager enable
+$st_blog_settings_controls['st-blog-enable-pager']  = array(
+    'setting' => array(
+        'default'   => $st_blog_customizer_defaults['st-blog-enable-pager']
+    ),
+    'control' => array(
+        'label'             => esc_html__('Enable/Disable Slider Pager','st-blog'),
+        'section'           => 'st-blog-feature-section',
+        'type'              => 'checkbox',
+        'priority'          => 100,
+        'active_callback'   => ''    
+    )  
+);
