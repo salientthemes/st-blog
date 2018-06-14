@@ -66,7 +66,7 @@ jQuery(window).load(function() {
 	        // document.getElementById("st-blog-scroll-top").style.display = "block";
 	        jQuery("body").addClass('scrolled-down');
 
-	        if(jQuery('body').hasClass('big-logo')) {
+	        if(jQuery('body').hasClass('logo-center')) {
 	        	jQuery("body").removeClass('big-logo-enable');
 	        	jQuery("body").addClass('big-logo-disable');//and hide logo on scroll
 				
@@ -78,7 +78,7 @@ jQuery(window).load(function() {
 	        // document.getElementById("st-blog-scroll-top").style.display = "none";
 	        jQuery("body").removeClass('scrolled-down');
 
-	        if(jQuery('body').hasClass('big-logo')) {
+	        if(jQuery('body').hasClass('logo-center')) {
 	        	jQuery("body").addClass('big-logo-enable');//don't want to add big-logo on default scroll
 	        	jQuery("body").removeClass('big-logo-disable');//and show logo
 				

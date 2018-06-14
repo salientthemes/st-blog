@@ -1,4 +1,4 @@
-body.big-logo {
+body.logo-center {
 	.site-branding {
 		img.custom-logo {
 		    max-height: 100px;
@@ -22,12 +22,12 @@ body.big-logo {
 }
 
 @include media(md) {
-	body.big-logo.big-logo-enable header.site-header .#{$prefix}-header-wrap-nav .#{$prefix}-menu-toggler-manage {
+	body.logo-center.big-logo-enable header.site-header .#{$prefix}-header-wrap-nav .#{$prefix}-menu-toggler-manage {
 	    position: inherit;
 	}
-	body.big-logo.big-logo-enable nav#site-navigation ul.nav-menu,
-	body.big-logo.big-logo-enable nav#site-navigation ul.menu,
-	body.big-logo.big-logo-enable nav#site-navigation ul#menu {
+	body.logo-center.big-logo-enable nav#site-navigation ul.nav-menu,
+	body.logo-center.big-logo-enable nav#site-navigation ul.menu,
+	body.logo-center.big-logo-enable nav#site-navigation ul#menu {
 	    float: none;
 	    margin-right: 0;
 	    margin: 0 auto;
@@ -35,11 +35,11 @@ body.big-logo {
 	    position: inherit;
 	}
 
-	body.big-logo.big-logo-enable nav#site-navigation {
+	body.logo-center.big-logo-enable nav#site-navigation {
 	    text-align: center;
 	}
 
-	body.big-logo nav#site-navigation {
+	body.logo-center nav#site-navigation {
 	    .container {
 		    padding-right: 70px;
 		}
@@ -48,36 +48,36 @@ body.big-logo {
 
 
 	// big-logo disable on scroll
-	.big-logo.big-logo-disable .#{$prefix}-header-row .#{$prefix}-logo-manage {
+	body.logo-center.big-logo-disable .#{$prefix}-header-row .#{$prefix}-logo-manage {
 	    display: none;
 	}
-	.big-logo.big-logo-disable nav#site-navigation ul {
+	body.logo-center.big-logo-disable nav#site-navigation ul {
 	    float: none;
 	    display: inline-block;
 	}
-	.big-logo.big-logo-disable header.site-header .#{$prefix}-header-wrap-nav .#{$prefix}-menu-toggler-manage {
+	body.logo-center.big-logo-disable header.site-header .#{$prefix}-header-wrap-nav .#{$prefix}-menu-toggler-manage {
 	    right: auto;
 	    width: 100%;
 	}
-	.big-logo.big-logo-disable nav#site-navigation {
+	body.logo-center.big-logo-disable nav#site-navigation {
 	    text-align: center;
 	}
 
 
-	body.big-logo nav#site-navigation ul.nav-menu > li > a,
-	body.big-logo nav#site-navigation ul.menu > li > a,
-	body.big-logo nav#site-navigation ul#menu > li > a {
+	body.logo-center nav#site-navigation ul.nav-menu > li > a,
+	body.logo-center nav#site-navigation ul.menu > li > a,
+	body.logo-center nav#site-navigation ul#menu > li > a {
 	    padding-top: 20px;
 	    padding-bottom: 20px;
 	    // padding-top: 10px;
 	    // padding-bottom: 10px;
 	}
 
-	body.big-logo header.site-header .#{$prefix}-header-wrap-nav .#{$prefix}-menu-toggler-manage {
+	body.logo-center header.site-header .#{$prefix}-header-wrap-nav .#{$prefix}-menu-toggler-manage {
 	    min-height: auto;
 	}
 
-	body.big-logo .main-navigation {
+	body.logo-center .main-navigation {
 	    float: none;
 	    li {
 	    	float: none;
