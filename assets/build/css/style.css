@@ -46,7 +46,7 @@ a.readmore:hover,
 a {
   color: gray; }
 
-.st-blog-header-wrap .st-blog-head-search form .search-submit:hover, .widget_search form .search-submit:hover, .pagination .nav-links a:hover, .wp-pagenavi a:hover,
+.st-blog-header-wrap .st-blog-head-search form .search-submit:hover, .widget_search form .search-submit:hover, .post-navigation a:hover, .posts-navigation a:hover, .pagination .nav-links a:hover, .wp-pagenavi a:hover,
 .pagination .nav-links span:hover,
 .wp-pagenavi span:hover, .btn:hover,
 .readmore:hover, .wpcf7-form .wpcf7-submit:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover,
@@ -63,7 +63,7 @@ a {
 header.site-header .st-blog-header-wrap-nav .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover, body.dark-theme header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage #menu-icon.menu-toggler span, body.dark-theme header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover {
   background-color: #ffffff; }
 
-.st-blog-header-wrap .st-blog-head-search form .search-submit, .widget_search form .search-submit, .pagination .nav-links a, .wp-pagenavi a,
+.st-blog-header-wrap .st-blog-head-search form .search-submit, .widget_search form .search-submit, .post-navigation a, .posts-navigation a, .pagination .nav-links a, .wp-pagenavi a,
 .pagination .nav-links span,
 .wp-pagenavi span, a.btn, .btn, a.readmore,
 .readmore, .wpcf7-form .wpcf7-submit, button, input[type="button"], input[type="reset"], input[type="submit"], .dark-theme .site-content a.readmore,
@@ -168,7 +168,7 @@ textarea:focus,
 .btn:focus {
   box-shadow: none; }
 
-.st-blog-header-wrap .st-blog-head-search form .search-submit, .widget_search form .search-submit, .pagination .nav-links a, .wp-pagenavi a,
+.st-blog-header-wrap .st-blog-head-search form .search-submit, .widget_search form .search-submit, .post-navigation a, .posts-navigation a, .pagination .nav-links a, .wp-pagenavi a,
 .pagination .nav-links span,
 .wp-pagenavi span, a.btn, .btn, a.readmore,
 .readmore, .wpcf7-form .wpcf7-submit, button, input[type="button"], input[type="reset"], input[type="submit"], .dark-theme .site-content a.readmore,
@@ -183,7 +183,7 @@ textarea:focus,
   cursor: pointer;
   font-size: 1.125rem;
   padding: 5px 10px; }
-  .st-blog-header-wrap .st-blog-head-search form .search-submit:hover, .widget_search form .search-submit:hover, .pagination .nav-links a:hover, .wp-pagenavi a:hover,
+  .st-blog-header-wrap .st-blog-head-search form .search-submit:hover, .widget_search form .search-submit:hover, .post-navigation a:hover, .posts-navigation a:hover, .pagination .nav-links a:hover, .wp-pagenavi a:hover,
   .pagination .nav-links span:hover,
   .wp-pagenavi span:hover, .btn:hover,
   .readmore:hover, .wpcf7-form .wpcf7-submit:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover,
@@ -191,7 +191,7 @@ textarea:focus,
   .dark-theme-coloured a.btn:hover {
     color: #ffffff; }
   @media (min-width: 575px) {
-    .st-blog-header-wrap .st-blog-head-search form .search-submit, .widget_search form .search-submit, .pagination .nav-links a, .wp-pagenavi a,
+    .st-blog-header-wrap .st-blog-head-search form .search-submit, .widget_search form .search-submit, .post-navigation a, .posts-navigation a, .pagination .nav-links a, .wp-pagenavi a,
     .pagination .nav-links span,
     .wp-pagenavi span, a.btn, .btn, a.readmore,
     .readmore, .wpcf7-form .wpcf7-submit, button, input[type="button"], input[type="reset"], input[type="submit"], .dark-theme .site-content a.readmore,
@@ -249,8 +249,10 @@ input[type=checkbox], input[type=radio] {
   justify-content: center; }
 
 .post-navigation, .posts-navigation {
-  border-top: 1px solid #b3b3b3;
   padding-top: 15px; }
+  .post-navigation a, .posts-navigation a {
+    background-color: gray;
+    display: inline-block; }
   .post-navigation .nav-previous a:before, .posts-navigation .nav-previous a:before {
     content: "\f30a";
     margin-right: 10px; }
