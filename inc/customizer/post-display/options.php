@@ -6,7 +6,7 @@ global $st_blog_settings_controls;
 global $st_blog_repeted_settings_controls;
 global $st_blog_customizer_defaults;
 
-$st_blog_customizer_defaults['latest-blog-numbe-of-post']		= 6;
+// $st_blog_customizer_defaults['latest-numbe-of-post']    = 6;
 $st_blog_customizer_defaults['latest-post-show-feature-image']  = 1;
 $st_blog_customizer_defaults['latest-post-show-title']			= 1;
 $st_blog_customizer_defaults['latest-post-show-excerpt']		= 1;
@@ -31,18 +31,18 @@ $st_blog_sections['latest-post-bolg-section']	= array(
 );
 
 // control setting for number of post
-$st_blog_settings_controls['latest-blog-numbe-of-post']  = array(
-	'setting' => array(
-		'default'		=> $st_blog_customizer_defaults['latest-blog-numbe-of-post']
-	),
-	'control' => array(
-		'label'				=> esc_html__('Select number for latest blog','st-blog'),
-		'section'			=> 'latest-post-bolg-section',
-		'type'				=> 'text',
-		'priority'			=> 10,
-		'active_callback'	=> ''
-	)
-);
+// $st_blog_settings_controls['latest-numbe-of-post']  = array(
+// 	'setting' => array(
+// 		'default'		=> $st_blog_customizer_defaults['latest-numbe-of-post']
+// 	),
+// 	'control' => array(
+// 		'label'				=> esc_html__('Select number for latest blog','st-blog'),
+// 		'section'			=> 'latest-post-bolg-section',
+// 		'type'				=> 'text',
+// 		'priority'			=> 10,
+// 		'active_callback'	=> ''
+// 	)
+// );
 
 // control setting for feature image
 $st_blog_settings_controls['latest-post-show-feature-image']  = array(
@@ -148,13 +148,13 @@ $st_blog_settings_controls['lates-blog-pagination'] = array(
 	    'default' => $st_blog_customizer_defaults['lates-blog-pagination'],
 	),
 	'control' => array(
-	    'label'                 =>  esc_html__( 'pagination', 'st-blog' ),
-	    'description'           =>  esc_html__( 'It will be change only the latest blog pagination', 'st-blog' ),
+	    'label'                 =>  esc_html__( 'Pagination', 'st-blog' ),
+	    'description'           =>  esc_html__( 'It will only change the latest blog pagination', 'st-blog' ),
 	    'section'               => 'latest-post-bolg-section',
 	    'type'                  => 'select',
 	    'choices' => array(
 	    	'numeric'			=> esc_html__('Numeric','st-blog'),
-	    	'default'			=> esc_html__('Default(Older posts/Newer posts)','st-blog'),
+	    	'default'			=> esc_html__('Default (Older posts/Newer posts) ','st-blog'),
 	    ),	
 	    'priority'              => 50,
 	)

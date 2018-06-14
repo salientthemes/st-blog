@@ -330,18 +330,20 @@ add_filter( 'get_the_archive_title', function ( $title ) {
 
 });
 
-// for number of latest blog post
-function st_blog_home_page_number_post( $query ) {
-	$st_blog_customizer_all_values = get_theme_mod( SALIENT_CUSTOMIZER_NAME );
-	$st_blog_number_of_post = $st_blog_customizer_all_values['latest-blog-numbe-of-post'];
-    if ( is_admin() || ! $query->is_main_query() )
-        return;
+// // for number of latest blog post
+// function st_blog_home_page_number_post( $query ) {
+// 	global $st_blog_customizer_all_values;
+// 	$ww = get_theme_mod( SALIENT_CUSTOMIZER_NAME );
+// 	$st_blog_number_of_post = $ww['latest-post-show-title'];
+// 	var_dump($st_blog_number_of_post);die('hello');
+//     if ( is_admin() || ! $query->is_main_query() )
+//         return;
 
-    if ( is_home() ) {
-        // Display only 1 post for the original blog archive
-        $query->set( 'posts_per_page', $st_blog_number_of_post );
-        return;
-    }
+//     if ( is_home() ) {
+//         // Display only 1 post for the original blog archive
+//         $query->set( 'posts_per_page', $st_blog_number_of_post );
+//         return;
+//     }
 
-}
-add_action( 'pre_get_posts', 'st_blog_home_page_number_post', 10 );
+// }
+// add_action( 'pre_get_posts', 'st_blog_home_page_number_post', 10 );
