@@ -200,7 +200,7 @@ textarea:focus,
     .dark-theme-coloured button,
     .dark-theme-coloured input[type="submit"],
     .dark-theme-coloured .st-blog-header-wrap .st-blog-head-search form .search-submit {
-      padding: 8px 16px; } }
+      padding: 5px 16px; } }
 
 .dark-theme-coloured .btn:hover,
 .dark-theme-coloured button:hover,
@@ -220,7 +220,7 @@ input[type=checkbox], input[type=radio] {
   margin-right: 10px; }
 
 .st-blog-header-wrap .st-blog-head-search form, .widget_search form {
-  height: 43px;
+  height: 38px;
   position: relative;
   padding-right: 84px; }
   .st-blog-header-wrap .st-blog-head-search form label, .widget_search form label {
@@ -1481,7 +1481,7 @@ body:not(.dark-theme) #st-blog-social-icons ul li {
     .nav-tabs .nav-item {
       font-size: 0.875rem; } }
   .nav-tabs .nav-item .nav-link {
-    padding: .9rem 0.7rem;
+    padding: 0.6rem 0.7rem;
     border-radius: 0;
     border: 0;
     text-transform: uppercase; }

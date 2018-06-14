@@ -37,7 +37,7 @@ jQuery(window).resize(function() {
 
 jQuery(window).load(function() {
 	// fixed header
-	jQuery('body').addClass('fixed-header box-layout big-logo big-logo-enable');
+	jQuery('body').addClass('fixed-header box-layout big-logo-enable');
 
 	// position search form
 	st_blog_head_search_form_position();
