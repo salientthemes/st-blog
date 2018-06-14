@@ -159,7 +159,7 @@
     @extend %bg-primary;
   }
   @include media(xs) {
-    padding: 8px 16px;//also in widget-search
+    padding: 5px 16px;//also in widget-search
   }
 }
 

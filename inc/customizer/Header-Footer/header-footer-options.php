@@ -40,7 +40,7 @@
             'type'                  => 'select',
             'choices' => array(
                 'logo-left'         => esc_html__( 'Left', 'st-blog' ),
-                'big-logo'         	=> esc_html__( 'Center', 'st-blog' ),
+                'logo-center'         	=> esc_html__( 'Center', 'st-blog' ),
                 'logo-right'        => esc_html__( 'Right','st-blog')   
             ),
             'priority'              => 15,

@@ -35,7 +35,7 @@ $st_blog_settings_controls['st-blog-select-post-from-category']  = array(
         'default'       => $st_blog_customizer_defaults['st-blog-select-post-from-category']
     ),
     'control' => array(
-        'label'             => esc_html__('Select a Category For Feature Slider','st-blog'),
+        'label'             => esc_html__('Select a Category For Featured Slider','st-blog'),
         'description'       => esc_html__( 'This option only work when you have selected "Category" in "Slider Post Type". Recommended featured image size 1360 * 530 for posts under selected category', 'st-blog' ),
         'section'           => 'st-blog-feature-section' ,
         'type'              => 'category_dropdown',
@@ -54,7 +54,7 @@ $st_blog_repeated_settings_controls['st-blog-select-post-from-page']  =  array(
         ),
         'control' => array(
             /* translators: %s: search page */
-            'label'             => esc_html__('Select a Page from Feature Slider %s','st-blog'),
+            'label'             => esc_html__('Select a Page from Featured Slider %s','st-blog'),
             'section'           => 'st-blog-feature-section',
             'type'              => 'dropdown-pages',
             'priority'          => 50,
