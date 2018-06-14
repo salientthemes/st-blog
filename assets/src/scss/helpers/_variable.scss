@@ -21,6 +21,7 @@ $color_primary: #EF3F3D;//red-orange
 $color_secondary: #272727;
 $color_link: lighten($color_black, 50%);
 $color_link_hover: $color_primary;
+$color_pagination: lighten($color_black, 50%);
 // $color_link_hover: $color_black;
 
 $text_light: #8e8e8e;
@@ -49,4 +50,4 @@ $head-search-btn-width: 84px;
 
 $search_height: 38px;
 
-$tabs_padding: .6rem 0.7rem; 
+$tabs_padding: .6rem 0.7rem;
