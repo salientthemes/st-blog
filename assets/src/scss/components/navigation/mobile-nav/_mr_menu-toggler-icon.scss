@@ -2,6 +2,9 @@ $mr-line-color : #000;
 $mr-line-animation: 0.35s ease;
 
 //Menu Toggle Design
+.menu-toggle {
+    display: none;
+}
 .menu-toggler {
     background: transparent;
     border: none;

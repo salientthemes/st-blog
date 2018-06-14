@@ -48,8 +48,14 @@ body.logo-center {
 
 
 	// big-logo disable on scroll
+	body.logo-center.big-logo-disable .site-header {
+	    // transform: translate(0,-122px);
+	}
+	body.logo-center.big-logo-disable .site-header {
+	    // transition: 0.4s all ease-in-out;
+	}
 	body.logo-center.big-logo-disable .#{$prefix}-header-row .#{$prefix}-logo-manage {
-	    display: none;
+	    // display: none;
 	}
 	body.logo-center.big-logo-disable nav#site-navigation ul {
 	    float: none;
@@ -82,5 +88,18 @@ body.logo-center {
 	    li {
 	    	float: none;
 	    }
+	}
+
+
+	body.logo-center.big-logo-disable .st-blog-header-wrap-nav {
+		z-index: 9997;
+	}
+	body.logo-center.big-logo-disable #big-logo-site-nav {
+	    position: fixed;
+	    background: #fff;
+	    width: 100%;
+	    top: 0;
+	    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+	    z-index: 9997;
 	}
 }

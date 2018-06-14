@@ -11,7 +11,7 @@ body.logo-right {
             // some fixes while shifting logo to the right
             .site-branding {
                 text-align: right;
-                padding-top: 5px;
+                // padding-top: 5px;
             }
         }
 
@@ -30,10 +30,13 @@ body.logo-right {
         }
     }
     
-    // searc icon
+    // search icon
     .#{$prefix}-header-wrap .#{$prefix}-header-wrap-nav .#{$prefix}-head-search-toggler {
         right: auto;
-        left: 15px;
+        left: 55px;
+        @include media(md) {
+            left: 15px;
+        }
     }
 
 }

@@ -49,3 +49,18 @@ header.site-header {
 		}
 	}
 }
+
+body.logo-right {
+	header.site-header {
+
+		// menu toggler
+		.#{$prefix}-header-wrap-nav {
+			.#{$prefix}-menu-toggler-manage {
+
+				#menu-icon.menu-toggler {
+					right: auto;
+				}
+			}
+		}
+	}
+}

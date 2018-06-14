@@ -7,6 +7,10 @@ body.fixed-header {
 	}
 
 	#page {
-	    padding-top: $header-height;
+	    // padding-top: $header-height;
 	}
+}
+
+body.fixed-header.logo-center .site-header {
+    position: inherit;
 }

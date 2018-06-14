@@ -35,9 +35,9 @@
                     right: 0;
                     z-index: 99;
                     .#{$prefix}-title {
-                        @include font-size(20);
+                        @include font-size(30);
                         
-                        @include media(xs) {
+                        @include media(sm) {
                             @include font-size(52);//36
                         }
                     }            
