@@ -20,8 +20,15 @@ function search_icon_alignment() {
 }
 
 function alignment_and_padding() {
+	jQuery('header.site-header').height( jQuery('.st-blog-header-wrap-nav').height() );
+
 	// page padding again
-	jQuery('#page.site').css({ 'padding-top': jQuery('.st-blog-header-wrap-nav').height() + 'px' });	
+	if(jQuery('body').hasClass('logo-left') || jQuery('body').hasClass('logo-right'))
+		jQuery('#page.site').css({ 'padding-top': jQuery('.st-blog-header-wrap-nav').height() + 'px' });	
+	else if( jQuery('body').hasClass('logo-center big-logo-disable') )
+		jQuery('#page.site').css({ 'padding-top': jQuery('.st-blog-header-wrap-nav').height() + 'px' });
+	else if( jQuery('body').hasClass('logo-center big-logo-enable') )
+		jQuery('#page.site').css({ 'padding-top': 0 });
 
 	// search icon padding
 	search_icon_alignment();
@@ -60,8 +67,21 @@ jQuery(window).load(function() {
 	});
 
 	// scroll top
+	var navbar = document.getElementById("big-logo-site-nav");
+	var sticky = navbar.offsetTop;
+	
 	jQuery(window).scroll(function() { 
-		if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+		// for logo-center only
+
+		if (window.pageYOffset >= sticky) {
+			// navbar.classList.add("sticky");
+		} else {
+			// navbar.classList.remove("sticky");
+		}
+		console.log(window.pageYOffset + '-' + sticky);
+
+		// if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {4
+		if (window.pageYOffset >= sticky) {
 			// scrolled down
 	        // document.getElementById("st-blog-scroll-top").style.display = "block";
 	        jQuery("body").addClass('scrolled-down');

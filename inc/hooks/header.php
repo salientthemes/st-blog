@@ -260,7 +260,7 @@ function st_blog_header() {
                     </div>
                 </div>
 
-                <div class="st-blog-header-row st-blog-big-logo-nav">
+                <div id="big-logo-site-nav" class="st-blog-header-row st-blog-big-logo-nav">
                     <!-- full width nav -->
                     <div class="text-right st-blog-menu-toggler-manage">
                         <button class="menu-toggler" id="menu-icon">

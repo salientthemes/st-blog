@@ -2,7 +2,8 @@ $admin-bar-height: 32px;
 $admin-bar-height-782: 46px;
 
 // admin-bar - ie logged in
-body.admin-bar.fixed-header .site-header {
+body.admin-bar.fixed-header .site-header,
+body.admin-bar.logo-center.big-logo-disable #big-logo-site-nav {
     top: $admin-bar-height;
 
 	@media screen and (max-width: 782px) {
@@ -14,7 +15,8 @@ body.admin-bar.fixed-header .site-header {
 	}
 }
 
-body.admin-bar .mr-mobile-menu {
+// mobile-nav
+body.admin-bar .st-mbl-menu {
     padding-top: $admin-bar-height;
 
 	@media screen and (max-width: 782px) {
