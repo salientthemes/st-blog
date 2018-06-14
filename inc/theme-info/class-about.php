@@ -6,14 +6,14 @@
  * @package eCommerce_Gem
  */
 
-if ( ! class_exists( 'eCommerce_Gem_About' ) ) {
+if ( ! class_exists( 'St_blog_About' ) ) {
 
 	/**
 	 * Main class.
 	 *
 	 * @since 1.0.0
 	 */
-	class eCommerce_Gem_About {
+	class St_blog_About {
 
 		/**
 		 * Class version.
@@ -114,22 +114,22 @@ if ( ! class_exists( 'eCommerce_Gem_About' ) ) {
 		private $notification;
 
 		/**
-		 * Singleton instance of eCommerce_Gem_About.
+		 * Singleton instance of St_blog_About.
 		 *
-		 * @var eCommerce_Gem_About $instance eCommerce_Gem_About instance.
+		 * @var St_blog_About $instance St_blog_About instance.
 		 */
 		private static $instance;
 
 		/**
-		 * Main eCommerce_Gem_About instance.
+		 * Main St_blog_About instance.
 		 *
 		 * @since 1.0.0
 		 *
 		 * @param array $config Configuration array.
 		 */
 		public static function init( $config ) {
-			if ( ! isset( self::$instance ) && ! ( self::$instance instanceof eCommerce_Gem_About ) ) {
-				self::$instance = new eCommerce_Gem_About;
+			if ( ! isset( self::$instance ) && ! ( self::$instance instanceof St_blog_About ) ) {
+				self::$instance = new St_blog_About;
 				if ( ! empty( $config ) && is_array( $config ) ) {
 					self::$instance->config = $config;
 					self::$instance->setup_config();

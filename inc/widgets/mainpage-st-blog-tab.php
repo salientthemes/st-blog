@@ -70,13 +70,11 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
                 <div class="clear"></div>  
 
                 <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="<?php echo esc_attr( $tab_id ); ?>-popular" role="tabpanel" aria-labelledby="<?php echo esc_attr( $tab_id ); ?>-popular-tab">
-                        <?php  $this->render_news( 'popular', $instance ); ?>
+                    <div class="tab-pane fade" id="<?php echo esc_attr( $tab_id ); ?>-popluar" role="tabpanel" aria-labelledby="<?php echo esc_attr( $tab_id ); ?>-popluar-tab">
+                        <?php $this->render_news( 'popluar', $instance ); ?>
                     </div>
                     <div class="tab-pane fade" id="<?php echo esc_attr( $tab_id ); ?>-recent" role="tabpanel" aria-labelledby="<?php echo esc_attr( $tab_id ); ?>-recent-tab">
                         <?php $this->render_news( 'recent', $instance ); ?>
-
-
                     </div>
                     <div class="tab-pane fade" id="<?php echo esc_attr( $tab_id ); ?>-comments" role="tabpanel" aria-labelledby="<?php echo esc_attr( $tab_id ); ?>-comments-tab">
                         <?php $this->render_comments(  $instance ); ?>

@@ -19,23 +19,33 @@ $config = array(
 	'quick_links' => array(
 		'theme_url' => array(
 			'text' => esc_html__( 'Theme Details','st-blog' ),
-			'url'  => 'https://promenadethemes.com/downloads/st-blog/',
+			'url'  => 'https://www.salientthemes.com/',
+			// 'url'  => 'https://promenadethemes.com/downloads/st-blog/',
+
 			),
 		'demo_url' => array(
 			'text' => esc_html__( 'View Demo','st-blog' ),
-			'url'  => 'https://promenadethemes.com/demo/st-blog/',
+			'url'  => 'https://www.salientthemes.com/',
+			// 'url'  => 'https://promenadethemes.com/demo/st-blog/',
+
 			),
 		'documentation_url' => array(
 			'text'   => esc_html__( 'View Documentation','st-blog' ),
-			'url'    => 'https://promenadethemes.com/documentation/st-blog/',
+			'url'    => 'https://www.salientthemes.com/',
+			// 'url'    => 'https://promenadethemes.com/documentation/st-blog/',
+
 			),
 		'rate_url' => array(
 			'text' => esc_html__( 'Rate This Theme','st-blog' ),
-			'url'  => 'https://wordpress.org/support/theme/st-blog/reviews/',
+			'url'  => 'https://www.salientthemes.com/',
+			// 'url'  => 'https://wordpress.org/support/theme/st-blog/reviews/',
+
 			),
 		'pro_url' => array(
 			'text' => esc_html__( 'Upgrade To Pro Theme','st-blog' ),
-			'url'  => 'https://promenadethemes.com/downloads/st-blog-plus',
+			'url'  => 'https://www.salientthemes.com/',
+			// 'url'  => 'https://promenadethemes.com/downloads/st-blog-plus',
+
 			'button' => 'primary',
 			),
 		),
@@ -56,7 +66,8 @@ $config = array(
 			'title'               => esc_html__( 'Theme Documentation', 'st-blog' ),
 			'text'                => esc_html__( 'Find step by step instructions with video documentation to setup theme easily.', 'st-blog' ),
 			'button_label'        => esc_html__( 'View documentation', 'st-blog' ),
-			'button_link'         => 'https://promenadethemes.com/documentation/st-blog/',
+			'button_link'         => 'https://www.salientthemes.com/',
+			// 'button_link'         => 'https://promenadethemes.com/documentation/st-blog/',
 			'is_button'           => false,
 			'recommended_actions' => false,
 			'is_new_tab'          => true,
@@ -66,6 +77,8 @@ $config = array(
 			'text'                => esc_html__( 'We recommend few steps to take so that you can get complete site like shown in demo.', 'st-blog' ),
 			'button_label'        => esc_html__( 'Check recommended actions', 'st-blog' ),
 			'button_link'         => esc_url( admin_url( 'themes.php?page=st-blog-about&tab=recommended_actions' ) ),
+			// 'button_link'         => esc_url( admin_url( 'themes.php?page=st-blog-about&tab=recommended_actions' ) ),
+
 			'is_button'           => false,
 			'recommended_actions' => false,
 			'is_new_tab'          => false,
@@ -84,7 +97,9 @@ $config = array(
 			'title'        			=> esc_html__( 'Youtube Video Tutorials', 'st-blog' ),
 			'text'         			=> esc_html__( 'Please check our youtube channel for video instructions of eCommerce Gem setup and customization.', 'st-blog' ),
 			'button_label' 			=> esc_html__( 'Video Tutorials', 'st-blog' ),
-			'button_link'  			=> 'https://www.youtube.com/watch?v=YUBUosw64AA&list=PL-Ic437QwxQ8cW5jX4XC0or7vYzUhZX7s',
+			 'button_link'  			=> 'https://www.salientthemes.com/',
+			// 'button_link'  			=> 'https://www.youtube.com/watch?v=YUBUosw64AA&list=PL-Ic437QwxQ8cW5jX4XC0or7vYzUhZX7s',
+
 			'is_button'    			=> false,
 			'recommended_actions' 	=> false,
 			'is_new_tab'   			=> true,
@@ -94,7 +109,8 @@ $config = array(
 			'title'        			=> esc_html__( 'Pro Version', 'st-blog' ),
 			'text'         			=> esc_html__( 'Upgrade to pro version for additional features and options.', 'st-blog' ),
 			'button_label' 			=> esc_html__( 'View Pro Version', 'st-blog' ),
-			'button_link'  			=> 'https://promenadethemes.com/downloads/st-blog-plus/',
+			'button_link'  			=> 'https://www.salientthemes.com/',
+			// 'button_link'  			=> 'https://promenadethemes.com/downloads/st-blog-plus/',
 			'is_button'    			=> true,
 			'recommended_actions' 	=> false,
 			'is_new_tab'   			=> true,
@@ -104,7 +120,8 @@ $config = array(
 			'title'        			=> esc_html__( 'Contact Support', 'st-blog' ),
 			'text'         			=> esc_html__( 'If you have any problem, feel free to create ticket on our dedicated Support forum.', 'st-blog' ),
 			'button_label' 			=> esc_html__( 'Contact Support', 'st-blog' ),
-			'button_link'  			=> esc_url( 'https://promenadethemes.com/support/item/st-blog/' ),
+			'button_link'  			=> esc_url( 'https://www.salientthemes.com/' ),
+			// 'button_link'  			=> esc_url( 'https://promenadethemes.com/support/item/st-blog/' ),
 			'is_button'    			=> false,
 			'recommended_actions' 	=> false,
 			'is_new_tab'   			=> true,
@@ -114,13 +131,13 @@ $config = array(
 	// Recommended actions.
 	'recommended_actions' => array(
 		'content' => array(
-			'woocommerce' => array(
-				'title'       => esc_html__( 'WooCommerce', 'st-blog' ),
-				'description' => esc_html__( 'Please install WooCommerce plugin.', 'st-blog' ),
-				'check'       => class_exists( 'WooCommerce' ),
-				'plugin_slug' => 'woocommerce',
-				'id'          => 'woocommerce',
-			),
+			// 'woocommerce' => array(
+			// 	'title'       => esc_html__( 'WooCommerce', 'st-blog' ),
+			// 	'description' => esc_html__( 'Please install WooCommerce plugin.', 'st-blog' ),
+			// 	'check'       => class_exists( 'WooCommerce' ),
+			// 	'plugin_slug' => 'woocommerce',
+			// 	'id'          => 'woocommerce',
+			// ),
 			// 'woocommerce-pages' => array(
 			// 	'title'       => esc_html__( 'WooCommerce Pages', 'st-blog' ),
 			// 	'description' => sprintf( esc_html__( 'Please make sure all WooCommerce pages are set properly. %1$s', 'st-blog' ), '<a href="https://docs.woocommerce.com/document/woocommerce-pages/" target="_blank">' . esc_html__( 'Reference', 'st-blog' ) . '</a>' ),
@@ -164,7 +181,8 @@ $config = array(
 			'icon'         => 'dashicons dashicons-sos',
 			'text'         => esc_html__( 'If you have any problem, feel free to create ticket on our dedicated Support forum.', 'st-blog' ),
 			'button_label' => esc_html__( 'Contact Support', 'st-blog' ),
-			'button_link'  => esc_url( 'https://promenadethemes.com/support/item/st-blog/' ),
+			'button_link'  => esc_url( 'https://www.salientthemes.com/' ),
+			// 'button_link'  => esc_url( 'https://promenadethemes.com/support/item/st-blog/' ),
 			'is_button'    => true,
 			'is_new_tab'   => true,
 		),
@@ -173,7 +191,8 @@ $config = array(
 			'icon'         => 'dashicons dashicons-book-alt',
 			'text'         => esc_html__( 'Kindly check our theme documentation for detailed information and video instructions.', 'st-blog' ),
 			'button_label' => esc_html__( 'View Documentation', 'st-blog' ),
-			'button_link'  => 'https://promenadethemes.com/documentation/st-blog/',
+			'button_link'  => 'https://www.salientthemes.com/',
+			// 'button_link'  => 'https://promenadethemes.com/documentation/st-blog/',
 			'is_button'    => false,
 			'is_new_tab'   => true,
 		),
@@ -183,7 +202,8 @@ $config = array(
 			'icon'         => 'dashicons dashicons-star-filled',
 			'text'         => esc_html__( 'Upgrade to pro version for additional features and options.', 'st-blog' ),
 			'button_label' => esc_html__( 'View Pro Version', 'st-blog' ),
-			'button_link'  => 'https://promenadethemes.com/downloads/st-blog-plus/',
+			'button_link'  => 'https://www.salientthemes.com/',
+			// 'button_link'  => 'https://promenadethemes.com/downloads/st-blog-plus/',
 			'is_button'    => true,
 			'is_new_tab'   => true,
 		),
@@ -192,7 +212,8 @@ $config = array(
 			'icon'         => 'dashicons dashicons-video-alt3',
 			'text'         => esc_html__( 'Please check our youtube channel for video instructions of eCommerce Gem setup and customization.', 'st-blog' ),
 			'button_label' => esc_html__( 'Video Tutorials', 'st-blog' ),
-			'button_link'  => 'https://www.youtube.com/watch?v=YUBUosw64AA&list=PL-Ic437QwxQ8cW5jX4XC0or7vYzUhZX7s',
+			'button_link'  => 'https://www.salientthemes.com/',
+			// 'button_link'  => 'https://www.youtube.com/watch?v=YUBUosw64AA&list=PL-Ic437QwxQ8cW5jX4XC0or7vYzUhZX7s',
 			'is_button'    => false,
 			'is_new_tab'   => true,
 		),
@@ -201,7 +222,8 @@ $config = array(
 			'icon'         => 'dashicons dashicons-admin-tools',
 			'text'         => esc_html__( 'We have dedicated team members for theme customization. Feel free to contact us any time if you need any customization service.', 'st-blog' ),
 			'button_label' => esc_html__( 'Customization Request', 'st-blog' ),
-			'button_link'  => 'https://promenadethemes.com/contact-us/',
+			'button_link'  => 'https://www.salientthemes.com/',
+			// 'button_link'  => 'https://promenadethemes.com/contact-us/',
 			'is_button'    => false,
 			'is_new_tab'   => true,
 		),
@@ -210,7 +232,8 @@ $config = array(
 			'icon'         => 'dashicons dashicons-admin-customizer',
 			'text'         => esc_html__( 'If you want to customize theme file, you should use child theme rather than modifying theme file itself.', 'st-blog' ),
 			'button_label' => esc_html__( 'About child theme', 'st-blog' ),
-			'button_link'  => 'https://developer.wordpress.org/themes/advanced-topics/child-themes/',
+			'button_link'  => 'https://www.salientthemes.com/',
+			// 'button_link'  => 'https://developer.wordpress.org/themes/advanced-topics/child-themes/',
 			'is_button'    => false,
 			'is_new_tab'   => true,
 		),
@@ -219,12 +242,12 @@ $config = array(
     // Free vs pro array.
     'free_pro' => array(
 
-	    array(
-		    'title'     => esc_html__( 'WooCommerce Ready', 'st-blog' ),
-		    'desc'      => esc_html__( 'Theme supports/works with WooCommerce plugin', 'st-blog' ),
-		    'free'      => esc_html__('yes','st-blog'),
-		    'pro'       => esc_html__('yes','st-blog'),
-	    ),
+	    // array(
+		   //  'title'     => esc_html__( 'WooCommerce Ready', 'st-blog' ),
+		   //  'desc'      => esc_html__( 'Theme supports/works with WooCommerce plugin', 'st-blog' ),
+		   //  'free'      => esc_html__('yes','st-blog'),
+		   //  'pro'       => esc_html__('yes','st-blog'),
+	    // ),
 
 	    array(
 		    'title'     => esc_html__( 'Slider Support', 'st-blog' ),
@@ -291,4 +314,4 @@ $config = array(
     ),
 
 );
-eCommerce_Gem_About::init( apply_filters( 'st_blog_about_filter', $config ) );
+St_blog_About::init( apply_filters( 'st_blog_about_filter', $config ) );
