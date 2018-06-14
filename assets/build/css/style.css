@@ -871,6 +871,9 @@ body.logo-right .st-blog-header-row .st-blog-menu-toggler-manage {
 body.logo-right .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler {
   right: auto;
   left: 55px; }
+  @media (min-width: 992px) {
+    body.logo-right .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler {
+      left: 15px; } }
 
 nav#site-navigation ul {
   float: right;

@@ -30,10 +30,13 @@ body.logo-right {
         }
     }
     
-    // searc icon
+    // search icon
     .#{$prefix}-header-wrap .#{$prefix}-header-wrap-nav .#{$prefix}-head-search-toggler {
         right: auto;
         left: 55px;
+        @include media(md) {
+            left: 15px;
+        }
     }
 
 }

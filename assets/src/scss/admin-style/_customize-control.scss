@@ -24,18 +24,20 @@ $color_customize_dark: #0073aa;
 }
 
 #customize-controls #customize-theme-controls .control-section-st-blog h3.accordion-section-title {
-    background-color: #ff95bc;
-    border-left-color: #ff95bc;
+    background-color: #FFC107;
+    border-left-color: #FFC107;
+    text-align: center;
     padding-top: 13px;
     &:hover {
         // background-color: #009688;
     }
     a.cusbtn {
-        background-color: $color_customize;
-        border-color: $color_customize_dark;
+        background-color: #009688;
+        border-color: #009688;
         color: #ffffff;
+        margin-left: 0;
         &:hover {
-            background-color: $color_customize_dark;
+            background-color: #008679;
         }
     }
 }
