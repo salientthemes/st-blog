@@ -160,10 +160,7 @@ function st_blog_google_fonts()
 	$st_blog_font_family_menu			 = $st_blog_customizer_all_values['st-blog-font-family-menu'];
 	$st_blog_font_family_h1_h6			 = $st_blog_customizer_all_values['st-blog-font-family-h1-h6'];
 	$st_blog_font_family_button_text	 = $st_blog_customizer_all_values['st-blog-font-family-button-text'];
-	$st_blog_font_family_copy_right_text = $st_blog_customizer_all_values['st-blog-footer-copy-right-text'];
-	$st_blog_number_of_post_lates = $st_blog_customizer_all_values['latest-numbe-of-post-for-blog-section'];
-	
-
+	$st_blog_font_family_copy_right_text = $st_blog_customizer_all_values['st-blog-footer-copy-right-text'];	
 	$st_blog_fonts = array();
 	$st_blog_fonts[] = $st_blog_font_family_site_identity;
 	$st_blog_fonts[] = $st_blog_font_family_menu;
@@ -337,7 +334,7 @@ add_filter( 'get_the_archive_title', 'st_blog_customizer_remove_defualt_cat_auth
 function st_blog_home_page_number_post( $query ) {
 	// global $st_blog_customizer_all_values;
 	$st_blog_theme = get_theme_mod( SALIENT_CUSTOMIZER_NAME );
-	$st_blog_number_of_post = $st_blog_theme['latest-numbe-of-post-for-blog-section'];
+	$st_blog_number_of_post = isset($st_blog_theme['latest-numbe-of-post-for-blog-section'] ) ? $st_blog_theme['latest-numbe-of-post-for-blog-section'] : '';
     if ( is_admin() || ! $query->is_main_query() )
         return;
 

@@ -26,7 +26,7 @@ Class st_blog_instagram_widget extends WP_Widget {
 		$link 		= empty( $instance['link'] ) ? '' : $instance['link'];
 
 		echo wp_kses_post( $args['before_widget'] );
-		if ( ! empty( $title ) ) { echo wp_kses_post($args['before_title']) . wp_kses_post( $title ) . esc_html($args['after_title'] ); };
+		if ( ! empty( $title ) ) { echo wp_kses_post($args['before_title']) . wp_kses_post( $title ) . wp_kses_post($args['after_title'] ); };
 		do_action( 'wpiw_before_widget', $instance );
 
 		if ( '' !== $username ) {
