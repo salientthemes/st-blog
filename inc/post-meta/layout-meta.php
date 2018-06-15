@@ -177,7 +177,7 @@ function st_blog_save_sidebar_layout( $post_id ) {
     /*image align*/
     if(isset($_POST['st-blog-single-post-image-align'])){
         $old = get_post_meta( $post_id, 'st-blog-single-post-image-align', true );
-       $new = sanitize_text_field( wp_unslash ( $_POST['st-blog-single-post-image-align'] ) );
+        $new = sanitize_text_field( wp_unslash( $_POST['st-blog-single-post-image-align'] ) );
         if ( $new && $new != $old ) {
             update_post_meta( $post_id, 'st-blog-single-post-image-align', $new );
         } elseif ( '' == $new && $old ) {

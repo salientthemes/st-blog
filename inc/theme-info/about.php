@@ -170,7 +170,9 @@ $config = array(
 	),
 
 	// Demo content.
+	
 	'demo_content' => array(
+		/* translators: %s: plugin import data*/
 		'description' => sprintf( esc_html__( 'Install %1$s plugin to import demo content. Demo data are bundled within the theme, Please make sure plugin is installed and activated. After plugin activation, go to Import Demo Data menu under Appearance and import it.', 'st-blog' ), '<a href="https://wordpress.org/plugins/one-click-demo-import/" target="_blank">' . esc_html__( 'One Click Demo Import', 'st-blog' ) . '</a>' ),
 		),
 

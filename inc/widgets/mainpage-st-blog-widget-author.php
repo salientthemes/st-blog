@@ -194,7 +194,7 @@ if ( !class_exists('st_blog_author_widget') ) :
 
             <p>
                 <label for="<?php echo absint($this->get_field_id( 'custom_class' )); ?>"><?php esc_html_e( 'Custom Class:', 'st-blog' ); ?></label>
-                <input class="widefat" id="<?php echo absint($this->get_field_id( 'custom_class' )); ?>" name="<?php echo ($this->get_field_name( 'custom_class' )); ?>" type="text" value="<?php echo esc_attr( $custom_class ); ?>" />
+                <input class="widefat" id="<?php echo absint($this->get_field_id( 'custom_class' )); ?>" name="<?php echo esc_html($this->get_field_name( 'custom_class' )); ?>" type="text" value="<?php echo esc_attr( $custom_class ); ?>" />
             </p>
             <?php
         }

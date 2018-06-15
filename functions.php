@@ -161,6 +161,8 @@ function st_blog_google_fonts()
 	$st_blog_font_family_h1_h6			 = $st_blog_customizer_all_values['st-blog-font-family-h1-h6'];
 	$st_blog_font_family_button_text	 = $st_blog_customizer_all_values['st-blog-font-family-button-text'];
 	$st_blog_font_family_copy_right_text = $st_blog_customizer_all_values['st-blog-footer-copy-right-text'];
+	$st_blog_number_of_post_lates = $st_blog_customizer_all_values['latest-numbe-of-post-for-blog-section'];
+	
 
 	$st_blog_fonts = array();
 	$st_blog_fonts[] = $st_blog_font_family_site_identity;
@@ -314,8 +316,8 @@ if ( !function_exists('st_blog_primary_menu')  ) :
 endif;
 
 // customize the catgory title author
-add_filter( 'get_the_archive_title', function ( $title ) {
-
+function st_blog_customizer_remove_defualt_cat_author()
+{
     if( is_category() ) {
 
         $title = single_cat_title( '', false );
@@ -328,22 +330,24 @@ add_filter( 'get_the_archive_title', function ( $title ) {
 
     return $title;
 
-});
+}
+add_filter( 'get_the_archive_title', 'st_blog_customizer_remove_defualt_cat_author' );
 
-// // for number of latest blog post
-// function st_blog_home_page_number_post( $query ) {
-// 	global $st_blog_customizer_all_values;
-// 	$ww = get_theme_mod( SALIENT_CUSTOMIZER_NAME );
-// 	$st_blog_number_of_post = $ww['latest-post-show-title'];
-// 	var_dump($st_blog_number_of_post);die('hello');
-//     if ( is_admin() || ! $query->is_main_query() )
-//         return;
+ // for number of latest blog post
+function st_blog_home_page_number_post( $query ) {
+	// global $st_blog_customizer_all_values;
+	$st_blog_theme = get_theme_mod( SALIENT_CUSTOMIZER_NAME );
+	$st_blog_number_of_post = $st_blog_theme['latest-numbe-of-post-for-blog-section'];
+    if ( is_admin() || ! $query->is_main_query() )
+        return;
 
-//     if ( is_home() ) {
-//         // Display only 1 post for the original blog archive
-//         $query->set( 'posts_per_page', $st_blog_number_of_post );
-//         return;
-//     }
+    if ( is_home() ) {
+        // Display only 1 post for the original blog archive
+        $query->set( 'posts_per_page', $st_blog_number_of_post );
+        
+    }
+    return;
 
-// }
-// add_action( 'pre_get_posts', 'st_blog_home_page_number_post', 10 );
+}
+add_action( 'pre_get_posts', 'st_blog_home_page_number_post', 10 );
+

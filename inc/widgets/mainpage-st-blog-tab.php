@@ -116,9 +116,9 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
                 case 'recent':
                     $qargs = array(
                         'post_type'         => 'post',
-                        'posts_per_page'    => $instance['recent_number'],
+                        'posts_per_page'    => isset($instance['recent_number'] ) ? $instance['recent_number'] : '',
                         'no_found_rows'     => true,
-                        'cat'               =>  $instance['recent_category']
+                        'cat'               =>  isset($instance['recent_category'] ) ? $instance['recent_category'] : '',
                         );
                     
                     break;
@@ -154,7 +154,7 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
                                     $author_name = get_the_author_meta('nickname');
                                     $author_url  = get_author_posts_url(get_the_author_meta('Id'));
                                 ?>
-                                <span class="author-link"><a href="<?php echo esc_url($author_url) . $author_name  ?>  "><?php echo esc_html($author_name);?></a></span>
+                                <span class="author-link"><a href="<?php echo esc_url($author_url) .  esc_html($author_name)  ?>  "><?php echo esc_html($author_name);?></a></span>
                                 <span class="date-link"><?php the_time( get_option( 'date_format' ) ); ?></span>
                             </div><!-- post meta -->
                         </div><!-- tab-heading-title -->
@@ -245,16 +245,16 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
                 'custom_class'      => ''
                
             ) );
-            $title            = strip_tags( $instance['title'] );
-            $popular_heading  = strip_tags( $instance['popular_heading'] );
-            $popular_category = $instance['popular_category'];
-            $popular_number   = absint( $instance['popular_number'] );
-            $recent_heading  = strip_tags( $instance['recent_heading'] );
-            $recent_category = $instance['recent_category'];
-            $recent_number   = absint( $instance['recent_number'] );
+            $title             = strip_tags( $instance['title'] );
+            $popular_heading   = strip_tags( $instance['popular_heading'] );
+            $popular_category  = $instance['popular_category'];
+            $popular_number    = absint( $instance['popular_number'] );
+            $recent_heading    = strip_tags( $instance['recent_heading'] );
+            $recent_category   = $instance['recent_category'];
+            $recent_number     = absint( $instance['recent_number'] );
             $comments_heading  = strip_tags( $instance['comments_heading'] );
-            $comments_number = $instance['comments_number'];
-            $custom_class     = esc_attr( $instance['custom_class'] );
+            $comments_number   = $instance['comments_number'];
+            $custom_class      = esc_attr( $instance['custom_class'] );
             
 
             ?>

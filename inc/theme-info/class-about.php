@@ -162,6 +162,7 @@ if ( ! class_exists( 'St_blog_About' ) ) {
 			$this->logo_url      = isset( $this->config['logo_url'] ) ? $this->config['logo_url'] : get_template_directory_uri() . '/includes/theme-info/images/pt-logo.png';
 			$this->logo_link     = isset( $this->config['logo_link'] ) ? $this->config['logo_link'] : 'https://promenadethemes.com/';
 			$this->tabs          = isset( $this->config['tabs'] ) ? $this->config['tabs'] : array();
+			/* translators: %s:  notification */
 			$this->notification  = isset( $this->config['notification'] ) ? $this->config['notification'] : ( '<p>' . sprintf( esc_html__( 'Welcome! Thank you for choosing %1$s! To fully take advantage of the best our theme can offer please make sure you visit our %2$swelcome page%3$s.', 'st-blog' ), $this->theme_name, '<a href="' . esc_url( admin_url( 'themes.php?page=' . $this->page_slug ) ) . '">', '</a>' ) . '</p><p><a href="' . esc_url( admin_url( 'themes.php?page=' . $this->page_slug ) ) . '" class="button button-primary" style="text-decoration: none;">' . sprintf( esc_html__( 'Get started with %s', 'st-blog' ), $this->theme_name ) . '</a></p>' );
 		}
 
@@ -309,7 +310,7 @@ if ( ! class_exists( 'St_blog_About' ) ) {
 
 				// Display tabs.
 				if ( ! empty( $this->tabs ) ) {
-					$active_tab = isset( $_GET['tab'] ) ? wp_unslash( $_GET['tab'] ) : 'getting_started';
+					$active_tab = isset( $_GET['tab'] ) ? sanitize_text_field(wp_unslash( $_GET['tab'] ) ): 'getting_started';
 
 					echo '<h2 class="nav-tab-wrapper wp-clearfix">';
 
@@ -321,16 +322,16 @@ if ( ! class_exists( 'St_blog_About' ) ) {
 								continue;
 							}
 						}
+						/* translators: %s: search term */
+						echo '<a href="' . esc_url( admin_url( 'themes.php?page=' . $this->page_slug ) ) . '&tab=' . esc_attr($tab_key) . '" class="nav-tab ' . ( $active_tab === $tab_key ? 'nav-tab-active' : '' ) . '" role="tab" data-toggle="tab">';
 
-						echo '<a href="' . esc_url( admin_url( 'themes.php?page=' . $this->page_slug ) ) . '&tab=' . $tab_key . '" class="nav-tab ' . ( $active_tab === $tab_key ? 'nav-tab-active' : '' ) . '" role="tab" data-toggle="tab">';
-
-						if ( 'upgrade_to_pro' === $tab_key ) {
+						if ( 'upgrade_to_pro' === esc_attr( $tab_key ) ) {
 							echo '<span class="dashicons dashicons-star-filled"></span>';
 						}
 
 						echo esc_html( $tab_name );
 
-						if ( 'recommended_actions' === $tab_key ) {
+						if ( 'recommended_actions' === esc_attr($tab_key ) ) {
 							$count = $this->get_total_recommended_actions();
 							if ( $count > 0 ) {
 								echo '<span class="badge-action-count">' . esc_html( $count ) . '</span>';
@@ -473,8 +474,8 @@ if ( ! class_exists( 'St_blog_About' ) ) {
 									$button_new_tab = '_blank';
 								}
 							}
-
-							echo '<a target="' . $button_new_tab . '" href="' . esc_url( $getting_started_item['button_link'] ) . '"class="' . esc_attr( $button_class ) . '">' . esc_html( $getting_started_item['button_label'] ) . '</a>';
+							/* translators: %s: button link */
+							echo '<a target="' . esc_attr( $button_new_tab ) . '" href="' . esc_url( $getting_started_item['button_link'] ) . '"class="' . esc_attr( $button_class ) . '">' . esc_html( $getting_started_item['button_label'] ) . '</a>';
 							echo '</p>';
 						}
 
@@ -725,7 +726,8 @@ if ( ! class_exists( 'St_blog_About' ) ) {
 									$button_new_tab = '_blank';
 								}
 							}
-							echo '<a target="' . $button_new_tab . '" href="' . esc_url( $support_step['button_link'] ) . '" class="' . esc_attr( $button_class ) . '">' . esc_html( $support_step['button_label'] ) . '</a>';
+							/* translators: %s: button link */
+							echo '<a target="' . esc_attr( $button_new_tab ) . '" href="' . esc_url( $support_step['button_link'] ) . '" class="' . esc_attr( $button_class ) . '">' . esc_html( $support_step['button_label'] ) . '</a>';
 							echo '</p>';
 						}
 
@@ -814,7 +816,7 @@ if ( ! class_exists( 'St_blog_About' ) ) {
 
 		            echo '<tr class="pt-theme-info-text-center">';
 		            echo '<td></td>';
-		            echo '<td colspan="2"><a href="https://promenadethemes.com/downloads/st-blog-plus/" target="_blank" class="button button-primary button-hero">eCommerce Gem Plus</a></td>';
+		            echo '<td colspan="2"><a href="https://www.salientthemes.com/" target="_blank" class="button button-primary button-hero">eCommerce Gem Plus</a></td>';
 		            echo '</tr>';
 
 		            echo '</tbody>';
@@ -927,11 +929,12 @@ if ( ! class_exists( 'St_blog_About' ) ) {
 		 *
 		 * @since 1.0.0
 		 */
+		/* translators: %s: search callback */
 		public function dismiss_recommended_action_callback() {
 
-			$todo      = ( isset( $_GET['todo'] ) ) ? esc_attr( wp_unslash( $_GET['todo'] ) ) : '';
-			$action_id = ( isset( $_GET['id'] ) ) ? esc_attr( wp_unslash( $_GET['id'] ) ) : '';
-			$wpnonce   = ( isset( $_GET['_wpnonce'] ) ) ? esc_attr( wp_unslash( $_GET['_wpnonce'] ) ) : '';
+			$todo      = ( isset( $_GET['todo'] ) ) ? sanitize_text_field( wp_unslash( $_GET['todo'] ) ) : '';
+			$action_id = ( isset( $_GET['id'] ) ) ? sanitize_text_field( wp_unslash( $_GET['id'] ) ) : '';
+			$wpnonce   = ( isset( $_GET['_wpnonce'] ) ) ? sanitize_text_field( wp_unslash( $_GET['_wpnonce'] ) ) : '';
 
 			$nonce = 'action-' . $action_id . '-' . $todo;
 
@@ -999,7 +1002,8 @@ if ( ! class_exists( 'St_blog_About' ) ) {
 		 *
 		 * @param string $plugin_folder Optional. Relative path to single plugin folder.
 		 * @return array Array of installed plugins with plugin information.
-		 */
+		 */		
+		/* translators: %s: search term */
 		public function get_plugins( $plugin_folder = '' ) {
 			if ( ! function_exists( 'get_plugins' ) ) {
 				require_once ABSPATH . 'wp-admin/includes/plugin.php';
@@ -1032,6 +1036,7 @@ if ( ! class_exists( 'St_blog_About' ) ) {
 		 * @param string $slug Plugin slug.
 		 * @return bool True if active, false otherwise.
 		 */
+		/* translators: %s: search term */
 		private function is_plugin_active( $slug ) {
 			$file_path = $this->get_plugin_basename_from_slug( $slug );
 

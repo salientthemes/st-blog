@@ -25,8 +25,8 @@ Class st_blog_instagram_widget extends WP_Widget {
 		$target 	= empty( $instance['target'] ) ? '_self' : $instance['target'];
 		$link 		= empty( $instance['link'] ) ? '' : $instance['link'];
 
-		echo $args['before_widget'];
-		if ( ! empty( $title ) ) { echo $args['before_title'] . wp_kses_post( $title ) . $args['after_title']; };
+		echo wp_kses_post( $args['before_widget'] );
+		if ( ! empty( $title ) ) { echo wp_kses_post($args['before_title']) . wp_kses_post( $title ) . esc_html($args['after_title'] ); };
 		do_action( 'wpiw_before_widget', $instance );
 
 		if ( '' !== $username ) {
@@ -51,9 +51,9 @@ Class st_blog_instagram_widget extends WP_Widget {
 				foreach( $media_array as $item ) {
 					// copy the else line into a new file (parts/st-blog.php) within your theme and customise accordingly.
 					if ( locate_template( $template_part ) !== '' ) {
-						include locate_template( $template_part );
+						get_template_part(). locate_template( $template_part );
 					} else {
-						echo '<li class="st-blog-instafeed-image' . esc_attr( $liclass ) . '"><a href="' . esc_url( $item['link'] ) . '" target="' . esc_attr( $target ) . '"  class="' . esc_attr( $aclass ) . '"><img src="' . esc_url( $item[$size] ) . '"  alt="' . htmlspecialchars( $item['description'],ENT_QUOTES ) . '" title="' . htmlspecialchars( $item['description'],ENT_QUOTES ) . '"  class="' . esc_attr( $imgclass ) . '"/></a></li>';
+						echo '<li class="st-blog-instafeed-image' . esc_attr( $liclass ) . '"><a href="' . esc_url( $item['link'] ) . '" target="' . esc_attr( $target ) . '"  class="' . esc_attr( $aclass ) . '"><img src="' . esc_url( $item[$size] ) . '"  alt="' . esc_attr(htmlspecialchars( $item['description'],ENT_QUOTES ) ) . '" title="' . esc_attr(htmlspecialchars( $item['description'],ENT_QUOTES ) ) . '"  class="' . esc_attr( $imgclass ) . '"/></a></li>';
 					}
 				}
 				?>
@@ -75,7 +75,7 @@ Class st_blog_instagram_widget extends WP_Widget {
 			?><p class="<?php echo esc_attr( $linkclass ); ?> follow-me"><a href="<?php echo trailingslashit( esc_url( $url ) ); ?>" rel="me" target="<?php echo esc_attr( $target ); ?>" class="<?php echo esc_attr( $linkaclass ); ?> button btn"><i class="fab fa-instagram"></i> <?php echo wp_kses_post( $link ); ?></a></p><?php
 		}
 		do_action( 'wpiw_after_widget', $instance );
-		echo $args['after_widget'];
+		echo wp_kses_post( $args['after_widget'] );
 	}
 	function form( $instance ) {
 		$instance = wp_parse_args( (array) $instance, array(

@@ -15,7 +15,7 @@ $config = array(
 	),
 	'ocdi'           => array(
 		array(
-			'import_file_name'             => esc_html__( 'Theme Demo Content', 'ecommerce-gem' ),
+			'import_file_name'             => esc_html__( 'Theme Demo Content', 'st-blog' ),
 			'local_import_file'            => trailingslashit( get_template_directory() ) . 'includes/demo/demo-content/content.xml',
 			'local_import_widget_file'     => trailingslashit( get_template_directory() ) . 'includes/demo/demo-content/widget.wie',
 			'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'includes/demo/demo-content/customizer.dat',
