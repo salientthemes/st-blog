@@ -93,7 +93,7 @@ endif;
 add_action( 'after_setup_theme', 'st_blog_setup' );
 
 
-function st_blog_disable_wp_emojicons() {
+/*function st_blog_disable_wp_emojicons() {
 
   // all actions related to emojis
   remove_action( 'admin_print_styles', 'print_emoji_styles' );
@@ -107,7 +107,7 @@ function st_blog_disable_wp_emojicons() {
   // filter to remove TinyMCE emojis
   // add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
 }
-add_action( 'init', 'st_blog_disable_wp_emojicons' );
+add_action( 'init', 'st_blog_disable_wp_emojicons' );*/
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -215,8 +215,6 @@ function st_blog_scripts() {
 
 	//theme-style
 	wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/assets/build/css/style'.$suffix.'.css' );
-	// testing purpose
-	// wp_enqueue_style( 'theme-style', 'http://192.168.2.28/themes/st-blog/wp-content/themes/st-blog/assets/build/css/style'.$suffix.'.css' );
 
 	wp_enqueue_script( 'st-blog-navigation', get_template_directory_uri() . '/assets/js/navigation'.$suffix.'.js', array(), '20151215', true );
 

@@ -153,6 +153,7 @@
   color: $color_white;
   cursor: pointer;
   @include font-size(18);//15
+  line-height: $line_height;
   padding: 5px 10px;
   &:hover {
     color: $color_white;
@@ -193,8 +194,6 @@
           margin-bottom: 0;
           width: 100%;
           .search-field {
-              /* border-radius: 0;
-              width: 100%; */
               @extend %input-style;
               height: 100%;
           }
@@ -382,10 +381,10 @@
           content: "soundcloud";
       }
       a[href*="wordpress.org"]::after {
-          content: "wordpress";
+          content: "WordPress";
       }
       a[href*="wordpress.com"]::after {
-          content: "wordpress";
+          content: "WordPress";
       }
 
       a[href*="jsfiddle.net"]::after {
@@ -420,18 +419,6 @@
           margin-right: 14px;
         }
       }
-      /* a[href*="facebook.com"]:before {
-        content: "\f39e"; 
-      }
-      a[href*="twitter.com"]:before {
-        content: "\f099"; 
-      }
-      a[href*="instagram.com"]:before {
-        content: "\f16d"; 
-      }
-      a[href*="pinterest.com"]:before {
-        content: "\f0d2"; 
-      } */
       a[href*="facebook.com"]::before {
           content: "\f09a";
       }
@@ -548,7 +535,7 @@
           content: "\f198";
       }
 
-      /*social links hover effect */
+      // social links hover effect 
       a[href*="facebook.com"]:hover {
           color: #3b5998;
       }

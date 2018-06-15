@@ -4,25 +4,3 @@
 	// with text
 	@extend %social-icons-text;
 }
-
-body:not(.dark-theme) {
-	##{$prefix}-social-icons {
-		ul {
-			li {
-				/* a[href*="facebook.com"]:hover {
-					color: $color_facebook;
-				}
-				a[href*="twitter.com"]:hover {
-					color: $color_twitter;
-				}
-				a[href*="instagram.com"]:hover {
-					color: $color_instagram;
-				}
-				a[href*="pinterest.com"]:hover {
-					color: $color_pinterest;
-				} */
-			}
-		}
-	}
-}
-

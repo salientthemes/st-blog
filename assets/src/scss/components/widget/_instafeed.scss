@@ -31,6 +31,7 @@ $instagram_height: 125px;
 			height: $instagram_height;
 			overflow: hidden;
 		.#{$prefix}-instafeed-image {
+			float: left;
 			// display: inline-block;
 			// height: $instagram_height;
 			width: calc(100% / 8);

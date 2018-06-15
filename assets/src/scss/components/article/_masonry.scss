@@ -2,7 +2,8 @@ $masonry_column_gap: 6%;//or 30px
 
 
 body.boxed {
-	.#{$prefix}-masonry { /* Masonry container */
+	// Masonry container
+	.#{$prefix}-masonry { 
 		// margin-bottom: 40px;
 		@include media(md) {
 		    column-count: 2;
@@ -12,7 +13,8 @@ body.boxed {
 		    column-count: 2;
 		}
 		// .#{$prefix}-item
-		article { /* Masonry bricks or child elements */
+		article { 
+			// Masonry bricks or child elements
 		    display: inline-block;
 		    text-align: center;
 		    // width: 100%;
