@@ -1,6 +1,11 @@
 .post-navigation {
     @extend %post-navigation;
 }
+.site-main {
+	.post-navigation {
+		margin-bottom: 3rem;
+	}
+}
 
 .posts-navigation {
     @extend %post-navigation;

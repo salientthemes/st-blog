@@ -23,6 +23,7 @@
                 }
             
                 .#{$prefix}-banner-caption {
+                    line-height: $line_height;
                     position: absolute;
                     left: 0;
                     text-align: center;
