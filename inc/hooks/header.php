@@ -255,7 +255,9 @@ function st_blog_header() {
                             </nav><!-- #site-navigation -->     
 
                             <!-- search toggle icon -->
-                            <button class="st-blog-head-search-toggler d-lg-none"><i class="fas fa-search"></i></button>
+                            <?php if ( $st_blog_customizer_all_values['header-search-button-enable'] ) {?>
+                                <button class="st-blog-head-search-toggler d-lg-none"><i class="fas fa-search"></i></button>
+                            <?php } ?>
                         </div><!-- site nav -->
                     </div>
                 </div>
