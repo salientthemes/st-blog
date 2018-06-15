@@ -105,7 +105,7 @@ function st_blog_disable_wp_emojicons() {
   remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 
   // filter to remove TinyMCE emojis
-  add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+  // add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
 }
 add_action( 'init', 'st_blog_disable_wp_emojicons' );
 
@@ -313,7 +313,7 @@ if ( !function_exists('st_blog_primary_menu')  ) :
 endif;
 
 // customize the catgory title author
-function st_blog_customizer_remove_defualt_cat_author()
+function st_blog_customizer_remove_defualt_cat_author($title)
 {
     if( is_category() ) {
 
