@@ -70,8 +70,8 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
                 <div class="clear"></div>  
 
                 <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade" id="<?php echo esc_attr( $tab_id ); ?>-popluar" role="tabpanel" aria-labelledby="<?php echo esc_attr( $tab_id ); ?>-popluar-tab">
-                        <?php $this->render_news( 'popluar', $instance ); ?>
+                    <div class="tab-pane fade active show " id="<?php echo esc_attr( $tab_id ); ?>-popular" role="tabpanel" aria-labelledby="<?php echo esc_attr( $tab_id ); ?>-popular-tab">
+                        <?php $this->render_news( 'popular', $instance ); ?>
                     </div>
                     <div class="tab-pane fade" id="<?php echo esc_attr( $tab_id ); ?>-recent" role="tabpanel" aria-labelledby="<?php echo esc_attr( $tab_id ); ?>-recent-tab">
                         <?php $this->render_news( 'recent', $instance ); ?>
@@ -100,19 +100,17 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
             if ( ! in_array( $type, array( 'popular', 'recent' ) ) ) {
                 return;
             }
-
+            
             switch ( $type ) {
                 case 'popular':
                     $qargs = array(
 
                         'post_type'         => 'post',
-                        'posts_per_page'    => $instance['popular_number'],
+                        'posts_per_page'    => isset($instance['popular_number'] ) ? $instance['popular_number'] : '',
                         'no_found_rows'     => true,
-                        'cat'               =>  $instance['popular_category']
+                        'cat'               => isset($instance['popular_category'] ) ? $instance['popular_category'] : '',
                         // 'orderby'        => 'comment_count',
                     );
-
-                    
                     break;
 
                 case 'recent':
