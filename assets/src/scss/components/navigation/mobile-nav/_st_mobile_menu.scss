@@ -1,33 +1,33 @@
-// mr mobile menu configuration
+// st mobile menu configuration
 $overlay            : true;
-$mr_menu_type       : overlay; // overlay or shift
-$mr_menu_direction  : left;  // left or right 
-$mr_menu_animation  : all 0.3s ease-in-out;
-$mr_overlay_color   : rgba(#000, 0.8);
-$mr_menu_width      : 300px;   
-$mr_menu_color      : #272727;
-$mr_menu_text_color : #fff;  
-$mr-font            : 'Roboto Condensed', sans-serif; // if you inherit font then remove this variable
-$mr_prefix             : 'st-mbl';
+$st_menu_type       : overlay; // overlay or shift
+$st_menu_direction  : left;  // left or right 
+$st_menu_animation  : all 0.3s ease-in-out;
+$st_overlay_color   : rgba(#000, 0.8);
+$st_menu_width      : 300px;   
+$st_menu_color      : #272727;
+$st_menu_text_color : #fff;  
+$st-font            : 'Roboto Condensed', sans-serif; // if you inherit font then remove this variable
+$st_prefix             : 'st-mbl';
 
 //  font-size
-$mr-fs-first-level  : 16px;
-$mr-fs-rest-level   : 12px; 
+$st-fs-first-level  : 16px;
+$st-fs-rest-level   : 12px; 
    
 // sub menu arrow
-$mr_submenu_indicator_arrow_width    : 30px;
-$mr_submenu_indicator_arrow_color    : #fff;
-$mr_submenu_indicator_arrow_animation : true;
+$st_submenu_indicator_arrow_width    : 30px;
+$st_submenu_indicator_arrow_color    : #fff;
+$st_submenu_indicator_arrow_animation : true;
 
 // close button
-$mr_close_button_size      : 20px;
-$mr_close_button_position  : right;
-$mr_colse_button_animation : true;
+$st_close_button_size      : 20px;
+$st_close_button_position  : right;
+$st_colse_button_animation : true;
 
-$mr_menu_z_index: 9999;
+$st_menu_z_index: 9999;
 
 //Browser reset
-.#{$mr_prefix}-menu{
+.#{$st_prefix}-menu{
     ul {
         margin: 0;
         padding: 0;
@@ -37,49 +37,49 @@ $mr_menu_z_index: 9999;
 
 // OVERLAY FOR MOBILE MENU
 @if ( $overlay ){
-  .#{$mr_prefix}-menu-overlay {
-      background-color: rgba( $mr_overlay_color, 0.6 );
+  .#{$st_prefix}-menu-overlay {
+      background-color: rgba( $st_overlay_color, 0.6 );
       position: fixed;
       left: 0;
       bottom: 0;
       right: 0;
       top: 0;
-      z-index: $mr_menu_z_index - 1;
+      z-index: $st_menu_z_index - 1;
       opacity: 0;
       visibility: hidden;
       -webkit-transition: all 0.3s ease-in-out;
          -moz-transition: all 0.3s ease-in-out;
               transition: all 0.3s ease-in-out;
 
-      &.mr-menu-open {
+      &.st-menu-open {
         opacity: 1;
         visibility: visible;
       }
   }
 } // End overlay
 
-@if( shift == $mr_menu_type) and (left == $mr_menu_direction ){
+@if( shift == $st_menu_type) and (left == $st_menu_direction ){
   body{
     position: relative;
     left: 0;
-    -webkit-transition: $mr_menu_animation;
-       -moz-transition: $mr_menu_animation;
-            transition: $mr_menu_animation;
-    &.mr-menu-open{
-      left: $mr_menu_width;
+    -webkit-transition: $st_menu_animation;
+       -moz-transition: $st_menu_animation;
+            transition: $st_menu_animation;
+    &.st-menu-open{
+      left: $st_menu_width;
     }
   }
 }
 
-@if( shift == $mr_menu_type) and (right == $mr_menu_direction ){
+@if( shift == $st_menu_type) and (right == $st_menu_direction ){
   body{
     position: relative;
     right: 0;
-    -webkit-transition: $mr_menu_animation;
-       -moz-transition: $mr_menu_animation;
-            transition: $mr_menu_animation;
-    &.mr-menu-open{
-      right: $mr_menu_width;
+    -webkit-transition: $st_menu_animation;
+       -moz-transition: $st_menu_animation;
+            transition: $st_menu_animation;
+    &.st-menu-open{
+      right: $st_menu_width;
     }
   }
 }
@@ -89,44 +89,44 @@ body {
 }
 
 //gh-shift-menu
-.#{$mr_prefix}-menu {
+.#{$st_prefix}-menu {
     position: fixed;
     top: 0;
     height: 100%;
     overflow-y: auto;
-    width: $mr_menu_width;
-    z-index: $mr_menu_z_index;
+    width: $st_menu_width;
+    z-index: $st_menu_z_index;
     overflow-x: hidden;
-    background-color: darken($mr_menu_color, 10%);
-    -webkit-transition: $mr_menu_animation;
-       -moz-transition: $mr_menu_animation;
-            transition: $mr_menu_animation;
+    background-color: darken($st_menu_color, 10%);
+    -webkit-transition: $st_menu_animation;
+       -moz-transition: $st_menu_animation;
+            transition: $st_menu_animation;
 
     //overlay right menu
-    @if (overlay == $mr_menu_type) and (right == $mr_menu_direction) {
-      right: -$mr_menu_width;
-      &.mr-menu-open{
+    @if (overlay == $st_menu_type) and (right == $st_menu_direction) {
+      right: -$st_menu_width;
+      &.st-menu-open{
           right: 0;
       }
     }
 
-    @if (overlay == $mr_menu_type) and (left == $mr_menu_direction) {
-      left: -$mr_menu_width;
-      &.mr-menu-open{
+    @if (overlay == $st_menu_type) and (left == $st_menu_direction) {
+      left: -$st_menu_width;
+      &.st-menu-open{
           left: 0;
       }
     }
 
-    @if( shift == $mr_menu_type) and (left == $mr_menu_direction ){
-      left: -$mr_menu_width;
-      &.mr-menu-open{
+    @if( shift == $st_menu_type) and (left == $st_menu_direction ){
+      left: -$st_menu_width;
+      &.st-menu-open{
           left: 0;
       }
     }
 
-    @if( shift == $mr_menu_type) and (right == $mr_menu_direction ){
-      right: -$mr_menu_width;
-      &.mr-menu-open{
+    @if( shift == $st_menu_type) and (right == $st_menu_direction ){
+      right: -$st_menu_width;
+      &.st-menu-open{
           right: 0;
       }
     }
@@ -135,8 +135,8 @@ body {
         margin: 0;
         padding: 0;
         list-style: none;
-        @if variable-exists(mr-font) {
-            font-family: #{$mr-font};
+        @if variable-exists(st-font) {
+            font-family: #{$st-font};
         }
 
         > li {
@@ -144,14 +144,14 @@ body {
                 padding: 8px 35px 8px 15px;
                 display: block;
                 font-weight: 400;
-                font-size: $mr-fs-first-level;
+                font-size: $st-fs-first-level;
                 text-transform: capitalize;
-                color: $mr_menu_text_color;
+                color: $st_menu_text_color;
                 position: relative;
             }
 
             ul {
-                background-color: $mr_menu_color;
+                background-color: $st_menu_color;
                 display: none;
 
                 li {
@@ -161,9 +161,9 @@ body {
                     a {
                         display: block;
                         padding: 8px 35px 8px 15px;
-                        border-bottom: 1px solid darken($mr_menu_color, 5%);
-                        color: $mr_menu_text_color;
-                        font-size: $mr-fs-rest-level;
+                        border-bottom: 1px solid darken($st_menu_color, 5%);
+                        color: $st_menu_text_color;
+                        font-size: $st-fs-rest-level;
                         position: relative;
                     }
 
@@ -183,22 +183,22 @@ body {
 }
 //shift_menu
 
-.mr-arrow-box {
+.st-arrow-box {
     display: inline-block;
     float: right;
-    width: $mr_submenu_indicator_arrow_width;
+    width: $st_submenu_indicator_arrow_width;
     transition: all 0.3s linear;
     position: absolute;
     right: 0;
     top: 0;
     bottom: 0;
 
-    @if $mr_submenu_indicator_arrow_animation{
+    @if $st_submenu_indicator_arrow_animation{
       -webkit-transfrom: scale(0.5);
       -moz-transfrom: scale(0.5);
       transform: scale(0.5);
 
-      .mr-menu-open &{
+      .st-menu-open &{
         -webkit-transfrom: scale(1);
            -moz-transfrom: scale(1);
                 transform: scale(1);
@@ -212,7 +212,7 @@ body {
         transform: rotate(180deg);
     }
 
-    .mr-down-arrow {
+    .st-down-arrow {
         width: 8px;
         height: 8px;
         position: absolute;
@@ -226,7 +226,7 @@ body {
             position: absolute;
             height: 100%;
             width: 2px;
-            background-color: $mr_submenu_indicator_arrow_color;
+            background-color: $st_submenu_indicator_arrow_color;
         }
 
         &:after {
@@ -239,25 +239,25 @@ body {
             transform-origin: left;
         }
     }
-} // mr-arrow-box
+} // st-arrow-box
 
-.mr-close-wrapper {
-    text-align: $mr_close_button_position;
+.st-close-wrapper {
+    text-align: $st_close_button_position;
     padding: 10px 7px;
 
-    .mr-inner-box {
-        width: $mr_close_button_size;
-        height: $mr_close_button_size;
+    .st-inner-box {
+        width: $st_close_button_size;
+        height: $st_close_button_size;
         cursor: pointer;
         display: inline-block;
         position: relative;
 
-        @if $mr_colse_button_animation{
+        @if $st_colse_button_animation{
           -webkit-transform: scale(0) rotate(180deg);
           -moz-transform: scale(0) rotate(180deg);
            transform: scale(0) rotate(180deg);
 
-          .mr-menu-open &{
+          .st-menu-open &{
             -webkit-transform: scale(1) rotate(0deg);
                -moz-transform: scale(1) rotate(0deg);
                     transform: scale(1) rotate(0deg);
@@ -268,7 +268,7 @@ body {
 
         }
 
-        .mr-inner{
+        .st-inner{
           display: inline-block;
           &:after, &:before{
             content: "";

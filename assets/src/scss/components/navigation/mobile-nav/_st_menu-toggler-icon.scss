@@ -1,5 +1,5 @@
-$mr-line-color : #000;
-$mr-line-animation: 0.35s ease;
+$st-line-color : #000;
+$st-line-animation: 0.35s ease;
 
 //Menu Toggle Design
 .menu-toggle {
@@ -27,7 +27,7 @@ $mr-line-animation: 0.35s ease;
         margin-bottom: 7px;
         height: 2px;
         width: 100%;
-        background: $mr-line-color;
+        background: $st-line-color;
         opacity: 1;
         left: 0;
 
@@ -35,9 +35,9 @@ $mr-line-animation: 0.35s ease;
            -moz-transform: rotate(0deg);
                 transform: rotate(0deg);
 
-        -webkit-transition: transform #{$mr-line-animation};
-           -moz-transition: transform #{$mr-line-animation};
-                transition: transform #{$mr-line-animation};
+        -webkit-transition: transform #{$st-line-animation};
+           -moz-transition: transform #{$st-line-animation};
+                transition: transform #{$st-line-animation};
 
         &:nth-child(1) {
             top: 0px; 
@@ -51,7 +51,7 @@ $mr-line-animation: 0.35s ease;
         }
     }
 
-    &.mr-menu-open {
+    &.st-menu-open {
         z-index: 9;
         span {
             &:nth-child(1) {

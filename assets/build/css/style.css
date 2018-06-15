@@ -1790,7 +1790,7 @@ nav#site-navigation ul.menu ul ul {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
-  .st-mbl-menu-overlay.mr-menu-open {
+  .st-mbl-menu-overlay.st-menu-open {
     opacity: 1;
     visibility: visible; }
 
@@ -1810,7 +1810,7 @@ body {
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   left: -300px; }
-  .st-mbl-menu.mr-menu-open {
+  .st-mbl-menu.st-menu-open {
     left: 0; }
   .st-mbl-menu ul.menu {
     margin: 0;
@@ -1841,7 +1841,7 @@ body {
         .st-mbl-menu ul.menu > li ul li ul li a {
           padding: 8px 0 8px 25px; }
 
-.mr-arrow-box {
+.st-arrow-box {
   display: inline-block;
   float: right;
   width: 30px;
@@ -1853,39 +1853,39 @@ body {
   -webkit-transfrom: scale(0.5);
   -moz-transfrom: scale(0.5);
   transform: scale(0.5); }
-  .mr-menu-open .mr-arrow-box {
+  .st-menu-open .st-arrow-box {
     -webkit-transfrom: scale(1);
     -moz-transfrom: scale(1);
     transform: scale(1);
     -webkit-transition: all 0.4s ease-in-out 0.2s;
     -moz-transition: all 0.4s ease-in-out 0.2s;
     transition: all 0.4s ease-in-out 0.2s; }
-  .mr-arrow-box.open {
+  .st-arrow-box.open {
     transform: rotate(180deg); }
-  .mr-arrow-box .mr-down-arrow {
+  .st-arrow-box .st-down-arrow {
     width: 8px;
     height: 8px;
     position: absolute;
     top: 46%;
     left: 60%;
     transform: translate(-50%, -50%); }
-    .mr-arrow-box .mr-down-arrow:after, .mr-arrow-box .mr-down-arrow:before {
+    .st-arrow-box .st-down-arrow:after, .st-arrow-box .st-down-arrow:before {
       content: '';
       position: absolute;
       height: 100%;
       width: 2px;
       background-color: #fff; }
-    .mr-arrow-box .mr-down-arrow:after {
+    .st-arrow-box .st-down-arrow:after {
       transform: rotate(45deg) translateX(3px);
       transform-origin: right; }
-    .mr-arrow-box .mr-down-arrow:before {
+    .st-arrow-box .st-down-arrow:before {
       transform: rotate(-45deg) translateX(-3px);
       transform-origin: left; }
 
-.mr-close-wrapper {
+.st-close-wrapper {
   text-align: right;
   padding: 10px 7px; }
-  .mr-close-wrapper .mr-inner-box {
+  .st-close-wrapper .st-inner-box {
     width: 20px;
     height: 20px;
     cursor: pointer;
@@ -1894,16 +1894,16 @@ body {
     -webkit-transform: scale(0) rotate(180deg);
     -moz-transform: scale(0) rotate(180deg);
     transform: scale(0) rotate(180deg); }
-    .mr-menu-open .mr-close-wrapper .mr-inner-box {
+    .st-menu-open .st-close-wrapper .st-inner-box {
       -webkit-transform: scale(1) rotate(0deg);
       -moz-transform: scale(1) rotate(0deg);
       transform: scale(1) rotate(0deg);
       -webkit-transition: all 0.4s ease-in-out 0.3s;
       -moz-transition: all 0.4s ease-in-out 0.3s;
       transition: all 0.4s ease-in-out 0.3s; }
-    .mr-close-wrapper .mr-inner-box .mr-inner {
+    .st-close-wrapper .st-inner-box .st-inner {
       display: inline-block; }
-      .mr-close-wrapper .mr-inner-box .mr-inner:after, .mr-close-wrapper .mr-inner-box .mr-inner:before {
+      .st-close-wrapper .st-inner-box .st-inner:after, .st-close-wrapper .st-inner-box .st-inner:before {
         content: "";
         position: absolute;
         background-color: white;
@@ -1913,7 +1913,7 @@ body {
         height: 100%;
         -webkit-transform: translate(-50%, -50%) rotate(45deg);
         transform: translate(-50%, -50%) rotate(45deg); }
-      .mr-close-wrapper .mr-inner-box .mr-inner:before {
+      .st-close-wrapper .st-inner-box .st-inner:before {
         -webkit-transform: translate(-50%, -50%) rotate(-45deg);
         transform: translate(-50%, -50%) rotate(-45deg); }
 
@@ -1953,21 +1953,21 @@ body {
       top: 8px; }
     .menu-toggler span:nth-child(4) {
       top: 16px; }
-  .menu-toggler.mr-menu-open {
+  .menu-toggler.st-menu-open {
     z-index: 9; }
-    .menu-toggler.mr-menu-open span:nth-child(1) {
+    .menu-toggler.st-menu-open span:nth-child(1) {
       top: 8px;
       width: 0%;
       left: 50%; }
-    .menu-toggler.mr-menu-open span:nth-child(2) {
+    .menu-toggler.st-menu-open span:nth-child(2) {
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
       transform: rotate(45deg); }
-    .menu-toggler.mr-menu-open span:nth-child(3) {
+    .menu-toggler.st-menu-open span:nth-child(3) {
       -webkit-transform: rotate(-45deg);
       -moz-transform: rotate(-45deg);
       transform: rotate(-45deg); }
-    .menu-toggler.mr-menu-open span:nth-child(4) {
+    .menu-toggler.st-menu-open span:nth-child(4) {
       top: 18px;
       width: 0%;
       left: 50%; }

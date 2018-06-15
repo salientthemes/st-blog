@@ -67,7 +67,7 @@
 
 
 
-    $.fn.mrMobileMenu = function(config) {
+    $.fn.stMobileMenu = function(config) {
         /* defining default config*/
         var defaultConfig = {
             icon: '#menu-icon',
@@ -100,7 +100,7 @@
             };
 
             this.closeMenuIcon = function() {
-                return ('<div class="mr-close-wrapper"> <span class="mr-inner-box" id="mr-close"><span class="mr-inner"></span></span> </div>');
+                return ('<div class="st-close-wrapper"> <span class="st-inner-box" id="st-close"><span class="st-inner"></span></span> </div>');
             };
 
             this.addOverlay = function() {
@@ -120,14 +120,14 @@
                     haveClassOnLi = $mobileMenu.find('.menu-item-has-children');
 
                 if (haveClassOnLi.length > 0) {
-                    $hasSubUl.children('a').append('<span class="mr-arrow-box"><span class="mr-down-arrow"></span></span>');
+                    $hasSubUl.children('a').append('<span class="st-arrow-box"><span class="st-down-arrow"></span></span>');
                 } else {
-                    $('#st-mbl-menu ul li:has(ul)').children('a').append('<span class="mr-arrow-box"><span class="mr-down-arrow"></span></span>');
+                    $('#st-mbl-menu ul li:has(ul)').children('a').append('<span class="st-arrow-box"><span class="st-down-arrow"></span></span>');
                 }
             };
 
             this.toggleSubUl = function() {
-                $(document).on('click', '.mr-arrow-box', toggleSubMenu);
+                $(document).on('click', '.st-arrow-box', toggleSubMenu);
 
                 function toggleSubMenu(e) {
                     e.stopPropagation();
@@ -140,8 +140,8 @@
               var menuConfig = {
                   animation: ['.st-mbl-menu-overlay', '#st-mbl-menu', 'body', '#menu-icon'], //where class add element
                   exceptions: ['#st-mbl-menu'], //stop propagation
-                  toggler: ['#menu-icon', '.st-mbl-menu-overlay', '#mr-close'],//class toggle on click
-                  className:'mr-menu-open'
+                  toggler: ['#menu-icon', '.st-mbl-menu-overlay', '#st-close'],//class toggle on click
+                  className:'st-menu-open'
               };
               new classToggler( menuConfig ).init();
             };
