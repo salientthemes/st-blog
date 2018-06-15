@@ -91,7 +91,7 @@ body.logo-center {
 	}
 
 
-	body.logo-center.big-logo-disable .st-blog-header-wrap-nav {
+	body.logo-center.big-logo-disable .#{$prefix}-header-wrap-nav {
 		z-index: 9997;
 	}
 	body.logo-center.big-logo-disable #big-logo-site-nav {

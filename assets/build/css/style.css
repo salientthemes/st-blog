@@ -328,9 +328,9 @@ input[type=checkbox], input[type=radio] {
 #st-blog-social-icons ul li a[href*="soundcloud.com"]::after {
   content: "soundcloud"; }
 #st-blog-social-icons ul li a[href*="wordpress.org"]::after {
-  content: "wordpress"; }
+  content: "WordPress"; }
 #st-blog-social-icons ul li a[href*="wordpress.com"]::after {
-  content: "wordpress"; }
+  content: "WordPress"; }
 #st-blog-social-icons ul li a[href*="jsfiddle.net"]::after {
   content: "jsfiddle"; }
 #st-blog-social-icons ul li a[href*="tripadvisor.com"]::after {
@@ -1288,19 +1288,23 @@ body.custom-background #st-blog-featured .container,
 body.custom-background .container.site-content,
 body.custom-background .st-blog-full-width-widget .container {
   background-color: #ffffff; }
-body.custom-background #st-blog-banner,
-body.custom-background #st-blog-featured,
-body.custom-background #st-blog-social-icons {
+
+#st-blog-banner,
+#st-blog-featured,
+#st-blog-social-icons {
   margin-bottom: 0 !important; }
-body.custom-background #st-blog-featured .container,
-body.custom-background #home-content,
-body.custom-background .st-blog-full-width-widget .container,
-body.custom-background #st-blog-social-icons .container {
+
+#st-blog-featured .container,
+#home-content,
+.st-blog-full-width-widget .container,
+#st-blog-social-icons .container {
   padding-top: 3rem; }
-body.custom-background .st-blog-full-width-widget .container .widget,
-body.custom-background .null-instagram-feed .follow-me {
+
+.st-blog-full-width-widget .container .widget,
+.null-instagram-feed .follow-me {
   margin-bottom: 0; }
-body.custom-background #st-blog-social-icons .container {
+
+#st-blog-social-icons .container {
   padding-bottom: 3rem; }
 
 article.hentry {
@@ -1409,6 +1413,7 @@ aside .widget {
   height: 125px;
   overflow: hidden; }
   .st-blog-full-width-widget .st-blog-instafeed-slider .st-blog-instafeed-image {
+    float: left;
     width: calc(100% / 8); }
     .st-blog-full-width-widget .st-blog-instafeed-slider .st-blog-instafeed-image a {
       display: block; }

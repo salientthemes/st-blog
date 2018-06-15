@@ -31,13 +31,13 @@
 
 	    .btn, .readmore,
 	    .nav-tabs .nav-item .nav-link.active,
-	    .st-blog-popular-posts-item .st-blog-popular-posts-content .st-blog-popular-posts-title a {
+	    .#{$prefix}-popular-posts-item .#{$prefix}-popular-posts-content .#{$prefix}-popular-posts-title a {
 	    	color: $color_white;
     		&:hover {
     			color: $color_white;
     		}
 	    }
-	    .st-blog-popular-posts-item .st-blog-popular-posts-content .st-blog-popular-posts-title a {
+	    .#{$prefix}-popular-posts-item .#{$prefix}-popular-posts-content .#{$prefix}-popular-posts-title a {
 	    	&:hover {
 	    		color: lighten($color_black, 70%);	    		
 	    	}
