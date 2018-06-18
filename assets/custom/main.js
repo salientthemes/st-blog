@@ -130,11 +130,15 @@
 			useCSS: true,
 		});
 
+		var ContentSliderSpeed  	= customzier_values['st-blog-feature-content-slider-time'];
+		var ContentSliderAutoPlay   = customzier_values['st-blog-feature-content-slider-autoplay-enable'];
+		console.log(ContentSliderAutoPlay);
+
 		$(".st-blog-featured-slider").slick({
 			// normal options...
 			arrows: false,
-			autoplay: true,
-			autoplaySpeed: 4000,
+			autoplay: ( ContentSliderAutoPlay == 1 ) ? true : false,
+			autoplaySpeed: ContentSliderSpeed,
 			draggable: true,
 			dots: true,
 			infinite: true,

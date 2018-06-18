@@ -52,16 +52,6 @@ require trailingslashit(get_template_directory() ) . '/inc/customizer/Feature-sl
 
 require trailingslashit(get_template_directory() ) . '/inc/customizer/Featured-Content-post/featured-options.php'; 
 
-// require get_template_directory(). '/inc/customizer/Footer-social-media/options.php'; 
-
-// require get_template_directory(). '/inc/customizer/Header-Footer/header-footer-options.php'; 
-
-// require get_template_directory(). '/inc/customizer/color/color-section.php';
-
-// require get_template_directory(). '/inc/customizer/font/font-section.php'; 
-
-// require get_template_directory(). '/inc/customizer/post-display/options.php'; 
-
 require trailingslashit(get_template_directory() ) . '/inc/customizer/panel.php'; 
 
 require trailingslashit(get_template_directory() ) . '/inc/customizer/theme-option/theme-panel.php';
@@ -72,12 +62,6 @@ global $st_blog_sections;
 global $st_blog_settings_controls;
 global $st_blog_repeated_settings_controls;
 global $st_blog_customizer_defaults;
-
-/*customizer design develop section*/
-// require get_template_directory().'/inc/customizer/main-panel.php';
-
-/*customizer theme option's section*/
-// require get_template_directory().'/inc/customizer/theme-option/option-panel.php';
 
 
 /*Resetting all Values*/

@@ -13,9 +13,9 @@ $st_blog_customizer_defaults['latest-post-show-excerpt']						= 1;
 $st_blog_customizer_defaults['latest-post-show-date']							= 1;
 $st_blog_customizer_defaults['latest-post-show-author']							= 1;
 $st_blog_customizer_defaults['latest-post-show-button']							= 1;
-$st_blog_customizer_defaults['st-blog-excerpt-length'] 							= '50';
-$st_blog_customizer_defaults['st-blog-latest-post-button-text'] 				= 'Read More';
-$st_blog_customizer_defaults['lates-blog-pagination']							= 'numeric';
+$st_blog_customizer_defaults['st-blog-excerpt-length'] 							=  50 ;
+$st_blog_customizer_defaults['st-blog-latest-post-button-text'] 				= esc_html__('Read More','st-blog');
+$st_blog_customizer_defaults['lates-blog-pagination']							= esc_html__('numeric','st-blog');
 
 
 // panel for post display

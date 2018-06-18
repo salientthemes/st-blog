@@ -29,12 +29,6 @@ Description
 
 ST Blog includes support for Infinite Scroll in Jetpack.
 
-== Changelog ==
-
-= 1.0 - May 12 2015 =
-* Initial release
-
-
 == Credits ==
 
 Underscores:
@@ -147,3 +141,8 @@ Note:
 1) https://www.pexels.com/photo/woman-sitting-on-bean-bag-white-using-macbook-in-front-of-round-table-with-green-leafed-plant-169915/
 2) https://www.pexels.com/photo/woman-in-white-dress-shirt-and-black-pants-920379/
 3) https://www.pexels.com/photo/woman-running-on-sand-near-white-concrete-building-736505/
+
+
+== Changelog ==
+= - 1.0.0 - =
+* Initial release.

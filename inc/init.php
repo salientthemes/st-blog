@@ -36,8 +36,6 @@ require trailingslashit( get_template_directory() ) . '/inc/hooks/header.php';
 
 require trailingslashit( get_template_directory() ) . '/inc/hooks/footer.php';
 
-require trailingslashit( get_template_directory() ) . '/inc/hooks/homepage-widget.php';
-
 require trailingslashit( get_template_directory() ) . '/inc/hooks/feature-slider.php';
 
 require trailingslashit( get_template_directory() ) . '/inc/hooks/feature-content-post.php';
@@ -47,7 +45,7 @@ require trailingslashit( get_template_directory() ) . '/inc/hooks/full-width-wid
 require trailingslashit( get_template_directory() ) . '/inc/hooks/homepage-social-meadia.php';
 
 require trailingslashit( get_template_directory() ) . '/inc/hooks/inline-style.php';
-// require trailingslashit( get_template_directory() ) . '/inc/hooks/tag.php';
+
 
 
 

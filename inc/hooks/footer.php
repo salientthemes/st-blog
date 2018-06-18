@@ -43,20 +43,6 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
                 }
                 
                 $col = 'col st-blog-footer-widget-col';
-
-                /*//for responsive
-                if( 1 == $st_blog_footer_widgets_number ){
-                    $col = 'col-md-12';
-                }
-                elseif( 2 == $st_blog_footer_widgets_number ){
-                 $col = 'col-sm-6 col-12';
-                }
-                elseif( 3 == $st_blog_footer_widgets_number ){
-                    $col = 'col-lg-4 col-sm-6 col-12';
-                }
-                else{              
-                    $col = 'col-lg-3 col-sm-6 col-12'; 
-                }*/ 
                 ?>
 
                      <!-- full width footer -->
