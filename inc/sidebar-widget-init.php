@@ -75,7 +75,7 @@ function st_blog_widgets_init() {
 }
 add_action( 'widgets_init', 'st_blog_widgets_init' );
 
-require trailingslashit( get_template_directory() ) . '/inc/widgets/mainpage-st-blog-tab.php';
+// require trailingslashit( get_template_directory() ) . '/inc/widgets/mainpage-st-blog-tab.php';
 require trailingslashit( get_template_directory() ) . '/inc/widgets/mainpage-st-blog-widget-author.php';
 require trailingslashit( get_template_directory() ) . '/inc/widgets/mainpage-st-blog-instagaram.php';
 

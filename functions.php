@@ -271,6 +271,9 @@ require trailingslashit(get_template_directory() ) . '/inc/custom-header.php';
  */
 require trailingslashit(get_template_directory()) . '/inc/template-tags.php';
 
+/*update to pro added*/
+require_once( trailingslashit( get_template_directory() ) . 'trt-customize-pro/st-blog/class-customize.php' );
+
 
 if ( is_admin() ) {
 	// Load about.
