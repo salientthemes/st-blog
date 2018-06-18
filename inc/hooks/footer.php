@@ -38,7 +38,7 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
          */
         function st_blog_widget_before_footer() {
                 global$st_blog_customizer_all_values;
-                if (!is_active_sidebar('full-width-footer') && !is_active_sidebar( 'footer-col-one' ) && !is_active_sidebar( 'footer-col-two' ) && !is_active_sidebar( 'footer-col-three' ) && !is_active_sidebar( 'footer-col-four' )){
+                if (!is_active_sidebar('full-width-footer') && !is_active_sidebar( 'footer-col-one' ) && !is_active_sidebar( 'footer-col-two' ) && !is_active_sidebar( 'footer-col-three' ) ){
                     return false;
                 }
                 
@@ -78,11 +78,7 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
                                             <?php dynamic_sidebar( 'footer-col-three' ); ?>
                                         </div>
                                     <?php endif; ?>
-                                    <?php if( is_active_sidebar( 'footer-col-four' )  ) : ?>
-                                        <div class="<?php echo esc_attr( $col );?>">
-                                            <?php dynamic_sidebar( 'footer-col-four' ); ?>
-                                        </div>
-                                    <?php endif; ?>
+                                    
                                 </div>
                             </div>
                         </div>   
@@ -109,7 +105,7 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
             global$st_blog_customizer_all_values;
             ?> 
             <!-- footer site info -->
-            <?php if ( !empty($st_blog_customizer_all_values['st-blog-copyright-text']) && !empty($st_blog_customizer_all_values['footer-enable-theme-name'])  ) { ?>
+            <?php if ( !empty($st_blog_customizer_all_values['st-blog-copyright-text'])   ) { ?>
                 <div class="site-content py-0">
                     <div class="site-info">
                         <div class="container">
@@ -122,13 +118,13 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
                                     ?>
                             <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'st-blog' ) ); ?>">
                             </a>
-                            <?php if ( 1 == $st_blog_customizer_all_values['footer-enable-theme-name'] ) { ?>
+                            
                             <span class="sep"> | </span>
                                 <?php
                                 /* translators: 1: Theme name, 2: Theme author. */
                                 printf( esc_html__( 'Theme: %1$s by %2$s', 'st-blog' ), 'ST Blog', sprintf('<a href="%s" target = "_blank" rel="designer">%s</a>', esc_url( 'http://salientthemes.com/' ), esc_html__( 'Salient Themes', 'st-blog' ) )  );
                                 ?>
-                            <?php } ?>    
+                             
                         </div>
                     </div><!-- .site-info -->
                 </div>

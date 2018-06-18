@@ -15,9 +15,6 @@ $st_blog_customizer_defaults['st-blog-feature-content-select-from-page'] 		= '';
 $st_blog_customizer_defaults['st-blog-feature-content-select-from-category'] 	= '';
 $st_blog_customizer_defaults['st-blog-feature-content-button-text']  			= '';
 $st_blog_customizer_defaults['st-blog-feature-content-button-enable']			= 1;
-// $st_blog_customizer_defaults['st-blog-feature-content-slider-autoplay-enable']	= 1;
-// $st_blog_customizer_defaults['st-blog-feature-content-slider-time']				= 4000;
-// $st_blog_customizer_defaults['st-blog-feature-content-image-enable']			= 1;
 
 
 // create a section for Featured Content
@@ -81,10 +78,7 @@ $st_blog_settings_controls['st-blog-feature-content-number-post'] =  array(
             1             => esc_html__('1','st-blog'),
             2             => esc_html__('2','st-blog'),
             3             => esc_html__('3','st-blog'),
-            4             => esc_html__('4','st-blog'),
-            5             => esc_html__('5','st-blog'),
-            6             => esc_html__('6','st-blog'),
-            7             => esc_html__('7','st-blog'),
+            
         ), 
         'priority'          => 35,
         'active_callback'   => ''
@@ -170,31 +164,4 @@ $st_blog_settings_controls['st-blog-feature-content-button-enable'] = array(
 	)
 );
 
-// enable AutoPlay
-// $st_blog_settings_controls['st-blog-feature-content-slider-autoplay-enable'] = array(
-// 	'setting'	=> array(
-// 		'default'			=> $st_blog_customizer_defaults['st-blog-feature-content-slider-autoplay-enable']
-// 	),
-// 	'control'=> array(
-// 		'label'				=> esc_html__('Enable/Disable AutoPlay','st-blog'),
-// 		'section'			=> 'st-blog-feature-content-section',
-// 		'type'				=> 'checkbox',
-// 		'priority'			=> 90,
-// 		'active_callback'	=> ''
-// 	)
-// );
-
-// slider time
-// $st_blog_settings_controls['st-blog-feature-content-slider-time'] = array(
-// 	'setting'	=> array(
-// 		'default'			=> $st_blog_customizer_defaults['st-blog-feature-content-slider-time']
-// 	),
-// 	'control'=> array(
-// 		'label'				=> esc_html__('Select Slider Time for Featured Content AutoPlay','st-blog'),
-// 		'section'			=> 'st-blog-feature-content-section',
-// 		'type'				=> 'text',
-// 		'priority'			=> 100,
-// 		'active_callback'	=> ''
-// 	)
-// );
 
