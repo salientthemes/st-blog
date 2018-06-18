@@ -76,6 +76,8 @@ if ( ! function_exists( 'st_blog_setup' ) ) :
 		add_image_size( 'feature-slider-image', 1340, 460, true );  //feature-slider image size
 		// add_image_size( 'feature-slider-image', 1090, 480, true );  //latest-post image size
 
+		/*woocommerce support*/
+		add_theme_support( 'woocommerce' );
 
 		/**
 		 * Add support for core custom logo.
@@ -268,9 +270,6 @@ require trailingslashit(get_template_directory() ) . '/inc/custom-header.php';
  * Custom template tags for this theme.
  */
 require trailingslashit(get_template_directory()) . '/inc/template-tags.php';
-
-/*update to pro added*/
-require_once( trailingslashit( get_template_directory() ) . 'trt-customize-pro/st-blog/class-customize.php' );
 
 
 if ( is_admin() ) {
