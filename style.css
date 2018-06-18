@@ -1,9 +1,9 @@
 /*!
-Theme Name: ST Blog Pro
+Theme Name: ST Blog
 Theme URI: https://www.salientthemes.com/
 Author: salient Themes
 Author URI: http://salientthemes.com
-Description: ST Blog, your new clean and minimal blogging WordPress theme. It's very easy to work with WordPress. site. It is fully responsive on iPhone, iPad and Android phones and tablets.
+Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -1462,6 +1462,9 @@ textarea:focus,
     #preloader #status i {
       font-size: 30px; }
 
+h2, h2 a, .h2, .h2 a, h2.widget-title, .h1, .h3, .h4, .h5, .h6, h1, h3, h4, h5, h6 .h1 a, .h3 a, .h4 a, .h5 a, .h6 a, h1 a, h3 a, h4 a, h5 a, h6 a {
+  color: #000; }
+
 .readmore {
   display: inline-block; }
   .readmore i {
@@ -2317,13 +2320,35 @@ aside .st-blog-instafeed-slider .st-blog-instafeed-image {
   font-size: 20px;
   font-weight: 400; }
 #st-blog-author .st-blog-author-img {
-  margin-bottom: 10px; }
+  position: relative; }
 #st-blog-author #st-blog-author-social-icons {
   margin-top: 20px;
-  margin-bottom: 10px; }
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  -moz-transform: translate(100%, 0);
+  -o-transform: translate(100%, 0);
+  -ms-transform: translate(100%, 0);
+  -webkit-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+  -webkit-transition: 0.4s all ease-in-out;
+  -moz-transition: 0.4s all ease-in-out;
+  -o-transition: 0.4s all ease-in-out;
+  transition: 0.4s all ease-in-out;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px; }
   #st-blog-author #st-blog-author-social-icons ul li {
-    margin-right: 15px;
+    margin-left: 0;
     padding: 0; }
+#st-blog-author:hover #st-blog-author-social-icons {
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0); }
 
 .st-blog-popular-posts-item {
   position: relative;
@@ -2346,20 +2371,21 @@ aside .st-blog-instafeed-slider .st-blog-instafeed-image {
       font-size: 20px; }
       .st-blog-popular-posts-item .st-blog-popular-posts-content .st-blog-popular-posts-title a {
         font-weight: 400; }
+  .st-blog-popular-posts-item .st-blog-popular-posts-content .post-meta-content .author-link {
+    margin-right: 10px; }
   .st-blog-popular-posts-item .st-blog-popular-posts-content .post-meta-content .date-link {
     display: block; }
     .st-blog-popular-posts-item .st-blog-popular-posts-content .post-meta-content .date-link a:before {
       padding-left: 0; }
   @media (min-width: 575px) {
     .st-blog-popular-posts-item .st-blog-popular-posts-content .post-meta-content .date-link {
-      display: inline-block; }
-      .st-blog-popular-posts-item .st-blog-popular-posts-content .post-meta-content .date-link:before {
-        padding-left: 10px; } }
+      display: inline-block; } }
   @media (min-width: 768px) {
     .st-blog-popular-posts-item .st-blog-popular-posts-content .post-meta-content .date-link {
-      display: block; }
-      .st-blog-popular-posts-item .st-blog-popular-posts-content .post-meta-content .date-link a:before {
-        padding-left: 0; } }
+      display: block; } }
+  @media (min-width: 992px) {
+    .st-blog-popular-posts-item .st-blog-popular-posts-content .post-meta-content .date-link {
+      display: inline-block; } }
 
 .widget_tag_cloud .tagcloud a {
   background: #f7f7f7;
