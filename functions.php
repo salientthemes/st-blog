@@ -93,7 +93,7 @@ endif;
 add_action( 'after_setup_theme', 'st_blog_setup' );
 
 
-/*function st_blog_disable_wp_emojicons() {
+function st_blog_disable_wp_emojicons() {
 
   // all actions related to emojis
   remove_action( 'admin_print_styles', 'print_emoji_styles' );
@@ -107,7 +107,7 @@ add_action( 'after_setup_theme', 'st_blog_setup' );
   // filter to remove TinyMCE emojis
   // add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
 }
-add_action( 'init', 'st_blog_disable_wp_emojicons' );*/
+add_action( 'init', 'st_blog_disable_wp_emojicons' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
