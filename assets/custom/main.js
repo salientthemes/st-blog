@@ -8,13 +8,17 @@
 		$('header.site-header').height( $('.st-blog-header-wrap-nav').height() );
 
 		// page padding again
-		if($('body').hasClass('logo-left') || $('body').hasClass('logo-right'))
+		if($('body').hasClass('logo-left') || $('body').hasClass('logo-right')) {
 			$('#page.site').css({ 'padding-top': $('.st-blog-header-wrap-nav').height() + 'px' });	
-		else if( $('body').hasClass('logo-center big-logo-disable') )
+
+			// for nav - always vertically center
+			$('nav#site-navigation ul#menu > li > a, nav#site-navigation ul.nav-menu > li > a, nav#site-navigation ul.menu > li > a').css({ 'line-height': $('.st-blog-header-wrap-nav').height()-50 + 'px' });
+		}
+		else if( $('body').hasClass('logo-center big-logo-disable') ) {
 			$('#page.site').css({ 'padding-top': $('.st-blog-header-wrap-nav').height() + 'px' });
+		}
 		else if( $('body').hasClass('logo-center big-logo-enable') )
 			$('#page.site').css({ 'padding-top': 0 });
-
 		
 	}
 
