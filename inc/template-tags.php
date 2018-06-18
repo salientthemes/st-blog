@@ -25,8 +25,7 @@ if ( ! function_exists( 'st_blog_posted_on' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 
-		$archive_year   = get_the_time('Y');
-
+			$archive_year   = get_the_time('Y');
 			$posted_on = sprintf(
 				/* translators: %s: post date. */
 				 esc_html_x( 'Posted on %s ','post date', 'st-blog') ,

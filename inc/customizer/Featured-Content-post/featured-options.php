@@ -120,7 +120,7 @@ $st_blog_settings_controls['st-blog-feature-content-select-from-category'] = arr
 
 // select post from page
 $st_blog_repeated_settings_controls['st-blog-feature-content-select-from-page'] = array(
-	'repeated'	=> 7,
+	'repeated'	=> 3,
 	'feature-content-page-id' => array(
 		'setting' => array(
 			'default'			=> $st_blog_customizer_defaults['st-blog-feature-content-select-from-page']
