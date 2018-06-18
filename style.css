@@ -1629,7 +1629,8 @@ body.logo-center .st-blog-header-row .st-blog-logo-manage {
   body.logo-center.big-logo-enable nav#site-navigation {
     text-align: center; }
 
-  body.logo-center nav#site-navigation .container {
+  body.logo-center nav#site-navigation .container,
+  body.logo-center .st-blog-header-wrap-nav .container {
     padding-right: 70px; }
 
   body.logo-center.big-logo-disable nav#site-navigation ul {
@@ -2128,6 +2129,9 @@ body.custom-background .st-blog-full-width-widget .container {
 #st-blog-social-icons .container {
   padding-bottom: 3rem; }
 
+#st-full-width + #st-blog-social-icons .container {
+  padding-top: 0; }
+
 article.hentry {
   margin-bottom: 40px; }
 article .image {
@@ -2195,6 +2199,11 @@ body.boxed .st-blog-masonry article {
 
 aside .widget {
   margin-bottom: 40px; }
+  aside .widget:last-child {
+    margin-bottom: 0; }
+
+.st-blog-full-width-widget .widget {
+  padding-bottom: 3em; }
 
 .widget_calendar caption {
   border: 1px solid #eee;
@@ -2243,7 +2252,13 @@ aside .widget {
 
 aside .null-instagram-feed {
   text-align: left; }
+aside .st-blog-instafeed-slider:before, aside .st-blog-instafeed-slider:after {
+  content: " ";
+  display: table; }
+aside .st-blog-instafeed-slider:after {
+  clear: both; }
 aside .st-blog-instafeed-slider .st-blog-instafeed-image {
+  float: left;
   max-width: 50%;
   padding: 2px; }
 

@@ -155,7 +155,7 @@ if ( !function_exists('st_blog_feature_content_post') ) :
                         
                             
                                 ?>
-                                      <?php if (!empty($st_blog_feature_content_post_image) && !empty($st_blog_feature_content_array['st-blog-feature-content-post-title']) && !empty($st_blog_feature_content_array['st-blog-feature-content-post-content'])  ) {?>
+                                      <?php if (!empty($st_blog_feature_content_post_image) || !empty($st_blog_feature_content_array['st-blog-feature-content-post-title']) || !empty($st_blog_feature_content_array['st-blog-feature-content-post-content'])  ) {?>
                                         <div class="st-blog-featured-item">
                                             <?php if (!empty($st_blog_feature_content_post_image)){ ?>
                                                 <div class="st-blog-featured-image">
