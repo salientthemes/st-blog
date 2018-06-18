@@ -23,7 +23,7 @@ if ( !function_exists('st_blog_social_media') ) :
  	{
  		return null;
  	}
-  if(!empty($st_blog_social_media_link1) && !empty($st_blog_social_media_link2) && !empty($st_blog_social_media_link3) && !empty($st_blog_social_media_link4)) {
+  if(!empty($st_blog_social_media_link1) || !empty($st_blog_social_media_link2) || !empty($st_blog_social_media_link3) || !empty($st_blog_social_media_link4)) {
  	?>
  	<section id="st-blog-social-icons" class="mb-5">
 		<div class="container site-content">
