@@ -10,11 +10,11 @@ global $st_blog_customizer_all_values;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if ( 1 == $st_blog_customizer_all_values['latest-post-show-feature-image']) { ?>
+	<!-- <?php if ( 1 == $st_blog_customizer_all_values['latest-post-show-feature-image']) { ?> -->
 	<div class="image">
 		<?php st_blog_post_thumbnail(); ?>
 	</div>
-	<?php } ?>
+	<!-- <?php } ?> -->
 	
 	<header class="entry-header">
 		<?php

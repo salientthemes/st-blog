@@ -6,7 +6,7 @@
 	global $st_blog_repeated_settings_controls;
 	global $st_blog_customizer_defaults;
 
-	$st_blog_customizer_defaults['header-logo-left-middel-right']	= '';
+	// $st_blog_customizer_defaults['header-logo-left-middel-right']	= '';
 	$st_blog_customizer_defaults['st-blog-default-logo-layout']     = 'logo-center';
 	$st_blog_customizer_defaults['header-search-button-enable']		= 1;
 	$st_blog_customizer_defaults['footer-enable-theme-name']   		= 1;
@@ -30,23 +30,23 @@
 	    )
     );
 
-    $st_blog_settings_controls['st-blog-default-logo-layout'] = array(
-        'setting' =>     array(
-            'default'              => $st_blog_customizer_defaults['st-blog-default-logo-layout'],
-        ),
-        'control' => array(
-            'label'                 =>  esc_html__( 'Logo Layout', 'st-blog' ),
-            'section'               => 'header-footer-section',
-            'type'                  => 'select',
-            'choices' => array(
-                'logo-left'         => esc_html__( 'Left', 'st-blog' ),
-                'logo-center'       => esc_html__( 'Center', 'st-blog' ),
-                'logo-right'        => esc_html__( 'Right','st-blog')   
-            ),
-            'priority'              => 15,
-            'active_callback'       => ''
-        )
-    );
+    // $st_blog_settings_controls['st-blog-default-logo-layout'] = array(
+    //     'setting' =>     array(
+    //         'default'              => $st_blog_customizer_defaults['st-blog-default-logo-layout'],
+    //     ),
+    //     'control' => array(
+    //         'label'                 =>  esc_html__( 'Logo Layout', 'st-blog' ),
+    //         'section'               => 'header-footer-section',
+    //         'type'                  => 'select',
+    //         'choices' => array(
+    //             'logo-left'         => esc_html__( 'Left', 'st-blog' ),
+    //             'logo-center'       => esc_html__( 'Center', 'st-blog' ),
+    //             'logo-right'        => esc_html__( 'Right','st-blog')   
+    //         ),
+    //         'priority'              => 15,
+    //         'active_callback'       => ''
+    //     )
+    // );
 
 	$st_blog_settings_controls['footer-enable-theme-name'] = array(
         'setting' =>  array(

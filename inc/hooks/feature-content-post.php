@@ -40,7 +40,7 @@ if ( !function_exists('st_blog_feature_content_post_array') ) :
     }
     else
     {
-      $st_blog_feature_content_posts = salient_customizer_get_repeated_all_value(7,$repeated_page);
+      $st_blog_feature_content_posts = salient_customizer_get_repeated_all_value(3,$repeated_page);
       if( null != $st_blog_feature_content_posts  )
       {
         foreach ($st_blog_feature_content_posts as $st_blog_feature_content_post)
@@ -127,7 +127,8 @@ if ( !function_exists('st_blog_feature_content_post') ) :
             $st_blog_feature_content_post_number       = $st_blog_customizer_all_values['st-blog-feature-content-number-post'];
             $st_feature_content_post_button_text       = $st_blog_customizer_all_values['st-blog-feature-content-button-text'];
             $st_feature_content_post_button_enable     = $st_blog_customizer_all_values['st-blog-feature-content-button-enable'];
-            $st_feature_content_post_image_enable      = $st_blog_customizer_all_values['st-blog-feature-content-image-enable']; ?>
+            // $st_feature_content_post_image_enable      = $st_blog_customizer_all_values['st-blog-feature-content-image-enable']; 
+            ?>
 
             
             <section id="st-blog-featured" class="mb-5">    

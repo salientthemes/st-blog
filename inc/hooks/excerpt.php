@@ -45,8 +45,8 @@ if ( ! function_exists( 'st_blog_implement_read_more' ) ) :
 
         // $read_more_text = esc_html__('continue  reading','st-blog');
         $read_more_text = $st_blog_customizer_all_values['st-blog-latest-post-button-text'];
-        if ( 1 == $st_blog_customizer_all_values['latest-post-show-button'] )
-        {
+        // if ( 1 == $st_blog_customizer_all_values['latest-post-show-button'] )
+        // {
             if ( !empty( $read_more_text ) ) {
                 $output = ' <div class="read-more-text"><a href="' . esc_url( get_permalink() ) . '" class="readmore">' . esc_html( $read_more_text ) . '</a></div>';
                 $output = apply_filters( 'st_blog_filter_read_more_link' , $output );
@@ -56,7 +56,7 @@ if ( ! function_exists( 'st_blog_implement_read_more' ) ) :
                 $output = ' <div class="read-more-text"><a href="' . esc_url( get_permalink() ) . '" class="readmore">' . 'read more' . '</a></div>';
             }
             return $output;
-        }
+        // }
 
     }
 

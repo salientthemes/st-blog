@@ -157,16 +157,16 @@ function st_blog_google_fonts()
 	$fonts 		= array();
 
 	$st_blog_font_family_site_identity   = $st_blog_customizer_all_values['st-blog-font-family-site-identity'];
-	$st_blog_font_family_menu			 = $st_blog_customizer_all_values['st-blog-font-family-menu'];
+	// $st_blog_font_family_menu			 = $st_blog_customizer_all_values['st-blog-font-family-menu'];
 	$st_blog_font_family_h1_h6			 = $st_blog_customizer_all_values['st-blog-font-family-h1-h6'];
 	$st_blog_font_family_button_text	 = $st_blog_customizer_all_values['st-blog-font-family-button-text'];
-	$st_blog_font_family_copy_right_text = $st_blog_customizer_all_values['st-blog-footer-copy-right-text'];	
+	// $st_blog_font_family_copy_right_text = $st_blog_customizer_all_values['st-blog-footer-copy-right-text'];	
 	$st_blog_fonts = array();
 	$st_blog_fonts[] = $st_blog_font_family_site_identity;
-	$st_blog_fonts[] = $st_blog_font_family_menu;
+	// $st_blog_fonts[] = $st_blog_font_family_menu;
 	$st_blog_fonts[] = $st_blog_font_family_h1_h6;
 	$st_blog_fonts[] = $st_blog_font_family_button_text;
-	$st_blog_fonts[] = $st_blog_font_family_copy_right_text;
+	// $st_blog_fonts[] = $st_blog_font_family_copy_right_text;
 
 	$st_blog_fonts_stylesheet = '//fonts.googleapis.com/css?family=';
 

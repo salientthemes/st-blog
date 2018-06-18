@@ -137,10 +137,10 @@ $st_blog_google_fonts = array(
 
 /*defaults values*/
 $st_blog_customizer_defaults['st-blog-font-family-site-identity']     = 'Roboto+Condensed:400,300,400italic,700';
-$st_blog_customizer_defaults['st-blog-font-family-menu']              = 'Roboto+Condensed:400,300,400italic,700';
+// $st_blog_customizer_defaults['st-blog-font-family-menu']              = 'Roboto+Condensed:400,300,400italic,700';
 $st_blog_customizer_defaults['st-blog-font-family-h1-h6']             = 'Roboto+Condensed:400,300,400italic,700';
 $st_blog_customizer_defaults['st-blog-font-family-button-text']       = 'Roboto+Condensed:400,300,400italic,700';
-$st_blog_customizer_defaults['st-blog-footer-copy-right-text']        = 'Open+Sans:400,400italic,600,700';  
+// $st_blog_customizer_defaults['st-blog-footer-copy-right-text']        = 'Open+Sans:400,400italic,600,700';  
 
 
 /*section*/
@@ -168,21 +168,21 @@ $st_blog_settings_controls['st-blog-font-family-site-identity'] =
         )
     );
 
-$st_blog_settings_controls['st-blog-font-family-menu'] =
-    array(
-        'setting' =>     array(
-            'default'              => $st_blog_customizer_defaults['st-blog-font-family-menu'],
-        ),
-        'control' => array(
-            'label'                 => esc_html__( 'Menu Font Family', 'st-blog' ),
-            'description'           => esc_html__( 'Primary menu font family', 'st-blog' ),
-            'section'               => 'st-blog-family',
-            'type'                  => 'select',
-            'choices'               => $st_blog_google_fonts,
-            'priority'              => 20,
-            'active_callback'       => ''
-        )
-    );
+// $st_blog_settings_controls['st-blog-font-family-menu'] =
+//     array(
+//         'setting' =>     array(
+//             'default'              => $st_blog_customizer_defaults['st-blog-font-family-menu'],
+//         ),
+//         'control' => array(
+//             'label'                 => esc_html__( 'Menu Font Family', 'st-blog' ),
+//             'description'           => esc_html__( 'Primary menu font family', 'st-blog' ),
+//             'section'               => 'st-blog-family',
+//             'type'                  => 'select',
+//             'choices'               => $st_blog_google_fonts,
+//             'priority'              => 20,
+//             'active_callback'       => ''
+//         )
+//     );
 
 $st_blog_settings_controls['st-blog-font-family-h1-h6'] =
     array(
@@ -214,18 +214,18 @@ $st_blog_settings_controls['st-blog-font-family-button-text'] =
         )
     );    
 
-$st_blog_settings_controls['st-blog-footer-copy-right-text'] =
-    array(
-        'setting' =>     array(
-            'default'              => $st_blog_customizer_defaults['st-blog-footer-copy-right-text'],
-        ),
-        'control' => array(
-            'label'                 => esc_html__( 'Footer Copyright Text', 'st-blog' ),
-            'description'           => esc_html__('It only changes the footer copyright text fonts, not all footer text','st-blog'),
-            'section'               => 'st-blog-family',
-            'type'                  => 'select',
-            'choices'               => $st_blog_google_fonts,
-            'priority'              => 60,
-            'active_callback'       => ''
-        )
-    );
+// $st_blog_settings_controls['st-blog-footer-copy-right-text'] =
+//     array(
+//         'setting' =>     array(
+//             'default'              => $st_blog_customizer_defaults['st-blog-footer-copy-right-text'],
+//         ),
+//         'control' => array(
+//             'label'                 => esc_html__( 'Footer Copyright Text', 'st-blog' ),
+//             'description'           => esc_html__('It only changes the footer copyright text fonts, not all footer text','st-blog'),
+//             'section'               => 'st-blog-family',
+//             'type'                  => 'select',
+//             'choices'               => $st_blog_google_fonts,
+//             'priority'              => 60,
+//             'active_callback'       => ''
+//         )
+//     );

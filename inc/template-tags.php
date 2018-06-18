@@ -25,7 +25,6 @@ if ( ! function_exists( 'st_blog_posted_on' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 
-		if ( 1 == $st_blog_customizer_all_values['latest-post-show-date'] ){
 			$posted_on = sprintf(
 				/* translators: %s: post date. */
 				 esc_html_x( ' %s |','post date', 'st-blog') ,
@@ -33,7 +32,7 @@ if ( ! function_exists( 'st_blog_posted_on' ) ) :
 			);
 
 			echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
-		}	
+			
 
 	}
 endif;
@@ -44,8 +43,7 @@ if ( ! function_exists( 'st_blog_posted_by' ) ) :
 	 */
 	function st_blog_posted_by() {
 		global $st_blog_customizer_all_values;
-		if ( 1 == $st_blog_customizer_all_values['latest-post-show-author'] )
-		{
+		
 			$byline = sprintf(
 				/* translators: %s: post author. */
 				esc_html_x( 'By %s | ', 'post author', 'st-blog' ),
@@ -53,7 +51,7 @@ if ( ! function_exists( 'st_blog_posted_by' ) ) :
 			);
 
 			echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
-		}
+		
 
 	}
 endif;

@@ -9,15 +9,15 @@ global $st_blog_customizer_defaults;
 $st_blog_customizer_defaults['st-blog-feature-content-enbale'] 					= 1;
 $st_blog_customizer_defaults['st-blog-feature-content-main-title-text'] 		= '';
 $st_blog_customizer_defaults['st-blog-feature-content-single-number-of-words'] 	= 25;
-$st_blog_customizer_defaults['st-blog-feature-content-number-post']				= 4;
+$st_blog_customizer_defaults['st-blog-feature-content-number-post']				= 3;
 $st_blog_customizer_defaults['st-blog-feature-content-select-post-from'] 		= 'from-page';
 $st_blog_customizer_defaults['st-blog-feature-content-select-from-page'] 		= '';
 $st_blog_customizer_defaults['st-blog-feature-content-select-from-category'] 	= '';
 $st_blog_customizer_defaults['st-blog-feature-content-button-text']  			= '';
 $st_blog_customizer_defaults['st-blog-feature-content-button-enable']			= 1;
-$st_blog_customizer_defaults['st-blog-feature-content-slider-autoplay-enable']	= 1;
-$st_blog_customizer_defaults['st-blog-feature-content-slider-time']				= 4000;
-$st_blog_customizer_defaults['st-blog-feature-content-image-enable']			= 1;
+// $st_blog_customizer_defaults['st-blog-feature-content-slider-autoplay-enable']	= 1;
+// $st_blog_customizer_defaults['st-blog-feature-content-slider-time']				= 4000;
+// $st_blog_customizer_defaults['st-blog-feature-content-image-enable']			= 1;
 
 
 // create a section for Featured Content
@@ -171,30 +171,30 @@ $st_blog_settings_controls['st-blog-feature-content-button-enable'] = array(
 );
 
 // enable AutoPlay
-$st_blog_settings_controls['st-blog-feature-content-slider-autoplay-enable'] = array(
-	'setting'	=> array(
-		'default'			=> $st_blog_customizer_defaults['st-blog-feature-content-slider-autoplay-enable']
-	),
-	'control'=> array(
-		'label'				=> esc_html__('Enable/Disable AutoPlay','st-blog'),
-		'section'			=> 'st-blog-feature-content-section',
-		'type'				=> 'checkbox',
-		'priority'			=> 90,
-		'active_callback'	=> ''
-	)
-);
+// $st_blog_settings_controls['st-blog-feature-content-slider-autoplay-enable'] = array(
+// 	'setting'	=> array(
+// 		'default'			=> $st_blog_customizer_defaults['st-blog-feature-content-slider-autoplay-enable']
+// 	),
+// 	'control'=> array(
+// 		'label'				=> esc_html__('Enable/Disable AutoPlay','st-blog'),
+// 		'section'			=> 'st-blog-feature-content-section',
+// 		'type'				=> 'checkbox',
+// 		'priority'			=> 90,
+// 		'active_callback'	=> ''
+// 	)
+// );
 
 // slider time
-$st_blog_settings_controls['st-blog-feature-content-slider-time'] = array(
-	'setting'	=> array(
-		'default'			=> $st_blog_customizer_defaults['st-blog-feature-content-slider-time']
-	),
-	'control'=> array(
-		'label'				=> esc_html__('Select Slider Time for Featured Content AutoPlay','st-blog'),
-		'section'			=> 'st-blog-feature-content-section',
-		'type'				=> 'text',
-		'priority'			=> 100,
-		'active_callback'	=> ''
-	)
-);
+// $st_blog_settings_controls['st-blog-feature-content-slider-time'] = array(
+// 	'setting'	=> array(
+// 		'default'			=> $st_blog_customizer_defaults['st-blog-feature-content-slider-time']
+// 	),
+// 	'control'=> array(
+// 		'label'				=> esc_html__('Select Slider Time for Featured Content AutoPlay','st-blog'),
+// 		'section'			=> 'st-blog-feature-content-section',
+// 		'type'				=> 'text',
+// 		'priority'			=> 100,
+// 		'active_callback'	=> ''
+// 	)
+// );
 
