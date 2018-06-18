@@ -242,15 +242,15 @@ function st_blog_header() {
                                 ?>
 
                                 <!-- search toggle icon -->
-                                <?php if ( $st_blog_customizer_all_values['header-search-button-enable'] ) {?>
+                                <!-- <?php if ( $st_blog_customizer_all_values['header-search-button-enable'] ) {?> -->
                                 <button class="st-blog-head-search-toggler d-none d-lg-block"><i class="fas fa-search"></i></button>
-                                <?php } ?>
+                                <!-- <?php } ?> -->
                             </nav><!-- #site-navigation -->     
 
                             <!-- search toggle icon -->
-                            <?php if ( $st_blog_customizer_all_values['header-search-button-enable'] ) {?>
+                            <!-- <?php if ( $st_blog_customizer_all_values['header-search-button-enable'] ) {?> -->
                                 <button class="st-blog-head-search-toggler d-lg-none"><i class="fas fa-search"></i></button>
-                            <?php } ?>
+                            <!-- <?php } ?> -->
                         </div><!-- site nav -->
                     </div>
                 </div>
