@@ -1,4 +1,6 @@
-node_modules/
+# node_modules/
+
+assets-scss/
 error_log
 .vscode
 # assets/build
