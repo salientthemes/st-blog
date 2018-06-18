@@ -117,8 +117,7 @@ if( !function_exists('st_blog_feature_slider') ) :
         if ( is_array($st_blog_fs_arrays) )
         {
             $st_blog_fs_enable_button                   = $st_blog_customizer_all_values['st-blog-enable-button'];
-            // $st_blog_fs_enable_array                    = $st_blog_customizer_all_values['st-blog-enable-arrow'];
-            // $st_blog_fs_autoplay                        = $st_blog_customizer_all_values['st-blog-enable-auto-play'];
+            
             $st_blog_feature_slider_button_text         = $st_blog_customizer_all_values['st-blog-button text'];
             $st_blog_feature_slider_number_of_slider    = $st_blog_customizer_all_values['st-blog-number-of-slider'];  
 

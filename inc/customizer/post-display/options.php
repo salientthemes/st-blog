@@ -7,12 +7,8 @@ global $st_blog_repeted_settings_controls;
 global $st_blog_customizer_defaults;
 
 $st_blog_customizer_defaults['latest-numbe-of-post-for-blog-section']    		= 6;
-// $st_blog_customizer_defaults['latest-post-show-feature-image']  				= 1;
 $st_blog_customizer_defaults['latest-post-show-title']							= 1;
 $st_blog_customizer_defaults['latest-post-show-excerpt']						= 1;
-// $st_blog_customizer_defaults['latest-post-show-date']							= 1;
-// $st_blog_customizer_defaults['latest-post-show-author']							= 1;
-// $st_blog_customizer_defaults['latest-post-show-button']							= 1;
 $st_blog_customizer_defaults['st-blog-excerpt-length'] 							=  50 ;
 $st_blog_customizer_defaults['st-blog-latest-post-button-text'] 				= esc_html__('Read More','st-blog');
 $st_blog_customizer_defaults['lates-blog-pagination']							= esc_html__('numeric','st-blog');
@@ -60,21 +56,6 @@ $st_blog_settings_controls['st-blog-excerpt-length'] =
     );
 
 
-// control setting for feature image
-// $st_blog_settings_controls['latest-post-show-feature-image']  = array(
-// 	'setting' => array(
-// 		'default'		=> $st_blog_customizer_defaults['latest-post-show-feature-image']
-// 	),
-// 	'control' => array(
-// 		'label'				=> esc_html__('Show Feature Image','st-blog'),
-// 		'section'			=> 'latest-post-bolg-section',
-// 		'type'				=> 'checkbox',
-// 		'priority'			=> 15,
-// 		'active_callback'	=> ''
-// 	)
-// );
-
-
 // control setting for post title
 $st_blog_settings_controls['latest-post-show-title']  = array(
 	'setting' => array(
@@ -103,47 +84,8 @@ $st_blog_settings_controls['latest-post-show-excerpt']  = array(
 	)
 );
 
-// control setting for post date
-// $st_blog_settings_controls['latest-post-show-date']  = array(
-// 	'setting' => array(
-// 		'default'		=> $st_blog_customizer_defaults['latest-post-show-date']
-// 	),
-// 	'control' => array(
-// 		'label'				=> esc_html__('Show Post Date','st-blog'),
-// 		'section'			=> 'latest-post-bolg-section',
-// 		'type'				=> 'checkbox',
-// 		'priority'			=> 30,
-// 		'active_callback'	=> ''
-// 	)
-// );
 
-// control setting for post author
-// $st_blog_settings_controls['latest-post-show-author']  = array(
-// 	'setting' => array(
-// 		'default'		=> $st_blog_customizer_defaults['latest-post-show-author']
-// 	),
-// 	'control' => array(
-// 		'label'				=> esc_html__('Show Post Author','st-blog'),
-// 		'section'			=> 'latest-post-bolg-section',
-// 		'type'				=> 'checkbox',
-// 		'priority'			=> 40,
-// 		'active_callback'	=> ''
-// 	)
-// );
 
-// control setting for post button
-// $st_blog_settings_controls['latest-post-show-button']  = array(
-// 	'setting' => array(
-// 		'default'		=> $st_blog_customizer_defaults['latest-post-show-button']
-// 	),
-// 	'control' => array(
-// 		'label'				=> esc_html__('Show Post Button','st-blog'),
-// 		'section'			=> 'latest-post-bolg-section',
-// 		'type'				=> 'checkbox',
-// 		'priority'			=> 40,
-// 		'active_callback'	=> ''
-// 	)
-// );
 
     /*latest-bolg-post-button*/
 $st_blog_settings_controls['st-blog-latest-post-button-text'] = array(

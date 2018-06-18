@@ -137,10 +137,8 @@ $st_blog_google_fonts = array(
 
 /*defaults values*/
 $st_blog_customizer_defaults['st-blog-font-family-site-identity']     = 'Roboto+Condensed:400,300,400italic,700';
-// $st_blog_customizer_defaults['st-blog-font-family-menu']              = 'Roboto+Condensed:400,300,400italic,700';
 $st_blog_customizer_defaults['st-blog-font-family-h1-h6']             = 'Roboto+Condensed:400,300,400italic,700';
-$st_blog_customizer_defaults['st-blog-font-family-button-text']       = 'Roboto+Condensed:400,300,400italic,700';
-// $st_blog_customizer_defaults['st-blog-footer-copy-right-text']        = 'Open+Sans:400,400italic,600,700';  
+$st_blog_customizer_defaults['st-blog-font-family-button-text']       = 'Roboto+Condensed:400,300,400italic,700'; 
 
 
 /*section*/
