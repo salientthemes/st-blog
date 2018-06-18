@@ -1367,6 +1367,9 @@ body a:focus {
   text-decoration: none;
   outline: none; }
 
+figure {
+  margin: 0; }
+
 html {
   font-size: 16px; }
 
@@ -1603,6 +1606,8 @@ body.logo-center .site-branding img.custom-logo {
   max-height: 100px;
   width: auto; }
 body.logo-center .site-branding .site-title {
+  margin-top: 2px;
+  margin-bottom: 5px;
   font-size: 3.25rem; }
 body.logo-center .st-blog-header-row .st-blog-logo-manage {
   padding-bottom: 15px;

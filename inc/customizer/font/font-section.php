@@ -175,7 +175,7 @@ $st_blog_settings_controls['st-blog-font-family-site-identity'] =
 //         ),
 //         'control' => array(
 //             'label'                 => esc_html__( 'Menu Font Family', 'st-blog' ),
-//             'description'           => esc_html__( 'Primary menu font family', 'st-blog' ),
+//             'description'           => esc_html__( 'Menu font family', 'st-blog' ),
 //             'section'               => 'st-blog-family',
 //             'type'                  => 'select',
 //             'choices'               => $st_blog_google_fonts,
@@ -221,7 +221,7 @@ $st_blog_settings_controls['st-blog-font-family-button-text'] =
 //         ),
 //         'control' => array(
 //             'label'                 => esc_html__( 'Footer Copyright Text', 'st-blog' ),
-//             'description'           => esc_html__('It only changes the footer copyright text fonts, not all footer text','st-blog'),
+//             'description'           => esc_html__('It only changes the footer copyright text font','st-blog'),
 //             'section'               => 'st-blog-family',
 //             'type'                  => 'select',
 //             'choices'               => $st_blog_google_fonts,

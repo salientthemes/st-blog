@@ -211,7 +211,7 @@ $st_blog_settings_controls['st-blog-footer-text-color'] = array(
 //     ),
 //     'control' => array(
 //         'label'                 =>  esc_html__( 'Reset', 'st-blog' ),
-//         'description'           =>  esc_html__( 'Caution: Reset all color settings above to default. Refresh the page after saving to view the effects', 'st-blog' ),
+//         'description'           =>  esc_html__( 'Caution: Reset all color settings above to default. Refresh the page after saving to view changes', 'st-blog' ),
 //         'section'               => 'colors',
 //         'type'                  => 'checkbox',
 //         'priority'              => 220,

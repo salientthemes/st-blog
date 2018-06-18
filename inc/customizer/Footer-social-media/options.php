@@ -18,7 +18,7 @@ $st_blog_panels['st-blog-social-panel'] = array(
 );
 
 $st_blog_sections['st-blog-social-section'] = array(
-	'title'			=> esc_html__('All Social Options','st-blog'),
+	'title'			=> esc_html__('Social Media Links','st-blog'),
 	'panel'			=> 'st-blog-homepage-panel',
 	'priority'		=> 50
 );

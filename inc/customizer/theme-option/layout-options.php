@@ -27,7 +27,7 @@ $st_blog_settings_controls['st-blog-enable-static-page'] = array(
 ),
 'control' => array(
     'label'                 =>  esc_html__( 'Enable Static Front Page', 'st-blog' ),
-    'description'           =>  esc_html__( 'If you disable this the static page will be disappera form the home page and other section from customizer will reamin as it is', 'st-blog' ),
+    'description'           =>  esc_html__( 'If you disable this, the static page will be disappeared form the front page and other section will remain as it is', 'st-blog' ),
     'section'               => 'st-blog-back-all-theme-setting',
     'type'                  => 'checkbox',
     'priority'              => 10,
@@ -43,7 +43,7 @@ $st_blog_settings_controls['st-blog-default-layout'] = array(
     ),
     'control' => array(
         'label'                 =>  esc_html__( 'Default Layout', 'st-blog' ),
-        'description'           =>  esc_html__( 'Please note that this section can be overridden for individual page/posts', 'st-blog' ),
+        'description'           =>  esc_html__( 'Please note that this section can be overridden by individual page/post settings', 'st-blog' ),
         'section'               => 'st-blog-back-all-theme-setting',
         'type'                  => 'select',
         'choices' => array(
@@ -72,7 +72,7 @@ $st_blog_settings_controls['st-blog-single-post-image-align'] = array(
             'no-image'  => esc_html__( 'No image', 'st-blog' )
         ),
         'priority'              => 40,
-        'description'           =>  esc_html__( 'Please note that this setting can be override from individual post/page', 'st-blog' ),
+        'description'           =>  esc_html__( 'Please note that this section can be overridden by individual page/post settings', 'st-blog' ),
     )
 );
 

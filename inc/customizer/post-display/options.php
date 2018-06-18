@@ -152,7 +152,7 @@ $st_blog_settings_controls['st-blog-latest-post-button-text'] = array(
 	),
 	'control' => array(
 	    'label'                 =>  esc_html__( 'Button Text', 'st-blog' ),
-	    'description'           =>  esc_html__( 'It will be change only the latest blog button text', 'st-blog' ),
+	    'description'           =>  esc_html__( 'It will only change the latest blog button text', 'st-blog' ),
 	    'section'               => 'latest-post-bolg-section',
 	    'type'                  => 'text',
 	    'priority'              => 50,
