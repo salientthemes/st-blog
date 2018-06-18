@@ -98,7 +98,7 @@ $st_blog_settings_controls['st-blog-feature-content-select-post-from'] = array(
 		'default'			=> $st_blog_customizer_defaults['st-blog-feature-content-select-post-from'] 
 	),
 	'control' => array(
-		'label'				=> esc_html__('Select Post type for Featured Content','st-blog'),
+		'label'				=> esc_html__('Select Article for Featured Content','st-blog'),
 		'section'			=> 'st-blog-feature-content-section',
 		'type'				=> 'select',
 		'choices' => array(
@@ -190,7 +190,7 @@ $st_blog_settings_controls['st-blog-feature-content-slider-time'] = array(
 		'default'			=> $st_blog_customizer_defaults['st-blog-feature-content-slider-time']
 	),
 	'control'=> array(
-		'label'				=> esc_html__('Select Slider Time For Featured Content AutoPlay','st-blog'),
+		'label'				=> esc_html__('Select Slider Time for Featured Content AutoPlay','st-blog'),
 		'section'			=> 'st-blog-feature-content-section',
 		'type'				=> 'text',
 		'priority'			=> 100,
