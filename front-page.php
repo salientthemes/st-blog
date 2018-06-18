@@ -37,7 +37,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
         // $st_blog_static_page = 1;
         if ($st_blog_static_page  == 1) { ?>
             <div id="content" class=" container site-content ">
-                <div id="primary" class="content-area col-sm-8">
+                <div id="primary" class="content-area">
                     <main id="main" class="site-main" role="main">
                         <?php
                         while ( have_posts() ) : the_post();

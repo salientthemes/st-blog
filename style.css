@@ -3,7 +3,7 @@ Theme Name: ST Blog
 Theme URI: https://www.salientthemes.com/
 Author: salient Themes
 Author URI: http://salientthemes.com
-Description: ST Blog, your new clean and minimal blogging WordPress theme. It's very easy to work with WordPress. site. It is fully responsive on iPhone, iPad and Android phones and tablets.
+Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -884,7 +884,11 @@ a:hover, .st-blog-item article .entry-title a:hover, #st-blog-featured .slick-li
 .widget_pages ul li a:hover,
 .widget_nav_menu ul li a:hover, .breadcrumbs .trail-items .trail-item a, .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler:hover i, body.head-search-active .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler .fa-search, nav#site-navigation ul a:hover, nav#site-navigation ul#menu > li.current-menu-item > a,
 nav#site-navigation ul.nav-menu > li.current-menu-item > a,
-nav#site-navigation ul.menu > li.current-menu-item > a, .site-footer .site-info a:hover, .st-blog-popular-posts-item .st-blog-popular-posts-content .st-blog-popular-posts-title a:hover, #st-blog-banner .st-blog-banner-slider .slick-slide .st-blog-banner-image .st-blog-banner-caption .st-blog-title:hover, #st-blog-banner .st-blog-banner-slider .slick-slide .st-blog-banner-image .st-blog-banner-caption .st-blog-title:hover a, #st-blog-featured .slick-list .slick-slide .st-blog-featured-item .st-blog-featured-caption .st-blog-category a, body.dark-theme nav#site-navigation ul.menu > li > a:hover, body.dark-theme nav#site-navigation ul.menu > li.current-menu-item a, .dark-theme-coloured .widget-title, .dark-theme-coloured .widgettitle {
+nav#site-navigation ul.menu > li.current-menu-item > a, .site-footer .site-info a:hover, .st-blog-popular-posts-item .st-blog-popular-posts-content .st-blog-popular-posts-title a:hover, #st-blog-banner .st-blog-banner-slider .slick-slide .st-blog-banner-image .st-blog-banner-caption .st-blog-title:hover, #st-blog-banner .st-blog-banner-slider .slick-slide .st-blog-banner-image .st-blog-banner-caption .st-blog-title:hover a, #st-blog-featured .slick-list .slick-slide .st-blog-featured-item .st-blog-featured-caption .st-blog-category a, .woocommerce ul.products li.product .price,
+.woocommerce div.product p.price, .woocommerce div.product span.price,
+.woocommerce-message::before,
+.woocommerce-info::before,
+.woocommerce form .form-row .required, body.dark-theme nav#site-navigation ul.menu > li > a:hover, body.dark-theme nav#site-navigation ul.menu > li.current-menu-item a, .dark-theme-coloured .widget-title, .dark-theme-coloured .widgettitle {
   color: #EF3F3D; }
 
 a.readmore:hover,
@@ -899,8 +903,13 @@ a {
 
 .st-blog-header-wrap .st-blog-head-search form .search-submit:hover, .widget_search form .search-submit:hover, .post-navigation a:hover, .posts-navigation a:hover, .pagination .nav-links a:hover, .wp-pagenavi a:hover,
 .pagination .nav-links span:hover,
-.wp-pagenavi span:hover, .btn:hover,
-.readmore:hover, .wpcf7-form .wpcf7-submit:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover,
+.wp-pagenavi span:hover, .button:hover,
+.btn:hover,
+.readmore:hover, .wpcf7-form .wpcf7-submit:hover, .woocommerce #respond input#submit:hover,
+.woocommerce div.product form.cart .button:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover,
 .dark-theme .site-content .readmore:hover, .dark-theme #st-blog-social-icons ul li a:hover,
 .dark-theme-coloured button:hover, .dark-theme-coloured .btn,
 .dark-theme-coloured a.btn,
@@ -908,7 +917,9 @@ a {
 .dark-theme-coloured input[type="submit"],
 .dark-theme-coloured .st-blog-header-wrap .st-blog-head-search form .search-submit, .dark-theme-coloured #st-blog-social-icons ul li a,
 .pagination .nav-links span.current,
-.wp-pagenavi span.current, a.readmore:hover, header.site-header .st-blog-header-wrap-nav .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover span, .nav-tabs .nav-item .nav-link.active, ul.slick-dots li button:hover, ul.slick-dots li.slick-active button, body.dark-theme.dark-theme-coloured .site-header .st-blog-header-wrap-nav, body.dark-theme.dark-theme-coloured .site-footer, body.dark-theme header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover span {
+.wp-pagenavi span.current, a.readmore:hover, header.site-header .st-blog-header-wrap-nav .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover span, .nav-tabs .nav-item .nav-link.active, ul.slick-dots li button:hover, ul.slick-dots li.slick-active button, .woocommerce span.onsale,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover, body.dark-theme.dark-theme-coloured .site-header .st-blog-header-wrap-nav, body.dark-theme.dark-theme-coloured .site-footer, body.dark-theme header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover span {
   background-color: #EF3F3D; }
 
 header.site-header .st-blog-header-wrap-nav .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover, body.dark-theme header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage #menu-icon.menu-toggler span, body.dark-theme header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover {
@@ -916,8 +927,17 @@ header.site-header .st-blog-header-wrap-nav .st-blog-menu-toggler-manage #menu-i
 
 .st-blog-header-wrap .st-blog-head-search form .search-submit, .widget_search form .search-submit, .post-navigation a, .posts-navigation a, .pagination .nav-links a, .wp-pagenavi a,
 .pagination .nav-links span,
-.wp-pagenavi span, a.btn, .btn, a.readmore,
-.readmore, .wpcf7-form .wpcf7-submit, button, input[type="button"], input[type="reset"], input[type="submit"], .dark-theme .site-content a.readmore,
+.wp-pagenavi span, a.btn, .button,
+.btn, a.readmore,
+.readmore, .wpcf7-form .wpcf7-submit, .woocommerce #respond input#submit,
+.woocommerce div.product form.cart .button,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt, button, input[type="button"], input[type="reset"], input[type="submit"], .dark-theme .site-content a.readmore,
 .dark-theme .site-content .readmore, .dark-theme #st-blog-social-icons ul li a, .dark-theme-coloured .btn,
 .dark-theme-coloured a.btn,
 .dark-theme-coloured button,
@@ -941,6 +961,10 @@ header.site-header .st-blog-header-wrap-nav .st-blog-menu-toggler-manage #menu-i
   .box-layout .st-blog-popular-posts-item:hover,
   .box-layout .widget_media_gallery .gallery:hover {
     background-color: #f7f7f7; }
+
+.woocommerce-message,
+.woocommerce-info {
+  border-color: #EF3F3D; }
 
 h1, h2, h3, h4, h5, h6, .st-blog-title, .readmore, nav#site-navigation ul a, #st-blog-author .st-blog-author-name, #st-blog-featured .slick-list .slick-slide .st-blog-featured-item .st-blog-featured-caption .st-blog-category {
   font-family: "Roboto Condensed", sans-serif; }
@@ -1021,8 +1045,17 @@ textarea:focus,
 
 .st-blog-header-wrap .st-blog-head-search form .search-submit, .widget_search form .search-submit, .post-navigation a, .posts-navigation a, .pagination .nav-links a, .wp-pagenavi a,
 .pagination .nav-links span,
-.wp-pagenavi span, a.btn, .btn, a.readmore,
-.readmore, .wpcf7-form .wpcf7-submit, button, input[type="button"], input[type="reset"], input[type="submit"], .dark-theme .site-content a.readmore,
+.wp-pagenavi span, a.btn, .button,
+.btn, a.readmore,
+.readmore, .wpcf7-form .wpcf7-submit, .woocommerce #respond input#submit,
+.woocommerce div.product form.cart .button,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt, button, input[type="button"], input[type="reset"], input[type="submit"], .dark-theme .site-content a.readmore,
 .dark-theme .site-content .readmore, .dark-theme #st-blog-social-icons ul li a, .dark-theme-coloured .btn,
 .dark-theme-coloured a.btn,
 .dark-theme-coloured button,
@@ -1037,16 +1070,30 @@ textarea:focus,
   padding: 5px 10px; }
   .st-blog-header-wrap .st-blog-head-search form .search-submit:hover, .widget_search form .search-submit:hover, .post-navigation a:hover, .posts-navigation a:hover, .pagination .nav-links a:hover, .wp-pagenavi a:hover,
   .pagination .nav-links span:hover,
-  .wp-pagenavi span:hover, .btn:hover,
-  .readmore:hover, .wpcf7-form .wpcf7-submit:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover,
+  .wp-pagenavi span:hover, .button:hover,
+  .btn:hover,
+  .readmore:hover, .wpcf7-form .wpcf7-submit:hover, .woocommerce #respond input#submit:hover,
+  .woocommerce div.product form.cart .button:hover,
+  .woocommerce a.button:hover,
+  .woocommerce button.button:hover,
+  .woocommerce input.button:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover,
   .dark-theme .site-content .readmore:hover, .dark-theme #st-blog-social-icons ul li a:hover,
   .dark-theme-coloured a.btn:hover {
     color: #ffffff; }
   @media (min-width: 575px) {
     .st-blog-header-wrap .st-blog-head-search form .search-submit, .widget_search form .search-submit, .post-navigation a, .posts-navigation a, .pagination .nav-links a, .wp-pagenavi a,
     .pagination .nav-links span,
-    .wp-pagenavi span, a.btn, .btn, a.readmore,
-    .readmore, .wpcf7-form .wpcf7-submit, button, input[type="button"], input[type="reset"], input[type="submit"], .dark-theme .site-content a.readmore,
+    .wp-pagenavi span, a.btn, .button,
+    .btn, a.readmore,
+    .readmore, .wpcf7-form .wpcf7-submit, .woocommerce #respond input#submit,
+    .woocommerce div.product form.cart .button,
+    .woocommerce #respond input#submit.alt,
+    .woocommerce a.button,
+    .woocommerce button.button,
+    .woocommerce input.button,
+    .woocommerce a.button.alt,
+    .woocommerce button.button.alt,
+    .woocommerce input.button.alt, button, input[type="button"], input[type="reset"], input[type="submit"], .dark-theme .site-content a.readmore,
     .dark-theme .site-content .readmore, .dark-theme #st-blog-social-icons ul li a, .dark-theme-coloured .btn,
     .dark-theme-coloured a.btn,
     .dark-theme-coloured button,
@@ -1367,6 +1414,9 @@ body a:focus {
   text-decoration: none;
   outline: none; }
 
+figure {
+  margin: 0; }
+
 html {
   font-size: 16px; }
 
@@ -1413,6 +1463,9 @@ textarea:focus,
     width: 100%; }
     #preloader #status i {
       font-size: 30px; }
+
+h2, h2 a, .h2, .h2 a, h2.widget-title, .h1, .h3, .h4, .h5, .h6, h1, h3, h4, h5, h6 .h1 a, .h3 a, .h4 a, .h5 a, .h6 a, h1 a, h3 a, h4 a, h5 a, h6 a {
+  color: #000; }
 
 .readmore {
   display: inline-block; }
@@ -1603,6 +1656,8 @@ body.logo-center .site-branding img.custom-logo {
   max-height: 100px;
   width: auto; }
 body.logo-center .site-branding .site-title {
+  margin-top: 2px;
+  margin-bottom: 5px;
   font-size: 3.25rem; }
 body.logo-center .st-blog-header-row .st-blog-logo-manage {
   padding-bottom: 15px;
@@ -2267,13 +2322,35 @@ aside .st-blog-instafeed-slider .st-blog-instafeed-image {
   font-size: 20px;
   font-weight: 400; }
 #st-blog-author .st-blog-author-img {
-  margin-bottom: 10px; }
+  position: relative; }
 #st-blog-author #st-blog-author-social-icons {
   margin-top: 20px;
-  margin-bottom: 10px; }
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  -moz-transform: translate(100%, 0);
+  -o-transform: translate(100%, 0);
+  -ms-transform: translate(100%, 0);
+  -webkit-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+  -webkit-transition: 0.4s all ease-in-out;
+  -moz-transition: 0.4s all ease-in-out;
+  -o-transition: 0.4s all ease-in-out;
+  transition: 0.4s all ease-in-out;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px; }
   #st-blog-author #st-blog-author-social-icons ul li {
-    margin-right: 15px;
+    margin-left: 0;
     padding: 0; }
+#st-blog-author:hover #st-blog-author-social-icons {
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0); }
 
 .st-blog-popular-posts-item {
   position: relative;
@@ -2296,20 +2373,21 @@ aside .st-blog-instafeed-slider .st-blog-instafeed-image {
       font-size: 20px; }
       .st-blog-popular-posts-item .st-blog-popular-posts-content .st-blog-popular-posts-title a {
         font-weight: 400; }
+  .st-blog-popular-posts-item .st-blog-popular-posts-content .post-meta-content .author-link {
+    margin-right: 10px; }
   .st-blog-popular-posts-item .st-blog-popular-posts-content .post-meta-content .date-link {
     display: block; }
     .st-blog-popular-posts-item .st-blog-popular-posts-content .post-meta-content .date-link a:before {
       padding-left: 0; }
   @media (min-width: 575px) {
     .st-blog-popular-posts-item .st-blog-popular-posts-content .post-meta-content .date-link {
-      display: inline-block; }
-      .st-blog-popular-posts-item .st-blog-popular-posts-content .post-meta-content .date-link:before {
-        padding-left: 10px; } }
+      display: inline-block; } }
   @media (min-width: 768px) {
     .st-blog-popular-posts-item .st-blog-popular-posts-content .post-meta-content .date-link {
-      display: block; }
-      .st-blog-popular-posts-item .st-blog-popular-posts-content .post-meta-content .date-link a:before {
-        padding-left: 0; } }
+      display: block; } }
+  @media (min-width: 992px) {
+    .st-blog-popular-posts-item .st-blog-popular-posts-content .post-meta-content .date-link {
+      display: inline-block; } }
 
 .widget_tag_cloud .tagcloud a {
   background: #f7f7f7;
@@ -2458,6 +2536,12 @@ ul.slick-dots {
 
 .wpcf7-form label {
   display: block; }
+
+.woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1, .woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2 {
+  max-width: 48%; }
+
+.woocommerce-input-wrapper {
+  width: 100%; }
 
 #comments .comments-title {
   margin-bottom: 20px; }

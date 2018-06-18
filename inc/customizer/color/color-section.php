@@ -120,3 +120,18 @@ $st_blog_settings_controls['st-blog-footer-text-color'] = array(
     )
 );
 
+
+// $st_blog_settings_controls['st-blog-color-reset'] = array(
+//     'setting' => array(
+//         'default'   => $st_blog_customizer_defaults['st-blog-color-reset'],
+//         'transport'            => 'postmessage',
+//     ),
+//     'control' => array(
+//         'label'                 =>  esc_html__( 'Reset', 'st-blog' ),
+//         'description'           =>  esc_html__( 'Caution: Reset all color settings above to default. Refresh the page after saving to view changes', 'st-blog' ),
+//         'section'               => 'colors',
+//         'type'                  => 'checkbox',
+//         'priority'              => 220,
+//         'active_callback'       => ''
+//     )
+// );

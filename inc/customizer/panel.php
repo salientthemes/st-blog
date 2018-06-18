@@ -3,7 +3,7 @@ global $st_blog_panels;
 
 // panel for main home page 
 $st_blog_panels['st-blog-homepage-panel']  = array(
-	'title'			=> esc_html__('All Theme Options','st-blog'),
+	'title'			=> esc_html__('Theme Options','st-blog'),
 	'priority'		=> 30	
 );
 
