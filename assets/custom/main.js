@@ -244,6 +244,60 @@
 			]
 		});
 
+		// free: gallery
+		$(".st-blog-gallery-slider").slick({
+			// normal options...
+			arrows: false,
+			autoplay: true,
+			autoplaySpeed: 4000,
+			draggable: true,
+			dots: false,
+			infinite: true,
+			pauseOnFocus: false,
+			pauseOnHover: true,
+			ltr: slick_ltr,//for rtl support
+			rtl: slick_rtl,
+			slidesToShow: 8,
+			prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>',
+			nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>',
+			speed: 800,
+			useCSS: true,
+
+			// the magic
+			responsive: [{
+
+			  breakpoint: 1024,
+			  settings: {
+			    slidesToShow: 6,
+			    infinite: true
+			  }
+
+			}, 
+			{
+
+			  breakpoint: 991,
+			  settings: {
+			    slidesToShow: 4,
+			  }
+
+			}, 
+			{
+
+			  breakpoint: 575,
+			  settings: {
+			    slidesToShow: 2,
+			  }
+
+			}, 
+			/*{
+
+			  breakpoint: 300,
+			  settings: "unslick" // destroys slick
+
+			}*/
+			]
+		});
+
 		// hide_preloader
 		$('#preloader').hide();
 	});
