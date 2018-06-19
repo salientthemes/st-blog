@@ -30,22 +30,30 @@ function  st_blog_image_gallery()
        $st_blog_fature_image_gallery_post_query = new WP_Query($st_blog_feature_about_args );
         if ($st_blog_fature_image_gallery_post_query->have_posts() ) :
           while ($st_blog_fature_image_gallery_post_query->have_posts() ) :$st_blog_fature_image_gallery_post_query->the_post();
+            $id = get_the_ID();
+            $galleries = get_post_galleries_images($id  );
+             
             ?>
-             <!-- gallery -->
+            <!-- gallery -->
+            <?php if (!empty($galleries)){ ?>
             <section id="st-blog-gallery" >
                 <div class="container">
                     <h2 class="widget-title text-center"><?php the_title();?></h2>
                     <div class="st-blog-gallery-slider pb-5">
-                    <?php $galleries = get_post_galleries_images(  );
+                    <?php
+                    if( !empty($galleries) )
+                    {
                     foreach( $galleries[0] as $gallery ) {
                      ?>
                         <div class="st-blog-gallery-image">
                             <a href="#!"><img src="<?php echo ($gallery);?>"></a>
                         </div>
                     <?php } ?>
+                    <?php } ?>
                      </div>
                 </div>
            </section>
+            <?php } ?>
             <?php
             endwhile;
         endif;
@@ -57,26 +65,33 @@ function  st_blog_image_gallery()
             'posts_per_page' => 1,
             'orderby' => 'post__in',
         );
-       $st_blog_image_post_query = new WP_Query($st_blog_feature_about_args );
-        if ($st_blog_image_post_query->have_posts() ) :
-          while ($st_blog_image_post_query->have_posts() ) :$st_blog_image_post_query->the_post();
+       $st_blog_fature_image_gallery_post_query = new WP_Query($st_blog_feature_about_args );
+        if ($st_blog_fature_image_gallery_post_query->have_posts() ) :
+          while ($st_blog_fature_image_gallery_post_query->have_posts() ) :$st_blog_fature_image_gallery_post_query->the_post();
+            $id = get_the_ID();
+            $galleries = get_post_galleries_images($id  );
+             
             ?>
             <!-- gallery -->
+            <?php if (!empty($galleries)){ ?>
             <section id="st-blog-gallery" >
                 <div class="container">
                     <h2 class="widget-title text-center"><?php the_title();?></h2>
                     <div class="st-blog-gallery-slider pb-5">
-                    <?php $galleries = get_post_galleries_images(  );
+                    <?php
+                    if( !empty($galleries) )
+                    {
                     foreach( $galleries[0] as $gallery ) {
                      ?>
                         <div class="st-blog-gallery-image">
                             <a href="#!"><img src="<?php echo ($gallery);?>"></a>
                         </div>
                     <?php } ?>
+                    <?php } ?>
                      </div>
                 </div>
            </section>
-
+            <?php } ?>
             <?php
             endwhile;
         endif;

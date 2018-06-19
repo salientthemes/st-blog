@@ -39,6 +39,7 @@ $st_blog_settings_controls['st-blog-image-galery-from-page'] = array(
 		'control' => array(
 			 /* translators: %s: search page */ 
 			'label'				=> esc_html__('Select page for image gallery ','st-blog'),
+			'description'		=> esc_html__('It will work when a selected page or post has a image gallery','st-blog'),
 			'section'			=> 'st-blog-image-gallery-section',
 			'type'				=> 'dropdown-pages',
 			'priority'			=> 60,
