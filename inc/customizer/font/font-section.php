@@ -144,7 +144,7 @@ $st_blog_customizer_defaults['st-blog-font-family-button-text']       = 'Roboto+
 /*section*/
 $st_blog_sections['st-blog-family'] =
     array(
-        'priority'       => 50,
+        'priority'       => 60,
         'title'          => esc_html__( 'Fonts', 'st-blog' ),
         'panel'          => 'st-blog-homepage-panel',
     );
@@ -166,21 +166,6 @@ $st_blog_settings_controls['st-blog-font-family-site-identity'] =
         )
     );
 
-// $st_blog_settings_controls['st-blog-font-family-menu'] =
-//     array(
-//         'setting' =>     array(
-//             'default'              => $st_blog_customizer_defaults['st-blog-font-family-menu'],
-//         ),
-//         'control' => array(
-//             'label'                 => esc_html__( 'Menu Font Family', 'st-blog' ),
-//             'description'           => esc_html__( 'Menu font family', 'st-blog' ),
-//             'section'               => 'st-blog-family',
-//             'type'                  => 'select',
-//             'choices'               => $st_blog_google_fonts,
-//             'priority'              => 20,
-//             'active_callback'       => ''
-//         )
-//     );
 
 $st_blog_settings_controls['st-blog-font-family-h1-h6'] =
     array(
@@ -212,18 +197,3 @@ $st_blog_settings_controls['st-blog-font-family-button-text'] =
         )
     );    
 
-// $st_blog_settings_controls['st-blog-footer-copy-right-text'] =
-//     array(
-//         'setting' =>     array(
-//             'default'              => $st_blog_customizer_defaults['st-blog-footer-copy-right-text'],
-//         ),
-//         'control' => array(
-//             'label'                 => esc_html__( 'Footer Copyright Text', 'st-blog' ),
-//             'description'           => esc_html__('It only changes the footer copyright text font','st-blog'),
-//             'section'               => 'st-blog-family',
-//             'type'                  => 'select',
-//             'choices'               => $st_blog_google_fonts,
-//             'priority'              => 60,
-//             'active_callback'       => ''
-//         )
-//     );

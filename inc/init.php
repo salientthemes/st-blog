@@ -46,6 +46,9 @@ require trailingslashit( get_template_directory() ) . '/inc/hooks/homepage-socia
 
 require trailingslashit( get_template_directory() ) . '/inc/hooks/inline-style.php';
 
+require trailingslashit( get_template_directory() ) . '/inc/hooks/image-gallery.php';
+
+
 
 
 
