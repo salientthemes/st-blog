@@ -761,8 +761,8 @@ if ( ! class_exists( 'St_blog_About' ) ) {
 		            echo '<thead>';
 		            echo '<tr>';
 		            echo '<th></th>';
-		            echo '<th>' . esc_html__( 'eCommerce Gem','st-blog' ) . '</th>';
-		            echo '<th>' . esc_html__( 'eCommerce Gem Plus','st-blog' ) . '</th>';
+		            echo '<th>' . esc_html__( 'ST Blog','st-blog' ) . '</th>';
+		            echo '<th>' . esc_html__( 'ST Blog Pro','st-blog' ) . '</th>';
 		            echo '</tr>';
 		            echo '</thead>';
 		            echo '<tbody>';
