@@ -25,10 +25,11 @@ if ( ! function_exists( 'st_blog_posted_on' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 
+			$archive_year   = get_the_time('Y');
 			$posted_on = sprintf(
 				/* translators: %s: post date. */
-				 esc_html_x( ' %s |','post date', 'st-blog') ,
-				'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+				 esc_html_x( ' %s ','post date', 'st-blog') ,
+				'<a href="' . esc_url( get_year_link($archive_year) ) . '" rel="bookmark">' . $time_string . '</a>'
 			);
 
 			echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.

@@ -47,7 +47,7 @@ $st_blog_settings_controls['st-blog-select-post-from-category']  = array(
 
 // slider post from page
 $st_blog_repeated_settings_controls['st-blog-select-post-from-page']  =  array(
-    'repeated'  => 7,
+    'repeated'  => 2,
     'feature-slider-page-id' => array(
         'setting' => array(
             'default'   => $st_blog_customizer_defaults['st-blog-select-post-from-page'] 
