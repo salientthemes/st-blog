@@ -816,7 +816,7 @@ if ( ! class_exists( 'St_blog_About' ) ) {
 
 		            echo '<tr class="pt-theme-info-text-center">';
 		            echo '<td></td>';
-		            echo '<td colspan="2"><a href="https://www.salientthemes.com/" target="_blank" class="button button-primary button-hero">eCommerce Gem Plus</a></td>';
+		            echo '<td colspan="2"><a href="https://www.salientthemes.com/" target="_blank" class="button button-primary button-hero">ST Blog Pro</a></td>';
 		            echo '</tr>';
 
 		            echo '</tbody>';
