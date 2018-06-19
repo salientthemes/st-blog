@@ -17,7 +17,7 @@ $st_blog_customizer_defaults['lates-blog-pagination']							= esc_html__('numeri
 // panel for post display
 $st_blog_panels['latest-post-bolg-panel']	= array(
 	'title'		=> esc_html__('Latest Post Blog','st-blog'),
-	'priority'	=> 30
+	'priority'	=> 20
 );
 
 // section for post display

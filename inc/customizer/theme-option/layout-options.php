@@ -15,7 +15,7 @@ $st_blog_customizer_defaults['st-blog-default-body-layout']     = 'boxed';
 
 
 $st_blog_sections['st-blog-back-all-theme-setting'] = array(
-    'priority'       => 30,
+    'priority'       => 10,
     'title'          => esc_html__( 'Layout Options', 'st-blog' ),
     'panel'          => 'st-blog-homepage-panel',
 );

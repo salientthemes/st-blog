@@ -15,16 +15,6 @@ function st_blog_widgets_init() {
         'after_title'   => '</h2>',
     ) );
 
-
-    register_sidebar( array(
-        'name'          => esc_html__( 'Front Page Full Width Widget', 'st-blog' ),
-        'id'            => 'full-width-widget',
-        'description'   => ''.esc_html__('Displays on footer section full width','st-blog').'',
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
-    ) );
    $st_blog_get_all_options = st_blog_get_all_options(1);
    
 
@@ -64,5 +54,6 @@ function st_blog_widgets_init() {
 add_action( 'widgets_init', 'st_blog_widgets_init' );
 
 require trailingslashit( get_template_directory() ) . '/inc/widgets/mainpage-st-blog-widget-author.php';
-require trailingslashit( get_template_directory() ) . '/inc/widgets/mainpage-st-blog-instagaram.php';
+require trailingslashit( get_template_directory() ) . '/inc/widgets/mainpage-st-blog-tab.php';
+
 

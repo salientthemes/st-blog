@@ -11,9 +11,9 @@
 	$st_blog_customizer_defaults['st-blog-copyright-text'] 			= esc_html__('Copyright &copy; All right reserved','st-blog'); 
 
 	$st_blog_sections['header-footer-section'] 	= array(
-		'title'		=> esc_html__('Header Footer Options','st-blog'),
+		'title'		=> esc_html__('Footer Options','st-blog'),
 		'panel'		=> 'st-blog-homepage-panel',
-		'priority'	=> 5
+		'priority'	=> 90
 	);
 
 	

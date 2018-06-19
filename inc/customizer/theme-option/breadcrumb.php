@@ -11,7 +11,7 @@ $st_blog_customizer_defaults['st-blog-enable-breadcrumb'] = 1;
 $st_blog_sections['st-blog-breadcrumb-setting'] = array(
     'title'          => esc_html__( 'Breadcrumb Options', 'st-blog' ),
     'panel'          => 'st-blog-homepage-panel',
-    'priority'       => 70,
+    'priority'       => 30,
 );
 
 
