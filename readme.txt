@@ -3,10 +3,10 @@
 by salient Themes
 
 Contributors: salienttheme
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, left-sidebar, right-sidebar, custom-header, blog, e-commerce, theme-options
 
 Requires at least: 4.5
-Tested up to: 4.8
+Tested up to: 4.9.6
 Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -15,7 +15,7 @@ A starter theme called ST Blog.
 
 == Description ==
 
-Description
+ST Blog, your new clean and minimal blogging WordPress theme. It's very easy to work with WordPress. site. It is fully responsive on iPhone, iPad and Android phones and tablets.
 
 == Installation ==
 

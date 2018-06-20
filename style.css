@@ -1,5 +1,5 @@
 /*!
-Theme Name: ST Blog Pro
+Theme Name: ST Blog
 Theme URI: https://www.salientthemes.com/
 Author: salient Themes
 Author URI: http://salientthemes.com
@@ -8,7 +8,7 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: st-blog
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, left-sidebar, right-sidebar, custom-header, blog, e-commerce, theme-options
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -996,6 +996,7 @@ body {
   font-size: 1.875rem;
   font-weight: 700;
   margin-bottom: 15px;
+  margin-top: 0;
   text-transform: uppercase; }
 
 .widget_categories ul li,
@@ -1541,7 +1542,8 @@ body.scrolled-down #st-blog-scroll-top {
 .breadcrumbs {
   margin-bottom: 15px; }
   .breadcrumbs .trail-items .trail-item {
-    display: inline-block; }
+    display: inline-block;
+    margin-left: 0; }
   .breadcrumbs .trail-items .trail-item + .trail-item {
     padding-left: .5rem; }
   .breadcrumbs .trail-items .trail-item + .trail-item::before {
@@ -2579,6 +2581,19 @@ ul.slick-dots {
 
 .woocommerce-input-wrapper {
   width: 100%; }
+
+@media (max-width: 575px) {
+  body.woocommerce ul.products[class*=columns-] li.product, body.woocommerce-page ul.products[class*=columns-] li.product {
+    width: 100%; } }
+@media (min-width: 768px) {
+  body.salient-right-sidebar.woocommerce ul.products[class*=columns-] li.product, body.salient-right-sidebar.woocommerce-page ul.products[class*=columns-] li.product, body.salient-left-sidebar.woocommerce ul.products[class*=columns-] li.product, body.salient-left-sidebar.woocommerce-page ul.products[class*=columns-] li.product {
+    float: left;
+    width: 48%;
+    margin: 0 0 2.992em; } }
+@media (min-width: 768px) {
+  body.salient-right-sidebar.woocommerce ul.products[class*=columns-] li.product:nth-child(2n), body.salient-right-sidebar.woocommerce-page ul.products[class*=columns-] li.product:nth-child(2n), body.salient-left-sidebar.woocommerce ul.products[class*=columns-] li.product:nth-child(2n), body.salient-left-sidebar.woocommerce-page ul.products[class*=columns-] li.product:nth-child(2n) {
+    float: right;
+    clear: none !important; } }
 
 #comments .comments-title {
   margin-bottom: 20px; }
