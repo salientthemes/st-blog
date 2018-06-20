@@ -297,8 +297,6 @@
 			}*/
 			]
 		});
-
-		// hide_preloader
-		$('#preloader').hide();
+		
 	});
 })(jQuery);
