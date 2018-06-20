@@ -997,7 +997,6 @@ msgid "eCommerce Gem"
 msgstr ""
 
 #: inc/theme-info/class-about.php:765
-msgid "eCommerce Gem Plus"
 msgstr ""
 
 #: inc/widgets/mainpage-st-blog-instagaram.php:12

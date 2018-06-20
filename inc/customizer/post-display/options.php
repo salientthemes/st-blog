@@ -9,7 +9,7 @@ global $st_blog_customizer_defaults;
 $st_blog_customizer_defaults['latest-numbe-of-post-for-blog-section']    		= 6;
 $st_blog_customizer_defaults['latest-post-show-title']							= 1;
 $st_blog_customizer_defaults['latest-post-show-excerpt']						= 1;
-$st_blog_customizer_defaults['st-blog-excerpt-length'] 							=  50 ;
+$st_blog_customizer_defaults['st-blog-excerpt-length'] 							= 25 ;
 $st_blog_customizer_defaults['st-blog-latest-post-button-text'] 				= esc_html__('Read More','st-blog');
 $st_blog_customizer_defaults['lates-blog-pagination']							= esc_html__('numeric','st-blog');
 
