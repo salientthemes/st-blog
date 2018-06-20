@@ -7,23 +7,24 @@
  * @package st-blog
  */
 global $st_blog_customizer_all_values;
-
-// for image_size - Box Post Layout
-if(is_single()) {
-	$imgsize = 'feature-slider-image';
-}
-else {
-	if( 'full-width' == $st_blog_customizer_all_values['st-blog-default-body-layout'] ) {
-	    $imgsize = 'feature-slider-image';
-	} else {
-	    $imgsize = 'feature-content-post-image';
-	}
-}
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="image">
-		<?php the_post_thumbnail($imgsize); ?>
+		<?php 
+		if(is_single()) {
+			st_blog_post_thumbnail(); 
+		}
+		else {
+			// archives: for image_size - Box Post Layout
+			if( 'full-width' == $st_blog_customizer_all_values['st-blog-default-body-layout'] ) {
+			    $imgsize = 'feature-slider-image';
+			} else {
+			    $imgsize = 'feature-content-post-image';
+			}
+			the_post_thumbnail($imgsize); 
+		}
+		?>
 	</div>
 	
 	<header class="entry-header">
