@@ -1009,6 +1009,7 @@ body {
   list-style: none;
   padding: 4px 10px;
   line-height: 28px;
+  margin-left: 0;
   margin-bottom: 8px; }
   .widget_categories ul li:hover,
   .widget_archive ul li:hover,
@@ -1791,6 +1792,7 @@ nav#site-navigation ul {
   padding: 0;
   list-style: none; }
   nav#site-navigation ul li {
+    margin-left: 0;
     position: relative; }
     nav#site-navigation ul li:hover > ul {
       -moz-transform: translate(0, 0);
