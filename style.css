@@ -1861,6 +1861,8 @@ nav#site-navigation ul.menu ul ul {
 .st-mbl-menu ul {
   margin: 0;
   padding: 0; }
+  .st-mbl-menu ul li {
+    margin-left: 0; }
 .st-mbl-menu a {
   text-decoration: none; }
 
@@ -2514,8 +2516,11 @@ aside .st-blog-instafeed-slider .st-blog-instafeed-image {
 #st-blog-banner .st-blog-banner-slider ul.slick-dots {
   position: absolute;
   bottom: 20px;
-  right: 50px;
+  right: 15px;
   z-index: 1; }
+  @media (min-width: 575px) {
+    #st-blog-banner .st-blog-banner-slider ul.slick-dots {
+      right: 50px; } }
 
 #st-blog-banner .st-blog-banner-slider .st-blog-overlay:after {
   background-color: rgba(0, 0, 0, 0.2); }
@@ -2547,8 +2552,11 @@ aside .st-blog-instafeed-slider .st-blog-instafeed-image {
 
 ul.slick-dots {
   margin-top: 30px;
+  margin-bottom: 0;
   display: inline-block !important; }
   ul.slick-dots li {
+    margin-left: 0;
+    line-height: 10px;
     list-style: none;
     display: inline-block; }
     ul.slick-dots li button {
@@ -2560,6 +2568,7 @@ ul.slick-dots {
       margin-left: 10px;
       text-indent: -9999px;
       height: 10px;
+      line-height: 10px;
       width: 10px; }
 
 .wpcf7-form label {
