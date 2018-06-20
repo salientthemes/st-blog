@@ -1,5 +1,5 @@
 /*!
-Theme Name: ST Blog
+Theme Name: ST Blog Pro
 Theme URI: https://www.salientthemes.com/
 Author: salient Themes
 Author URI: http://salientthemes.com
@@ -2666,10 +2666,11 @@ body.admin-bar.logo-center.big-logo-disable #big-logo-site-nav {
     body.admin-bar.fixed-header .site-header,
     body.admin-bar.logo-center.big-logo-disable #big-logo-site-nav {
       top: 46px; } }
-  @media screen and (max-width: 600px) {
-    body.admin-bar.fixed-header .site-header,
-    body.admin-bar.logo-center.big-logo-disable #big-logo-site-nav {
-      position: absolute; } }
+
+@media screen and (max-width: 600px) {
+  body.admin-bar.fixed-header.logo-right .site-header,
+  body.admin-bar.fixed-header.logo-left .site-header {
+    position: absolute; } }
 
 body.admin-bar .st-mbl-menu {
   padding-top: 32px; }
