@@ -60,13 +60,15 @@ if ( !class_exists('st_blog_author_widget') ) :
                         <p><?php echo esc_html( $description ); ?></p>
                         <a href="<?php echo esc_url( $author_link ); ?>" class="readmore">Know More</a>
 
-                        <div id="st-blog-author-social-icons" class="">
-                            <ul>
-                                <li><a href="<?php echo esc_url($social_link1); ?>"></a></li>
-                                <li><a href="<?php echo esc_url($social_link2); ?>"></a></li>
-                                <li><a href="<?php echo esc_url($social_link3); ?>"></a></li>
-                            </ul>
-                        </div>
+                        <?php if(isset($social_link1) || isset($social_link2) || isset($social_link3)): ?>
+                            <div id="st-blog-author-social-icons" class="">
+                                <ul>
+                                    <li><a href="<?php echo esc_url($social_link1); ?>"></a></li>
+                                    <li><a href="<?php echo esc_url($social_link2); ?>"></a></li>
+                                    <li><a href="<?php echo esc_url($social_link3); ?>"></a></li>
+                                </ul>
+                            </div>
+                        <?php endif;?>
                 </div><!-- /.st-blog-author-item -->                    
                             
             </div> 
