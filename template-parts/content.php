@@ -7,11 +7,23 @@
  * @package st-blog
  */
 global $st_blog_customizer_all_values;
+
+// for image_size - Box Post Layout
+if(is_single()) {
+	$imgsize = 'feature-slider-image';
+}
+else {
+	if( 'full-width' == $st_blog_customizer_all_values['st-blog-default-body-layout'] ) {
+	    $imgsize = 'feature-slider-image';
+	} else {
+	    $imgsize = 'feature-content-post-image';
+	}
+}
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="image">
-		<?php st_blog_post_thumbnail(); ?>
+		<?php the_post_thumbnail($imgsize); ?>
 	</div>
 	
 	<header class="entry-header">
