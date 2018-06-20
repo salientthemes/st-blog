@@ -122,7 +122,7 @@ if( !function_exists('st_blog_feature_slider') ) :
             $st_blog_feature_slider_number_of_slider    = $st_blog_customizer_all_values['st-blog-number-of-slider'];  
 
         ?>
-        <section id="st-blog-banner" class="mb-5">
+        <section id="st-blog-banner" class="mb-5" style="opacity: 0;">
             <div class="st-blog-banner-slider">
                 <?php
                     $i = 0;
