@@ -2798,7 +2798,7 @@ aside .widget {
 }
 
 figure.gallery-item {
-  margin: 1em 0;
+  padding: 1em;
 }
 
 .widget_media_gallery figure.gallery-item {
