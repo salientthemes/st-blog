@@ -11,7 +11,20 @@ global $st_blog_customizer_all_values;
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="image">
-		<?php st_blog_post_thumbnail(); ?>
+		<?php 
+		if(is_single()) {
+			st_blog_post_thumbnail(); 
+		}
+		else {
+			// archives: for image_size - Box Post Layout
+			if( 'full-width' == $st_blog_customizer_all_values['st-blog-default-body-layout'] ) {
+			    $imgsize = 'feature-slider-image';
+			} else {
+			    $imgsize = 'feature-content-post-image';
+			}
+			the_post_thumbnail($imgsize); 
+		}
+		?>
 	</div>
 	
 	<header class="entry-header">
@@ -50,18 +63,6 @@ global $st_blog_customizer_all_values;
 			}
 		}	
 		
-		// the_content( sprintf(
-		// 	wp_kses(
-		// 		/* translators: %s: Name of current post. Only visible to screen readers */
-		// 		__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'st-blog' ),
-		// 		array(
-		// 			'span' => array(
-		// 				'class' => array(),
-		// 			),
-		// 		)
-		// 	),
-		// 	get_the_title()
-		// ) );
 
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'st-blog' ),

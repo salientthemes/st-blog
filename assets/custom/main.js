@@ -190,6 +190,8 @@
 			}*/
 			]
 		});
+		
+		$('#st-blog-banner').css({'opacity': 1});
 
 		$(".st-blog-full-width-widget .st-blog-instafeed-slider").slick({
 			// normal options...
@@ -298,7 +300,5 @@
 			]
 		});
 
-		// hide_preloader
-		$('#preloader').hide();
 	});
 })(jQuery);

@@ -8,7 +8,7 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: st-blog
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, left-sidebar, right-sidebar, custom-header, blog, e-commerce, theme-options
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -1138,6 +1138,7 @@ body {
   font-size: 1.875rem;
   font-weight: 700;
   margin-bottom: 15px;
+  margin-top: 0;
   text-transform: uppercase;
 }
 
@@ -1152,6 +1153,7 @@ body {
   list-style: none;
   padding: 4px 10px;
   line-height: 28px;
+  margin-left: 0;
   margin-bottom: 8px;
 }
 .widget_categories ul li:hover,
@@ -1732,6 +1734,39 @@ textarea:focus,
   transition: 0.4s all ease-in-out;
 }
 
+blockquote {
+  margin: 0 0 1.5em;
+  padding: 0 20px;
+  border-left: 5px solid #b3b3b3;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  margin-bottom: 1.5em;
+}
+
+ul li, ol li {
+  margin-left: 20px;
+}
+
+li > ol,
+li > ul {
+  margin: 0;
+}
+
+table tr td {
+  border-top: 1px solid #d3d3d3;
+  padding: 3px 8px;
+}
+
+table {
+  border: 1px solid #d3d3d3;
+}
+
 #preloader {
   position: fixed;
   left: 0;
@@ -1808,6 +1843,7 @@ body.scrolled-down #st-blog-scroll-top {
 }
 .breadcrumbs .trail-items .trail-item {
   display: inline-block;
+  margin-left: 0;
 }
 .breadcrumbs .trail-items .trail-item + .trail-item {
   padding-left: .5rem;
@@ -2122,6 +2158,7 @@ nav#site-navigation ul {
   list-style: none;
 }
 nav#site-navigation ul li {
+  margin-left: 0;
   position: relative;
 }
 nav#site-navigation ul li:hover > ul {
@@ -2200,6 +2237,9 @@ nav#site-navigation ul.menu ul ul {
   margin: 0;
   padding: 0;
 }
+.st-mbl-menu ul li {
+  margin-left: 0;
+}
 .st-mbl-menu a {
   text-decoration: none;
 }
@@ -2224,7 +2264,7 @@ nav#site-navigation ul.menu ul ul {
 }
 
 body {
-  overflow-X: hidden;
+  overflow-x: hidden;
 }
 
 .st-mbl-menu {
@@ -2735,9 +2775,6 @@ body.boxed .st-blog-masonry article {
 aside .widget {
   margin-bottom: 40px;
 }
-aside .widget:last-child {
-  margin-bottom: 0;
-}
 
 .st-blog-full-width-widget .widget {
   padding-bottom: 3em;
@@ -2920,6 +2957,7 @@ aside .st-blog-instafeed-slider .st-blog-instafeed-image {
 }
 
 .nav-tabs .nav-item {
+  margin-left: 0;
   margin-bottom: 0;
   text-align: center;
   width: calc(100% / 3);
@@ -3039,8 +3077,13 @@ aside .st-blog-instafeed-slider .st-blog-instafeed-image {
 #st-blog-banner .st-blog-banner-slider ul.slick-dots {
   position: absolute;
   bottom: 20px;
-  right: 50px;
+  right: 15px;
   z-index: 1;
+}
+@media (min-width: 575px) {
+  #st-blog-banner .st-blog-banner-slider ul.slick-dots {
+    right: 50px;
+  }
 }
 
 #st-blog-banner .st-blog-banner-slider .st-blog-overlay:after {
@@ -3082,9 +3125,12 @@ aside .st-blog-instafeed-slider .st-blog-instafeed-image {
 
 ul.slick-dots {
   margin-top: 30px;
+  margin-bottom: 0;
   display: inline-block !important;
 }
 ul.slick-dots li {
+  margin-left: 0;
+  line-height: 10px;
   list-style: none;
   display: inline-block;
 }
@@ -3097,6 +3143,7 @@ ul.slick-dots li button {
   margin-left: 10px;
   text-indent: -9999px;
   height: 10px;
+  line-height: 10px;
   width: 10px;
 }
 
@@ -3110,6 +3157,25 @@ ul.slick-dots li button {
 
 .woocommerce-input-wrapper {
   width: 100%;
+}
+
+@media (max-width: 575px) {
+  body.woocommerce ul.products[class*=columns-] li.product, body.woocommerce-page ul.products[class*=columns-] li.product {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  body.salient-right-sidebar.woocommerce ul.products[class*=columns-] li.product, body.salient-right-sidebar.woocommerce-page ul.products[class*=columns-] li.product, body.salient-left-sidebar.woocommerce ul.products[class*=columns-] li.product, body.salient-left-sidebar.woocommerce-page ul.products[class*=columns-] li.product {
+    float: left;
+    width: 48%;
+    margin: 0 0 2.992em;
+  }
+}
+@media (min-width: 768px) {
+  body.salient-right-sidebar.woocommerce ul.products[class*=columns-] li.product:nth-child(2n), body.salient-right-sidebar.woocommerce-page ul.products[class*=columns-] li.product:nth-child(2n), body.salient-left-sidebar.woocommerce ul.products[class*=columns-] li.product:nth-child(2n), body.salient-left-sidebar.woocommerce-page ul.products[class*=columns-] li.product:nth-child(2n) {
+    float: right;
+    clear: none !important;
+  }
 }
 
 #comments .comments-title {
@@ -3227,9 +3293,10 @@ body.admin-bar.logo-center.big-logo-disable #big-logo-site-nav {
     top: 46px;
   }
 }
+
 @media screen and (max-width: 600px) {
-  body.admin-bar.fixed-header .site-header,
-  body.admin-bar.logo-center.big-logo-disable #big-logo-site-nav {
+  body.admin-bar.fixed-header.logo-right .site-header,
+  body.admin-bar.fixed-header.logo-left .site-header {
     position: absolute;
   }
 }
