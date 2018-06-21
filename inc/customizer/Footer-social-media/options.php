@@ -7,10 +7,10 @@ global $st_blog_repeated_settings_controls;
 global $st_blog_customizer_defaults;
 
 $st_blog_customizer_defaults['st-blog-enable-social-media']         = 1;
-$st_blog_customizer_defaults['st-blog-social-link1']				= '#';
-$st_blog_customizer_defaults['st-blog-social-link2']				= '#';
-$st_blog_customizer_defaults['st-blog-social-link3']				= '#';
-$st_blog_customizer_defaults['st-blog-social-link4']				= '#';
+$st_blog_customizer_defaults['st-blog-social-link1']				= '';
+$st_blog_customizer_defaults['st-blog-social-link2']				= '';
+$st_blog_customizer_defaults['st-blog-social-link3']				= '';
+$st_blog_customizer_defaults['st-blog-social-link4']				= '';
 
 // $st_blog_panels['st-blog-social-panel'] = array(
 // 	'title'			=> esc_html__('Social Media','st-blog'),
