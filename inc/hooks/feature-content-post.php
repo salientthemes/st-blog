@@ -31,7 +31,7 @@ if ( !function_exists('st_blog_feature_content_post_array') ) :
       {
         $st_blog_feature_content_post_args = array(
           'post_type'           => 'post',
-          // 'post_per_page'    => $st_blog_feature_content_post_number,
+          'posts_per_page'    => $st_blog_feature_content_post_number,
           'cat'                 => $st_blog_post_category,
           'ignore_sticky_posts' => true
 

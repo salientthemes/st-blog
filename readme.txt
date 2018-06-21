@@ -142,7 +142,10 @@ Note:
 2) https://www.pexels.com/photo/woman-in-white-dress-shirt-and-black-pants-920379/
 3) https://www.pexels.com/photo/woman-running-on-sand-near-white-concrete-building-736505/
 
+== woocommerce==
+St blog themes includes support for WooCommerce.
 
 == Changelog ==
 = - 1.0.0 - =
 * Initial release.
+

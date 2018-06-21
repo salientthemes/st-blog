@@ -28,6 +28,7 @@ if ( !function_exists('st_fetaure_slider_array')  ) :
         {
             $st_blog_feature_slider_args = array(
                 'post_type'             => 'post',
+                'posts_per_page'    => $st_blog_feature_slider_number_of_slider,
                 'cat'                   => $st_blog_fs_category,
                 'ignore_sticky_posts'   => true
             );

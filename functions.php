@@ -79,6 +79,8 @@ if ( ! function_exists( 'st_blog_setup' ) ) :
 		/*woocommerce support*/
 		add_theme_support( 'woocommerce' );
 
+		// remove_theme_support('custom-header');
+
 		/**
 		 * Add support for core custom logo.
 		 *
@@ -90,6 +92,7 @@ if ( ! function_exists( 'st_blog_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
 	}
 endif;
 add_action( 'after_setup_theme', 'st_blog_setup' );
@@ -159,16 +162,12 @@ function st_blog_google_fonts()
 	$fonts 		= array();
 
 	$st_blog_font_family_site_identity   = $st_blog_customizer_all_values['st-blog-font-family-site-identity'];
-	// $st_blog_font_family_menu			 = $st_blog_customizer_all_values['st-blog-font-family-menu'];
 	$st_blog_font_family_h1_h6			 = $st_blog_customizer_all_values['st-blog-font-family-h1-h6'];
-	$st_blog_font_family_button_text	 = $st_blog_customizer_all_values['st-blog-font-family-button-text'];
-	// $st_blog_font_family_copy_right_text = $st_blog_customizer_all_values['st-blog-footer-copy-right-text'];	
+	$st_blog_font_family_button_text	 = $st_blog_customizer_all_values['st-blog-font-family-button-text'];	
 	$st_blog_fonts = array();
 	$st_blog_fonts[] = $st_blog_font_family_site_identity;
-	// $st_blog_fonts[] = $st_blog_font_family_menu;
 	$st_blog_fonts[] = $st_blog_font_family_h1_h6;
 	$st_blog_fonts[] = $st_blog_font_family_button_text;
-	// $st_blog_fonts[] = $st_blog_font_family_copy_right_text;
 
 	$st_blog_fonts_stylesheet = '//fonts.googleapis.com/css?family=';
 
@@ -261,10 +260,12 @@ function st_blog_wp_admin_style($hook) {
 }
 add_action( 'admin_enqueue_scripts', 'st_blog_wp_admin_style' );
 
+  
 /**
  * Implement the Custom Header feature.
  */
 require trailingslashit(get_template_directory() ) . '/inc/custom-header.php';
+
 
 /**
  * Custom template tags for this theme.
