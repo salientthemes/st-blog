@@ -3151,6 +3151,11 @@ ul.slick-dots li button {
   width: 10px;
 }
 
+.st-blog-gallery-image img {
+  height: 125px;
+  object-fit: cover;
+}
+
 .wpcf7-form label {
   display: block;
 }
