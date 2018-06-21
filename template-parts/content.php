@@ -10,7 +10,7 @@ global $st_blog_customizer_all_values;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="image">
+	<a href="<?php the_permalink();?>"><div class="image">
 		<?php 
 		if(is_single()) {
 			st_blog_post_thumbnail(); 
@@ -25,7 +25,7 @@ global $st_blog_customizer_all_values;
 			the_post_thumbnail($imgsize); 
 		}
 		?>
-	</div>
+	</div></a>
 	
 	<header class="entry-header">
 		<?php

@@ -160,7 +160,7 @@ if ( !function_exists('st_blog_feature_content_post') ) :
                                         <div class="st-blog-featured-item">
                                             <?php if (!empty($st_blog_feature_content_post_image)){ ?>
                                                 <div class="st-blog-featured-image">
-                                                    <img src="<?php echo esc_url($st_blog_feature_content_post_image);?>">
+                                                    <a href="<?php the_permalink();?>"><img src="<?php echo esc_url($st_blog_feature_content_post_image);?>"></a>
                                                 </div>
                                             <?php } ?>    
                                             <div class="st-blog-featured-caption text-center">
