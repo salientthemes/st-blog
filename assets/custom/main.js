@@ -254,7 +254,7 @@
 			autoplaySpeed: 4000,
 			draggable: true,
 			dots: false,
-			infinite: true,
+			infinite: false,
 			pauseOnFocus: false,
 			pauseOnHover: true,
 			ltr: slick_ltr,//for rtl support
@@ -299,6 +299,13 @@
 			}*/
 			]
 		});
+
+		// photobox for gallery
+		$( '#st-blog-gallery' ).photobox( '.st-blog-gallery-image a', {
+			time:0,
+			zoomable:false
+			//single: true
+	    });
 
 	});
 })(jQuery);

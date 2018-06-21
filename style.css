@@ -1049,7 +1049,7 @@ a {
 .pagination .nav-links span.current,
 .wp-pagenavi span.current, a.readmore:hover, header.site-header .st-blog-header-wrap-nav .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover span, .nav-tabs .nav-item .nav-link.active, ul.slick-dots li button:hover, ul.slick-dots li.slick-active button, .woocommerce span.onsale,
 .woocommerce a.button.alt:hover,
-.woocommerce button.button.alt:hover, body.dark-theme.dark-theme-coloured .site-header .st-blog-header-wrap-nav, body.dark-theme.dark-theme-coloured .site-footer, body.dark-theme header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover span {
+.woocommerce button.button.alt:hover, body.dark-theme.dark-theme-coloured .site-header .st-blog-header-wrap-nav, body.dark-theme.dark-theme-coloured .site-footer, body.dark-theme header.site-header .st-blog-header-wrap-nav .container .st-blog-menu-toggler-manage #menu-icon.menu-toggler:hover span, #pbCloseBtn:hover:before {
   background-color: #EF3F3D;
 }
 
@@ -1098,7 +1098,7 @@ header.site-header .st-blog-header-wrap-nav .st-blog-menu-toggler-manage #menu-i
 }
 
 .woocommerce-message,
-.woocommerce-info {
+.woocommerce-info, .pbThumbs li.active a img {
   border-color: #EF3F3D;
 }
 
@@ -2797,6 +2797,10 @@ aside .widget {
   text-align: center;
 }
 
+figure.gallery-item {
+  margin: 1em 0;
+}
+
 .widget_media_gallery figure.gallery-item {
   padding: 2px;
   margin: 0;
@@ -3331,6 +3335,14 @@ body.admin-bar.search .readmore {
 .image-right {
   float: right;
   margin-left: 15px;
+}
+
+.on #pbCloseBtn {
+  opacity: 0.5;
+}
+
+.on #pbCloseBtn:hover {
+  opacity: 1;
 }
 
 #st-blog-gallery .container {

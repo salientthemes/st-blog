@@ -46,7 +46,7 @@ function  st_blog_image_gallery()
                     foreach( $galleries[0] as $gallery ) {
                      ?>
                         <div class="st-blog-gallery-image">
-                            <a href="#!"><img src="<?php echo ($gallery);?>"></a>
+                            <a href="<?php echo ($gallery);?>"><img src="<?php echo ($gallery);?>"></a>
                         </div>
                     <?php } ?>
                     <?php } ?>
