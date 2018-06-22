@@ -23,4 +23,4 @@ $config = array(
 	),
 );
 
-eCommerce_Gem_Demo::init( apply_filters( 'eCommerce_Gem_Demo_filter', $config ) );
+st_blog_Demo::init( apply_filters( 'st_blog_Demo_filter', $config ) );
