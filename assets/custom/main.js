@@ -6,20 +6,22 @@
 
 	function alignment_and_padding() {
 		$('header.site-header').height( $('.st-blog-header-wrap-nav').height() );
-
-		// page padding again
-		if($('body').hasClass('logo-left') || $('body').hasClass('logo-right')) {
-			$('#page.site').css({ 'padding-top': $('.st-blog-header-wrap-nav').height() + 'px' });	
-
-			// for nav - always vertically center
-			$('nav#site-navigation ul#menu > li > a, nav#site-navigation ul.nav-menu > li > a, nav#site-navigation ul.menu > li > a').css({ 'line-height': $('.st-blog-header-wrap-nav').height()-50 + 'px' });
-		}
-		else if( $('body').hasClass('logo-center big-logo-disable') ) {
-			$('#page.site').css({ 'padding-top': $('.st-blog-header-wrap-nav').height() + 'px' });
-		}
-		else if( $('body').hasClass('logo-center big-logo-enable') )
-			$('#page.site').css({ 'padding-top': 0 });
 		
+		if($(window).width() >= 601) {
+			// page padding again
+			$('#page.site').css({ 'padding-top': $('.st-blog-header-wrap-nav').height() + 'px' });	
+		}
+		else {
+			$('#page.site').css({ 'padding-top': '0px' });	
+		}
+
+
+		if($(window).width() >= 992) {
+			if($('body').hasClass('logo-left') || $('body').hasClass('logo-right')) {
+				// for nav - always vertically center
+				$('nav#site-navigation ul#menu > li > a, nav#site-navigation ul.nav-menu > li > a, nav#site-navigation ul.menu > li > a').css({ 'line-height': $('.st-blog-header-wrap-nav').height()-50 + 'px' });
+			}
+		}		
 	}
 
 	$(window).resize(function() {
@@ -52,51 +54,21 @@
 			}
 		});
 
-		// scroll top
-		var navbar = document.getElementById("big-logo-site-nav");
-		var sticky = navbar.offsetTop;
-		
+
 		$(window).scroll(function() { 
-			// for logo-center only
+			var scrollTopPosition    = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
 
-			if (window.pageYOffset >= sticky) {
-				// navbar.classList.add("sticky");
-			} else {
-				// navbar.classList.remove("sticky");
-			}
-
-			// if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {4
-			if (window.pageYOffset >= sticky) {
-				// scrolled down
-		        // document.getElementById("st-blog-scroll-top").style.display = "block";
-		        $("body").addClass('scrolled-down');
-
-		        if($('body').hasClass('logo-center')) {
-		        	$("body").removeClass('big-logo-enable');
-		        	$("body").addClass('big-logo-disable');//and hide logo on scroll
-					
-					// position search form
-					st_blog_head_search_form_position();	
-					        	
-		        }
+			if (scrollTopPosition > 200) {		        
+		        $('#st-blog-scroll-top').css({'bottom': '40px'});
 		    } else {
-		        // document.getElementById("st-blog-scroll-top").style.display = "none";
-		        $("body").removeClass('scrolled-down');
-
-		        if($('body').hasClass('logo-center')) {
-		        	$("body").addClass('big-logo-enable');//don't want to add big-logo on default scroll
-		        	$("body").removeClass('big-logo-disable');//and show logo
-					
-					// position search form
-					st_blog_head_search_form_position();	        	
-					
-		        }
+		        $('#st-blog-scroll-top').css({'bottom': '-40px'});
 		    } 
 		});
 
 		$('#st-blog-scroll-top').click(function() {
 			$("html, body").animate({ scrollTop: 0 }, "slow");
 		});
+		
 
 		// slick_init
 		var slick_ltr, slick_rtl;
@@ -306,6 +278,48 @@
 			zoomable:false
 			//single: true
 	    });
+
+
+
+	    // hide header on scroll down, show on scroll up
+		// Hide Header on on scroll down
+		var didScroll;
+		var lastScrollTop = 0;
+		var delta = 5;
+		var navbarHeight = $('header').outerHeight();
+
+		$(window).scroll(function(event){
+		    didScroll = true;
+		});
+
+		setInterval(function() {
+		    if (didScroll) {
+		        hasScrolled();
+		        didScroll = false;
+		    }
+		}, 250);
+
+		function hasScrolled() {
+		    var st = $(this).scrollTop();
+		    
+		    // Make sure they scroll more than delta
+		    if(Math.abs(lastScrollTop - st) <= delta)
+		        return;
+		    
+		    // If they scrolled down and are past the navbar, add class .nav-up.
+		    // This is necessary so you never see what is "behind" the navbar.
+		    if (st > lastScrollTop && st > navbarHeight){
+		        // Scroll Down
+		        $('header').removeClass('nav-down').addClass('nav-up');
+		    } else {
+		        // Scroll Up
+		        if(st + $(window).height() < $(document).height()) {
+		            $('header').removeClass('nav-up').addClass('nav-down');
+		        }
+		    }
+		    
+		    lastScrollTop = st;
+		}
 
 	});
 })(jQuery);
