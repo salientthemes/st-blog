@@ -1316,11 +1316,9 @@ input[type=checkbox], input[type=radio] {
   background-color: gray;
   display: inline-block;
 }
-@media (min-width: 575px) {
-  .post-navigation .nav-previous a:before, .posts-navigation .nav-previous a:before {
-    content: "\f30a";
-    margin-right: 10px;
-  }
+.post-navigation .nav-previous a:before, .posts-navigation .nav-previous a:before {
+  content: "\f30a";
+  margin-right: 10px;
 }
 .post-navigation .nav-next a:after, .posts-navigation .nav-next a:after {
   content: "\f30b";
@@ -1855,6 +1853,12 @@ body.scrolled-down #st-blog-scroll-top {
   content: "/";
 }
 
+.comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next,
+.comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
+  margin-bottom: 10px;
+  width: auto;
+}
+
 .site-branding .custom-logo-link {
   margin-bottom: 10px;
 }
@@ -2028,7 +2032,11 @@ body.logo-center .site-branding .site-title {
 body.logo-center .st-blog-header-row .st-blog-logo-manage {
   padding-bottom: 15px;
   padding-top: 15px;
-  text-align: center;
+}
+@media (min-width: 360px) {
+  body.logo-center .st-blog-header-row .st-blog-logo-manage {
+    text-align: center;
+  }
 }
 @media (min-width: 992px) {
   body.logo-center .st-blog-header-row .st-blog-logo-manage {
