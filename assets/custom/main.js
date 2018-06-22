@@ -56,7 +56,7 @@
 		// search toggle
 		// create a mask
 		$('body').append('<div class="st-blog-search-mask"></div>');
-		
+
 		$('.st-blog-head-search-toggler').click(function() { 
 			$('body').toggleClass('head-search-active');
 
@@ -67,33 +67,8 @@
 		});
 
 		$('body .st-blog-search-mask').click(function() { 
-			console.log('click on before');
 			$('.st-blog-head-search-toggler').trigger('click');
 		});
-
-		/*$('html').click(function(e) {   
-			if($('body').hasClass('head-search-active') ) {
-				if( !$(e.target).hasClass('st-blog-head-search') ) {
-				    $('body').removeClass('head-search-active');
-				    console.log('clicked on outside');
-				}
-
-
-				if( $(e.target).hasClass('st-blog-head-search-toggler') ) {
-					// head_search();
-					$('body').removeClass('head-search-active');				
-				    console.log('clicked on search toggler');
-				}
-			}
-
-			else {
-				if( $(e.target).hasClass('st-blog-head-search-toggler') ) {
-					// head_search();
-					$('body').addClass('head-search-active');				
-				    console.log('clicked on search toggler');
-				}
-			}
-		});    */
 
 
 
