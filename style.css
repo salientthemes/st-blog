@@ -3139,8 +3139,18 @@ aside .st-blog-instafeed-slider .st-blog-instafeed-image {
 }
 
 #st-blog-featured .st-blog-featured-slider {
-  column-count: 3;
+  column-count: 1;
   column-gap: 30px;
+}
+@media (min-width: 768px) {
+  #st-blog-featured .st-blog-featured-slider {
+    column-count: 3;
+  }
+}
+@media (min-width: 1199px) {
+  #st-blog-featured .st-blog-featured-slider {
+    column-count: 3;
+  }
 }
 #st-blog-featured .st-blog-featured-slider.slick-slider {
   column-count: 1;
