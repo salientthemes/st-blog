@@ -2798,6 +2798,13 @@ body.boxed .st-blog-masonry article {
   font-size: 0.875rem;
 }
 
+.entry-footer {
+  font-size: 0.875rem;
+}
+.entry-footer span {
+  display: block;
+}
+
 aside .widget {
   margin-bottom: 40px;
 }
@@ -3143,11 +3150,6 @@ aside .st-blog-instafeed-slider .st-blog-instafeed-image {
   column-gap: 30px;
 }
 @media (min-width: 768px) {
-  #st-blog-featured .st-blog-featured-slider {
-    column-count: 3;
-  }
-}
-@media (min-width: 1199px) {
   #st-blog-featured .st-blog-featured-slider {
     column-count: 3;
   }
