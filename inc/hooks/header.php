@@ -183,7 +183,7 @@ function st_blog_header() {
     <!-- header -->
     <header id="masthead" class="site-header" style="background-image: url('<?php echo( get_header_image() ); ?>');">
         <div class="st-blog-header-wrap">
-            <div class="st-blog-header-wrap-nav" style="background: rgba(255,255,255,0.8);">
+            <div class="st-blog-header-wrap-nav">
                 <div class="container">
                     <div class="st-blog-header-row">
                         <div class="st-blog-logo-manage">
