@@ -988,7 +988,7 @@ object {
   transition: 0.4s all ease-in-out;
 }
 
-.img-cover, #st-blog-banner .st-blog-banner-slider .slick-slide .st-blog-banner-image {
+.img-cover, header.site-header, #st-blog-banner .st-blog-banner-slider .slick-slide .st-blog-banner-image {
   background-color: #000;
   background-size: cover;
   background-position: center center;
@@ -1908,7 +1908,7 @@ body.logo-left .st-blog-logo-left-right-nav, body.logo-right .st-blog-logo-left-
   width: 100%;
   left: 0;
   right: 0;
-  background: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   z-index: 3;
 }
 .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler {
