@@ -2756,6 +2756,9 @@ body.boxed .st-blog-item article .image {
     column-count: 2;
   }
 }
+body.boxed .st-blog-masonry .st-blog-item {
+  display: inline-block;
+}
 body.boxed .st-blog-masonry article {
   display: inline-block;
   text-align: center;
