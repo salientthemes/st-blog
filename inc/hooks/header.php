@@ -181,7 +181,17 @@ function st_blog_header() {
     global$st_blog_customizer_all_values;
     ?>
     <!-- header -->
-    <header id="masthead" class="site-header" style="background-image: url('<?php echo( get_header_image() ); ?>');">
+    <?php $header_image = get_header_image();
+        if ( !empty($header_image)  ) 
+        {
+            $image_header = 'background-image: url(' . $header_image . ');';
+        }
+        else
+        {
+            $image_header =  '';
+        }
+     ?>
+    <header id="masthead" class="site-header" style="<?php echo $image_header ; ?>">
         <div class="st-blog-header-wrap">
             <div class="st-blog-header-wrap-nav">
                 <div class="container">
