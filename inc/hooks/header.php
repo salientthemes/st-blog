@@ -181,7 +181,7 @@ function st_blog_header() {
     global$st_blog_customizer_all_values;
     ?>
     <!-- header -->
-    <header id="masthead" class="site-header" style="background-image: url('https://nikeshulak.github.io/design/business-click/img/bg3.jpg');">
+    <header id="masthead" class="site-header" style="background-image: url('<?php echo( get_header_image() ); ?>');">
         <div class="st-blog-header-wrap">
             <div class="st-blog-header-wrap-nav" style="background: rgba(255,255,255,0.8);">
                 <div class="container">
