@@ -159,8 +159,8 @@ if ( ! class_exists( 'St_blog_About' ) ) {
 			$this->action_key    = $this->theme_slug . '-recommended_actions';
 			$this->menu_name     = isset( $this->config['menu_name'] ) ? $this->config['menu_name'] : $this->theme_name;
 			$this->page_name     = isset( $this->config['page_name'] ) ? $this->config['page_name'] : $this->theme_name;
-			$this->logo_url      = isset( $this->config['logo_url'] ) ? $this->config['logo_url'] : get_template_directory_uri() . '/includes/theme-info/images/pt-logo.png';
-			$this->logo_link     = isset( $this->config['logo_link'] ) ? $this->config['logo_link'] : 'https://promenadethemes.com/';
+			$this->logo_url      = isset( $this->config['logo_url'] ) ? $this->config['logo_url'] : get_template_directory_uri() . '/inc/theme-info/images/st-logo.png';
+			$this->logo_link     = isset( $this->config['logo_link'] ) ? $this->config['logo_link'] : 'https://salientthemes.com/';
 			$this->tabs          = isset( $this->config['tabs'] ) ? $this->config['tabs'] : array();
 			/* translators: %s:  notification */
 			$this->notification  = isset( $this->config['notification'] ) ? $this->config['notification'] : ( '<p>' . sprintf( esc_html__( 'Welcome! Thank you for choosing %1$s! To fully take advantage of the best our theme can offer please make sure you visit our %2$swelcome page%3$s.', 'st-blog' ), $this->theme_name, '<a href="' . esc_url( admin_url( 'themes.php?page=' . $this->page_slug ) ) . '">', '</a>' ) . '</p><p><a href="' . esc_url( admin_url( 'themes.php?page=' . $this->page_slug ) ) . '" class="button button-primary" style="text-decoration: none;">' . sprintf( esc_html__( 'Get started with %s', 'st-blog' ), $this->theme_name ) . '</a></p>' );
