@@ -191,7 +191,7 @@ function st_blog_header() {
             $image_header =  '';
         }
      ?>
-    <header id="masthead" class="site-header" style="<?php echo $image_header ; ?>">
+    <header id="masthead" class="site-header" style="<?php echo esc_url($image_header) ; ?>">
         <div class="st-blog-header-wrap">
             <div class="st-blog-header-wrap-nav">
                 <div class="container">
