@@ -2792,7 +2792,6 @@ body.boxed .st-blog-masonry article {
 
 .byline:before {
   content: "\f007";
-  padding-left: 10px;
 }
 
 .author-link a:before {
@@ -2801,7 +2800,6 @@ body.boxed .st-blog-masonry article {
 
 .date-link a:before {
   content: "\f133";
-  padding-left: 10px;
 }
 
 .author-link, .date-link, .byline, .posted-on {
@@ -2813,6 +2811,12 @@ body.boxed .st-blog-masonry article {
 }
 .entry-footer span {
   display: block;
+}
+
+.author-link, .date-link, .byline, .posted-on, .tags-links, .cat-links {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 5px;
 }
 
 aside .widget {
