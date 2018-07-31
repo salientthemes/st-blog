@@ -337,6 +337,8 @@
 		    
 		    lastScrollTop = st;
 		}
+		
+		$('#preloader').hide();
 
 	});
 })(jQuery);

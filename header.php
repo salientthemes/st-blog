@@ -45,7 +45,9 @@ do_action( 'st_blog_action_before_head' );?>
 </head>
 
 <body <?php body_class(); ?>>
-
+<div id="preloader" style="">
+	<div id="status" style=""><i class="fa fa-spinner fa-spin"></i></div>
+</div>
 <?php
 /**
  * st_blog_action_before hook
