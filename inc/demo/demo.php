@@ -9,16 +9,14 @@ $config = array(
 	'static_page'    => 'home',
 	'posts_page'     => 'blog',
 	'menu_locations' => array(
-		'top'  	  => 'top-menu',
-		'primary' => 'main-menu',
-		'social'  => 'social-menu',
+		'menu-1' => 'Primary Menu',
 	),
 	'ocdi'           => array(
 		array(
 			'import_file_name'             => esc_html__( 'Theme Demo Content', 'st-blog' ),
-			'local_import_file'            => trailingslashit( get_template_directory() ) . 'includes/demo/demo-content/content.xml',
-			'local_import_widget_file'     => trailingslashit( get_template_directory() ) . 'includes/demo/demo-content/widget.wie',
-			'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'includes/demo/demo-content/customizer.dat',
+			'local_import_file'            => trailingslashit( get_template_directory() ) . 'inc/demo/demo-content/content.xml',
+			'local_import_widget_file'     => trailingslashit( get_template_directory() ) . 'inc/demo/demo-content/widget.wie',
+			'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'inc/demo/demo-content/customizer.dat',
 		),
 	),
 );

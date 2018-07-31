@@ -336,7 +336,7 @@ function st_blog_home_page_number_post( $query ) {
 	$st_blog_theme = get_theme_mod( SALIENT_CUSTOMIZER_NAME );
 	$st_blog_number_of_post = isset($st_blog_theme['latest-numbe-of-post-for-blog-section'] ) ? $st_blog_theme['latest-numbe-of-post-for-blog-section'] : '';
     if ( is_admin() || ! $query->is_main_query() )
-        return;
+        return $st_blog_number_of_post;
 
     if ( is_home() ) {
         // Display only 1 post for the original blog archive

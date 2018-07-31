@@ -35,7 +35,7 @@ $st_blog_settings_controls['latest-numbe-of-post-for-blog-section']  = array(
 	'control' => array(
 		'label'				=> esc_html__('Select number for latest blog','st-blog'),
 		'section'			=> 'latest-post-bolg-section',
-		'type'				=> 'text',
+		'type'				=> 'number',
 		'priority'			=> 10,
 		'active_callback'	=> ''
 	)
