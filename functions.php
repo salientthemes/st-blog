@@ -347,4 +347,3 @@ function st_blog_home_page_number_post( $query ) {
 
 }
 add_action( 'pre_get_posts', 'st_blog_home_page_number_post', 10 );
-

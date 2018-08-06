@@ -9,7 +9,7 @@ $config = array(
 	'static_page'    => 'home',
 	'posts_page'     => 'blog',
 	'menu_locations' => array(
-		'menu-1' => 'Primary Menu',
+		'menu-1' => 'primary',
 	),
 	'ocdi'           => array(
 		array(
