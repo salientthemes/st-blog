@@ -56,18 +56,6 @@ get_header();
 
 					echo '</div><!-- .masonry -->';
 
-				// the_posts_navigation();
-					 // wp_pagenavi(); 
-					// if (function_exists('wp-pagenavi')) 
-					// { 
-					// 	wp_pagenavi(); 
-					// } 
-					// else 
-					// {
-					// 	the_posts_navigation();
-					// }
-					 // the_posts_pagination( array( 'mid_size' => 1 ) ); 
-
 					 $st_blog_pagination = $st_blog_customizer_all_values['lates-blog-pagination'];
 
 					 if (  $st_blog_pagination == 'numeric')
