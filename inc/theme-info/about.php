@@ -27,7 +27,7 @@ $config = array(
 			),
 		'documentation_url' => array(
 			'text'   => esc_html__( 'View Documentation','st-blog' ),
-			'url'    => 'https://www.salientthemes.com/',
+			'url'    => 'https://www.salientthemes.com/wp-documentation/st-blog/',
 			),
 		'pro_url' => array(
 			'text' => esc_html__( 'Upgrade To Pro Theme','st-blog' ),
@@ -52,7 +52,7 @@ $config = array(
 			'title'               => esc_html__( 'Theme Documentation', 'st-blog' ),
 			'text'                => esc_html__( 'Find step by step instructions with video documentation to setup theme easily.', 'st-blog' ),
 			'button_label'        => esc_html__( 'View documentation', 'st-blog' ),
-			'button_link'         => 'https://www.salientthemes.com/',
+			'button_link'         => 'https://www.salientthemes.com/wp-documentation/st-blog/',
 			'is_button'           => false,
 			'recommended_actions' => false,
 			'is_new_tab'          => true,
@@ -130,7 +130,7 @@ $config = array(
 			'icon'         => 'dashicons dashicons-book-alt',
 			'text'         => esc_html__( 'Kindly check our theme documentation for detailed information and video instructions.', 'st-blog' ),
 			'button_label' => esc_html__( 'View Documentation', 'st-blog' ),
-			'button_link'  => 'https://www.salientthemes.com/',
+			'button_link'  => 'https://www.salientthemes.com/wp-documentation/st-blog/',
 			'is_button'    => false,
 			'is_new_tab'   => true,
 		),
