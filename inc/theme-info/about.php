@@ -19,23 +19,19 @@ $config = array(
 	'quick_links' => array(
 		'theme_url' => array(
 			'text' => esc_html__( 'Theme Details','st-blog' ),
-			'url'  => 'https://www.salientthemes.com/',
+			'url'  => 'https://www.salientthemes.com/product/st-blog/',
 			),
 		'demo_url' => array(
 			'text' => esc_html__( 'View Demo','st-blog' ),
-			'url'  => 'https://www.salientthemes.com/',
+			'url'  => 'http://preview.salientthemes.com/st-blog/',
 			),
 		'documentation_url' => array(
 			'text'   => esc_html__( 'View Documentation','st-blog' ),
 			'url'    => 'https://www.salientthemes.com/',
 			),
-		'rate_url' => array(
-			'text' => esc_html__( 'Rate This Theme','st-blog' ),
-			'url'  => 'https://www.salientthemes.com/',
-			),
 		'pro_url' => array(
 			'text' => esc_html__( 'Upgrade To Pro Theme','st-blog' ),
-			'url'  => 'https://www.salientthemes.com/',
+			'url'  => 'http://www.salientthemes.com/product/st-blog-pro/',
 			'button' => 'primary',
 			),
 		),
@@ -82,35 +78,15 @@ $config = array(
 		),
 
 		array(
-			'title'        			=> esc_html__( 'Youtube Video Tutorials', 'st-blog' ),
-			'text'         			=> esc_html__( 'Please check our youtube channel for video instructions of eCommerce Gem setup and customization.', 'st-blog' ),
-			'button_label' 			=> esc_html__( 'Video Tutorials', 'st-blog' ),
-			 'button_link'  			=> 'https://www.salientthemes.com/',
-
-			'is_button'    			=> false,
-			'recommended_actions' 	=> false,
-			'is_new_tab'   			=> true,
-		),
-
-		array(
 			'title'        			=> esc_html__( 'Pro Version', 'st-blog' ),
 			'text'         			=> esc_html__( 'Upgrade to pro version for additional features and options.', 'st-blog' ),
 			'button_label' 			=> esc_html__( 'View Pro Version', 'st-blog' ),
-			'button_link'  			=> 'https://www.salientthemes.com/',
+			'button_link'  			=> 'http://www.salientthemes.com/product/st-blog-pro/',
 			'is_button'    			=> true,
 			'recommended_actions' 	=> false,
 			'is_new_tab'   			=> true,
 		),
 
-		'first' => array(
-			'title'        			=> esc_html__( 'Contact Support', 'st-blog' ),
-			'text'         			=> esc_html__( 'If you have any problem, feel free to create ticket on our dedicated Support forum.', 'st-blog' ),
-			'button_label' 			=> esc_html__( 'Contact Support', 'st-blog' ),
-			'button_link'  			=> esc_url( 'https://www.salientthemes.com/' ),
-			'is_button'    			=> false,
-			'recommended_actions' 	=> false,
-			'is_new_tab'   			=> true,
-		),
 	),
 
 	// Recommended actions.
@@ -149,15 +125,6 @@ $config = array(
 
 	// Support.
 	'support_content' => array(
-		'first' => array(
-			'title'        => esc_html__( 'Contact Support', 'st-blog' ),
-			'icon'         => 'dashicons dashicons-sos',
-			'text'         => esc_html__( 'If you have any problem, feel free to create ticket on our dedicated Support forum.', 'st-blog' ),
-			'button_label' => esc_html__( 'Contact Support', 'st-blog' ),
-			'button_link'  => esc_url( 'https://www.salientthemes.com/' ),
-			'is_button'    => true,
-			'is_new_tab'   => true,
-		),
 		'second' => array(
 			'title'        => esc_html__( 'Theme Documentation', 'st-blog' ),
 			'icon'         => 'dashicons dashicons-book-alt',
@@ -173,17 +140,8 @@ $config = array(
 			'icon'         => 'dashicons dashicons-star-filled',
 			'text'         => esc_html__( 'Upgrade to pro version for additional features and options.', 'st-blog' ),
 			'button_label' => esc_html__( 'View Pro Version', 'st-blog' ),
-			'button_link'  => 'https://www.salientthemes.com/',
+			'button_link'  => 'http://www.salientthemes.com/product/st-blog-pro/',
 			'is_button'    => true,
-			'is_new_tab'   => true,
-		),
-		'fourth' => array(
-			'title'        => esc_html__( 'Youtube Video Tutorials', 'st-blog' ),
-			'icon'         => 'dashicons dashicons-video-alt3',
-			'text'         => esc_html__( 'Please check our youtube channel for video instructions of eCommerce Gem setup and customization.', 'st-blog' ),
-			'button_label' => esc_html__( 'Video Tutorials', 'st-blog' ),
-			'button_link'  => 'https://www.salientthemes.com/',
-			'is_button'    => false,
 			'is_new_tab'   => true,
 		),
 		'fifth' => array(
