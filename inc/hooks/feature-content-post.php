@@ -126,8 +126,7 @@ if ( !function_exists('st_blog_feature_content_post') ) :
         {
             $st_blog_feature_content_post_number       = $st_blog_customizer_all_values['st-blog-feature-content-number-post'];
             $st_feature_content_post_button_text       = $st_blog_customizer_all_values['st-blog-feature-content-button-text'];
-            $st_feature_content_post_button_enable     = $st_blog_customizer_all_values['st-blog-feature-content-button-enable'];
-            // $st_feature_content_post_image_enable      = $st_blog_customizer_all_values['st-blog-feature-content-image-enable']; 
+            $st_feature_content_post_button_enable     = $st_blog_customizer_all_values['st-blog-feature-content-button-enable']; 
             ?>
 
             
@@ -160,7 +159,7 @@ if ( !function_exists('st_blog_feature_content_post') ) :
                                         <div class="st-blog-featured-item">
                                             <?php if (!empty($st_blog_feature_content_post_image)){ ?>
                                                 <div class="st-blog-featured-image">
-                                                    <a href="<?php the_permalink();?>"><img src="<?php echo esc_url($st_blog_feature_content_post_image);?>"></a>
+                                                    <a href="<?php echo esc_url($st_blog_feature_content_array['st-blog-feature-content-post-url']);?>"><img src="<?php echo esc_url($st_blog_feature_content_post_image);?>"></a>
                                                 </div>
                                             <?php } ?>    
                                             <div class="st-blog-featured-caption text-center">
