@@ -75,7 +75,7 @@ if ( !function_exists('st_blog_feature_content_post_array') ) :
                 $thumb_image = '';
                 if ( has_post_thumbnail())
                 {
-                    $image        = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_id() ), 'feature-content-post-image');
+                    $image        = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_id() ), 'st-feature-content-post-image');
                     $thumb_image  = $image['0'];
                 }
                 $st_blog_feature_content_post_content_array[$i]['st-blog-feature-content-post-title'] = get_the_title();

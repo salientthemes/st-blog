@@ -52,7 +52,6 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <?php if (!empty($popular_heading) ) { ?>
                         <li class="nav-item">
-                            <!-- <a class="nav-link active" id="popular-tab" data-toggle="tab" href="#popular" role="tab" aria-controls="popular" aria-selected="true"> -->
                             <a href="#<?php echo esc_attr( $tab_id ); ?>-popular" class="nav-link active" data-toggle="tab" role="tab" aria-controls="<?php echo esc_attr( $tab_id ); ?>-popular" aria-selected="true"><?php echo esc_html($popular_heading);?></a>
                         </li>
                     <?php } ?>    

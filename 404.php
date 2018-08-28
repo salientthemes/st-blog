@@ -36,10 +36,5 @@ get_header();
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-	<?php 
-	// sidebar
-	//get_template_part('template-parts/markup/sidebar-404'); 
-	?>
-
 <?php
 get_footer();
