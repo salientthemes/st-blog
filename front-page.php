@@ -34,7 +34,6 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
         <?php     
 
         $st_blog_static_page = absint($st_blog_customizer_all_values['st-blog-enable-static-page']);
-        // $st_blog_static_page = 1;
         if ($st_blog_static_page  == 1) { ?>
             <div id="content" class=" container site-content ">
                 <div id="primary" class="content-area">
@@ -57,8 +56,6 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
                 <?php get_sidebar(); ?>                
             </div>
         <?php }
-        
-     // do_action('st_blog_show_message_if_no_option_selected');
 
 }
 get_footer();

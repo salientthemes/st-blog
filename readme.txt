@@ -13,6 +13,13 @@ License URI: LICENSE
 
 A starter theme called ST Blog.
 
+
+== Copyright ==
+
+ST Blog WordPress Theme, Copyright 2018 salient Themes
+ST Blog is distributed under the terms of the GNU GPL
+
+
 == Description ==
 
 ST Blog, your new clean and minimal blogging WordPress theme. It's very easy to work with WordPress. site. It is fully responsive on iPhone, iPad and Android phones and tablets.
