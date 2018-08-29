@@ -1652,6 +1652,7 @@ input[type=checkbox], input[type=radio] {
 }
 
 .box-layout .st-blog-featured-item, .box-layout .st-blog-item article, .box-layout .st-blog-author-item, .box-layout .st-blog-popular-posts-item, .box-layout .widget_media_gallery .gallery {
+  border: 1px solid #e6e6e6;
   box-shadow: 0 0 2px #cccccc;
   padding: 10px;
 }
@@ -3203,11 +3204,11 @@ aside .st-blog-instafeed-slider .st-blog-instafeed-image {
 }
 
 ul.slick-dots {
-  margin-top: 30px;
   margin-bottom: 0;
   display: inline-block !important;
 }
 ul.slick-dots li {
+  margin-top: 30px;
   margin-left: 0;
   line-height: 10px;
   list-style: none;
@@ -3224,6 +3225,9 @@ ul.slick-dots li button {
   height: 10px;
   line-height: 10px;
   width: 10px;
+}
+ul.slick-dots li:only-child {
+  display: none;
 }
 
 .st-blog-gallery-image img {

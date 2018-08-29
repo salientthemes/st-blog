@@ -143,14 +143,16 @@ if( !function_exists('st_blog_feature_slider') ) :
                         }
                     
                         ?>
-                        <div class="st-blog-banner-image st-blog-overlay position-relative" style="background-image: url(<?php echo esc_url($st_blog_feature_slider_image); ?>);">
-                            <div class="st-blog-banner-caption">
-                                <h2 class="st-blog-title text-white mb-4"><a href="<?php echo esc_url($st_blog_fs_array['st-blog-fs-url']); ?>" class=""><?php echo esc_html($st_blog_fs_array['st-blog-fs-title']);?></a></h2>
-                                <?php if (!empty($st_blog_feature_slider_button_text) ) { ?>
-                                    <?php if( 1 == $st_blog_fs_enable_button ) {?>
-                                        <a href="<?php echo esc_url($st_blog_fs_array['st-blog-fs-url']); ?>" class="btn"><?php echo esc_html($st_blog_feature_slider_button_text); ?></a>
-                                    <?php } ?>
-                                <?php } ?>    
+                        <div>
+                            <div class="st-blog-banner-image st-blog-overlay position-relative" <?php if(  !empty($st_blog_feature_slider_image)) {?> style="background-image: url(<?php echo esc_url($st_blog_feature_slider_image); ?>);"<?php } ?> >
+                                <div class="st-blog-banner-caption">
+                                    <h2 class="st-blog-title text-white mb-4"><a href="<?php echo esc_url($st_blog_fs_array['st-blog-fs-url']); ?>" class=""><?php echo esc_html($st_blog_fs_array['st-blog-fs-title']);?></a></h2>
+                                    <?php if (!empty($st_blog_feature_slider_button_text) ) { ?>
+                                        <?php if( 1 == $st_blog_fs_enable_button ) {?>
+                                            <a href="<?php echo esc_url($st_blog_fs_array['st-blog-fs-url']); ?>" class="btn"><?php echo esc_html($st_blog_feature_slider_button_text); ?></a>
+                                        <?php } ?>
+                                    <?php } ?>    
+                                </div>
                             </div>
                         </div>
                     <?php
