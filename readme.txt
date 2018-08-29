@@ -7,7 +7,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 
 Requires at least: 4.5
 Tested up to: 4.9.6
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
@@ -141,18 +141,19 @@ Note:
 == Image used in screenshot ==
 * All images are licensed under [CC0](http://creativecommons.org/publicdomain/zero/1.0/legalcode.txt)
 
-== main slider ==
-1) https://www.pexels.com/photo/women-in-white-button-up-long-sleeved-top-and-black-pants-sitting-on-white-and-brown-bed-920384/
-
-== feature-content post ==
-1) https://www.pexels.com/photo/woman-sitting-on-bean-bag-white-using-macbook-in-front-of-round-table-with-green-leafed-plant-169915/
-2) https://www.pexels.com/photo/woman-in-white-dress-shirt-and-black-pants-920379/
-3) https://www.pexels.com/photo/woman-running-on-sand-near-white-concrete-building-736505/
+1) https://pixabay.com/en/girl-sleep-female-woman-young-1733352/
+2) https://pixabay.com/en/wedding-dresses-fashion-bride-veil-1486256/
+3) https://pixabay.com/en/water-droplet-drop-splash-wet-1281247/
+4) https://pixabay.com/en/coffee-book-flowers-setting-2390136/
 
 == woocommerce==
 St blog themes includes support for WooCommerce.
 
 == Changelog ==
+= - 1.0.4 - =
+* Screenshot updated
+* Some css and functionality issue fixed
+
 = - 1.0.3 - =
 * Fixed issue about theme info
 
