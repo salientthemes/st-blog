@@ -36,7 +36,7 @@ get_header();
 				endif;
 					
 					echo '<div class="st-blog-masonry">';
-
+						echo '<div class="st-blog-grid-sizer"></div>';
 						/* Start the Loop */
 						while ( have_posts() ) :
 							echo '<div class="st-blog-item">';

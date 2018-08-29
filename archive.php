@@ -24,6 +24,7 @@ get_header();
 
 		<?php
 		echo '<div class="st-blog-masonry">';
+			echo '<div class="st-blog-grid-sizer"></div>';
 
 		/* Start the Loop */
 		while ( have_posts() ) :
