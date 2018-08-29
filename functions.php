@@ -72,8 +72,8 @@ if ( ! function_exists( 'st_blog_setup' ) ) :
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
 		//recomended image size
-		add_image_size( 'st-feature-content-post-image', 330, 200, true );  //feature-content image size
-		add_image_size( 'st-feature-slider-image', 1340, 460, true );  //feature-slider image size
+		add_image_size( 'st-blog-feature-content-post-image', 330, 200, true );  //feature-content image size
+		add_image_size( 'st-blog-feature-slider-image', 1340, 460, true );  //feature-slider image size
 
 		/*woocommerce support*/
 		add_theme_support( 'woocommerce' );
