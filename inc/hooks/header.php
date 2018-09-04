@@ -184,18 +184,10 @@ function st_blog_header() {
     ?>
     <!-- header -->
     <?php $header_image = get_header_image();
-        if ( !empty($header_image)  ) 
-        {
-            $image_header = 'background-image: url(' . $header_image . ');';
-        }
-        else
-        {
-            $image_header =  '';
-        }
      ?>
-    <header id="masthead" class="site-header" style="<?php echo esc_url($image_header) ; ?>">
+    <header id="masthead" class="site-header" >
         <div class="st-blog-header-wrap">
-            <div class="st-blog-header-wrap-nav">
+            <div class="st-blog-header-wrap-nav img-cover" style="<?php echo 'background-image: url('. $header_image.');' ; ?>">
                 <div class="container">
                     <div class="st-blog-header-row">
                         <div class="st-blog-logo-manage">
