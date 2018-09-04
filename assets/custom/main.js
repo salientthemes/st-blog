@@ -5,9 +5,9 @@
 	}
 
 	function alignment_and_padding() {
-		$('header.site-header').height( $('.st-blog-header-wrap-nav').height() );
+		// $('header.site-header').height( $('.st-blog-header-wrap-nav').height() );
 		
-		if($(window).width() >= 601) {
+		if($(window).width() >= 992) {//601
 			// page padding again
 			$('#page.site').css({ 'padding-top': $('.st-blog-header-wrap-nav').height() + 'px' });	
 		}
