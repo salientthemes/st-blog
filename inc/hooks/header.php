@@ -195,6 +195,13 @@ function st_blog_header() {
      ?>
     <header id="masthead" class="site-header" style="<?php echo esc_url($image_header) ; ?>">
         <div class="st-blog-header-wrap">
+
+            <div class="st-blog-head-search">
+                <div class="container">
+                    <?php get_search_form();?>
+                </div>
+            </div>
+            
             <div class="st-blog-header-wrap-nav">
                 <div class="container">
                     <div class="st-blog-header-row">
@@ -300,12 +307,6 @@ function st_blog_header() {
                     </div><!-- site nav -->
                 </div>
 
-            </div>
-
-            <div class="st-blog-head-search">
-                <div class="container">
-                    <?php get_search_form();?>
-                </div>
             </div>
         </div>
     </header><!-- #masthead -->
