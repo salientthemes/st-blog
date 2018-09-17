@@ -2,12 +2,12 @@
 /**
  * About configuration
  *
- * @package eCommerce_Gem
+ * @package st_blog
  */
 
 $config = array(
-	'menu_name' => esc_html__( 'About ST-Blog', 'st-blog' ),
-	'page_name' => esc_html__( 'About ST-Blog', 'st-blog' ),
+	'menu_name' => esc_html__( 'About ST Blog', 'st-blog' ),
+	'page_name' => esc_html__( 'About ST Blog', 'st-blog' ),
 
 	/* translators: theme version */
 	'welcome_title' => sprintf( esc_html__( 'Welcome to %s - ', 'st-blog' ), 'St-Blog' ),
@@ -27,7 +27,7 @@ $config = array(
 			),
 		'documentation_url' => array(
 			'text'   => esc_html__( 'View Documentation','st-blog' ),
-			'url'    => 'https://www.salientthemes.com/wp-documentation/st-blog/',
+			'url'    => 'https://www.salientthemes.com/documentation/',
 			),
 		'pro_url' => array(
 			'text' => esc_html__( 'Upgrade To Pro Theme','st-blog' ),

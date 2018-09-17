@@ -3,7 +3,7 @@
 /**
  * About class
  *
- * @package eCommerce_Gem
+ * @package st_blog
  */
 
 if ( ! class_exists( 'St_blog_About' ) ) {
@@ -419,7 +419,7 @@ if ( ! class_exists( 'St_blog_About' ) ) {
 				$js_vars = array(
 					'ajaxurl' => esc_url( admin_url( 'admin-ajax.php' ) ),
 				);
-				wp_localize_script( 'st-blog-about', 'eCommerceGemAboutObject', $js_vars );
+				wp_localize_script( 'st-blog-about', 'stBlogAboutObject', $js_vars );
 			}
 		}
 
