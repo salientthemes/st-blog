@@ -185,4 +185,4 @@ if ( !function_exists('st_blog_feature_content_post') ) :
         <?php }    
     }
 endif;
-add_action('st_blog_homepage','st_blog_feature_content_post',20);
+add_action('st_blog_homepage_featured','st_blog_feature_content_post',20);

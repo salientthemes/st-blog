@@ -25,7 +25,11 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
          * @hooked busine_Craft_aboutus _page -16
          * @hooked trade_hub_our_service -21
          */
-        do_action( 'st_blog_homepage' );    
+        if( st_blog_slider_alignment() == 'full_width_slider') {
+            do_action('st_blog_homepage');
+        }
+
+        do_action('st_blog_homepage_featured');//seperated
         ?>
 
 <div id="home-content" class="container site-content home-static-page">
@@ -38,6 +42,13 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
             <div id="content" class=" container site-content ">
                 <div id="primary" class="content-area">
                     <main id="main" class="site-main" role="main">
+                        
+                        <?php
+                        if( st_blog_slider_alignment() == 'content_slider') {
+                            do_action('st_blog_homepage');
+                        }
+                        ?>
+
                         <?php
                         while ( have_posts() ) : the_post();
 

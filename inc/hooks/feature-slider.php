@@ -145,6 +145,9 @@ if( !function_exists('st_blog_feature_slider') ) :
                         ?>
                         <div>
                             <div class="st-blog-banner-image st-blog-overlay position-relative" <?php if(  !empty($st_blog_feature_slider_image)) {?> style="background-image: url(<?php echo esc_url($st_blog_feature_slider_image); ?>);"<?php } ?> >
+                                <?php if(  !empty($st_blog_feature_slider_image)) {?> 
+                                <img src="<?php echo esc_url($st_blog_feature_slider_image); ?>" style="display: none;">
+                                <?php } ?>
                                 <div class="st-blog-banner-caption">
                                     <h2 class="st-blog-title text-white mb-4"><a href="<?php echo esc_url($st_blog_fs_array['st-blog-fs-url']); ?>" class=""><?php echo esc_html($st_blog_fs_array['st-blog-fs-title']);?></a></h2>
                                     <?php if (!empty($st_blog_feature_slider_button_text) ) { ?>

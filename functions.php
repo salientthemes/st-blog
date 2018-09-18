@@ -327,6 +327,13 @@ if( ! function_exists('st_blog_header_alignment') ) {
 	}
 }
 
+// for slider alignment
+if( ! function_exists('st_blog_slider_alignment') ) {
+	function st_blog_slider_alignment() {
+		return 'full_width_slider';//full_width_slider, content_slider
+	}
+}
+
 // for additional support
 if ( ! function_exists ( 'st_blog_additional_class' ) ) {
 	function st_blog_additional_class($id) {

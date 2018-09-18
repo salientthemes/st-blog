@@ -17,12 +17,24 @@ get_header();
 	</div><!-- .st-blog-site-content -->
 </div><!-- #content.container -->
 
-<?php do_action('st_blog_homepage');?>
+<?php 
+if( st_blog_slider_alignment() == 'full_width_slider') {
+	do_action('st_blog_homepage');
+}
+
+do_action('st_blog_homepage_featured');//seperated
+?>
 
 <div id="home-content" class="container site-content">
 	<div class="st-blog-site-content">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main">
+
+			<?php 
+			if( st_blog_slider_alignment() == 'content_slider') {
+				do_action('st_blog_homepage');
+			}
+			?>
 
 			<?php
 			if ( have_posts() ) :
