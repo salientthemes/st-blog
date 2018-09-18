@@ -8,9 +8,8 @@ global$st_blog_customizer_defaults;
 /*defaults values*/
 $st_blog_customizer_defaults['st-blog-enable-static-page']      = 1;
 $st_blog_customizer_defaults['st-blog-default-layout']          = 'right-sidebar';
-$st_blog_customizer_defaults['st-blog-single-post-image-align'] = '';
+$st_blog_customizer_defaults['st-blog-single-post-image-align'] = 'full';
 $st_blog_customizer_defaults['st-blog-archive-layout']          = 'thumbnail-and-excerpt';
-$st_blog_customizer_defaults['st-blog-archive-image-align']     = 'full';
 $st_blog_customizer_defaults['st-blog-default-body-layout']     = 'boxed';
 
 
