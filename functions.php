@@ -320,6 +320,13 @@ function st_blog_home_page_number_post( $query ) {
 }
 add_action( 'pre_get_posts', 'st_blog_home_page_number_post', 10 );
 
+// for header, navigation alignment
+if( ! function_exists('st_blog_header_alignment') ) {
+	function st_blog_header_alignment() {
+		return 'header_first';//header_first, nav_first
+	}
+}
+
 // for additional support
 if ( ! function_exists ( 'st_blog_additional_class' ) ) {
 	function st_blog_additional_class($id) {
@@ -328,4 +335,3 @@ if ( ! function_exists ( 'st_blog_additional_class' ) ) {
 		}
 	}
 }
-add_action( 'additional_class', 'st_blog_additional_class' );
