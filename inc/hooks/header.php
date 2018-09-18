@@ -169,6 +169,54 @@ function st_blog_skip_to_content() {
 endif;
 add_action( 'st_blog_action_before_header', 'st_blog_skip_to_content', 10 );
 
+// Navigation
+if ( ! function_exists( 'st_blog_header_navigation' ) ) :
+/**
+ * Main header
+ *
+ * @since st-blog 1.0.0
+ *
+ * @param null
+ * @return null
+ *
+ */
+function st_blog_header_navigation() {
+?>
+<!-- navigation -->
+<div id="big-logo-site-nav" class="st-blog-header-row st-blog-big-logo-nav">
+    <!-- full width nav -->
+    <div class="text-right st-blog-menu-toggler-manage">
+        <button class="menu-toggler" id="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <nav id="site-navigation" class="main-navigation">
+            <div class="container">
+                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'st-blog' ); ?></button>
+                <?php
+                wp_nav_menu( array(
+                    'theme_location' => 'menu-1',
+                    'menu_id'        => 'primary-menu',
+                    'fallback_cb'    => 'st_blog_primary_menu'
+                ) );
+                ?>
+
+                <!-- search toggle icon -->
+                <button class="st-blog-head-search-toggler d-none d-lg-block"><i class="fas fa-search"></i></button>
+            </div>
+        </nav><!-- #site-navigation -->     
+
+        <!-- search toggle icon -->
+            <button class="st-blog-head-search-toggler d-lg-none"><i class="fas fa-search"></i></button>
+    </div><!-- site nav -->
+</div>
+<?php
+}
+endif;
+
 if ( ! function_exists( 'st_blog_header' ) ) :
 /**
  * Main header
@@ -194,6 +242,12 @@ function st_blog_header() {
             </div>
             
             <div class="st-blog-header-wrap-nav img-cover" style="<?php echo 'background-image: url('. $header_image.');' ; ?>">
+                
+                <?php if( st_blog_header_alignment() == 'nav_first') { ?>
+                    <?php st_blog_header_navigation(); ?>
+                <?php } ?>
+
+                <!-- header -->
                 <div class="container">
                     <div class="st-blog-header-row">
                         <div class="st-blog-logo-manage">
@@ -263,36 +317,9 @@ function st_blog_header() {
                     </div>
                 </div>
 
-                <div id="big-logo-site-nav" class="st-blog-header-row st-blog-big-logo-nav">
-                    <!-- full width nav -->
-                    <div class="text-right st-blog-menu-toggler-manage">
-                        <button class="menu-toggler" id="menu-icon">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                        
-                        <nav id="site-navigation" class="main-navigation">
-                            <div class="container">
-                                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'st-blog' ); ?></button>
-                                <?php
-                                wp_nav_menu( array(
-                                    'theme_location' => 'menu-1',
-                                    'menu_id'        => 'primary-menu',
-                                     'fallback_cb'    => 'st_blog_primary_menu'
-                                ) );
-                                ?>
-
-                                <!-- search toggle icon -->
-                                <button class="st-blog-head-search-toggler d-none d-lg-block"><i class="fas fa-search"></i></button>
-                            </div>
-                        </nav><!-- #site-navigation -->     
-
-                        <!-- search toggle icon -->
-                            <button class="st-blog-head-search-toggler d-lg-none"><i class="fas fa-search"></i></button>
-                    </div><!-- site nav -->
-                </div>
+                <?php if( st_blog_header_alignment() == 'header_first') { ?>
+                    <?php st_blog_header_navigation(); ?>
+                <?php } ?>
 
             </div>
         </div>

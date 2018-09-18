@@ -130,7 +130,7 @@ if ( !function_exists('st_blog_feature_content_post') ) :
             ?>
 
             
-            <section id="st-blog-featured" class="mb-5">    
+            <section id="st-blog-featured" class="mb-5 <?php echo st_blog_additional_class('st-blog-featured');?>">    
                 <div class="container site-content">
                   <?php if (!empty($st_blog_feature_content_post_title)) { ?>
                     <h1 class="widget-title text-center"><?php echo esc_html($st_blog_feature_content_post_title);?></h1>
