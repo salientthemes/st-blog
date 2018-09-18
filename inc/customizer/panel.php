@@ -31,7 +31,6 @@ require trailingslashit(get_template_directory() ) .'/inc/customizer/theme-optio
 require trailingslashit(get_template_directory() ) .'/inc/customizer/theme-option/breadcrumb.php';
 
 // layout
-
 require get_template_directory() .'/inc/customizer/theme-option/layout-options.php';
 
 require get_template_directory() .'/inc/customizer/gallery/options.php';

@@ -187,8 +187,6 @@ function st_blog_header() {
      ?>
     <header id="masthead" class="site-header" >
         <div class="st-blog-header-wrap">
-
-
             <div class="st-blog-head-search">
                 <div class="container">
                     <?php get_search_form();?>
@@ -277,26 +275,22 @@ function st_blog_header() {
                         
                         <nav id="site-navigation" class="main-navigation">
                             <div class="container">
-                            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'st-blog' ); ?></button>
-                            <?php
-                            wp_nav_menu( array(
-                                'theme_location' => 'menu-1',
-                                'menu_id'        => 'primary-menu',
-                                 'fallback_cb'    => 'st_blog_primary_menu'
-                            ) );
-                            ?>
+                                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'st-blog' ); ?></button>
+                                <?php
+                                wp_nav_menu( array(
+                                    'theme_location' => 'menu-1',
+                                    'menu_id'        => 'primary-menu',
+                                     'fallback_cb'    => 'st_blog_primary_menu'
+                                ) );
+                                ?>
 
-                            <!-- search toggle icon -->
-                            <!-- <?php //if ( 1 == $st_blog_customizer_all_values['header-search-button-enable']) { ?> -->
+                                <!-- search toggle icon -->
                                 <button class="st-blog-head-search-toggler d-none d-lg-block"><i class="fas fa-search"></i></button>
-                            <!-- <?php //} ?>     -->
                             </div>
                         </nav><!-- #site-navigation -->     
 
                         <!-- search toggle icon -->
-                        <!-- <?php //if ( 1 == $st_blog_customizer_all_values['header-search-button-enable']) { ?> -->
                             <button class="st-blog-head-search-toggler d-lg-none"><i class="fas fa-search"></i></button>
-                        <!-- <?php //} ?> -->
                     </div><!-- site nav -->
                 </div>
 

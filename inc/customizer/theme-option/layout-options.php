@@ -85,11 +85,11 @@ $st_blog_settings_controls['st-blog-archive-layout'] = array(
         'label'                 =>  esc_html__( 'Archive Layout', 'st-blog' ),
         'section'               => 'st-blog-back-all-theme-setting',
         'type'                  => 'select',
-        'choices'               => array(
-            'excerpt-only' => esc_html__( 'Excerpt Only', 'st-blog' ),
-            'thumbnail-and-excerpt' => esc_html__( 'Thumbnail and Excerpt', 'st-blog' ),
-            'full-post' => esc_html__( 'Full Post', 'st-blog' ),
-            'thumbnail-and-full-post' => esc_html__( 'Thumbnail and Full Post', 'st-blog' ),
+        'choices'  => array(
+            'excerpt-only'              => esc_html__( 'Excerpt Only', 'st-blog' ),
+            'thumbnail-and-excerpt'     => esc_html__( 'Thumbnail and Excerpt', 'st-blog' ),
+            'full-post'                 => esc_html__( 'Full Post', 'st-blog' ),
+            'thumbnail-and-full-post'   => esc_html__( 'Thumbnail and Full Post', 'st-blog' ),
         ),
         'priority'              => 55,
     )

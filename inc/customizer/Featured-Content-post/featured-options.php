@@ -11,8 +11,8 @@ $st_blog_customizer_defaults['st-blog-feature-content-main-title-text'] 		= '';
 $st_blog_customizer_defaults['st-blog-feature-content-single-number-of-words'] 	= 25;
 $st_blog_customizer_defaults['st-blog-feature-content-number-post']				= 3;
 $st_blog_customizer_defaults['st-blog-feature-content-select-post-from'] 		= 'from-page';
-$st_blog_customizer_defaults['st-blog-feature-content-select-from-page'] 		= '';
-$st_blog_customizer_defaults['st-blog-feature-content-select-from-category'] 	= '';
+$st_blog_customizer_defaults['st-blog-feature-content-select-from-page'] 		= 0;
+$st_blog_customizer_defaults['st-blog-feature-content-select-from-category'] 	= 1;
 $st_blog_customizer_defaults['st-blog-feature-content-button-text']  			= '';
 $st_blog_customizer_defaults['st-blog-feature-content-button-enable']			= 1;
 

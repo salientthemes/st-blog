@@ -108,7 +108,6 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
                         'posts_per_page'    => isset($instance['popular_number'] ) ? $instance['popular_number'] : '',
                         'no_found_rows'     => true,
                         'cat'               => isset($instance['popular_category'] ) ? $instance['popular_category'] : '',
-                        // 'orderby'        => 'comment_count',
                     );
                     break;
 

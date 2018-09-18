@@ -43,7 +43,6 @@ if ( ! function_exists( 'st_blog_implement_read_more' ) ) :
             return $more;
         }
 
-        // $read_more_text = esc_html__('continue  reading','st-blog');
         $read_more_text = $st_blog_customizer_all_values['st-blog-latest-post-button-text'];
         
             if ( !empty( $read_more_text ) ) {

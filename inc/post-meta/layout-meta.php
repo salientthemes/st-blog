@@ -21,7 +21,7 @@ function st_blog_add_layout_metabox() {
     foreach ( $st_blog_post_types as $post_type ) {
         add_meta_box(
             'st_blog_layout_options', // $id
-            __( 'Layout options', 'st-blog' ), // $title
+            esc_html__( 'Layout options', 'st-blog' ), // $title
             'st_blog_layout_options_callback', // $callback
             $post_type, // $page
             'normal', // $context
@@ -49,19 +49,19 @@ $st_blog_default_layout_options = array(
 $st_blog_single_post_image_align_options = array(
     'full' => array(
         'value' => 'full',
-        'label' => __( 'Full', 'st-blog' )
+        'label' => esc_html__( 'Full', 'st-blog' )
     ),
     'right' => array(
         'value' => 'right',
-        'label' => __( 'Right ', 'st-blog' ),
+        'label' => esc_html__( 'Right ', 'st-blog' ),
     ),
     'left' => array(
         'value'     => 'left',
-        'label' => __( 'Left', 'st-blog' ),
+        'label' => esc_html__( 'Left', 'st-blog' ),
     ),
     'no-image' => array(
         'value'     => 'no-image',
-        'label' => __( 'No Image', 'st-blog' )
+        'label' => esc_html__( 'No Image', 'st-blog' )
     )
 );
 

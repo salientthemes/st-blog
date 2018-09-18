@@ -22,9 +22,9 @@ function  st_blog_image_gallery()
     if( !empty($st_blogimage_gal_posts ))
     {
        $st_blog_feature_about_args =    array(
-            'post_type' => 'page',
-            'p' =>$st_blogimage_gal_posts,
-            'posts_per_page' => 1
+            'post_type'         => 'page',
+            'p'                 => $st_blogimage_gal_posts,
+            'posts_per_page'    => 1
 
         );
        $st_blog_fature_image_gallery_post_query = new WP_Query($st_blog_feature_about_args );
@@ -61,9 +61,9 @@ function  st_blog_image_gallery()
     if( empty($st_blogimage_gal_posts ))
     {
        $st_blog_feature_about_args =    array(
-            'post_type' => 'page',
-            'posts_per_page' => 1,
-            'orderby' => 'post__in',
+            'post_type'         => 'page',
+            'posts_per_page'    => 1,
+            'orderby'           => 'post__in',
         );
        $st_blog_fature_image_gallery_post_query = new WP_Query($st_blog_feature_about_args );
         if ($st_blog_fature_image_gallery_post_query->have_posts() ) :

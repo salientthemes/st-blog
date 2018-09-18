@@ -17,7 +17,7 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
         <?php do_action('footer_social_media');?>
     <!-- </section> -->
     
-        <!-- *****************************************
+    <!-- *****************************************
              Footer section starts
     ****************************************** -->
     <footer id="colophon" class="site-footer st-blog-list">

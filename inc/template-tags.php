@@ -52,8 +52,6 @@ if ( ! function_exists( 'st_blog_posted_by' ) ) :
 			);
 
 			echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
-		
-
 	}
 endif;
 

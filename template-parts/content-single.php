@@ -8,27 +8,28 @@
  */
 
 ?>
-<div class="wrapper page-inner-title">
-	<div class="container">
-	    <div class="row">
-	        <div class="col-md-12 col-sm-12 col-xs-12">
-				<header class="entry-header">
-					<div class="inner-banner-overlay">
-						<?php if (is_singular()){ ?>
-						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-						<?php if (! is_page() ){?>
-							<header class="entry-header">
-								<div class="entry-meta entry-inner">
-									<?php st_blog_posted_on(); ?>
-								</div><!-- .entry-meta -->
-							</header><!-- .entry-header -->
-						<?php } } ?>
-					</div>
-				</header><!-- .entry-header -->
-	        </div>
-	    </div>
+	<div class="wrapper page-inner-title">
+		<div class="container">
+		    <div class="row">
+		        <div class="col-md-12 col-sm-12 col-xs-12">
+					<header class="entry-header">
+						<div class="inner-banner-overlay">
+							<?php if (is_singular()){ ?>
+							<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+							<?php if (! is_page() ){?>
+								<header class="entry-header">
+									<div class="entry-meta entry-inner">
+										<?php st_blog_posted_on(); ?>
+									</div><!-- .entry-meta -->
+								</header><!-- .entry-header -->
+							<?php } } ?>
+						</div>
+					</header><!-- .entry-header -->
+		        </div>
+		    </div>
+		</div>
 	</div>
-</div>
+
 	<div class="entry-content">
 		<?php
 		$st_blog_single_post_image_align = st_blog_single_post_image_align(get_the_ID());

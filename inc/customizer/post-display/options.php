@@ -85,9 +85,7 @@ $st_blog_settings_controls['latest-post-show-excerpt']  = array(
 );
 
 
-
-
-    /*latest-bolg-post-button*/
+/*latest-bolg-post-button*/
 $st_blog_settings_controls['st-blog-latest-post-button-text'] = array(
 	'setting' => array(
 	    'default' => $st_blog_customizer_defaults['st-blog-latest-post-button-text'],

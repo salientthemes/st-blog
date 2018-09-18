@@ -14,10 +14,10 @@ if ( !function_exists('st_blog_social_media') ) :
  function st_blog_social_media()
  {
  	global $st_blog_customizer_all_values;
- 	$st_blog_social_media_link1   = esc_url($st_blog_customizer_all_values['st-blog-social-link1']);
- 	$st_blog_social_media_link2   = esc_url($st_blog_customizer_all_values['st-blog-social-link2']);
-  $st_blog_social_media_link3   = esc_url($st_blog_customizer_all_values['st-blog-social-link3']);
- 	$st_blog_social_media_link4   = esc_url($st_blog_customizer_all_values['st-blog-social-link4']);
+ 	$st_blog_social_media_link1   =  $st_blog_customizer_all_values['st-blog-social-link1'];
+ 	$st_blog_social_media_link2   =  $st_blog_customizer_all_values['st-blog-social-link2'];
+  $st_blog_social_media_link3   =  $st_blog_customizer_all_values['st-blog-social-link3'];
+ 	$st_blog_social_media_link4   =  $st_blog_customizer_all_values['st-blog-social-link4'];
 
  	if( 1 != $st_blog_customizer_all_values['st-blog-enable-social-media'] )
  	{

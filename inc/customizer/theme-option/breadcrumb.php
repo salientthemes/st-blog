@@ -17,7 +17,7 @@ $st_blog_sections['st-blog-breadcrumb-setting'] = array(
 
 $st_blog_settings_controls['st-blog-enable-breadcrumb'] = array(
     'setting' =>     array(
-        'default'              =>$st_blog_customizer_defaults['st-blog-enable-breadcrumb'],
+        'default'              => $st_blog_customizer_defaults['st-blog-enable-breadcrumb'],
     ),
     'control' => array(
         'label'                 =>  esc_html__( 'Enable Breadcrumb', 'st-blog' ),

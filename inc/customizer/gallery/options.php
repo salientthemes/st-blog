@@ -7,7 +7,7 @@ global $st_blog_repeated_settings_controls;
 global $st_blog_customizer_defaults;
 
 $st_blog_customizer_defaults['st-blog-enable-image-gallery']         = 1;
-$st_blog_customizer_defaults['st-blog-image-galery-from-page'] 		= '';
+$st_blog_customizer_defaults['st-blog-image-galery-from-page'] 		 = '';
 
 
 $st_blog_sections['st-blog-image-gallery-section'] = array(
