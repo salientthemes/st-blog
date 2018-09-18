@@ -319,3 +319,13 @@ function st_blog_home_page_number_post( $query ) {
 
 }
 add_action( 'pre_get_posts', 'st_blog_home_page_number_post', 10 );
+
+// for additional support
+if ( ! function_exists ( 'st_blog_additional_class' ) ) {
+	function st_blog_additional_class($id) {
+		if($id == 'st-blog-featured') {
+			return 'additional-class';
+		}
+	}
+}
+add_action( 'additional_class', 'st_blog_additional_class' );
