@@ -3,11 +3,14 @@ global$st_blog_panels;
 
 
 // back-to-top-options
-require trailingslashit( get_template_directory() ) .'/inc/customizer/theme-option/back-to-top.php';
+$st_blog_back_to_top_path = st_blog_file_directory('inc/customizer/theme-option/back-to-top.php');
+require $st_blog_back_to_top_path; 
 
 // breadcrumb
-require trailingslashit( get_template_directory() ) .'/inc/customizer/theme-option/breadcrumb.php';
+$st_blog_breadcrumb_path = st_blog_file_directory('inc/customizer/theme-option/breadcrumb.php');
+require $st_blog_breadcrumb_path; 
 
 // layout
-require trailingslashit( get_template_directory() ) .'/inc/customizer/theme-option/layout-options.php';
+$st_blog_layout_options_path = st_blog_file_directory('inc/customizer/theme-option/layout-options.php');
+require $st_blog_layout_options_path; 
 
