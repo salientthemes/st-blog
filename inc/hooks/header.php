@@ -241,79 +241,83 @@ function st_blog_header() {
                 </div>
             </div>
             
-            <div class="st-blog-header-wrap-nav img-cover" style="<?php echo 'background-image: url('. $header_image.');' ; ?>">
+            <div class="st-blog-header-wrap-nav">
                 
                 <?php if( st_blog_header_alignment() == 'nav_first') { ?>
                     <?php st_blog_header_navigation(); ?>
                 <?php } ?>
 
                 <!-- header -->
-                <div class="container">
-                    <div class="st-blog-header-row">
-                        <div class="st-blog-logo-manage">
-                            <div class="site-branding">
-                                <?php
-                                the_custom_logo();
-                                 if ( is_front_page() && !is_home() ) :
-                                    
-                                    ?>
-                                    
-                                        <h1 class="site-title">
-                                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                                                <?php bloginfo('name'); ?>
-                                            </a>
-                                        </h1>
-                                    
-                                    <?php
-                                else :
-                                    ?>
-                                    
-                                    <h1 class="site-title">
-                                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                                            <?php bloginfo('name'); ?>
-                                        </a>
-                                    </h1>
-                                    
-                                    <?php
-                                endif;
-                                $st_blog_description = get_bloginfo( 'description', 'display' );
-                                if ( $st_blog_description || is_customize_preview() ) :
-                                    ?>
-                                    <?php if (!empty($st_blog_description)) { ?>
-                                        <p class="site-description"><?php echo $st_blog_description; /* WPCS: xss ok. */ ?></p>
-                                    <?php } ?>
-                                <?php endif; ?>
-                            </div><!-- .site-branding -->                   
-                        </div><!-- site brand-->
+                <div class="st-blog-header-bg img-cover" style="<?php echo 'background-image: url('. $header_image.');' ; ?>">
+                    <div class="st-blog-header-overlay">
+                        <div class="container">
+                            <div class="st-blog-header-row">
+                                <div class="st-blog-logo-manage">
+                                    <div class="site-branding">
+                                        <?php
+                                        the_custom_logo();
+                                         if ( is_front_page() && !is_home() ) :
+                                            
+                                            ?>
+                                            
+                                                <h1 class="site-title">
+                                                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                                                        <?php bloginfo('name'); ?>
+                                                    </a>
+                                                </h1>
+                                            
+                                            <?php
+                                        else :
+                                            ?>
+                                            
+                                            <h1 class="site-title">
+                                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                                                    <?php bloginfo('name'); ?>
+                                                </a>
+                                            </h1>
+                                            
+                                            <?php
+                                        endif;
+                                        $st_blog_description = get_bloginfo( 'description', 'display' );
+                                        if ( $st_blog_description || is_customize_preview() ) :
+                                            ?>
+                                            <?php if (!empty($st_blog_description)) { ?>
+                                                <p class="site-description"><?php echo $st_blog_description; /* WPCS: xss ok. */ ?></p>
+                                            <?php } ?>
+                                        <?php endif; ?>
+                                    </div><!-- .site-branding -->                   
+                                </div><!-- site brand-->
 
-                        <!-- left and right nav -->
-                        <div class="text-right st-blog-logo-left-right-nav st-blog-menu-toggler-manage">
-                            <button class="menu-toggler" id="menu-icon">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </button>
-                            
-                            <nav id="site-navigation" class="main-navigation">
-                                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'st-blog' ); ?></button>
-                                <?php
-                                wp_nav_menu( array(
-                                    'theme_location' => 'menu-1',
-                                    'menu_id'        => 'primary-menu',
-                                    'fallback_cb'   => 'st_blog_primary_menu'
-                                ) );
-                                ?>
+                                <!-- left and right nav -->
+                                <div class="text-right st-blog-logo-left-right-nav st-blog-menu-toggler-manage">
+                                    <button class="menu-toggler" id="menu-icon">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                    
+                                    <nav id="site-navigation" class="main-navigation">
+                                        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'st-blog' ); ?></button>
+                                        <?php
+                                        wp_nav_menu( array(
+                                            'theme_location' => 'menu-1',
+                                            'menu_id'        => 'primary-menu',
+                                            'fallback_cb'   => 'st_blog_primary_menu'
+                                        ) );
+                                        ?>
 
-                                <!-- search toggle icon -->
-                                
-                                <button class="st-blog-head-search-toggler d-none d-lg-block"><i class="fas fa-search"></i></button>
-                                
-                            </nav><!-- #site-navigation -->     
+                                        <!-- search toggle icon -->
+                                        
+                                        <button class="st-blog-head-search-toggler d-none d-lg-block"><i class="fas fa-search"></i></button>
+                                        
+                                    </nav><!-- #site-navigation -->     
 
-                            <!-- search toggle icon -->
-                                <button class="st-blog-head-search-toggler d-lg-none"><i class="fas fa-search"></i></button>
-                        </div><!-- site nav -->
+                                    <!-- search toggle icon -->
+                                        <button class="st-blog-head-search-toggler d-lg-none"><i class="fas fa-search"></i></button>
+                                </div><!-- site nav -->
+                            </div>
+                        </div>
                     </div>
                 </div>
 
