@@ -95,10 +95,14 @@
 		$(window).scroll(function() { 
 			var scrollTopPosition    = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
 
-			if (scrollTopPosition > 200) {		        
+			if (scrollTopPosition > 200) {//200
 		        $('#st-blog-scroll-top').css({'bottom': '40px'});
+		        $('body').addClass('small-header');
+		        st_blog_head_search_form_position();
 		    } else {
 		        $('#st-blog-scroll-top').css({'bottom': '-40px'});
+		        $('body').removeClass('small-header');
+		        st_blog_head_search_form_position();
 		    } 
 		});
 
