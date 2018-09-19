@@ -3773,6 +3773,7 @@ figure.gallery-item {
 ul.slick-dots {
   margin-bottom: 0;
   display: inline-block !important;
+  z-index: 1;
 }
 ul.slick-dots li {
   margin-top: 30px;

@@ -40,15 +40,17 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
             if ( $custom_class ) {
                 $before_widget      = str_replace( 'class="', 'class="'. $custom_class . ' ', $before_widget );
             }
-
-            // Title
-            if ( $title ) echo wp_kses_post($before_title . $title . $after_title);
     
             $tab_id = 'tabbed-' . $this->number;
 
            echo wp_kses_post($args['before_widget']);
            ?>
             <div id="st-blog-popular-posts" class="widget widget_popular_posts">
+                <?php 
+                // Title
+                if ( $title ) 
+                    echo wp_kses_post($before_title . $title . $after_title);
+                ?>
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <?php if (!empty($popular_heading) ) { ?>
                         <li class="nav-item">
