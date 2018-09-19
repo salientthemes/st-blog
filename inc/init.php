@@ -73,6 +73,10 @@ $st_blog_image_gallery_path = st_blog_file_directory('inc/hooks/image-gallery.ph
 require $st_blog_image_gallery_path;
 
 
+$st_blog_additiona_section_main = st_blog_file_directory('inc/hooks/additional-section-main.php');
+require $st_blog_additiona_section_main;
+
+
 
 
 

@@ -30,6 +30,11 @@ do_action('st_blog_homepage_featured');//seperated
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main">
 
+			<?php
+			// additional sections
+			do_action('st_blog_homepage_additional_section_main');
+			?>
+
 			<?php 
 			if( st_blog_slider_alignment() == 'content_slider') {
 				do_action('st_blog_homepage');
