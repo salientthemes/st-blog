@@ -330,6 +330,20 @@ function st_blog_header() {
     </header><!-- #masthead -->
 
     <div id="content" class="site-content container">
+        
+        <?php
+        if (  is_front_page() && !is_home() ) {
+        } else {
+            /**
+             * st_blog_action_after_title hook
+             * @since st-blog 1.0.0
+             *
+             * @hooked null
+             */
+            do_action( 'st_blog_action_after_title' );//breadcrumb
+        }
+        ?>
+
         <div class="st-blog-site-content">
 
 <?php 
@@ -354,14 +368,6 @@ if( ! function_exists( 'st_blog_main_slider_setion' ) ) :
     function st_blog_main_slider_setion(){
         if (  is_front_page() && !is_home() ) {
             do_action('st_blog_action_main_slider');
-        } else {
-            /**
-             * st_blog_action_after_title hook
-             * @since st-blog 1.0.0
-             *
-             * @hooked null
-             */
-            do_action( 'st_blog_action_after_title' );
         }
     }
 endif;
@@ -390,7 +396,8 @@ if( ! function_exists( 'st_blog_add_breadcrumb' ) ) :
         if ( is_front_page() || is_home() ) {
             return;
         }
-        echo '<div class="container"><div id="breadcrumb" class="wrapper wrap-breadcrumb">';
+        echo '<div class="container">
+        <div id="breadcrumb" class="wrapper wrap-breadcrumb">';
          st_blog_simple_breadcrumb();
         echo '</div><!-- .container --></div><!-- #breadcrumb -->';
         return;

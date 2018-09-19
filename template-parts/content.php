@@ -68,7 +68,11 @@ global $st_blog_customizer_all_values;
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'st-blog' ),
 			'after'  => '</div>',
 		) );
+
+		// additional sections
+		st_blog_additional_article();
 		?>
+		
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

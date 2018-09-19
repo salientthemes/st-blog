@@ -365,3 +365,12 @@ if ( ! function_exists ( 'st_blog_theme_name' ) ) {
 		return 'ST Blog';
 	}
 }
+
+// for additional article
+if ( ! function_exists ( 'st_blog_additional_article' ) ) {
+	function st_blog_additional_article() {
+		?>
+		<div class="additional-sections"></div>
+		<?php
+	}
+}
