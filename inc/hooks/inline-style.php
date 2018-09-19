@@ -114,10 +114,14 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
             
         if( !empty($st_blog_menu_text_color) )
         {?>
-        	nav#site-navigation ul a
+        	nav#site-navigation ul a,
+            .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler
         	{
         		color: <?php echo esc_attr($st_blog_menu_text_color);?>;
         	}
+            .menu-toggler span {
+                background-color: <?php echo esc_attr($st_blog_menu_text_color);?>;
+            }
 
         <?php }
 

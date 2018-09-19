@@ -122,7 +122,7 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
                             <span class="sep"> | </span>
                                 <?php
                                 /* translators: 1: Theme name, 2: Theme author. */
-                                printf( esc_html__( 'Theme: %1$s by %2$s', 'st-blog' ), 'ST Blog', sprintf('<a href="%s" target = "_blank" rel="designer">%s</a>', esc_url( 'http://salientthemes.com/' ), esc_html__( 'Salient Themes', 'st-blog' ) )  );
+                                printf( esc_html__( 'Theme: %1$s by %2$s', 'st-blog' ), st_blog_theme_name(), sprintf('<a href="%s" target = "_blank" rel="designer">%s</a>', esc_url( 'http://salientthemes.com/' ), esc_html__( 'Salient Themes', 'st-blog' ) )  );
                                 ?>
                              
                         </div>
