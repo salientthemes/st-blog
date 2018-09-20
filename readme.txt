@@ -2,7 +2,7 @@
 
 by salient Themes
 
-Contributors: salienttheme
+Contributors: salientthemes
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, left-sidebar, right-sidebar, custom-header, blog, e-commerce, theme-options
 
 Requires at least: 4.5

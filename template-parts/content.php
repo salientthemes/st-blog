@@ -18,7 +18,7 @@ global $st_blog_customizer_all_values;
 		else {
 			// archives: for image_size - Box Post Layout
 			if( 'full-width' == $st_blog_customizer_all_values['st-blog-default-body-layout'] ) {
-			    $imgsize = 'st-blog-feature-slider-image';
+			    $imgsize = 'large';
 			} else {
 			    $imgsize = 'st-blog-feature-content-post-image';
 			}

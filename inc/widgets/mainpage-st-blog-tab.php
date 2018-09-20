@@ -139,7 +139,7 @@ if ( ! class_exists( 'st_blog_tab_widget' ) ) :
                     <div class="st-blog-popular-posts-item clearfix">
                         <div class="st-blog-popular-posts-img">
                             <?php if ( has_post_thumbnail( $post->ID ) ) : ?>
-                                <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ) ); ?>
+                                <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); ?>
                             <?php if ( ! empty( $image ) ) : ?>
                                     <a href="<?php the_permalink();?>"><img class="img-responsive" src="<?php echo esc_url( $image[0] ); ?>" alt="" /></a>
                                 <?php endif; ?>
