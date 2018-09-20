@@ -30,7 +30,6 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
         //*color options*/
         $st_blog_background_color 				= get_background_color();
         $st_blog_primary_color_option 			= $st_blog_customizer_all_values['st-blog-primary-color'];
-        $st_blog_site_identity_color_option 	= $st_blog_customizer_all_values['st-blog-site-identity-color'];
         $st_blog_menu_text_color       		    = $st_blog_customizer_all_values['st-blog-menu-text-color'];
         
         $st_blog_h1_h6 				    		= $st_blog_customizer_all_values['st-blog-h1-h6-color'];
@@ -98,19 +97,7 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
         	border-color: <?php echo esc_attr( $st_blog_primary_color_option ) ;?>;
         }  
         <?php
-        } 
-        if( !empty($st_blog_site_identity_color_option) ){
-        ?>
-            /*Site identity / logo & tagline*/
-            .site-branding a,
-            .site-branding p,
-            .site-branding p a {
-              color: <?php echo esc_attr( $st_blog_site_identity_color_option );?>;
-            }
-        <?php
-        }
-
-        
+        }         
             
         if( !empty($st_blog_menu_text_color) )
         {?>

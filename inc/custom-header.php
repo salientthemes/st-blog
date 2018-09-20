@@ -62,7 +62,10 @@ if ( ! function_exists( 'st_blog_check_header_style' ) ) :
 		else :
 			?>
 			.site-title a,
-			.site-description {
+			.site-description,
+			.site-branding a,
+            .site-branding p,
+            .site-branding p a {
 				color: #<?php echo esc_attr( $header_text_color ); ?>;
 			}
 		<?php endif; ?>

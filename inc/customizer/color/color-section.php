@@ -5,7 +5,6 @@ global $st_blog_settings_controls;
 global $st_blog_customizer_defaults;
 
 /*defaults values*/
-$st_blog_customizer_defaults['st-blog-site-identity-color']     = '#313131';
 $st_blog_customizer_defaults['st-blog-primary-color']           = '#EF3F3D';
 $st_blog_customizer_defaults['st-blog-menu-text-color']         = '#000';
 $st_blog_customizer_defaults['st-blog-h1-h6-color']             = '#000';
@@ -21,21 +20,6 @@ $st_blog_sections['colors'] = array(
         'title'          => esc_html__( 'Colors', 'st-blog' ),
         'panel'         => 'st-blog-homepage-panel'   
     );
-
-
-$st_blog_settings_controls['st-blog-site-identity-color'] = array(
-    'setting' =>  array(
-        'default'  => $st_blog_customizer_defaults['st-blog-site-identity-color'],
-    ),
-    'control' => array(
-        'label'                 =>  esc_html__( 'Site Identity Color', 'st-blog' ),
-        'description'           =>  esc_html__( 'Site title and tagline color', 'st-blog' ),
-        'section'               => 'colors',
-        'type'                  => 'color',
-        'priority'              => 20,
-        'active_callback'       => ''
-    )
-);
 
 $st_blog_settings_controls['st-blog-primary-color'] = array(
     'setting' => array(
