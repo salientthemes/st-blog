@@ -350,6 +350,7 @@ function st_blog_header() {
 }
 endif;
 add_action( 'st_blog_action_header', 'st_blog_header', 10 );
+
 if ( is_front_page() )
 {
     do_action('st_blog_front_homepage');
