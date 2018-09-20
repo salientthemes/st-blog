@@ -9,7 +9,6 @@ global$st_blog_customizer_defaults;
 $st_blog_customizer_defaults['st-blog-enable-static-page']      = 1;
 $st_blog_customizer_defaults['st-blog-default-layout']          = 'right-sidebar';
 $st_blog_customizer_defaults['st-blog-single-post-image-align'] = 'full';
-$st_blog_customizer_defaults['st-blog-archive-layout']          = 'thumbnail-and-excerpt';
 $st_blog_customizer_defaults['st-blog-default-body-layout']     = 'boxed';
 
 
@@ -19,7 +18,7 @@ $st_blog_sections['st-blog-back-all-theme-setting'] = array(
     'panel'          => 'st-blog-homepage-panel',
 );
 
-    /*home page static page display*/
+/*home page static page display*/
 $st_blog_settings_controls['st-blog-enable-static-page'] = array(
 'setting' => array(
     'default' => $st_blog_customizer_defaults['st-blog-enable-static-page'],
@@ -75,24 +74,6 @@ $st_blog_settings_controls['st-blog-single-post-image-align'] = array(
     )
 );
 
-
-$st_blog_settings_controls['st-blog-archive-layout'] = array(
-    'setting' =>  array(
-        'default'              => $st_blog_customizer_defaults['st-blog-archive-layout'],
-    ),
-    'control' => array(
-        'label'                 =>  esc_html__( 'Archive Layout', 'st-blog' ),
-        'section'               => 'st-blog-back-all-theme-setting',
-        'type'                  => 'select',
-        'choices'  => array(
-            'excerpt-only'              => esc_html__( 'Excerpt Only', 'st-blog' ),
-            'thumbnail-and-excerpt'     => esc_html__( 'Thumbnail and Excerpt', 'st-blog' ),
-            'full-post'                 => esc_html__( 'Full Post', 'st-blog' ),
-            'thumbnail-and-full-post'   => esc_html__( 'Thumbnail and Full Post', 'st-blog' ),
-        ),
-        'priority'              => 55,
-    )
-);
 
 $st_blog_settings_controls['st-blog-default-body-layout'] =
         array(

@@ -78,4 +78,4 @@ global $st_blog_customizer_all_values;
 	<footer class="entry-footer">
 		<?php //st_blog_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+</article><!-- #post- -->
