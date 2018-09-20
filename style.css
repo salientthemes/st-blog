@@ -1048,7 +1048,7 @@ a {
 .woocommerce button.button:hover,
 .woocommerce input.button:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover,
 .dark-theme .site-content .readmore:hover, .dark-theme #st-blog-social-icons ul li a:hover,
-.dark-theme-coloured button:hover, .dark-theme-coloured .btn,
+.dark-theme-coloured button:hover, .wp-block-button .wp-block-button__link:hover, .dark-theme-coloured .btn,
 .dark-theme-coloured a.btn,
 .dark-theme-coloured button,
 .dark-theme-coloured input[type="submit"],
@@ -1081,7 +1081,7 @@ body.dark-theme header.site-header .st-blog-header-wrap-nav .container .st-blog-
 .dark-theme-coloured a.btn,
 .dark-theme-coloured button,
 .dark-theme-coloured input[type="submit"],
-.dark-theme-coloured .st-blog-header-wrap .st-blog-head-search form .search-submit, .nav-tabs, .nav-tabs .nav-item .nav-link {
+.dark-theme-coloured .st-blog-header-wrap .st-blog-head-search form .search-submit, .wp-block-button .wp-block-button__link, .nav-tabs, .nav-tabs .nav-item .nav-link {
   background-color: #000;
 }
 
@@ -1218,7 +1218,7 @@ textarea:focus,
 .dark-theme-coloured a.btn,
 .dark-theme-coloured button,
 .dark-theme-coloured input[type="submit"],
-.dark-theme-coloured .st-blog-header-wrap .st-blog-head-search form .search-submit {
+.dark-theme-coloured .st-blog-header-wrap .st-blog-head-search form .search-submit, .wp-block-button .wp-block-button__link {
   border: 0;
   border-radius: 0;
   color: #ffffff;
@@ -1237,7 +1237,7 @@ textarea:focus,
 .woocommerce button.button:hover,
 .woocommerce input.button:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover,
 .dark-theme .site-content .readmore:hover, .dark-theme #st-blog-social-icons ul li a:hover,
-.dark-theme-coloured a.btn:hover {
+.dark-theme-coloured a.btn:hover, .wp-block-button .wp-block-button__link:hover {
   color: #ffffff;
 }
 @media (min-width: 575px) {
@@ -1258,7 +1258,7 @@ textarea:focus,
   .dark-theme-coloured a.btn,
   .dark-theme-coloured button,
   .dark-theme-coloured input[type="submit"],
-  .dark-theme-coloured .st-blog-header-wrap .st-blog-head-search form .search-submit {
+  .dark-theme-coloured .st-blog-header-wrap .st-blog-head-search form .search-submit, .wp-block-button .wp-block-button__link {
     padding: 5px 16px;
   }
 }
@@ -3722,6 +3722,7 @@ figure.gallery-item {
   }
 }
 #st-blog-banner .st-blog-banner-slider .slick-slide .st-blog-banner-image .st-blog-banner-caption {
+  color: #ffffff;
   line-height: 1.5;
   position: absolute;
   left: 0;
@@ -4007,7 +4008,7 @@ body.admin-bar.search .readmore {
   opacity: 1;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 768px) {
   .alignfull {
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
@@ -4021,7 +4022,46 @@ body.admin-bar.search .readmore {
     width: auto;
     max-width: 1000%;
   }
+
+  .alignwide img,
+  .alignfull img {
+    display: block;
+    margin: 0 auto;
+  }
 }
+blockquote {
+  background: transparent;
+  margin: 0 0 15px;
+  font-style: italic;
+  padding: 0;
+  text-align: center;
+}
+blockquote cite {
+  display: block;
+  font-size: 18px;
+  margin-top: 17px;
+}
+blockquote p:last-of-type {
+  margin-bottom: 0;
+}
+blockquote.is-large.wp-block-quote {
+  margin: 0 0 15px;
+  padding: 0;
+}
+blockquote.is-large.wp-block-quote cite {
+  text-align: center;
+}
+blockquote.wp-block-pullquote {
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  padding: 15px 0;
+}
+
+.wp-block-button {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
 #st-blog-featured .st-blog-featured-slider {
   column-count: 1;
   column-gap: 30px;
