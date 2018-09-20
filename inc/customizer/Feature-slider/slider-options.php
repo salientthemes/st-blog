@@ -11,6 +11,7 @@ $st_blog_customizer_defaults['st-blog-number-of-slider']            = 2;
 $st_blog_customizer_defaults['st-blog-button text']                 = '';
 $st_blog_customizer_defaults['st-blog-enable-button']               = 1;
 $st_blog_customizer_defaults['st-blog-enable-auto-play']            = 1;
+$st_blog_customizer_defaults['st-blog-number-of-word']              = 30;
 
 $st_blog_sections['st-blog-feature-section'] = array(
     'title'     => esc_html__('Featured Slider ','st-blog'),

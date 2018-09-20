@@ -13,6 +13,7 @@ if ( !function_exists('st_blog_fetaure_slider_array')  ) :
  {
     global $st_blog_customizer_all_values;
     $st_blog_feature_slider_number_of_slider                         = absint($st_blog_customizer_all_values['st-blog-number-of-slider']);
+    $st_blog_slider_number_of_word                                   = absint($st_blog_customizer_all_values['st-blog-number-of-word']);
     $st_blog_feature_slider_content_array[0]['st-blog-fs-title']     = '';
     $st_blog_feature_slider_content_array[0]['st-blog-fs-content']   = '';
     $st_blog_feature_slider_content_array[0]['st-blog-fs-image']     = '';
@@ -82,7 +83,7 @@ if ( !function_exists('st_blog_fetaure_slider_array')  ) :
                     $st_blog_feature_slider_content_array[$i]['st-blog-fs-content']     = get_the_excerpt();
                 }else
                 {
-                    $st_blog_feature_slider_content_array[$i]['st-blog-fs-content']     = st_blog_words_count( get_the_content() );
+                    $st_blog_feature_slider_content_array[$i]['st-blog-fs-content']     =  st_blog_words_count( $st_blog_slider_number_of_word, get_the_content() ) ;
                 }
                 $st_blog_feature_slider_content_array[$i]['st-blog-fs-url']             = esc_url(get_permalink());
                 $st_blog_feature_slider_content_array[$i]['st-blog-fs-image']           = $thumb_image;
@@ -152,6 +153,7 @@ if( !function_exists('st_blog_feature_slider') ) :
                                 <?php } ?>
                                 <div class="st-blog-banner-caption">
                                     <h2 class="st-blog-title text-white mb-4"><a href="<?php echo esc_url($st_blog_fs_array['st-blog-fs-url']); ?>" class=""><?php echo esc_html($st_blog_fs_array['st-blog-fs-title']);?></a></h2>
+                                    <p><?php echo esc_html($st_blog_fs_array['st-blog-fs-content']);?></p>
                                     <?php if (!empty($st_blog_feature_slider_button_text) ) { ?>
                                         <?php if( 1 == $st_blog_fs_enable_button ) {?>
                                             <a href="<?php echo esc_url($st_blog_fs_array['st-blog-fs-url']); ?>" class="btn"><?php echo esc_html($st_blog_feature_slider_button_text); ?></a>
