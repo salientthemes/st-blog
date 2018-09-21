@@ -4,7 +4,7 @@ if ( !function_exists('st_blog_additional_section_main') ) :
      /**
      * additional section main
      *
-     * @since blog-times 1.0.0
+     * @since st-blog 1.0.0
      *
      * @param null
      * @return null
@@ -15,9 +15,9 @@ if ( !function_exists('st_blog_additional_section_main') ) :
     {
 
         global $st_blog_customizer_all_values;
-        $blog_times_slecet_category_post =  $st_blog_customizer_all_values['blog-times-ticker-category-post'];
+        $blog_times_slecet_category_post =  $st_blog_customizer_all_values['st-blog-ticker-category-post'];
 
-        if( 1 == $st_blog_customizer_all_values['blog-times-enable-ticker'] ) { ?>
+        if( 1 == $st_blog_customizer_all_values['st-blog-enable-ticker'] ) { ?>
             <div class="additional-sections">
                 <div class="st-blog-vticker-wrap">
                     <?php  
