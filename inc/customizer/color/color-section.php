@@ -6,7 +6,7 @@ global $st_blog_customizer_defaults;
 
 /*defaults values*/
 $st_blog_customizer_defaults['st-blog-primary-color']           = '#EF3F3D';
-$st_blog_customizer_defaults['st-blog-menu-text-color']         = '#000';
+$st_blog_customizer_defaults['st-blog-menu-text-color']         = '';//#000
 $st_blog_customizer_defaults['st-blog-h1-h6-color']             = '#000';
 $st_blog_customizer_defaults['st-blog-button-text-color']       = '#808080';
 $st_blog_customizer_defaults['st-blog-footer-background-color'] = '#fff';
