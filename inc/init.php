@@ -10,71 +10,44 @@
 /**
  * Customizer additions.
  */
-$st_blog_customizer_path = st_blog_file_directory('inc/customizer/customizer.php');
-require $st_blog_customizer_path;
+require trailingslashit( get_template_directory() ).'/inc/customizer/customizer.php';
 
 /**
 *sidebar widget.
 */
-$st_blog_sidebar_widget_path = st_blog_file_directory('inc/sidebar-widget-init.php');
-require $st_blog_sidebar_widget_path;
+require trailingslashit( get_template_directory() ) . '/inc/sidebar-widget-init.php';
 
 /**
 Layout additions
  */
-$st_blog_layout_meta_path = st_blog_file_directory('inc/post-meta/layout-meta.php');
-require $st_blog_layout_meta_path;
+require trailingslashit( get_template_directory() ) . '/inc/post-meta/layout-meta.php';
 
+require trailingslashit( get_template_directory() ).'/inc/hooks/excerpt.php';
 
-$st_blog_excerpt_path = st_blog_file_directory('inc/hooks/excerpt.php');
-require $st_blog_excerpt_path;
+require trailingslashit( get_template_directory() ).'/inc/function/words-count.php';
 
-$st_blog_words_count_path = st_blog_file_directory('inc/function/words-count.php');
-require $st_blog_words_count_path;
+require trailingslashit( get_template_directory() ).'/inc/function/single-image-align.php';
 
+require trailingslashit( get_template_directory() ) . '/inc/function/header-logo.php';
 
-$st_blog_single_image_align_path = st_blog_file_directory('inc/function/single-image-align.php');
-require $st_blog_single_image_align_path;
+require trailingslashit( get_template_directory() ) . '/inc/hooks/header.php';
 
+require trailingslashit( get_template_directory() ) . '/inc/hooks/footer.php';
 
-$st_blog_header_logo_path = st_blog_file_directory('inc/function/header-logo.php');
-require $st_blog_header_logo_path;
+require trailingslashit( get_template_directory() ) . '/inc/hooks/feature-slider.php';
 
+require trailingslashit( get_template_directory() ) . '/inc/hooks/feature-content-post.php';
 
-$st_blog_header_path = st_blog_file_directory('inc/hooks/header.php');
-require $st_blog_header_path;
+require trailingslashit( get_template_directory() ) . '/inc/hooks/full-width-widget.php';
 
+require trailingslashit( get_template_directory() ) . '/inc/hooks/homepage-social-meadia.php';
 
-$st_blog_footer_path = st_blog_file_directory('inc/hooks/footer.php');
-require $st_blog_footer_path;
+require trailingslashit( get_template_directory() ) . '/inc/hooks/inline-style.php';
 
+require trailingslashit( get_template_directory() ) . '/inc/hooks/image-gallery.php';
 
-$st_blog_feature_slider_path = st_blog_file_directory('inc/hooks/feature-slider.php');
-require $st_blog_feature_slider_path;
+require trailingslashit( get_template_directory() ) . '/inc/hooks/ticker.php';
 
-
-$st_blog_feature_content_post_path = st_blog_file_directory('inc/hooks/feature-content-post.php');
-require $st_blog_feature_content_post_path;
-
-
-$st_blog_full_width_widget_path = st_blog_file_directory('inc/hooks/full-width-widget.php');
-require $st_blog_full_width_widget_path;
-
-
-$st_blog_homepage_social_meadia_path = st_blog_file_directory('inc/hooks/homepage-social-meadia.php');
-require $st_blog_homepage_social_meadia_path;
-
-
-$st_blog_inline_style_path = st_blog_file_directory('inc/hooks/inline-style.php');
-require $st_blog_inline_style_path;
-
-
-$st_blog_image_gallery_path = st_blog_file_directory('inc/hooks/image-gallery.php');
-require $st_blog_image_gallery_path;
-
-
-$st_blog_additiona_section_main = st_blog_file_directory('inc/hooks/additional-section-main.php');
-require $st_blog_additiona_section_main;
 
 
 

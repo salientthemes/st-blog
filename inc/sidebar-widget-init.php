@@ -6,7 +6,7 @@
  */
 function st_blog_widgets_init() {
     register_sidebar( array(
-        'name'          => esc_html__( 'Sidebar', 'st-blog' ),
+        'name'          => esc_html__( 'Primary Sidebar', 'st-blog' ),
         'id'            => 'sidebar-1',
         'description'   => '',
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -14,6 +14,17 @@ function st_blog_widgets_init() {
         'before_title'  => '<h2 class="widget-title">',
         'after_title'   => '</h2>',
     ) );
+
+    register_sidebar( array(
+        'name'          => esc_html__( ' Secondary Sidebar', 'st-blog' ),
+        'id'            => 'sidebar-2',
+        'description'   => '',
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+    
 
     $st_blog_get_all_options = st_blog_get_all_options(1);
     register_sidebar(array(

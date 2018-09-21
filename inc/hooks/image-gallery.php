@@ -3,7 +3,7 @@ if ( ! function_exists( 'st_blog_image_gallery' ) ) :
     /**
     * about-event 
     *
-    * @since st-blog1.0.0
+    * @since st-blog 1.0.0
     *
     * @param null
     * @return null

@@ -47,6 +47,7 @@ $st_blog_settings_controls['st-blog-default-layout'] = array(
         'choices' => array(
             'right-sidebar'     => esc_html__( 'Content - Primary Sidebar', 'st-blog' ),
             'left-sidebar'      => esc_html__( 'Primary Sidebar - Content', 'st-blog' ),
+            'both-sidebar'      => esc_html__( 'Three Columns  - Content', 'st-blog' ),
             'no-sidebar'        => esc_html__( 'No Sidebar', 'st-blog' )
         ),
         'priority'              => 20,

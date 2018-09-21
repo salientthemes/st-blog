@@ -45,24 +45,17 @@ endif;
 /**
  * Customizer framework added.
  */
-$st_blog_frameworks_salient_customizer_path = st_blog_file_directory('inc/frameworks/salient-customizer/salient-customizer.php');
-require $st_blog_frameworks_salient_customizer_path;
+require trailingslashit(get_template_directory() ) .'/inc/frameworks/salient-customizer/salient-customizer.php';
 
- 
-$st_blog_Slider_option_path = st_blog_file_directory('inc/customizer/Feature-slider/slider-options.php');
-require $st_blog_Slider_option_path;
+require trailingslashit(get_template_directory() ) . '/inc/customizer/Feature-slider/slider-options.php'; 
+require trailingslashit(get_template_directory() ) . '/inc/customizer/Feature-slider/slider-setting.php';
 
-$st_blog_Slider_setting_path = st_blog_file_directory('inc/customizer/Feature-slider/slider-setting.php');
-require $st_blog_Slider_setting_path;
+require trailingslashit(get_template_directory() ) . '/inc/customizer/Featured-Content-post/featured-options.php'; 
 
-$st_blog_feature_option_path = st_blog_file_directory('inc/customizer/Featured-Content-post/featured-options.php');
-require $st_blog_feature_option_path; 
+require trailingslashit(get_template_directory() ) . '/inc/customizer/panel.php'; 
 
-$st_blog_customizer_panel_path = st_blog_file_directory('inc/customizer/panel.php');
-require $st_blog_customizer_panel_path; 
+require trailingslashit(get_template_directory() ) . '/inc/customizer/theme-option/theme-panel.php';
 
-$st_blog_theme_panel_path = st_blog_file_directory('inc/customizer/theme-option/theme-panel.php');
-require $st_blog_theme_panel_path; 
 
 global $st_blog_panels;
 global $st_blog_sections;

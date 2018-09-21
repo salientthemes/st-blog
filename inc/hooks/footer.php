@@ -15,7 +15,6 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
     </div><!-- #content -->
         <?php do_action('st_blog_action_front_page');?>
         <?php do_action('footer_social_media');?>
-    <!-- </section> -->
     
     <!-- *****************************************
              Footer section starts
