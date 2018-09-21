@@ -4111,4 +4111,46 @@ a.readmore,
   padding: 0;
 }
 
+.st-blog-vticker-wrap {
+  background-color: #ffffff;
+  margin-bottom: 30px;
+  padding: 8px 15px;
+}
+.st-blog-vticker-wrap .st-blog-vticker:before {
+  content: '\f0a1';
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+}
+.st-blog-vticker-wrap .st-blog-vticker ul {
+  padding-left: 28px;
+}
+.st-blog-vticker-wrap .st-blog-vticker ul li {
+  list-style: none;
+}
+
+/* Three Column */
+@media (min-width: 992px) {
+  body.salient-both-sidebar .st-blog-site-content #secondary.s1 {
+    width: 360px;
+    float: left;
+    margin-left: -360px;
+  }
+  body.salient-both-sidebar .st-blog-site-content #secondary.s2 {
+    width: 260px;
+    margin-right: -260px;
+    float: left;
+    position: relative;
+    right: -100%;
+  }
+  body.salient-both-sidebar .st-blog-site-content {
+    padding-left: 360px;
+    padding-right: 260px;
+    position: relative;
+  }
+  body.salient-both-sidebar .st-blog-site-content #primary {
+    width: 100%;
+    float: right;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

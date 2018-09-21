@@ -65,6 +65,22 @@
 		// fixed header
 		$('body').addClass('fixed-header box-layout big-logo-enable');
 
+
+		// easy ticker
+		var dd = $('.st-blog-vticker').easyTicker({
+			direction: 'up',
+			speed: 'fast',
+			interval: 2000,
+			mousePause: 1,
+			height: 'auto',
+			visible: 1,
+			controls: {
+				up: '.up',
+				down: '.down',
+			}
+		}).data('easyTicker');
+
+
 		// position search form
 		st_blog_head_search_form_position();
 

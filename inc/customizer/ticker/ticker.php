@@ -6,7 +6,7 @@ global$st_blog_repeated_settings_controls;
 global$st_blog_customizer_defaults;
 
 /*defaults values*/
-$st_blog_customizer_defaults['st-blog-enable-ticker']      		= 1;
+$st_blog_customizer_defaults['st-blog-enable-ticker']      		= 0;
 $st_blog_customizer_defaults['st-blog-ticker-category-post'] 	= 1;
 
 

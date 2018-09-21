@@ -58,6 +58,21 @@ Author: Ken Wheeler
 Source: http://github.com/kenwheeler/slick
 License: Licensed MIT
 
+jquery-easy-ticker:
+Author: Aakash Chakravarthy
+Source: http://www.aakashweb.com/
+License: Licensed MIT
+
+masonry:
+Author: David DeSandro
+Source: https://masonry.desandro.com
+License: Licensed MIT
+
+photobox:
+Author: Yair Even Or
+Source: http://yaireo.github.io/photobox/
+License: GNU AGPLv3
+
 Font Icons:
 * Font Awesome 5.0.13 by @fontawesome - http://fontawesome.io - @fontawesome *  License - https://fontawesome.com/license (Fonts: SIL OFL 1.1, Code: MIT License) 
 

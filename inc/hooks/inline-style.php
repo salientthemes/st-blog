@@ -101,7 +101,8 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
             
         if( !empty($st_blog_menu_text_color) )
         {?>
-        	nav#site-navigation ul a,
+        	nav#site-navigation ul#menu > li > a, 
+            nav#site-navigation ul.nav-menu > li > a, nav#site-navigation ul.menu > li > a,
             .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler
         	{
         		color: <?php echo esc_attr($st_blog_menu_text_color);?>;
@@ -136,6 +137,25 @@ if( ! function_exists( 'st_blog_inline_style' ) ) :
             a.readmore, .readmore
             {
                 color: <?php echo esc_attr($st_blog_button_text_color);?>;
+            }
+
+        <?php }
+
+        /*custom header image check*/
+        $get_header_image = get_header_image();
+        if( !empty( $get_header_image ) )
+        {?>
+            .st-blog-header-overlay {
+                background-color: rgba(0, 0, 0, 0.5);
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+
+            .st-blog-header-wrap .st-blog-header-wrap-nav .st-blog-head-search-toggler {
+                color: #fff;
+            }
+            .menu-toggler span {
+                background-color: #fff;
             }
 
         <?php }
