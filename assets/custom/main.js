@@ -113,12 +113,18 @@
 
 			if (scrollTopPosition > 200) {//200
 		        $('#st-blog-scroll-top').css({'bottom': '40px'});
-		        $('body').addClass('small-header');
-		        st_blog_head_search_form_position();
+
+		        if ($(window).width() >= 992) {
+			        $('body').addClass('small-header');
+			        st_blog_head_search_form_position();
+		        }
 		    } else {
 		        $('#st-blog-scroll-top').css({'bottom': '-40px'});
-		        $('body').removeClass('small-header');
-		        st_blog_head_search_form_position();
+
+		        if ($(window).width() >= 992) {
+			        $('body').removeClass('small-header');
+			        st_blog_head_search_form_position();
+			    }
 		    } 
 		});
 
