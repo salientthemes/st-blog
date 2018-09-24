@@ -30,6 +30,7 @@ function st_blog_add_layout_metabox() {
     }
 
 }
+
 /* st-blog sidebar layout */
 $st_blog_default_layout_options = array(
     'left-sidebar' => array(
@@ -49,6 +50,7 @@ $st_blog_default_layout_options = array(
         'thumbnail' => get_template_directory_uri() . '/inc/images/no-sidebar.png'
     )
 );
+
 /* st-blog featured layout */
 $st_blog_single_post_image_align_options = array(
     'full' => array(
@@ -95,7 +97,6 @@ function st_blog_layout_options_callback() {
                 $st_blog_single_sidebar_layout_meta = get_post_meta( $post->ID, 'st-blog-default-layout', true );
                 if( false != $st_blog_single_sidebar_layout_meta ){
                    $st_blog_single_sidebar_layout = $st_blog_single_sidebar_layout_meta;
-                   
 
                 }
                 foreach ($st_blog_default_layout_options as $field) {

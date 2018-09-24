@@ -9,7 +9,6 @@ global$st_blog_customizer_defaults;
 $st_blog_customizer_defaults['st-blog-enable-back-to-top'] = 1;
 
 // st-blog setting section
-
 $st_blog_sections['st-blog-enable-back-to-top-section']	  = array(
 	'title'			=> esc_html__('Scroll To Top Options','st-blog'),
 	'panel'			=> 'st-blog-homepage-panel',

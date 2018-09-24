@@ -44,7 +44,7 @@ if ( ! function_exists( 'st_blog_before_footer' ) ) :
                 $col = 'col st-blog-footer-widget-col';
                 ?>
 
-                     <!-- full width footer -->
+                    <!-- full width footer -->
                     <section>
                         <div class="container full-width-footer">
                             <div class="row">

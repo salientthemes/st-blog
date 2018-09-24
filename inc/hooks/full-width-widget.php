@@ -1,11 +1,10 @@
 <?php
-
 if ( !function_exists('st_blog_widget_blcok') ) :
 
 	/**
      * Blank Block Widgeet Section
      *
-     * @since Bizlight Pro 1.0.0
+     * @since st-blog 1.0.0
      *
      * @param null
      * @return null

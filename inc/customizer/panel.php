@@ -23,16 +23,6 @@ require trailingslashit(get_template_directory() ) .'/inc/customizer/color/color
 // fonts
 require trailingslashit(get_template_directory() ) .'/inc/customizer/font/font-section.php';
 
-
-// back-to-top-options
-require trailingslashit(get_template_directory() ) .'/inc/customizer/theme-option/back-to-top.php';
-
-// breadcrumb
-require trailingslashit(get_template_directory() ) .'/inc/customizer/theme-option/breadcrumb.php';
-
-// layout
-require get_template_directory() .'/inc/customizer/theme-option/layout-options.php';
-
 require get_template_directory() .'/inc/customizer/gallery/options.php';
 
 // ticker options
