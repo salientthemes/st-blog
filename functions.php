@@ -7,21 +7,8 @@
  * @package st-blog
  */
 
-if(  !function_exists('st_blog_file_directory') ){
-	function st_blog_file_directory($file_path){
-		if(file_exists(trailingslashit( get_stylesheet_directory() ) . $file_path ) ){
+require trailingslashit( get_template_directory() ) . '/inc/init.php';
 
-			return trailingslashit( get_stylesheet_directory() ) . $file_path;
-		}
-		else{
-			return trailingslashit( get_template_directory() ) . $file_path;
-		}
-	}
-}
-
-
-$st_blog_init_path = st_blog_file_directory('inc/init.php');
-require $st_blog_init_path;
 
 if ( ! function_exists( 'st_blog_setup' ) ) :
 	/**
@@ -255,15 +242,15 @@ add_action( 'admin_enqueue_scripts', 'st_blog_wp_admin_style' );
 /**
  * Implement the Custom Header feature.
  */
-$st_blog_custom_header_path    = st_blog_file_directory('inc/custom-header.php');
-require $st_blog_custom_header_path;
+require trailingslashit( get_template_directory() ) . '/inc/custom-header.php';
+
 
 
 /**
  * Custom template tags for this theme.
  */
-$st_blog_template_tag_path    = st_blog_file_directory('inc/template-tags.php');
-require $st_blog_template_tag_path;
+require trailingslashit( get_template_directory() ) . '/inc/template-tags.php';
+
 
 /*update to pro added*/
 require_once( trailingslashit( get_template_directory() ) . 'trt-customize-pro/st-blog/class-customize.php' );
@@ -397,3 +384,4 @@ add_theme_support( 'gutenberg', array(
     ),
  
 ) );
+

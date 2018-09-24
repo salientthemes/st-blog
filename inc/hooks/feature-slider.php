@@ -74,7 +74,8 @@ if ( !function_exists('st_blog_fetaure_slider_array')  ) :
                 $thumb_image = '';
                 if( has_post_thumbnail() )
                 {
-                    $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_id() ), 'large');//st-blog-feature-slider-image
+                    //st-blog-feature-slider-image
+                    $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_id() ), 'large');
                     $thumb_image = $thumb['0'];
                 }
                 $st_blog_feature_slider_content_array[$i]['st-blog-fs-title']           = get_the_title();
