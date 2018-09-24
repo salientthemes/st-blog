@@ -1977,8 +1977,9 @@ body.head-search-active .st-blog-header-wrap .st-blog-head-search {
     transform: translate(0, -200%);
   }
 }
-body.fixed-header .site-header {
-  position: absolute;
+body.small-header header.site-header .st-blog-vticker-wrap,
+body.small-header header.site-header .st-blog-header-bg {
+  display: none;
 }
 
 header.site-header .st-blog-header-wrap-nav .container {
