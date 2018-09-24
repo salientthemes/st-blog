@@ -1977,6 +1977,10 @@ body.head-search-active .st-blog-header-wrap .st-blog-head-search {
     transform: translate(0, -200%);
   }
 }
+body.fixed-header .site-header {
+  position: absolute;
+}
+
 header.site-header .st-blog-header-wrap-nav .container {
   position: relative;
 }
@@ -4108,6 +4112,15 @@ blockquote.wp-block-pullquote {
 a.readmore,
 .readmore {
   background-color: transparent;
+  padding: 0;
+}
+
+header.site-header .st-blog-vticker-wrap {
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
+}
+
+.st-blog-site-content .st-blog-vticker-wrap .container {
   padding: 0;
 }
 

@@ -242,7 +242,12 @@ function st_blog_header() {
             </div>
             
             <div class="st-blog-header-wrap-nav">
-                
+                <!-- ticker -->
+                <?php
+                if(st_blog_ticker_position() == 'ticker_top')
+                    st_blog_ticker();
+                ?>
+
                 <?php if( st_blog_header_alignment() == 'nav_first') { ?>
                     <?php st_blog_header_navigation(); ?>
                 <?php } ?>

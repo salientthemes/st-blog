@@ -339,17 +339,24 @@ function st_blog_home_page_number_post( $query ) {
 }
 add_action( 'pre_get_posts', 'st_blog_home_page_number_post', 10 );
 
+// for ticker position
+if( ! function_exists('st_blog_header_alignment') ) {
+	function st_blog_ticker_position() {
+		return 'ticker_top';
+	}
+}
+
 // for header, navigation alignment
 if( ! function_exists('st_blog_header_alignment') ) {
 	function st_blog_header_alignment() {
-		return 'header_first';//header_first, nav_first
+		return 'header_first';
 	}
 }
 
 // for slider alignment
 if( ! function_exists('st_blog_slider_alignment') ) {
 	function st_blog_slider_alignment() {
-		return 'full_width_slider';//full_width_slider, content_slider
+		return 'full_width_slider';
 	}
 }
 

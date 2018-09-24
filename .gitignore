@@ -1,5 +1,5 @@
 # node_modules/
-
+*.bak
 assets-scss/
 error_log
 .vscode
