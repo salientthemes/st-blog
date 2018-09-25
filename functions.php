@@ -244,8 +244,6 @@ add_action( 'admin_enqueue_scripts', 'st_blog_wp_admin_style' );
  */
 require trailingslashit( get_template_directory() ) . '/inc/custom-header.php';
 
-
-
 /**
  * Custom template tags for this theme.
  */

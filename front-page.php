@@ -36,7 +36,6 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
     <div class="st-blog-site-content">
 
         <?php     
-
         $st_blog_static_page = absint($st_blog_customizer_all_values['st-blog-enable-static-page']);
         if ($st_blog_static_page  == 1) { ?>
             <div id="content" class=" container site-content ">

@@ -24,9 +24,7 @@ function st_blog_widgets_init() {
         'before_title'  => '<h2 class="widget-title">',
         'after_title'   => '</h2>',
     ) );
-    
 
-    $st_blog_get_all_options = st_blog_get_all_options(1);
     register_sidebar(array(
         'name' => esc_html__('Footer Column One', 'st-blog'),
         'id' => 'footer-col-one',
