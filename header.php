@@ -18,8 +18,6 @@
  */
 do_action( 'st_blog_action_before_head' );?>
 
-
-
 <head>
 
 	<?php
