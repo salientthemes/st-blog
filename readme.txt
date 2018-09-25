@@ -166,6 +166,8 @@ St blog themes includes support for WooCommerce.
 
 == Changelog ==
 = - 1.0.5 - =
+* Added Ticker in Top Header
+* Three Column Layout added
 * Featured Slider Caption added
 * Gutenberg support
 * Made child theme friendly

@@ -1,7 +1,9 @@
 +(function($) {
 	function st_blog_head_search_form_position() {
 		// position search form again - placed in three place in this js
-		$('.st-blog-head-search').css({ 'top': $('.st-blog-header-wrap-nav').height() + 'px' });	
+		setTimeout(function() {
+			$('.st-blog-head-search').css({ 'top': $('.st-blog-header-wrap-nav').height() + 'px' });
+		}, 500);
 	}
 
 	function alignment_and_padding() {
@@ -14,14 +16,6 @@
 		else {
 			$('#page.site').css({ 'padding-top': '0px' });	
 		}
-
-
-		if($(window).width() >= 992) {
-			if($('body').hasClass('logo-left') || $('body').hasClass('logo-right')) {
-				// for nav - always vertically center
-				$('nav#site-navigation ul#menu > li > a, nav#site-navigation ul.nav-menu > li > a, nav#site-navigation ul.menu > li > a').css({ 'line-height': $('.st-blog-header-wrap-nav').height()-50 + 'px' });
-			}
-		}		
 	}
 
 	function head_search() {
@@ -113,12 +107,18 @@
 
 			if (scrollTopPosition > 200) {//200
 		        $('#st-blog-scroll-top').css({'bottom': '40px'});
-		        $('body').addClass('small-header');
-		        st_blog_head_search_form_position();
+
+		        if ($(window).width() >= 992) {
+			        $('body').addClass('small-header');
+			        st_blog_head_search_form_position();
+		        }
 		    } else {
 		        $('#st-blog-scroll-top').css({'bottom': '-40px'});
-		        $('body').removeClass('small-header');
-		        st_blog_head_search_form_position();
+
+		        if ($(window).width() >= 992) {
+			        $('body').removeClass('small-header');
+			        st_blog_head_search_form_position();
+			    }
 		    } 
 		});
 
@@ -328,46 +328,6 @@
 	    });
 
 
-
-	    // hide header on scroll down, show on scroll up
-		// Hide Header on on scroll down
-		var didScroll;
-		var lastScrollTop = 0;
-		var delta = 5;
-		var navbarHeight = $('header').outerHeight();
-
-		$(window).scroll(function(event){
-		    didScroll = true;
-		});
-
-		setInterval(function() {
-		    if (didScroll) {
-		        hasScrolled();
-		        didScroll = false;
-		    }
-		}, 250);
-
-		function hasScrolled() {
-		    var st = $(this).scrollTop();
-		    
-		    // Make sure they scroll more than delta
-		    if(Math.abs(lastScrollTop - st) <= delta)
-		        return;
-		    
-		    // If they scrolled down and are past the navbar, add class .nav-up.
-		    // This is necessary so you never see what is "behind" the navbar.
-		    if (st > lastScrollTop && st > navbarHeight){
-		        // Scroll Down
-		        $('header').removeClass('nav-down').addClass('nav-up');
-		    } else {
-		        // Scroll Up
-		        if(st + $(window).height() < $(document).height()) {
-		            $('header').removeClass('nav-up').addClass('nav-down');
-		        }
-		    }
-		    
-		    lastScrollTop = st;
-		}
 
 		// masonry
 		setTimeout(function() {
