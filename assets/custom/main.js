@@ -16,14 +16,6 @@
 		else {
 			$('#page.site').css({ 'padding-top': '0px' });	
 		}
-
-
-		if($(window).width() >= 992) {
-			if($('body').hasClass('logo-left') || $('body').hasClass('logo-right')) {
-				// for nav - always vertically center
-				$('nav#site-navigation ul#menu > li > a, nav#site-navigation ul.nav-menu > li > a, nav#site-navigation ul.menu > li > a').css({ 'line-height': $('.st-blog-header-wrap-nav').height()-50 + 'px' });
-			}
-		}		
 	}
 
 	function head_search() {

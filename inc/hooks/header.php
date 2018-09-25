@@ -180,12 +180,12 @@ if ( ! function_exists( 'st_blog_header_navigation' ) ) :
  * @return null
  *
  */
-function st_blog_header_navigation() {
+function st_blog_header_navigation($search) {
 ?>
 <!-- navigation -->
 <div id="big-logo-site-nav" class="st-blog-header-row st-blog-big-logo-nav">
     <!-- full width nav -->
-    <div class="text-right st-blog-menu-toggler-manage">
+    <div class="text-right st-blog-menu-toggler-manage <?php if($search == 'with_search_box') echo 'st-blog-header-wrap-nav';?>">
         <button class="menu-toggler" id="menu-icon">
             <span></span>
             <span></span>
@@ -195,6 +195,19 @@ function st_blog_header_navigation() {
         
         <nav id="site-navigation" class="main-navigation">
             <div class="container">
+                <!-- search box -->
+                <?php
+                if($search == 'with_search_box') {
+                    ?>
+                    <div class="st-blog-head-search">
+                        <div class="container">
+                            <?php get_search_form();?>
+                        </div>
+                    </div>
+                    <?php
+                }
+                ?>
+
                 <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'st-blog' ); ?></button>
                 <?php
                 wp_nav_menu( array(
@@ -233,13 +246,22 @@ function st_blog_header() {
     <!-- header -->
     <?php $header_image = get_header_image();
      ?>
+
+
+    <?php if( st_blog_header_alignment() == 'nav_first') { ?>
+        <?php st_blog_header_navigation('with_search_box');//requires search box here for nav_first ?>
+    <?php } ?>
+
     <header id="masthead" class="site-header" >
         <div class="st-blog-header-wrap">
-            <div class="st-blog-head-search">
-                <div class="container">
-                    <?php get_search_form();?>
+            <!-- search box -->
+            <?php if( st_blog_header_alignment() == 'header_first') { ?>
+                <div class="st-blog-head-search">
+                    <div class="container">
+                        <?php get_search_form();?>
+                    </div>
                 </div>
-            </div>
+            <?php } ?>
             
             <div class="st-blog-header-wrap-nav">
                 <!-- ticker -->
@@ -247,10 +269,6 @@ function st_blog_header() {
                 if(st_blog_ticker_position() == 'ticker_top')
                     st_blog_ticker();
                 ?>
-
-                <?php if( st_blog_header_alignment() == 'nav_first') { ?>
-                    <?php st_blog_header_navigation(); ?>
-                <?php } ?>
 
                 <!-- header -->
                 <div class="st-blog-header-bg img-cover" style="<?php echo 'background-image: url('. $header_image.');' ; ?>">
@@ -327,7 +345,7 @@ function st_blog_header() {
                 </div>
 
                 <?php if( st_blog_header_alignment() == 'header_first') { ?>
-                    <?php st_blog_header_navigation(); ?>
+                    <?php st_blog_header_navigation(''); ?>
                 <?php } ?>
 
             </div>
