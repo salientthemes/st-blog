@@ -1,7 +1,9 @@
 +(function($) {
 	function st_blog_head_search_form_position() {
 		// position search form again - placed in three place in this js
-		$('.st-blog-head-search').css({ 'top': $('.st-blog-header-wrap-nav').height() + 'px' });	
+		setTimeout(function() {
+			$('.st-blog-head-search').css({ 'top': $('.st-blog-header-wrap-nav').height() + 'px' });
+		}, 500);
 	}
 
 	function alignment_and_padding() {
