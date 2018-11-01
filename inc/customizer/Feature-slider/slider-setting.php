@@ -7,7 +7,7 @@ global $st_blog_repeated_settings_controls;
 global $st_blog_customizer_defaults;
 
 $st_blog_customizer_defaults['st-blog-select-post-form']            = 'from-category';
-$st_blog_customizer_defaults['st-blog-select-post-from-category']   = 1;
+$st_blog_customizer_defaults['st-blog-select-post-from-category']   = -1;
 $st_blog_customizer_defaults['st-blog-select-post-from-page']       = 0;
 
 // slider post selection
