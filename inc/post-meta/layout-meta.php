@@ -43,7 +43,7 @@ $st_blog_default_layout_options = array(
     ),
      'Both-sidebar' => array(
         'value'     => 'both-sidebar',//this should be both-sidebar ?
-        'thumbnail' => get_stylesheet_directory_uri() . '/inc/images/both-sidebar.png'
+        'thumbnail' => get_template_directory_uri() . '/inc/images/both-sidebar.png'
     ),
     'no-sidebar' => array(
         'value'     => 'no-sidebar',
